@@ -420,6 +420,14 @@ const config = {
   files: ['out/**'],
   extraResources: [
     {
+      from: '../../LICENSE',
+      to: 'LICENSE',
+    },
+    {
+      from: '../../NOTICE',
+      to: 'NOTICE',
+    },
+    {
       from: 'build/THIRD-PARTY-NOTICES.txt',
       to: 'THIRD-PARTY-NOTICES.txt',
     },

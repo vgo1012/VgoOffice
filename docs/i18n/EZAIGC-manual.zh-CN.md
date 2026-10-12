@@ -4,9 +4,36 @@
 [genspark-ai/genoffice](https://github.com/genspark-ai/genoffice)，基线提交为
 `fc754f7a90619289942602ebcce68bd57a90515c`，定制分支为 `codex/ezaigc-logo`。
 
-本次只替换 EZAIGC Logo 和应用图标，并调整首页 Logo 的显示与可访问名称。
+品牌定制仅替换 EZAIGC Logo 和应用图标，并调整首页 Logo 的显示与可访问名称。
 软件名称仍为 **GenOffice**；`EOffice` 是本地目录名。编辑器、文件读写、AI、
 登录、云功能、更新配置、许可及原有帮助内容沿用上游实现。
+完整 Windows 构建另补齐根 `LICENSE`、`NOTICE` 的随包复制配置，未修改业务代码。
+
+## 直接使用交付的 EXE
+
+本次生成 **0.11.0 / Windows x64** 的两个完整软件包，位于
+`D:\code\EOffice\apps\shell\release\`：
+
+| 文件                         | 使用方式                                                     | 文件大小                     |
+| ---------------------------- | ------------------------------------------------------------ | ---------------------------- |
+| `GenOffice 0.11.0.exe`       | 免安装版；复制这一个 EXE 到其他电脑，双击启动                | 158,206,260 字节，约 151 MiB |
+| `GenOffice Setup 0.11.0.exe` | 安装版；双击安装，可选择安装目录，安装后从开始菜单或桌面启动 | 158,543,197 字节，约 151 MiB |
+
+普通使用者**无需安装 Node.js、npm、Rust、GCC 或 Windows SDK，也无需复制源码**。
+Word、Excel、PowerPoint、PDF、Markdown、HTML 编辑器、内置字体、CLI、表格原生
+引擎、PDF WASM 引擎和 Windows OCR 都随软件打包。
+
+免安装版首次启动会将程序解压到系统临时目录，稍等片刻再操作；退出后由启动器
+清理解压的程序文件。它仍使用原程序的用户配置目录，并不是把设置和文件全部
+保存在 EXE 旁边。请把要编辑的文档放在正常、可写的文件夹中。
+
+本次在 **Windows 11 x64** 上验证；其他电脑使用 Windows 10/11 x64，并按公司
+软件管理规定运行，底层平台要求见 [Electron 平台支持说明](https://github.com/electron/electron/blob/v43.7.6/README.md#platform-support)。Windows OCR 依赖系统的 WinRT OCR 和相应识别语言；缺少
+语言组件时，按系统设置补齐。两个 EXE 均未做代码签名，Windows 或公司安全策略
+可能显示提示或拦截，需由公司的软件管理员核准或使用公司签名流程。
+
+本地编辑不需要配置 AI 账号；AI、联网搜索和图片生成需要原功能支持的账号或
+API 密钥，配置方法见下文。完整打包不包含第三方服务额度。
 
 ## Logo 来源与维护入口
 
@@ -117,6 +144,26 @@ EZAIGC。没有签名凭证时生成未签名包，Windows 可能显示安全提
 关闭；未提供完整 GA4 配置时使用统计不启用。本次没有修改这两项配置。如果公司
 后续使用自己的构建环境，应核查实际注入的配置。
 
+### 在本次构建机器上重新生成两个 EXE
+
+本次在 `.local/packaging/toolchain/` 中安装了隔离的 GNU Rust 和 w64devkit，
+没有改系统 PATH，也没有安装全局开发工具。以下入口仅适用于已保留该本地工具链
+的当前工作区；`.local/` 不进入 Git，其他构建机器需自行准备上述开发工具。
+
+```powershell
+Set-Location -LiteralPath 'D:\code\EOffice'
+. .local/packaging/env.ps1
+$env:CSC_IDENTITY_AUTO_DISCOVERY = 'false'
+npm.cmd run notices
+npm.cmd run build:all
+Set-Location -LiteralPath 'D:\code\EOffice\apps\shell'
+& ../../node_modules/.bin/electron-builder.cmd --win nsis portable --x64 --publish never --config electron-builder.cjs --config.electronDist=D:/code/EOffice/node_modules/electron/dist
+```
+
+每一步确认成功后再执行下一步。隔离环境将 native sidecar 直接编译到打包所需的
+`x86_64-pc-windows-gnu/release/`，不使用上面的 MSVC 暂存复制。最后一条命令复用
+已安装的 Electron，生成安装版与免安装版，并明确禁止发布。
+
 ### 改动检查
 
 下列为 [CONTRIBUTING.md](../../CONTRIBUTING.md) 规定的验证命令，均在仓库根目录执行。
@@ -135,6 +182,9 @@ npm.cmd run licenses
 提交后的分支还可运行 `npm.cmd run format:check -- --base origin/main` 检查相对
 上游的已提交文件。本手册记录操作方法，不作为这些检查或安装包验收已通过的证明。
 
+当前工作区保留了 `.local/` 中的本地工具链和验收副本；重新运行 lint 时使用
+`npm.cmd run lint -- --ignore-pattern '.local/**'` 排除这些生成文件，不排除项目源码。
+
 交付给员工前，用安装包核查桌面与开始菜单图标、首页 Logo、深浅主题显示，
 并打开一份 `.docx`、`.xlsx`、`.pptx` 和 PDF 验证保存；需要 AI 时再验证实际
 账号配置。应保留具体运行结果，区分源码构建成功与安装后实际可用。
@@ -145,13 +195,27 @@ npm.cmd run licenses
   主题色检查和生产依赖许可证检查，统一桌面外壳构建成功。
 - 在真实 Electron 窗口中确认首页浅色、深色和跟随系统主题的 Logo、首次欢迎页、
   模拟更新窗口中的图标均可加载，软件标题仍为 GenOffice。
-- 与基线源码逐文件比较，本次变化仅涉及 25 个 Logo 资源、Logo 引用与显示、
-  图标可访问名称和本手册文件，其余已跟踪文件未变。
+- 与基线源码逐文件比较，品牌修改涉及 25 个 Logo 资源、Logo 引用与显示、
+  图标可访问名称和本手册文件；完整构建只另增加打包配置中 `LICENSE`、`NOTICE`
+  两个资源复制项，业务逻辑保持原样。
 - `npm.cmd test` 在上游 `electron-utils` 的 7 项测试失败后停止；另行执行 shell
   测试有 783 项通过、20 项失败、3 项跳过。本次出现的失败均在未定制的原版源码
   对照中复现，未修改这些功能或测试以消除失败，完整测试不能视为通过。
-- 当前机器未安装可调用的 Rust `cargo`；未执行完整原生构建、安装包制作或
-  安装后验收。需要制作 Windows 安装包时，按上文补齐工具链并验证产物。
+- 已完成全部编辑器、CLI、shell 和 Windows x64 native sidecar 构建；native
+  引擎 244 项测试全部通过。安装版和免安装版 EXE 均已生成。
+- 把完整打包程序复制到独立目录，在只有 Windows 系统目录的 PATH 下运行。
+  主动拒绝从源码及开发依赖目录解析模块。六类生成文件均实际打开和渲染；
+  DOCX 编辑后保存到 OOXML，XLSX 修改数值和公式、重算得到 11 与 22 后保存。
+  重启独立程序，再次打开两份文件，修改和公式结果均保留；包内 CLI 六条命令
+  均成功，未记录渲染、preload、页面加载或控制台错误。
+- 免安装 EXE 本身已从独立位置运行，自行解压，使用真实隐藏编辑器把 Markdown
+  导出为一页 PDF，正常退出。不是仅检查文件存在或首页能够启动。
+- 包内原生表格 EXE 与 OCR EXE 的 Windows 导入依赖均为系统组件，不依赖
+  Node、Rust、GCC 或外部开发运行时；OCR 已验证英文和中文样例。
+- 打包资源包含与源码相同的根 `LICENSE`、`NOTICE`，第三方声明包含 570 个 npm
+  包、144 个 Rust crate，未使用缺少 Cargo 元数据的回退声明。
+- 尚未在第二台物理电脑或干净虚拟机上验证，也未执行 NSIS 安装/卸载、公司代码
+  签名或真实 AI 账号请求；复杂 Office 文件兼容性不在本次最小样例验收范围。
 
 ## 同步上游与保留定制
 
