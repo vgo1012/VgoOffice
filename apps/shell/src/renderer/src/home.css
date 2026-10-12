@@ -16,8 +16,6 @@
   --shadow-pill: 0 1px 2px rgb(0 0 0 / 8%);
   --shadow-composer: 0 6px 30px rgb(0 0 0 / 8%);
 
-  /* genoffice-logo.svg is pure black-and-white; dark themes flip it to 1 */
-  --logo-invert: 0;
   /* lift for the kb-ask composer box */
   --shadow-composer: 0 1px 3px rgb(0 0 0 / 5%);
 }
@@ -36,7 +34,6 @@
   --timeline-user-text: #b0b0c0;
   --shadow-pill: 0 1px 2px rgb(0 0 0 / 40%);
   --shadow-composer: 0 6px 30px rgb(0 0 0 / 30%);
-  --logo-invert: 1;
   --shadow-composer: 0 1px 3px rgb(0 0 0 / 25%);
 }
 
@@ -53,7 +50,6 @@
     --timeline-user-text: #b0b0c0;
     --shadow-pill: 0 1px 2px rgb(0 0 0 / 40%);
     --shadow-composer: 0 6px 30px rgb(0 0 0 / 30%);
-    --logo-invert: 1;
     --shadow-composer: 0 1px 3px rgb(0 0 0 / 25%);
   }
 }
@@ -127,7 +123,6 @@ body.vib .home {
   display: block;
   height: 28px;
   width: auto;
-  filter: invert(var(--logo-invert));
 }
 
 .sidebar-nav {
