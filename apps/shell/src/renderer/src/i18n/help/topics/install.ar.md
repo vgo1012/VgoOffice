@@ -1,5 +1,7 @@
 # تثبيت GenOffice
 
+> فيما يلي مرجع تثبيت المشروع الأصلي GenOffice. لتثبيت Eoffice، استخدم برنامج تثبيت Windows المرفق.
+
 كل نسخة منشورة على [صفحة الإصدارات](https://github.com/genspark-ai/genoffice/releases/latest). وجميعها مبنية من `main`؛ وحزّامات التثبيت لنظامي macOS وWindows موقّعة.
 
 ## اختر الملف المناسب لجهازك

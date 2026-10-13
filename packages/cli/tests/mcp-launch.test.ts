@@ -41,8 +41,32 @@ describe('mcp launch entry', () => {
     const exists = (p: string) => p === `${WIN_DIR}\\..\\..\\GenOffice.exe`
     const fromCli = mcpLaunchFromLauncher(`${WIN_DIR}\\genoffice.cmd`, { exists })
     expect(fromCli).toEqual(WIN_APP)
-    expect(fromCli).toEqual(mcpLaunch({ status: 'missing', launcherDir: WIN_DIR }))
-    expect(fromCli).toEqual(mcpLaunch({ status: 'present', launcherDir: WIN_DIR }))
+    expect(fromCli).toEqual(
+      mcpLaunch({ status: 'missing', launcherDir: WIN_DIR, appBinary: WIN_APP.command }),
+    )
+    expect(fromCli).toEqual(
+      mcpLaunch({ status: 'present', launcherDir: WIN_DIR, appBinary: WIN_APP.command }),
+    )
+  })
+
+  it('prefers Eoffice and uses the actual executable in snippets for custom install directories', () => {
+    const launcherDir = 'D:\\Company Tools\\resources\\cli'
+    const command = `${launcherDir}\\..\\..\\Eoffice.exe`
+    const expected = {
+      command,
+      args: [`${launcherDir}\\genoffice.cjs`, 'mcp'],
+      env: { ELECTRON_RUN_AS_NODE: '1' },
+    }
+    expect(mcpLaunchFromLauncher(`${launcherDir}\\genoffice.cmd`, { exists: () => true })).toEqual(
+      expected,
+    )
+    expect(mcpLaunch({ status: 'missing', launcherDir })).toEqual(expected)
+    expect(
+      mcpLaunch({ status: 'present', launcherDir, appBinary: 'D:\\Company Tools\\GenOffice.exe' }),
+    ).toEqual({
+      ...expected,
+      command: 'D:\\Company Tools\\GenOffice.exe',
+    })
   })
 
   it('runs a Windows checkout on the system node with the built bundle', () => {
@@ -63,6 +87,8 @@ describe('mcp launch entry', () => {
     expect(isGenofficeLauncher('/opt/GenOffice/resources/cli/genoffice')).toBe(true)
     expect(isGenofficeLauncher('C:\\GenOffice\\resources\\cli\\genoffice.cmd')).toBe(true)
     expect(isGenofficeLauncher('C:\\Program Files\\GenOffice\\GenOffice.exe')).toBe(true)
+    expect(isGenofficeLauncher('D:\\Company Tools\\Eoffice.exe')).toBe(true)
+    expect(isGenofficeLauncher('/Applications/Custom.app/Contents/MacOS/Eoffice')).toBe(true)
     expect(isGenofficeLauncher(WIN_APP.command, WIN_APP.args)).toBe(true)
     expect(
       isGenofficeLauncher('node', ['C:\\src\\packages\\cli\\dist\\genoffice.cjs', 'mcp']),

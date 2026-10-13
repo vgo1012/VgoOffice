@@ -1,6 +1,6 @@
 # L’écran d’accueil : où vivent vos fichiers
 
-Accueil est la page de démarrage de GenOffice : une barre de navigation à gauche, des listes de fichiers et des cartes de création rapide à droite.
+Accueil est la page de démarrage de Eoffice : une barre de navigation à gauche, des listes de fichiers et des cartes de création rapide à droite.
 
 ![L’écran d’accueil](img/home-screen.png)
 
@@ -37,7 +37,7 @@ Cochez la case d’une ligne, ou faites ⌘/ctrl-clic, pour composer une sélect
 La zone de recherche en haut porte sur deux choses à la fois :
 
 - **Les noms de fichiers** : filtrage rapide par nom.
-- **Le contenu des fichiers** : GenOffice indexe vos fichiers en arrière-plan (le texte des .docx/xlsx/pptx/pdf/md/html), si bien que chercher dans le corps du texte trouve aussi des fichiers. La portée et les interrupteurs se règlent dans les paramètres de recherche.
+- **Le contenu des fichiers** : Eoffice indexe vos fichiers en arrière-plan (le texte des .docx/xlsx/pptx/pdf/md/html), si bien que chercher dans le corps du texte trouve aussi des fichiers. La portée et les interrupteurs se règlent dans les paramètres de recherche.
 
 ## Cartes de démarrage rapide
 
@@ -67,6 +67,6 @@ Ce que fait chaque carte :
 
 ## Projets cloud (Genspark Projects)
 
-- La première utilisation exige de se connecter à votre compte Genspark (flux par code d’appareil : GenOffice affiche un code, vous terminez la connexion dans le navigateur).
+- La première utilisation exige de se connecter à votre compte Genspark (flux par code d’appareil : Eoffice affiche un code, vous terminez la connexion dans le navigateur).
 - La liste des projets se synchronise avec le web ; Ouvrir dans le navigateur y conduit pour continuer.
 - Ne pas se connecter n’a aucune incidence sur les fonctions locales.

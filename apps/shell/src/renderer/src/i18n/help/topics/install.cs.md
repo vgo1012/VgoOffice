@@ -1,5 +1,7 @@
 # Instalace GenOffice
 
+> Následující pokyny se týkají původního projektu GenOffice. Pro Eoffice použijte dodaný instalační program pro Windows.
+
 Každá sestavení je zveřejněno na [stránce Releases](https://github.com/genspark-ai/genoffice/releases/latest). Všechna pocházejí z `main`; instalátory pro macOS a Windows jsou podepsané.
 
 ## Vyberte soubor pro svůj počítač

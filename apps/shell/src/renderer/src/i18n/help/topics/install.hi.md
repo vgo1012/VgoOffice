@@ -1,5 +1,7 @@
 # GenOffice इंस्टॉल करना
 
+> नीचे मूल GenOffice परियोजना की स्थापना जानकारी दी गई है। Eoffice के लिए दिए गए Windows इंस्टॉलर का उपयोग करें।
+
 हर बिल्ड [Releases पेज](https://github.com/genspark-ai/genoffice/releases/latest) पर प्रकाशित होता है। सभी `main` से बनी होती हैं; और macOS तथा Windows के इंस्टॉलर हस्ताक्षरित होते हैं।
 
 ## अपने मशीन के लिए फ़ाइल चुनें

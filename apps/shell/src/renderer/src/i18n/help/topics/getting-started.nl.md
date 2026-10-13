@@ -1,6 +1,6 @@
 # Snel starten: de interface en de basis
 
-GenOffice is een kantoorsuite die volledig op je eigen computer draait: één venster, één rij tabbladen, met zes editors — Docs (tekstverwerking), Sheets (spreadsheets), Slides (presentaties), PDF, Markdown en HTML. De bestanden zijn echte .docx / .xlsx / .pptx / .pdf-bestanden, volledig uitwisselbaar met Word, Excel en PowerPoint. Er is geen netwerk nodig.
+Eoffice is een kantoorsuite die volledig op je eigen computer draait: één venster, één rij tabbladen, met zes editors — Docs (tekstverwerking), Sheets (spreadsheets), Slides (presentaties), PDF, Markdown en HTML. De bestanden zijn echte .docx / .xlsx / .pptx / .pdf-bestanden, volledig uitwisselbaar met Word, Excel en PowerPoint. Er is geen netwerk nodig.
 
 ## Overzicht van de interface
 
@@ -18,7 +18,7 @@ Een van de volgende:
 
 - Klik op een snelmakenkaart in het onderdeel [Snel starten](help://getting-started) van **Start** (AI Docs, AI Sheets, AI Slides, ...).
 - Menu **Bestand ▸ Nieuw**: Docs (⌘N/ctrl+N), Sheets, Slides, Markdown, HTML of PDF.
-- Sleep een bestand naar het venster, of dubbelklik erop in je bestandsverkenner (als GenOffice de standaardapp is).
+- Sleep een bestand naar het venster, of dubbelklik erop in je bestandsverkenner (als Eoffice de standaardapp is).
 
 Een nieuw document opent zonder titel; het bestand op schijf wordt pas aangemaakt bij de eerste keer opslaan.
 
@@ -52,7 +52,7 @@ Sneltoetsen binnen elke editor (opmaakpenseel, zoeken en vervangen, tabelbewerki
 
 ## De Option+Command-sneltoetsen
 
-Option+Command is de laag die Word reserveert voor gestructureerde sprongen, en GenOffice vult die op dezelfde manier. Docs neemt daar het grootste deel van in, Sheets neemt er twee van zichzelf om met Excel gelijk te lopen; één sneltoets werkt overal.
+Option+Command is de laag die Word reserveert voor gestructureerde sprongen, en Eoffice vult die op dezelfde manier. Docs neemt daar het grootste deel van in, Sheets neemt er twee van zichzelf om met Excel gelijk te lopen; één sneltoets werkt overal.
 
 **Docs**
 
@@ -81,7 +81,7 @@ Let op: **⌥⌘0 betekent Standaard in Docs en Buitenranden in Sheets**. Ze kom
 
 **Elke editor**: **⌥⌘R / Ctrl+F1** vouwt het lint samen, zoals hierboven beschreven.
 
-Daarmee blijft ⌥⌘D vrij voor GenOffice om op macOS te gebruiken, als een toekomstige opdracht hem nodig heeft.
+Daarmee blijft ⌥⌘D vrij voor Eoffice om op macOS te gebruiken, als een toekomstige opdracht hem nodig heeft.
 
 ## Waar nu heen
 

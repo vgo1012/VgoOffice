@@ -1,6 +1,6 @@
 # Obrazovka domovské stránky: kde žijí vaše soubory
 
-Domů je startovní stránka GenOffice: navigační panel vlevo, seznamy souborů a karty pro rychlé vytvoření vpravo.
+Domů je startovní stránka Eoffice: navigační panel vlevo, seznamy souborů a karty pro rychlé vytvoření vpravo.
 
 ![Obrazovka domovské stránky](img/home-screen.png)
 
@@ -37,7 +37,7 @@ Zaškrtněte pole u řádku nebo klepněte s ⌘/ctrl, abyste vytvořili výběr
 Vyhledávací pole nahoře filtruje najednou dvě věci:
 
 - **Názvy souborů**: rychlé filtrování podle názvu.
-- **Obsah souborů**: GenOffice na pozadí indexuje vaše soubory (text uvnitř docx/xlsx/pptx/pdf/md/html), takže hledáním v textu najdete i soubory. Rozsah a přepínače se nastavují v nastavení vyhledávání.
+- **Obsah souborů**: Eoffice na pozadí indexuje vaše soubory (text uvnitř docx/xlsx/pptx/pdf/md/html), takže hledáním v textu najdete i soubory. Rozsah a přepínače se nastavují v nastavení vyhledávání.
 
 ## Karty rychlého startu
 
@@ -67,6 +67,6 @@ Co která karta dělá:
 
 ## Projekty v cloudu (Genspark Projects)
 
-- Při prvním použití je nutné přihlásit se k účtu Genspark (postup s kódem zařízení: GenOffice zobrazí kód a vy dokončíte přihlášení v prohlížeči).
+- Při prvním použití je nutné přihlásit se k účtu Genspark (postup s kódem zařízení: Eoffice zobrazí kód a vy dokončíte přihlášení v prohlížeči).
 - Seznam projektů se synchronizuje s webem; Otevřít v prohlížeči vás přesune tam, kde lze pokračovat.
 - Nepřihlášení nijak neomezuje žádnou místní funkci.

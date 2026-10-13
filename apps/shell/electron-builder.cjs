@@ -408,8 +408,8 @@ const FILE_ASSOCIATIONS = [
 ]
 
 const config = {
-  appId: 'com.genoffice.app',
-  productName: 'GenOffice',
+  appId: 'com.eoffice.app',
+  productName: 'Eoffice',
   // Resolved from the installed electron package so dependency bumps can
   // never leave a stale hard-coded pin behind (packaging would silently ship
   // the old runtime).
@@ -678,6 +678,7 @@ const config = {
   nsis: {
     oneClick: false,
     allowToChangeInstallationDirectory: true,
+    shortcutName: 'Eoffice',
   },
   beforePack: async (context) => {
     ensurePlatformHelpers()

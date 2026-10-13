@@ -3,13 +3,14 @@ import { describe, expect, it } from 'vitest'
 import { aiSettingsPath, proxyUrlFromEnv } from '../src/cloud'
 import { analysisText } from '../src/commands/media'
 import { resultCount } from '../src/commands/search'
-import { run } from './helpers'
+import { run, tempDir } from './helpers'
 
 describe('cloud command plumbing', () => {
   it('locates the shell ai-settings.json without Electron and honours the override', () => {
     expect(aiSettingsPath({ GENOFFICE_AI_SETTINGS: '/x/ai.json' })).toBe('/x/ai.json')
-    const p = aiSettingsPath({})
-    expect(p.endsWith(join('GenOffice', 'ai-settings.json'))).toBe(true)
+    const home = tempDir()
+    const p = aiSettingsPath({ HOME: home, APPDATA: home, XDG_CONFIG_HOME: home })
+    expect(p.endsWith(join('Eoffice', 'ai-settings.json'))).toBe(true)
     if (process.platform === 'darwin') expect(p).toContain('Library/Application Support')
     expect(aiSettingsPath({ GENOFFICE_USER_DATA: '/ud' })).toBe(join('/ud', 'ai-settings.json'))
   })

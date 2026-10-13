@@ -7,6 +7,6 @@ export const TAB_STRIP_HEIGHT = 40
 
 export function tabStripOverlay(dark: boolean): TitleBarOverlay {
   return dark
-    ? { color: '#2a2a2a', symbolColor: '#e4e4e4', height: TAB_STRIP_HEIGHT }
-    : { color: '#ebebeb', symbolColor: '#454746', height: TAB_STRIP_HEIGHT }
+    ? { color: '#172a45', symbolColor: '#e8f0fa', height: TAB_STRIP_HEIGHT }
+    : { color: '#dce7f5', symbolColor: '#263f60', height: TAB_STRIP_HEIGHT }
 }

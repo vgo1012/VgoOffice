@@ -18,17 +18,20 @@ export function mcpLaunch(cli: {
   status: string
   launcherDir: string
   pathHint?: string
+  /** Actual packaged executable; installation directory names are arbitrary. */
+  appBinary?: string
 }): McpLaunch {
   const dir = cli.launcherDir
-  if (isWindowsPath(dir)) return windowsAppLaunch(dir)
+  if (isWindowsPath(dir)) return windowsAppLaunch(dir, cli.appBinary)
   const onPath = cli.status === 'present' && !cli.pathHint
   return { command: onPath ? 'genoffice' : `${dir}/genoffice`, args: ['mcp'] }
 }
 
-function windowsAppLaunch(dir: string): McpLaunch {
+function windowsAppLaunch(dir: string, appBinary?: string): McpLaunch {
+  const sep = isWindowsPath(dir) ? '\\' : '/'
   return {
-    command: `${dir}\\..\\..\\GenOffice.exe`,
-    args: [`${dir}\\genoffice.cjs`, 'mcp'],
+    command: appBinary ?? `${dir}${sep}..${sep}..${sep}Eoffice.exe`,
+    args: [`${dir}${sep}genoffice.cjs`, 'mcp'],
     env: { ELECTRON_RUN_AS_NODE: '1' },
   }
 }
@@ -42,7 +45,7 @@ export interface LauncherLaunchOptions {
 /**
  * `mcp install`: always the absolute launcher, never the bare name. On Windows
  * the packaged app is run as Node (same entry as the app's snippet); a checkout
- * has no GenOffice.exe beside it and runs the bundle on the system node, as the
+ * has no app executable beside it and runs the bundle on the system node, as the
  * bin/genoffice script does.
  */
 export function mcpLaunchFromLauncher(
@@ -54,7 +57,10 @@ export function mcpLaunchFromLauncher(
   const sep = isWindowsPath(launcher) ? '\\' : '/'
   const dir = launcher.slice(0, Math.max(launcher.lastIndexOf('\\'), launcher.lastIndexOf('/')))
   const exists = opts.exists ?? (() => false)
-  if (exists(`${dir}${sep}..${sep}..${sep}GenOffice.exe`)) return windowsAppLaunch(dir)
+  for (const name of ['Eoffice.exe', 'GenOffice.exe']) {
+    const binary = `${dir}${sep}..${sep}..${sep}${name}`
+    if (exists(binary)) return windowsAppLaunch(dir, binary)
+  }
   const bundle = exists(`${dir}${sep}genoffice.cjs`)
     ? `${dir}${sep}genoffice.cjs`
     : `${dir}${sep}..${sep}dist${sep}genoffice.cjs`

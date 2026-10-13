@@ -1,6 +1,6 @@
 # Màn hình Trang chủ: tập tin của bạn ở đâu
 
-Trang chủ là trang khởi đầu của GenOffice: thanh điều hướng bên trái, danh sách tập tin và các thẻ tạo nhanh bên phải.
+Trang chủ là trang khởi đầu của Eoffice: thanh điều hướng bên trái, danh sách tập tin và các thẻ tạo nhanh bên phải.
 
 ![Màn hình Trang chủ](img/home-screen.png)
 
@@ -37,7 +37,7 @@ Chọn ô tick của một hàng, hoặc nhấp ⌘/ctrl, để tạo một vùn
 Ô tìm kiếm ở trên khớp với hai thứ cùng lúc:
 
 - **Tên tập tin**: lọc nhanh theo tên.
-- **Nội dung tập tin**: GenOffice lập chỉ mục cho tập tin của bạn ở nền (văn bản bên trong docx/xlsx/pptx/pdf/md/html), nên tìm trong phần chữ cũng ra tập tin. Phạm vi và các công tắc nằm trong cài đặt tìm kiếm.
+- **Nội dung tập tin**: Eoffice lập chỉ mục cho tập tin của bạn ở nền (văn bản bên trong docx/xlsx/pptx/pdf/md/html), nên tìm trong phần chữ cũng ra tập tin. Phạm vi và các công tắc nằm trong cài đặt tìm kiếm.
 
 ## Thẻ bắt đầu nhanh
 
@@ -67,6 +67,6 @@ Từng thẻ dùng để làm gì:
 
 ## Dự án trên đám mây (Genspark Projects)
 
-- Lần dùng đầu tiên cần đăng nhập tài khoản Genspark (luồng mã thiết bị: GenOffice hiển thị một mã, bạn hoàn tất đăng nhập trong trình duyệt).
+- Lần dùng đầu tiên cần đăng nhập tài khoản Genspark (luồng mã thiết bị: Eoffice hiển thị một mã, bạn hoàn tất đăng nhập trong trình duyệt).
 - Danh sách dự án đồng bộ với web; Mở trong trình duyệt đưa bạn tới đó để tiếp tục.
 - Không đăng nhập không ảnh hưởng tới bất kỳ tính năng cục bộ nào.

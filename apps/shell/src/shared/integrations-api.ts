@@ -11,6 +11,8 @@ export type { AgentId, AgentTarget, SkillInstallState, SkillInstallStatus }
 export interface CliStatus extends InstallOutcome {
   /** directory holding the genoffice launcher (what `~/.genoffice/launcher` points at) */
   launcherDir: string
+  /** actual installed Windows app binary, independent of its installation directory name */
+  appBinary?: string
   /** app runs from a dmg / AppImage mount: the launcher path will not survive a restart */
   ephemeral: boolean
   /** version of the bundled command line */

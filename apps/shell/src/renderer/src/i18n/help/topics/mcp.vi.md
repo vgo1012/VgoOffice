@@ -1,14 +1,14 @@
 # Kết nối tác nhân lập trình
 
-GenOffice nói chuyện theo Model Context Protocol, nên một tác nhân lập trình có thể đọc, ghi và kết xuất tài liệu của bạn qua đúng những engine mà ứng dụng dùng. Tác nhân không phải đoán mò một định dạng tệp: nó nhận lược đồ thao tác có kiểu từ đúng những định nghĩa mà bộ thực thi dùng để kiểm tra.
+Eoffice nói chuyện theo Model Context Protocol, nên một tác nhân lập trình có thể đọc, ghi và kết xuất tài liệu của bạn qua đúng những engine mà ứng dụng dùng. Tác nhân không phải đoán mò một định dạng tệp: nó nhận lược đồ thao tác có kiểu từ đúng những định nghĩa mà bộ thực thi dùng để kiểm tra.
 
 ## Đăng ký từ trong ứng dụng
 
 Việc này làm ở **Cài đặt ▸ Tích hợp**. Bảng đó có hai nửa, và bạn có thể dùng một nửa hoặc cả hai.
 
-**Kỹ năng.** Mỗi tác nhân lập trình tìm thấy trên máy này một dòng — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, mỗi dòng có **Cài đặt**, **Cập nhật** và **Gỡ cài đặt**, cộng thêm **Cài đặt vào một thư mục khác…**, **Tải xuống kỹ năng (zip)** và **Sao chép đường dẫn**. Nếu trợ lý của bạn không có trong danh sách, hãy chỉ cho GenOffice thư mục mà nó đọc `SKILL.md`, hoặc lưu tệp zip lại rồi bảo trợ lý tự cài đặt. Kỹ năng và MCP có thể nằm cạnh nhau: trợ lý chọn một trong hai, và chúng làm đúng những việc giống nhau.
+**Kỹ năng.** Mỗi tác nhân lập trình tìm thấy trên máy này một dòng — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, mỗi dòng có **Cài đặt**, **Cập nhật** và **Gỡ cài đặt**, cộng thêm **Cài đặt vào một thư mục khác…**, **Tải xuống kỹ năng (zip)** và **Sao chép đường dẫn**. Nếu trợ lý của bạn không có trong danh sách, hãy chỉ cho Eoffice thư mục mà nó đọc `SKILL.md`, hoặc lưu tệp zip lại rồi bảo trợ lý tự cài đặt. Kỹ năng và MCP có thể nằm cạnh nhau: trợ lý chọn một trong hai, và chúng làm đúng những việc giống nhau.
 
-**MCP.** Có hai đường: **Được khởi động bởi trợ lý (khuyến nghị)**, ở đó bạn thêm cấu hình được hiển thị vào phía khách của mình và trợ lý tự khởi chạy máy chủ, và **Máy chủ HTTP cục bộ**, do ứng dụng chạy thay bạn. Dù chọn đường nào, trợ lý vẫn kết nối với GenOffice và bạn không phải gõ lệnh nào.
+**MCP.** Có hai đường: **Được khởi động bởi trợ lý (khuyến nghị)**, ở đó bạn thêm cấu hình được hiển thị vào phía khách của mình và trợ lý tự khởi chạy máy chủ, và **Máy chủ HTTP cục bộ**, do ứng dụng chạy thay bạn. Dù chọn đường nào, trợ lý vẫn kết nối với Eoffice và bạn không phải gõ lệnh nào.
 
 ## Đăng ký từ dòng lệnh
 
@@ -70,7 +70,7 @@ Một tác nhân không biết từ vựng thao tác sẽ đoán mò. Kỹ năng
 
 ## Nó chạm được gì trong ứng dụng
 
-Máy chủ không chỉ dừng ở các tệp trên đĩa. Chừng nào GenOffice còn chạy, tác nhân cũng có thể làm việc qua cửa sổ:
+Máy chủ không chỉ dừng ở các tệp trên đĩa. Chừng nào Eoffice còn chạy, tác nhân cũng có thể làm việc qua cửa sổ:
 
 - **`open_in_genoffice`** mở một tệp trong một thẻ và đưa thẻ đó lên tiền cảnh.
 - **`open_documents`** liệt kê mọi tài liệu bạn đang mở — id, loại, đường dẫn và có thay đổi chưa lưu hay không —, rồi đọc nội dung hiện tại của một tài liệu hoặc đóng nó lại, lưu trước trừ khi bạn bảo nó bỏ thay đổi.

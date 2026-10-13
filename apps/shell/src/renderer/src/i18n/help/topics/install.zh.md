@@ -1,5 +1,7 @@
 # 安装 GenOffice
 
+> 以下为上游 GenOffice 的安装参考。Eoffice 请使用随附的 Windows 安装包。
+
 每个构建都发布在 [Releases 页面](https://github.com/genspark-ai/genoffice/releases/latest)。它们全部出自 `main`；macOS 与 Windows 的安装包已签名。
 
 ## 选择适合你机器的文件

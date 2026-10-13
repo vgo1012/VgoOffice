@@ -1,14 +1,14 @@
 # Connecter un agent de codage
 
-GenOffice parle le Model Context Protocol : un agent de programmation peut donc lire, écrire et rendre vos documents avec les mêmes moteurs que l’application. L’agent ne devine pas un format de fichier : il reçoit les schémas typés des ops à partir des définitions mêmes contre lesquelles l’executor valide.
+Eoffice parle le Model Context Protocol : un agent de programmation peut donc lire, écrire et rendre vos documents avec les mêmes moteurs que l’application. L’agent ne devine pas un format de fichier : il reçoit les schémas typés des ops à partir des définitions mêmes contre lesquelles l’executor valide.
 
 ## L’enregistrer depuis l’application
 
 C’est dans **Paramètres ▸ Intégrations** qu’on fait cela. Le panneau a deux moitiés, et vous pouvez utiliser l’une, l’autre, ou les deux.
 
-**La compétence.** Une ligne par agent de programmation trouvé sur cette machine — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, chacune avec **Installer**, **Mettre à jour** et **Désinstaller**, plus **Installer dans un autre dossier…**, **Télécharger le skill (zip)** et **Copier le chemin**. Si votre assistant n’est pas dans la liste, indiquez à GenOffice un dossier depuis lequel il lit `SKILL.md`, ou enregistrez le zip et laissez l’assistant l’installer. La compétence et le MCP peuvent coexister : l’assistant choisit l’un des deux, et ils font exactement les mêmes choses.
+**La compétence.** Une ligne par agent de programmation trouvé sur cette machine — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, chacune avec **Installer**, **Mettre à jour** et **Désinstaller**, plus **Installer dans un autre dossier…**, **Télécharger le skill (zip)** et **Copier le chemin**. Si votre assistant n’est pas dans la liste, indiquez à Eoffice un dossier depuis lequel il lit `SKILL.md`, ou enregistrez le zip et laissez l’assistant l’installer. La compétence et le MCP peuvent coexister : l’assistant choisit l’un des deux, et ils font exactement les mêmes choses.
 
-**MCP.** Deux voies sont proposées : **Lancé par l’assistant (recommandé)**, où vous ajoutez la configuration affichée à votre client et où l’assistant lance le serveur lui-même, et le **Serveur HTTP local**, que l’application fait tourner pour vous. Dans les deux cas, l’assistant finit par parler à GenOffice et vous ne tapez jamais une commande.
+**MCP.** Deux voies sont proposées : **Lancé par l’assistant (recommandé)**, où vous ajoutez la configuration affichée à votre client et où l’assistant lance le serveur lui-même, et le **Serveur HTTP local**, que l’application fait tourner pour vous. Dans les deux cas, l’assistant finit par parler à Eoffice et vous ne tapez jamais une commande.
 
 ## L’enregistrer depuis la ligne de commande
 
@@ -70,7 +70,7 @@ Un agent qui ne connaît pas le vocabulaire des ops devine. La compétence embar
 
 ## Ce qu’il atteint dans l’application
 
-Le serveur ne se limite pas aux fichiers sur le disque. Tant que GenOffice tourne, l’agent peut aussi travailler par la fenêtre :
+Le serveur ne se limite pas aux fichiers sur le disque. Tant que Eoffice tourne, l’agent peut aussi travailler par la fenêtre :
 
 - **`open_in_genoffice`** ouvre un fichier dans un onglet et le met au premier plan.
 - **`open_documents`** liste tous les documents que vous avez ouverts — id, type, chemin, et s’ils ont des modifications non enregistrées —, puis lit le contenu actuel de l’un d’eux ou le ferme, en enregistrant d’abord, sauf si vous lui demandez de jeter.

@@ -1,7 +1,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { genofficeUserDataDir, guiOpenDocuments } from '../src/gui'
+import { assertNotOpenInGui, genofficeUserDataDir, guiOpenDocuments } from '../src/gui'
 import { run, tempDir } from './helpers'
 
 function writeRegistry(dir: string, pid: number, paths: string[]): void {
@@ -31,7 +31,37 @@ async function workbook(dir: string): Promise<string> {
 describe('GUI-open documents', () => {
   it('locates the shell userData directory and honours the override', () => {
     expect(genofficeUserDataDir({ GENOFFICE_USER_DATA: '/u' })).toBe('/u')
-    expect(genofficeUserDataDir({}).endsWith('GenOffice')).toBe(true)
+    const home = tempDir()
+    const env = { HOME: home, APPDATA: home, XDG_CONFIG_HOME: home }
+    const current = genofficeUserDataDir(env)
+    expect(current.endsWith('Eoffice')).toBe(true)
+    const legacy = current.slice(0, -'Eoffice'.length) + 'GenOffice'
+    mkdirSync(legacy, { recursive: true })
+    expect(genofficeUserDataDir(env)).toBe(legacy)
+    mkdirSync(current, { recursive: true })
+    expect(genofficeUserDataDir(env)).toBe(current)
+  })
+
+  it('protects documents open in both app names and their current/legacy dev profiles', () => {
+    const home = tempDir()
+    const env = { HOME: home, APPDATA: home, XDG_CONFIG_HOME: home }
+    const primary = genofficeUserDataDir(env)
+    const base = primary.slice(0, -'Eoffice'.length)
+    const profiles = [
+      'Eoffice',
+      'Eoffice-Dev',
+      'Eoffice Dev',
+      'GenOffice',
+      'GenOffice-Dev',
+      'GenOffice Dev',
+    ]
+    for (const profile of profiles) {
+      const document = join(home, `${profile}.docx`)
+      writeRegistry(base + profile, process.pid, [document])
+      expect(() => assertNotOpenInGui(document, env), profile).toThrow(/has this file open/)
+    }
+    expect(guiOpenDocuments(env)).toHaveLength(profiles.length)
+    expect(guiOpenDocuments({ ...env, GENOFFICE_USER_DATA: primary })).toHaveLength(1)
   })
 
   it('ignores a missing, malformed or crash-leftover registry', () => {

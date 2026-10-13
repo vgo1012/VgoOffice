@@ -1,4 +1,4 @@
-import { mkdtempSync, writeFileSync } from 'node:fs'
+import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs'
 import { createServer, type Server } from 'node:net'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
@@ -6,6 +6,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { parseArgs } from '../src/args'
 import { parseTarget } from '../src/commands/open'
 import { controlEndpoint, controlRequest } from '../src/control'
+import { genofficeUserDataDir } from '../src/gui'
 import type { ControlReply } from '../src/control-protocol'
 import { CliError } from '../src/result'
 import { run } from './helpers'
@@ -119,6 +120,30 @@ describe('control endpoint', () => {
         2_000,
       ),
     ).rejects.toMatchObject({ reason: 'app_unavailable', code: 4 })
+  })
+
+  it('finds Eoffice endpoints and still falls back to live legacy profiles', () => {
+    const home = mkdtempSync(join(tmpdir(), 'eoffice-ctl-'))
+    const env = { HOME: home, APPDATA: home, XDG_CONFIG_HOME: home }
+    const current = genofficeUserDataDir(env)
+    const legacy = current.slice(0, -'Eoffice'.length) + 'GenOffice-Dev'
+    mkdirSync(legacy, { recursive: true })
+    writeFileSync(
+      join(legacy, 'control.json'),
+      JSON.stringify({ protocol: 1, pid: process.pid, endpoint: '/legacy', token: 't' }),
+    )
+    expect(controlEndpoint(env)?.endpoint).toBe('/legacy')
+    mkdirSync(current, { recursive: true })
+    writeFileSync(
+      join(current, 'control.json'),
+      JSON.stringify({ protocol: 1, pid: 2 ** 22 - 1, endpoint: '/dead', token: 't' }),
+    )
+    expect(controlEndpoint(env)?.endpoint).toBe('/legacy')
+    writeFileSync(
+      join(current, 'control.json'),
+      JSON.stringify({ protocol: 1, pid: process.pid, endpoint: '/eoffice', token: 't' }),
+    )
+    expect(controlEndpoint(env)?.endpoint).toBe('/eoffice')
   })
 })
 

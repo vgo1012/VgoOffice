@@ -1,6 +1,6 @@
 # La pantalla de inicio: dónde están sus archivos
 
-Inicio es la página de arranque de GenOffice: una barra de navegación a la izquierda, listas de archivos y tarjetas de creación rápida a la derecha.
+Inicio es la página de arranque de Eoffice: una barra de navegación a la izquierda, listas de archivos y tarjetas de creación rápida a la derecha.
 
 ![La pantalla de inicio](img/home-screen.png)
 
@@ -37,7 +37,7 @@ Marque la casilla de una fila, o haga ⌘/ctrl-clic, para ir formando una selecc
 El cuadro de búsqueda de arriba cubre dos cosas a la vez:
 
 - **Nombres de archivo**: filtrado rápido por nombre.
-- **Contenido de los archivos**: GenOffice indexa sus archivos en segundo plano (el texto de los .docx/xlsx/pptx/pdf/md/html), así que buscar en el cuerpo del texto también encuentra archivos. El ámbito y los interruptores se ajustan en los ajustes de búsqueda.
+- **Contenido de los archivos**: Eoffice indexa sus archivos en segundo plano (el texto de los .docx/xlsx/pptx/pdf/md/html), así que buscar en el cuerpo del texto también encuentra archivos. El ámbito y los interruptores se ajustan en los ajustes de búsqueda.
 
 ## Tarjetas de inicio rápido
 
@@ -67,6 +67,6 @@ Qué hace cada tarjeta:
 
 ## Proyectos en la nube (Genspark Projects)
 
-- El primer uso requiere iniciar sesión en su cuenta de Genspark (flujo por código de dispositivo: GenOffice muestra un código y usted completa el inicio de sesión en el navegador).
+- El primer uso requiere iniciar sesión en su cuenta de Genspark (flujo por código de dispositivo: Eoffice muestra un código y usted completa el inicio de sesión en el navegador).
 - La lista de proyectos se sincroniza con la web; Abrir en el navegador lleva allí para continuar.
 - No iniciar sesión no afecta a ninguna función local.

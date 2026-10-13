@@ -1,5 +1,8 @@
 # GenOffice：EZAIGC Logo 定制版手册
 
+此手册记录历史 EZAIGC Logo 版本。当前交付已更名为 **Eoffice**，使用新 V Logo、
+蓝色背景及安装后直接启动模式，请参阅 [Eoffice 安装版手册](Eoffice-manual.zh-CN.md)。
+
 本手册适用于 `D:\code\EOffice` 中的本地定制源码。上游项目为
 [genspark-ai/genoffice](https://github.com/genspark-ai/genoffice)，基线提交为
 `fc754f7a90619289942602ebcce68bd57a90515c`，定制分支为 `codex/ezaigc-logo`。

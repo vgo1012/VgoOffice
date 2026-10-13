@@ -1,6 +1,6 @@
 # O ecrã Início: onde ficam os seus arquivos
 
-O ecrã Início é a página inicial do GenOffice: uma barra de navegação à esquerda e, à direita, as listas de arquivos e os cartões de criação rápida.
+O ecrã Início é a página inicial do Eoffice: uma barra de navegação à esquerda e, à direita, as listas de arquivos e os cartões de criação rápida.
 
 ![O ecrã Início](img/home-screen.png)
 
@@ -37,7 +37,7 @@ Marque a caixa de uma linha, ou faça ⌘/ctrl-clique, para construir uma seleç
 A caixa de pesquisa no topo corresponde a duas coisas ao mesmo tempo:
 
 - **Nomes de arquivos**: filtragem rápida por nome.
-- **Conteúdo dos arquivos**: o GenOffice indexa seus arquivos em segundo plano (texto dentro de docx/xlsx/pptx/pdf/md/html), pelo que pesquisar no corpo do texto também encontra arquivos. O âmbito e as opções ficam nas configurações de pesquisa.
+- **Conteúdo dos arquivos**: o Eoffice indexa seus arquivos em segundo plano (texto dentro de docx/xlsx/pptx/pdf/md/html), pelo que pesquisar no corpo do texto também encontra arquivos. O âmbito e as opções ficam nas configurações de pesquisa.
 
 ## Cartões de início rápido
 
@@ -67,6 +67,6 @@ O que faz cada cartão:
 
 ## Projetos na nuvem (Genspark Projects)
 
-- O primeiro uso exige entrar na sua conta Genspark (fluxo de código de dispositivo: o GenOffice mostra um código e você conclui o início de sessão no navegador).
+- O primeiro uso exige entrar na sua conta Genspark (fluxo de código de dispositivo: o Eoffice mostra um código e você conclui o início de sessão no navegador).
 - A lista de projetos fica sincronizada com a web; Abrir no navegador leva lá para continuar.
 - Não entrar não afeta nenhuma das funcionalidades locais.

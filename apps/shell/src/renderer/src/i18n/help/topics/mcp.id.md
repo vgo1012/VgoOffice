@@ -1,14 +1,14 @@
 # Menghubungkan agen pemrograman
 
-GenOffice berbicara dalam Model Context Protocol, jadi agen pemrograman dapat membaca, menulis, dan merender dokumen Anda lewat mesin yang sama dengan yang dipakai aplikasi. Agen itu tidak sedang menebak-nebak format berkas: ia memperoleh skema op bertipe dari definisi yang sama dengan yang dipakai eksekutor untuk memvalidasi.
+Eoffice berbicara dalam Model Context Protocol, jadi agen pemrograman dapat membaca, menulis, dan merender dokumen Anda lewat mesin yang sama dengan yang dipakai aplikasi. Agen itu tidak sedang menebak-nebak format berkas: ia memperoleh skema op bertipe dari definisi yang sama dengan yang dipakai eksekutor untuk memvalidasi.
 
 ## Mendaftarkannya dari aplikasi
 
 Inilah tempatnya: **Pengaturan ▸ Integrasi**. Panel ini punya dua bagian, dan Anda bisa memakai salah satunya atau keduanya.
 
-**Skill-nya.** Satu baris per agen pemrograman yang ditemukan di komputer ini — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, masing-masing dengan **Pasang**, **Perbarui**, dan **Hapus**, ditambah **Pasang ke folder lain…**, **Unduh skill (zip)**, dan **Salin path**. Jika asisten Anda tidak ada di daftar, tunjukkan folder tempat ia membaca `SKILL.md` kepada GenOffice, atau simpan zip-nya dan biarkan asisten yang memasangnya. Skill dan MCP bisa berdampingan: asisten memilih salah satu, dan keduanya melakukan hal yang persis sama.
+**Skill-nya.** Satu baris per agen pemrograman yang ditemukan di komputer ini — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, masing-masing dengan **Pasang**, **Perbarui**, dan **Hapus**, ditambah **Pasang ke folder lain…**, **Unduh skill (zip)**, dan **Salin path**. Jika asisten Anda tidak ada di daftar, tunjukkan folder tempat ia membaca `SKILL.md` kepada Eoffice, atau simpan zip-nya dan biarkan asisten yang memasangnya. Skill dan MCP bisa berdampingan: asisten memilih salah satu, dan keduanya melakukan hal yang persis sama.
 
-**MCP.** Ada dua jalur yang ditawarkan: **Dijalankan oleh asisten (disarankan)**, tempat Anda menambahkan konfigurasi yang ditampilkan ke klien dan asisten menjalankan servernya sendiri, serta **Server HTTP lokal**, yang dijalankan aplikasi untuk Anda. Cara mana pun, asisten akhirnya berbicara dengan GenOffice dan Anda tidak pernah mengetik satu perintah pun.
+**MCP.** Ada dua jalur yang ditawarkan: **Dijalankan oleh asisten (disarankan)**, tempat Anda menambahkan konfigurasi yang ditampilkan ke klien dan asisten menjalankan servernya sendiri, serta **Server HTTP lokal**, yang dijalankan aplikasi untuk Anda. Cara mana pun, asisten akhirnya berbicara dengan Eoffice dan Anda tidak pernah mengetik satu perintah pun.
 
 ## Mendaftarkannya dari baris perintah
 
@@ -70,7 +70,7 @@ Agen yang tidak mengenal kosakata op akan menebak. Skill itu membawa referensi d
 
 ## Apa yang bisa dicapainya di dalam aplikasi
 
-Server itu tidak dibatasi pada berkas di disk. Selama GenOffice berjalan, agen juga bisa bekerja melalui jendela:
+Server itu tidak dibatasi pada berkas di disk. Selama Eoffice berjalan, agen juga bisa bekerja melalui jendela:
 
 - **`open_in_genoffice`** membuka berkas di sebuah tab dan memfokuskannya.
 - **`open_documents`** mencantumkan setiap dokumen yang Anda buka — id, jenis, path, dan apakah ada perubahan yang belum disimpan —, lalu membaca isi terkini salah satunya atau menutupnya, dengan menyimpan lebih dulu kecuali Anda menyuruhnya membuang.

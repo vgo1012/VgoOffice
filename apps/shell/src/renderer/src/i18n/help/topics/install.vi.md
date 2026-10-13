@@ -1,5 +1,7 @@
 # Cài đặt GenOffice
 
+> Dưới đây là hướng dẫn cài đặt của dự án gốc GenOffice. Với Eoffice, hãy dùng trình cài đặt Windows được cung cấp.
+
 Mọi bản dựng đều được công bố trên [trang phát hành](https://github.com/genspark-ai/genoffice/releases/latest). Tất cả đều đến từ `main`; và trình cài đặt cho macOS và Windows đã được ký.
 
 ## Chọn tệp cho máy của bạn

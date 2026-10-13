@@ -59,6 +59,7 @@ export function registerIntegrationsIpc(deps: IntegrationsDeps): void {
       cli: {
         ...inspectCliLink({ launcher }),
         launcherDir: deps.cliDir,
+        ...(app.isPackaged && process.platform === 'win32' ? { appBinary: process.execPath } : {}),
         ephemeral: app.isPackaged && isEphemeralInstall(process.resourcesPath, process.env),
         version: cliVersion(deps.cliPackageJson),
       },

@@ -184,9 +184,9 @@ describe('Settings → Integrations', () => {
         launcherDir: '/Applications/GenOffice.app/Contents/Resources/cli',
       }),
     ).toEqual({ command: 'genoffice', args: ['mcp'] })
-    const winDir = 'C:\\Users\\Jane Doe\\AppData\\Local\\Programs\\GenOffice\\resources\\cli'
+    const winDir = 'C:\\Users\\Jane Doe\\AppData\\Local\\Programs\\Eoffice\\resources\\cli'
     const win = {
-      command: `${winDir}\\..\\..\\GenOffice.exe`,
+      command: `${winDir}\\..\\..\\Eoffice.exe`,
       args: [`${winDir}\\genoffice.cjs`, 'mcp'],
       env: { ELECTRON_RUN_AS_NODE: '1' },
     }

@@ -1,6 +1,6 @@
 # Ekran strony głównej: gdzie mieszkają Twoje pliki
 
-Strona główna to punkt wyjścia GenOffice: pasek nawigacyjny po lewej, listy plików i karty szybkiego tworzenia po prawej.
+Strona główna to punkt wyjścia Eoffice: pasek nawigacyjny po lewej, listy plików i karty szybkiego tworzenia po prawej.
 
 ![Ekran strony głównej](img/home-screen.png)
 
@@ -37,7 +37,7 @@ Zaznacz pole wyboru w wierszu lub kliknij ⌘/ctrl, aby zbudować zaznaczenie; p
 Pole wyszukiwania u góry filtruje naraz dwie rzeczy:
 
 - **Nazwy plików**: szybkie filtrowanie po nazwie.
-- **Zawartość plików**: GenOffice indeksuje Twoje pliki w tle (tekst w docx/xlsx/pptx/pdf/md/html), więc wyszukiwanie po treści znajduje również pliki. Zakres i przełączniki ustawia się w ustawieniach wyszukiwania.
+- **Zawartość plików**: Eoffice indeksuje Twoje pliki w tle (tekst w docx/xlsx/pptx/pdf/md/html), więc wyszukiwanie po treści znajduje również pliki. Zakres i przełączniki ustawia się w ustawieniach wyszukiwania.
 
 ## Karty szybkiego startu
 
@@ -67,6 +67,6 @@ Co robi każda karta:
 
 ## Projekty w chmurze (Genspark Projects)
 
-- Przy pierwszym użyciu trzeba zalogować się na konto Genspark (przepływ z kodem urządzenia: GenOffice pokazuje kod, a Ty kończysz logowanie w przeglądarce).
+- Przy pierwszym użyciu trzeba zalogować się na konto Genspark (przepływ z kodem urządzenia: Eoffice pokazuje kod, a Ty kończysz logowanie w przeglądarce).
 - Lista projektów synchronizuje się z siecią; Otwórz w przeglądarce przenosi tam, gdzie można kontynuować.
 - Brak logowania nie wpływa na żadną funkcję lokalną.

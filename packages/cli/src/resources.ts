@@ -122,25 +122,40 @@ function installedAppBinaries(
     case 'darwin':
       return [
         ...(shipped ? [shipped] : []),
+        '/Applications/Eoffice.app/Contents/MacOS/Eoffice',
+        join(homedir(), 'Applications/Eoffice.app/Contents/MacOS/Eoffice'),
         '/Applications/GenOffice.app/Contents/MacOS/GenOffice',
         join(homedir(), 'Applications/GenOffice.app/Contents/MacOS/GenOffice'),
       ]
     case 'win32':
       return [
         ...(shipped ? [shipped] : []),
+        env.LOCALAPPDATA ? join(env.LOCALAPPDATA, 'Programs', 'Eoffice', 'Eoffice.exe') : '',
+        env.ProgramFiles ? join(env.ProgramFiles, 'Eoffice', 'Eoffice.exe') : '',
         env.LOCALAPPDATA ? join(env.LOCALAPPDATA, 'Programs', 'GenOffice', 'GenOffice.exe') : '',
         env.ProgramFiles ? join(env.ProgramFiles, 'GenOffice', 'GenOffice.exe') : '',
       ].filter(Boolean)
     default:
-      return [...(shipped ? [shipped] : []), '/opt/GenOffice/genoffice', '/usr/bin/genoffice']
+      return [
+        ...(shipped ? [shipped] : []),
+        '/opt/Eoffice/genoffice',
+        '/opt/GenOffice/genoffice',
+        '/usr/bin/genoffice',
+      ]
   }
 }
 
-export function appBinaryForResources(resources: string, platform: NodeJS.Platform): string {
+export function appBinaryForResources(
+  resources: string,
+  platform: NodeJS.Platform,
+  exists: (path: string) => boolean = existsSync,
+): string {
   const install = dirname(resources)
-  if (platform === 'darwin') return join(install, 'MacOS', 'GenOffice')
-  if (platform === 'win32') return join(install, 'GenOffice.exe')
-  return join(install, 'genoffice')
+  if (platform !== 'darwin' && platform !== 'win32') return join(install, 'genoffice')
+  const binaries = ['Eoffice', 'GenOffice'].map((name) =>
+    platform === 'darwin' ? join(install, 'MacOS', name) : join(install, `${name}.exe`),
+  )
+  return binaries.find(exists) ?? binaries[0]
 }
 
 /**

@@ -1,17 +1,16 @@
 /* Shared chrome/AI-panel tokens come from @genoffice/ui/tokens.css (imported
  * before this file in main.tsx); only shell-specific tokens live here. */
 :root {
-  /* Genspark DS v4.1: guide/onboarding accent is the brand blue */
-  --accent: #0f7fff;
-  --accent-hover: #0e72e5;
+  --accent: #35648f;
+  --accent-hover: #294f74;
   /* selected-option tint for the shared dropdown (gs-dd) */
-  --accent-soft: #eaf0fd;
+  --accent-soft: #e1ebf7;
   --modal-width-sm: 480px;
-  --avatar-bg: #e8ebef;
-  --badge-bg: #eaf0fd;
-  --checkbox-bg: #ececec;
-  --timeline-user-bg: #eef1f5;
-  --timeline-user-text: #5a6170;
+  --avatar-bg: #dce7f3;
+  --badge-bg: #e1ebf7;
+  --checkbox-bg: #e1eaf5;
+  --timeline-user-bg: #e9f0f8;
+  --timeline-user-text: #4a607b;
   /* lift for the active segment in gray-track tab pills */
   --shadow-pill: 0 1px 2px rgb(0 0 0 / 8%);
   --shadow-composer: 0 6px 30px rgb(0 0 0 / 8%);
@@ -24,14 +23,14 @@
 
 /* Explicit dark: [data-theme="dark"] on <html> */
 [data-theme='dark'] {
-  --accent: #3f99ff;
-  --accent-hover: #5ba5ff;
-  --accent-soft: #24354d;
-  --avatar-bg: #333;
-  --badge-bg: #2a3a4a;
-  --checkbox-bg: #333;
-  --timeline-user-bg: #2a2a3a;
-  --timeline-user-text: #b0b0c0;
+  --accent: #98b7dc;
+  --accent-hover: #bfd2e9;
+  --accent-soft: #263f60;
+  --avatar-bg: #2b4362;
+  --badge-bg: #263f60;
+  --checkbox-bg: #2b4362;
+  --timeline-user-bg: #1d3351;
+  --timeline-user-text: #b7c8de;
   --shadow-pill: 0 1px 2px rgb(0 0 0 / 40%);
   --shadow-composer: 0 6px 30px rgb(0 0 0 / 30%);
   --shadow-composer: 0 1px 3px rgb(0 0 0 / 25%);
@@ -40,14 +39,14 @@
 /* System dark: no data-theme or data-theme="system" — follow OS preference */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']):not([data-theme='dark']) {
-    --accent: #3f99ff;
-    --accent-hover: #5ba5ff;
-    --accent-soft: #24354d;
-    --avatar-bg: #333;
-    --badge-bg: #2a3a4a;
-    --checkbox-bg: #333;
-    --timeline-user-bg: #2a2a3a;
-    --timeline-user-text: #b0b0c0;
+    --accent: #98b7dc;
+    --accent-hover: #bfd2e9;
+    --accent-soft: #263f60;
+    --avatar-bg: #2b4362;
+    --badge-bg: #263f60;
+    --checkbox-bg: #2b4362;
+    --timeline-user-bg: #1d3351;
+    --timeline-user-text: #b7c8de;
     --shadow-pill: 0 1px 2px rgb(0 0 0 / 40%);
     --shadow-composer: 0 6px 30px rgb(0 0 0 / 30%);
     --shadow-composer: 0 1px 3px rgb(0 0 0 / 25%);
@@ -114,15 +113,26 @@ body.vib .home {
 .sidebar-logo {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 11px;
   padding: 0 8px;
   margin-bottom: 20px;
 }
 
 .logo-lockup {
   display: block;
-  height: 28px;
-  width: auto;
+  flex-shrink: 0;
+  height: 36px;
+  width: 36px;
+  border-radius: 9px;
+}
+
+.logo-wordmark {
+  color: var(--text-primary);
+  font-family: 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
+  font-size: 23px;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1;
 }
 
 .sidebar-nav {

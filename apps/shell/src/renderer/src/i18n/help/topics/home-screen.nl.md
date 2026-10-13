@@ -1,6 +1,6 @@
 # Het startscherm: waar je bestanden staan
 
-Start is de beginpagina van GenOffice: een navigatiebalk links, bestandslijsten en snelmakenkaarten rechts.
+Start is de beginpagina van Eoffice: een navigatiebalk links, bestandslijsten en snelmakenkaarten rechts.
 
 ![Het startscherm](img/home-screen.png)
 
@@ -37,7 +37,7 @@ Vink het vakje bij een rij aan, of ⌘/ctrl-klik, om een selectie op te bouwen; 
 Het zoekvak bovenaan filtert op twee dingen tegelijk:
 
 - **Bestandsnamen**: snel filteren op naam.
-- **Bestandsinhoud**: GenOffice indexeert je bestanden op de achtergrond (de tekst in docx/xlsx/pptx/pdf/md/html), dus zoeken naar hoofdtekst vindt ook bestanden. Het bereik en de schakelaars staan in de zoekinstellingen.
+- **Bestandsinhoud**: Eoffice indexeert je bestanden op de achtergrond (de tekst in docx/xlsx/pptx/pdf/md/html), dus zoeken naar hoofdtekst vindt ook bestanden. Het bereik en de schakelaars staan in de zoekinstellingen.
 
 ## Snelstartkaarten
 
@@ -67,6 +67,6 @@ Wat elke kaart doet:
 
 ## Cloudprojecten (Genspark Projects)
 
-- Voor het eerste gebruik moet je je aanmelden bij je Genspark-account (flow met apparaatcode: GenOffice toont een code en jij rondt het aanmelden in de browser af).
+- Voor het eerste gebruik moet je je aanmelden bij je Genspark-account (flow met apparaatcode: Eoffice toont een code en jij rondt het aanmelden in de browser af).
 - De projectlijst synchroniseert met het web; Openen in browser springt daarheen om verder te gaan.
 - Niet aanmelden heeft geen invloed op een enkele lokale functie.

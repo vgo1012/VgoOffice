@@ -1,14 +1,14 @@
 # Ligar um agente de programação
 
-O GenOffice fala o Model Context Protocol, por isso um agente de programação consegue ler, escrever e renderizar os seus documentos através dos mesmos motores que a aplicação usa. O agente não está a adivinhar um formato de ficheiro: recebe os esquemas tipados das operações a partir das mesmas definições contra as quais o executor valida.
+O Eoffice fala o Model Context Protocol, por isso um agente de programação consegue ler, escrever e renderizar os seus documentos através dos mesmos motores que a aplicação usa. O agente não está a adivinhar um formato de ficheiro: recebe os esquemas tipados das operações a partir das mesmas definições contra as quais o executor valida.
 
 ## Registá-lo a partir da aplicação
 
 É em **Configurações ▸ Integrações** que isto se faz. O painel tem duas metades, e pode usar uma ou as duas.
 
-**A skill.** Uma linha por cada agente de programação encontrado nesta máquina — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, cada uma com **Instalar**, **Atualizar** e **Desinstalar**, a que se juntam **Instalar em outra pasta…**, **Baixar skill (zip)** e **Copiar caminho**. Se o seu assistente não estiver na lista, indique ao GenOffice uma pasta de onde ele lê o `SKILL.md`, ou grave o zip e deixe o assistente instalá-lo. A skill e o MCP podem andar lado a lado: o assistente escolhe um dos dois, e fazem exatamente as mesmas coisas.
+**A skill.** Uma linha por cada agente de programação encontrado nesta máquina — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, cada uma com **Instalar**, **Atualizar** e **Desinstalar**, a que se juntam **Instalar em outra pasta…**, **Baixar skill (zip)** e **Copiar caminho**. Se o seu assistente não estiver na lista, indique ao Eoffice uma pasta de onde ele lê o `SKILL.md`, ou grave o zip e deixe o assistente instalá-lo. A skill e o MCP podem andar lado a lado: o assistente escolhe um dos dois, e fazem exatamente as mesmas coisas.
 
-**MCP.** São oferecidas duas vias: **Iniciado pelo assistente (recomendado)**, em que acrescenta a configuração apresentada ao seu cliente e o assistente arranca o servidor sozinho, e o **Servidor HTTP local**, que a aplicação executa por si. De qualquer forma, o assistente acaba a falar com o GenOffice e nunca escreve um comando.
+**MCP.** São oferecidas duas vias: **Iniciado pelo assistente (recomendado)**, em que acrescenta a configuração apresentada ao seu cliente e o assistente arranca o servidor sozinho, e o **Servidor HTTP local**, que a aplicação executa por si. De qualquer forma, o assistente acaba a falar com o Eoffice e nunca escreve um comando.
 
 ## Registá-lo a partir da linha de comando
 
@@ -70,7 +70,7 @@ Um agente que não conhece o vocabulário das operações vai adivinhar. A skill
 
 ## O que consegue alcançar na aplicação
 
-O servidor não se limita aos ficheiros em disco. Enquanto o GenOffice estiver a correr, o agente também pode trabalhar através da janela:
+O servidor não se limita aos ficheiros em disco. Enquanto o Eoffice estiver a correr, o agente também pode trabalhar através da janela:
 
 - **`open_in_genoffice`** abre um ficheiro num separador e dá-lhe o foco.
 - **`open_documents`** lista todos os documentos que tem abertos — id, tipo, caminho e se têm alterações por guardar —, e depois lê o conteúdo atual de um deles ou fecha-o, guardando primeiro, a não ser que lhe peça para descartar.

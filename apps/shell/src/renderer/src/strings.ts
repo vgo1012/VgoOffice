@@ -219,8 +219,8 @@ export const strings = {
     aiFontSizeCustom: '自定义',
     setAiSpellcheck: 'AI 对话拼写检查',
     setDefaultApp: '设为 Office 文档默认程序',
-    setDefaultAppDesc: '双击 .docx、.xlsx、.pptx 文件时用 GenOffice 打开。',
-    setDefaultAppIs: 'GenOffice 已是默认程序。',
+    setDefaultAppDesc: '双击 .docx、.xlsx、.pptx 文件时用 Eoffice 打开。',
+    setDefaultAppIs: 'Eoffice 已是默认程序。',
     setDefaultAppOther: '当前默认程序：{app}',
     setDefaultAppSet: '设为默认',
     setDefaultAppOpenSettings: '打开系统设置',
@@ -257,7 +257,7 @@ export const strings = {
     setMcpLogEmpty: '暂无日志',
     setSecAbout: '关于',
     setSecIntegrations: '集成',
-    intgHeroTitle: '在 AI 助手里使用 GenOffice',
+    intgHeroTitle: '在 AI 助手里使用 Eoffice',
     intgHeroDesc:
       '接好后，Claude Code、Codex、Cursor、Claude Desktop 等助手就能替你创建、转换、读取和编辑 Word、Excel、PowerPoint、PDF 和 Markdown 文件。全部在本机完成，不会上传任何内容。',
     intgHeroStep1: '选接法：助手能运行终端命令就用 CLI，不能就用 MCP',
@@ -265,14 +265,14 @@ export const strings = {
     intgHeroStep3: '新开一个对话，直接提需求',
     intgStep1Title: '把 skill 安装到你的助手',
     intgStep1Desc: '这里只列出本机检测到的助手。装到你实际在用的那一个即可，不必全装。',
-    intgStep1Update: 'GenOffice 升级带来新版 skill 时，对应助手旁会出现「更新」按钮。',
+    intgStep1Update: 'Eoffice 升级带来新版 skill 时，对应助手旁会出现「更新」按钮。',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'skill 未安装',
     intgStateInstalled: '已安装 skill {v} · 下次对话即可使用',
     intgOtherToggle: '没有列出我的助手',
     intgOtherDesc: '以下三种方式任选一种即可。装的是同一份 skill，不需要重复操作。',
     intgOtherFolderTitle: '任何能读取 SKILL.md 目录的助手',
-    intgOtherFolderDesc: '选择它的 skills 目录，GenOffice 把文件写进去。',
+    intgOtherFolderDesc: '选择它的 skills 目录，Eoffice 把文件写进去。',
     intgOtherZipTitle: '把文件交给助手',
     intgOtherZipDesc: '把 skill 保存为 zip，然后让助手自己安装。',
     intgOtherNpxTitle: '用 skills 命令安装（需要 Node.js）',
@@ -283,22 +283,22 @@ export const strings = {
     intgStep2DescBefore: '装好后，在助手里新开一个对话，用平常说话的方式提需求，例如：',
     intgExample1: '把 ~/Downloads/report.md 转成 Word 文档',
     intgExample2: '做一份 6 页的幻灯片，介绍我们第三季度的业绩',
-    intgExample3: '把 budget.xlsx 转成 PDF，并在 GenOffice 里打开',
+    intgExample3: '把 budget.xlsx 转成 PDF，并在 Eoffice 里打开',
     intgStep2Note: '助手会自己调用 genoffice 命令行，你不需要输入任何命令。',
     intgCliPartTitle: 'CLI · 命令行 + skill',
     intgCliPartDesc:
       '适合能运行终端命令的助手（Claude Code、Codex、Cursor 等）。安装 skill 后，助手会自己调用 genoffice 命令行创建、转换、读取和编辑文件，你不需要输入任何命令。',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP 是 AI 助手调用外部工具的通用协议。助手不能运行命令（如 Claude Desktop），或你想让它直接操作 GenOffice 窗口时用这条路。下面两种接法任选一种。',
+      'MCP 是 AI 助手调用外部工具的通用协议。助手不能运行命令（如 Claude Desktop），或你想让它直接操作 Eoffice 窗口时用这条路。下面两种接法任选一种。',
     intgMcpStdioTitle: '由助手启动（推荐）',
     intgMcpStdioDesc:
-      '助手自己拉起 genoffice mcp，不需要在这里开任何开关，GenOffice 也不用开着。功能与 CLI 完全相同。',
+      '助手自己拉起 genoffice mcp，不需要在这里开任何开关，Eoffice 也不用开着。功能与 CLI 完全相同。',
     intgMcpHttpTitle: '本地 HTTP 服务',
     intgMcpHttpDesc:
-      '在 GenOffice 内运行，助手通过网址连接，可以看着它在 Word 编辑器里逐步生成。需要 GenOffice 保持打开；目前只支持 Word。',
+      '在 Eoffice 内运行，助手通过网址连接，可以看着它在 Word 编辑器里逐步生成。需要 Eoffice 保持打开；目前只支持 Word。',
     intgMcpHttpAdvanced: '高级：其他地址与日志',
-    intgMcpTryNote: '助手会通过 MCP 调用 GenOffice，你不需要输入任何命令。',
+    intgMcpTryNote: '助手会通过 MCP 调用 Eoffice，你不需要输入任何命令。',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: '在终端运行一次：',
     intgMcpOtherTitle: 'Cursor、Claude Desktop 或其他支持 MCP 的助手',
@@ -332,9 +332,9 @@ export const strings = {
     intgSaveZipTitle: '保存 skill',
     intgSavedTo: '已保存到 {path}',
     intgCopied: '已复制',
-    intgCliEphemeral: '请先把 GenOffice 拖到「应用程序」，再使用命令行。',
+    intgCliEphemeral: '请先把 Eoffice 拖到「应用程序」，再使用命令行。',
     intgCopyPath: '复制路径',
-    intgCliNeedsUpdate: '此 skill 需要命令行 {v} 或更新版本，请更新 GenOffice。',
+    intgCliNeedsUpdate: '此 skill 需要命令行 {v} 或更新版本，请更新 Eoffice。',
     intgLoading: '正在检测…',
     intgUpdateDue: 'skill 有新版本可更新',
     setSecAiModel: 'AI 模型',
@@ -388,8 +388,8 @@ export const strings = {
       '服务商选择 Genspark 时，网页搜索、生图与媒体解析经 Genspark 云端并消耗积分；关闭后搜索改用免费来源，Genspark 生图工具不可用。',
     setGithub: '开源项目',
     starOnGitHub: '去 GitHub 点 Star',
-    starPromptTitle: '喜欢 GenOffice 吗？',
-    starPromptTitleN: '你已经用 GenOffice 打开了 {n} 个文档',
+    starPromptTitle: '喜欢 Eoffice 吗？',
+    starPromptTitleN: '你已经用 Eoffice 打开了 {n} 个文档',
     starPromptBody: 'GenOffice 是免费开源软件。到 GitHub 给我们一个 Star，是对团队最好的支持。',
     starPromptGo: '去点 Star',
     starPromptDone: '已经点过了',
@@ -410,7 +410,7 @@ export const strings = {
     appMenu: '菜单',
     newTab: '新建标签页',
     // First-run onboarding
-    onbTitle1: '欢迎使用 GenOffice',
+    onbTitle1: '欢迎使用 Eoffice',
     onbSubtitle1: '第一个开源的 AI 原生 Office 套件',
     onbBody1: '创建文档、制作表格、生成演示、审阅 PDF。AI 深度融入每个环节。',
     onbTitle2: '这只是一个开始',
@@ -650,8 +650,8 @@ export const strings = {
     aiFontSizeCustom: 'Custom',
     setAiSpellcheck: 'Spell check in AI chat',
     setDefaultApp: 'Default app for Office documents',
-    setDefaultAppDesc: 'Open .docx, .xlsx and .pptx files in GenOffice when double-clicked.',
-    setDefaultAppIs: 'GenOffice is already the default.',
+    setDefaultAppDesc: 'Open .docx, .xlsx and .pptx files in Eoffice when double-clicked.',
+    setDefaultAppIs: 'Eoffice is already the default.',
     setDefaultAppOther: 'Current default: {app}',
     setDefaultAppSet: 'Make default',
     setDefaultAppOpenSettings: 'Open system settings',
@@ -690,7 +690,7 @@ export const strings = {
     setMcpLogEmpty: 'No log entries yet',
     setSecAbout: 'About',
     setSecIntegrations: 'Integrations',
-    intgHeroTitle: 'Use GenOffice from your AI assistant',
+    intgHeroTitle: 'Use Eoffice from your AI assistant',
     intgHeroDesc:
       'Once connected, Claude Code, Codex, Cursor, Claude Desktop and similar assistants can create, convert, read and edit Word, Excel, PowerPoint, PDF and Markdown files for you. Everything runs on this computer; nothing is uploaded.',
     intgHeroStep1:
@@ -701,7 +701,7 @@ export const strings = {
     intgStep1Desc:
       'Only assistants found on this computer are listed. Install into the one you actually use; you do not need all of them.',
     intgStep1Update:
-      'When a GenOffice update ships a newer skill, an Update button appears next to that assistant.',
+      'When a Eoffice update ships a newer skill, an Update button appears next to that assistant.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill not installed',
     intgStateInstalled: 'Skill {v} installed · ready in your next chat',
@@ -709,7 +709,7 @@ export const strings = {
     intgOtherDesc:
       'Pick any one of these three ways. They all install the same skill, so there is no need to do more than one.',
     intgOtherFolderTitle: 'Any assistant that reads SKILL.md folders',
-    intgOtherFolderDesc: 'Pick its skills folder and GenOffice writes the file there.',
+    intgOtherFolderDesc: 'Pick its skills folder and Eoffice writes the file there.',
     intgOtherZipTitle: 'Hand the file to the assistant',
     intgOtherZipDesc: 'Save the skill as a zip, then ask the assistant to install it.',
     intgOtherNpxTitle: 'With the skills command (needs Node.js)',
@@ -721,7 +721,7 @@ export const strings = {
       'Once installed, open a new chat in your assistant and ask in plain words, for example:',
     intgExample1: 'Turn ~/Downloads/report.md into a Word document',
     intgExample2: 'Make a 6-slide deck about our Q3 results',
-    intgExample3: 'Convert budget.xlsx to PDF and open it in GenOffice',
+    intgExample3: 'Convert budget.xlsx to PDF and open it in Eoffice',
     intgStep2Note:
       'The assistant runs the genoffice command line itself; you never have to type it.',
     intgCliPartTitle: 'CLI · command line + skill',
@@ -729,15 +729,15 @@ export const strings = {
       'For assistants that can run terminal commands (Claude Code, Codex, Cursor and others). Once the skill is installed, the assistant calls the genoffice command line itself to create, convert, read and edit files; you never type a command.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP is the common protocol AI assistants use to call external tools. Use it when your assistant cannot run commands (Claude Desktop, for example) or when you want it to drive the GenOffice window directly. Pick either of the two ways below.',
+      'MCP is the common protocol AI assistants use to call external tools. Use it when your assistant cannot run commands (Claude Desktop, for example) or when you want it to drive the Eoffice window directly. Pick either of the two ways below.',
     intgMcpStdioTitle: 'Started by the assistant (recommended)',
     intgMcpStdioDesc:
-      'The assistant launches genoffice mcp itself: nothing to switch on here, and GenOffice does not need to be open. Same features as the CLI.',
+      'The assistant launches genoffice mcp itself: nothing to switch on here, and Eoffice does not need to be open. Same features as the CLI.',
     intgMcpHttpTitle: 'Local HTTP server',
     intgMcpHttpDesc:
-      'Runs inside GenOffice; the assistant connects to a URL and you can watch it build the document step by step in the Word editor. GenOffice must stay open; Word documents only for now.',
+      'Runs inside Eoffice; the assistant connects to a URL and you can watch it build the document step by step in the Word editor. Eoffice must stay open; Word documents only for now.',
     intgMcpHttpAdvanced: 'Advanced: other endpoints and log',
-    intgMcpTryNote: 'The assistant calls GenOffice through MCP; you never type a command.',
+    intgMcpTryNote: 'The assistant calls Eoffice through MCP; you never type a command.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Run this once in a terminal:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop or any other MCP-capable assistant',
@@ -772,9 +772,9 @@ export const strings = {
     intgSaveZipTitle: 'Save skill',
     intgSavedTo: 'Saved to {path}',
     intgCopied: 'Copied',
-    intgCliEphemeral: 'Drag GenOffice into Applications first, then use the command line.',
+    intgCliEphemeral: 'Drag Eoffice into Applications first, then use the command line.',
     intgCopyPath: 'Copy path',
-    intgCliNeedsUpdate: 'This skill needs command line {v} or newer; update GenOffice.',
+    intgCliNeedsUpdate: 'This skill needs command line {v} or newer; update Eoffice.',
     intgLoading: 'Checking…',
     intgUpdateDue: 'Skill update available',
     setSecAiModel: 'AI Model',
@@ -830,8 +830,8 @@ export const strings = {
       'Web search, image generation and media analysis run through Genspark and use credits while their provider is set to Genspark; when off, search uses free sources and the Genspark image tools are unavailable.',
     setGithub: 'Open Source',
     starOnGitHub: 'Star on GitHub',
-    starPromptTitle: 'Enjoying GenOffice?',
-    starPromptTitleN: "You've opened {n} documents with GenOffice",
+    starPromptTitle: 'Enjoying Eoffice?',
+    starPromptTitleN: "You've opened {n} documents with Eoffice",
     starPromptBody:
       'GenOffice is free and open source. A star on GitHub is the best way to support the team.',
     starPromptGo: 'Star on GitHub',
@@ -851,7 +851,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'New tab',
     // First-run onboarding
-    onbTitle1: 'Welcome to GenOffice',
+    onbTitle1: 'Welcome to Eoffice',
     onbSubtitle1: 'The first open-source, AI-native office suite',
     onbBody1:
       'Create docs, build sheets, make slides, and review PDFs. AI is built into every step.',
@@ -1093,8 +1093,8 @@ export const strings = {
     aiFontSizeCustom: 'Tùy chỉnh',
     setAiSpellcheck: 'Kiểm tra chính tả trong trò chuyện AI',
     setDefaultApp: 'Ứng dụng mặc định cho tài liệu Office',
-    setDefaultAppDesc: 'Mở các tệp .docx, .xlsx và .pptx bằng GenOffice khi bấm đúp.',
-    setDefaultAppIs: 'GenOffice đã là ứng dụng mặc định.',
+    setDefaultAppDesc: 'Mở các tệp .docx, .xlsx và .pptx bằng Eoffice khi bấm đúp.',
+    setDefaultAppIs: 'Eoffice đã là ứng dụng mặc định.',
     setDefaultAppOther: 'Mặc định hiện tại: {app}',
     setDefaultAppSet: 'Đặt làm mặc định',
     setDefaultAppOpenSettings: 'Mở cài đặt hệ thống',
@@ -1133,7 +1133,7 @@ export const strings = {
     setMcpLogEmpty: 'Chưa có mục nhật ký nào',
     setSecAbout: 'Giới thiệu',
     setSecIntegrations: 'Tích hợp',
-    intgHeroTitle: 'Sử dụng GenOffice từ trợ lý AI của bạn',
+    intgHeroTitle: 'Sử dụng Eoffice từ trợ lý AI của bạn',
     intgHeroDesc:
       'Sau khi kết nối, Claude Code, Codex, Cursor, Claude Desktop và các trợ lý tương tự có thể tạo, chuyển đổi, đọc và chỉnh sửa các tệp Word, Excel, PowerPoint, PDF và Markdown cho bạn. Mọi thứ đều chạy trên máy tính này; không có gì được tải lên.',
     intgHeroStep1:
@@ -1144,7 +1144,7 @@ export const strings = {
     intgStep1Desc:
       'Chỉ các trợ lý được tìm thấy trên máy tính này mới được liệt kê. Hãy cài đặt vào trợ lý bạn thực sự sử dụng; bạn không cần phải cài đặt tất cả.',
     intgStep1Update:
-      'Khi bản cập nhật GenOffice cung cấp kỹ năng mới hơn, nút Cập nhật sẽ xuất hiện bên cạnh trợ lý đó.',
+      'Khi bản cập nhật Eoffice cung cấp kỹ năng mới hơn, nút Cập nhật sẽ xuất hiện bên cạnh trợ lý đó.',
     intgSkillVersion: 'kỹ năng {v}',
     intgStateMissing: 'Chưa cài đặt kỹ năng',
     intgStateInstalled: 'Đã cài đặt kỹ năng {v} · sẵn sàng cho cuộc trò chuyện tiếp theo của bạn',
@@ -1152,7 +1152,7 @@ export const strings = {
     intgOtherDesc:
       'Chọn bất kỳ cách nào trong ba cách này. Tất cả đều cài đặt cùng một kỹ năng, vì vậy không cần làm nhiều hơn một cách.',
     intgOtherFolderTitle: 'Bất kỳ trợ lý nào đọc thư mục SKILL.md',
-    intgOtherFolderDesc: 'Chọn thư mục kỹ năng của trợ lý và GenOffice sẽ ghi tệp vào đó.',
+    intgOtherFolderDesc: 'Chọn thư mục kỹ năng của trợ lý và Eoffice sẽ ghi tệp vào đó.',
     intgOtherZipTitle: 'Giao tệp cho trợ lý',
     intgOtherZipDesc: 'Lưu kỹ năng dưới dạng zip, sau đó yêu cầu trợ lý cài đặt.',
     intgOtherNpxTitle: 'Bằng lệnh skills (yêu cầu Node.js)',
@@ -1165,22 +1165,22 @@ export const strings = {
       'Sau khi cài đặt, hãy mở một cuộc trò chuyện mới trong trợ lý của bạn và hỏi bằng ngôn ngữ tự nhiên, ví dụ:',
     intgExample1: 'Chuyển đổi ~/Downloads/report.md thành tài liệu Word',
     intgExample2: 'Tạo bài thuyết trình 6 trang trình bày về kết quả quý 3 của chúng tôi',
-    intgExample3: 'Chuyển đổi budget.xlsx sang PDF và mở trong GenOffice',
+    intgExample3: 'Chuyển đổi budget.xlsx sang PDF và mở trong Eoffice',
     intgStep2Note: 'Trợ lý tự chạy dòng lệnh genoffice; bạn không bao giờ phải nhập lệnh.',
     intgCliPartTitle: 'CLI · dòng lệnh + kỹ năng',
     intgCliPartDesc:
       'Dành cho các trợ lý có thể chạy lệnh terminal (Claude Code, Codex, Cursor và các trợ lý khác). Khi kỹ năng đã được cài đặt, trợ lý sẽ tự gọi dòng lệnh genoffice để tạo, chuyển đổi, đọc và chỉnh sửa tệp; bạn không cần nhập lệnh.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP là giao thức tiêu chuẩn mà các trợ lý AI dùng để gọi công cụ bên ngoài. Sử dụng khi trợ lý của bạn không thể chạy lệnh (ví dụ Claude Desktop) hoặc khi bạn muốn trợ lý điều khiển trực tiếp cửa sổ GenOffice. Chọn một trong hai cách bên dưới.',
+      'MCP là giao thức tiêu chuẩn mà các trợ lý AI dùng để gọi công cụ bên ngoài. Sử dụng khi trợ lý của bạn không thể chạy lệnh (ví dụ Claude Desktop) hoặc khi bạn muốn trợ lý điều khiển trực tiếp cửa sổ Eoffice. Chọn một trong hai cách bên dưới.',
     intgMcpStdioTitle: 'Được khởi động bởi trợ lý (khuyến nghị)',
     intgMcpStdioDesc:
-      'Trợ lý sẽ tự khởi chạy genoffice mcp: không cần bật gì ở đây và GenOffice không cần phải mở. Có đầy đủ tính năng tương tự CLI.',
+      'Trợ lý sẽ tự khởi chạy genoffice mcp: không cần bật gì ở đây và Eoffice không cần phải mở. Có đầy đủ tính năng tương tự CLI.',
     intgMcpHttpTitle: 'Máy chủ HTTP cục bộ',
     intgMcpHttpDesc:
-      'Chạy bên trong GenOffice; trợ lý kết nối với một URL và bạn có thể theo dõi nó tạo tài liệu từng bước trong trình chỉnh sửa Word. GenOffice phải luôn mở; hiện tại chỉ hỗ trợ tài liệu Word.',
+      'Chạy bên trong Eoffice; trợ lý kết nối với một URL và bạn có thể theo dõi nó tạo tài liệu từng bước trong trình chỉnh sửa Word. Eoffice phải luôn mở; hiện tại chỉ hỗ trợ tài liệu Word.',
     intgMcpHttpAdvanced: 'Nâng cao: các điểm cuối khác và nhật ký',
-    intgMcpTryNote: 'Trợ lý gọi GenOffice thông qua MCP; bạn không bao giờ phải nhập lệnh.',
+    intgMcpTryNote: 'Trợ lý gọi Eoffice thông qua MCP; bạn không bao giờ phải nhập lệnh.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Chạy lệnh này một lần trong terminal:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop hoặc bất kỳ trợ lý hỗ trợ MCP nào khác',
@@ -1215,11 +1215,10 @@ export const strings = {
     intgSaveZipTitle: 'Lưu kỹ năng',
     intgSavedTo: 'Đã lưu vào {path}',
     intgCopied: 'Đã sao chép',
-    intgCliEphemeral:
-      'Trước tiên hãy kéo GenOffice vào Applications, sau đó mới sử dụng dòng lệnh.',
+    intgCliEphemeral: 'Trước tiên hãy kéo Eoffice vào Applications, sau đó mới sử dụng dòng lệnh.',
     intgCopyPath: 'Sao chép đường dẫn',
     intgCliNeedsUpdate:
-      'Kỹ năng này yêu cầu dòng lệnh {v} hoặc mới hơn; vui lòng cập nhật GenOffice.',
+      'Kỹ năng này yêu cầu dòng lệnh {v} hoặc mới hơn; vui lòng cập nhật Eoffice.',
     intgLoading: 'Đang kiểm tra…',
     intgUpdateDue: 'Có bản cập nhật kỹ năng',
     setSecAiModel: 'Mô hình AI',
@@ -1276,8 +1275,8 @@ export const strings = {
       'Tìm kiếm web, tạo hình ảnh và phân tích phương tiện được xử lý qua Genspark và tiêu tốn credit khi nhà cung cấp được đặt là Genspark; khi tắt, tìm kiếm sẽ dùng các nguồn miễn phí và công cụ hình ảnh Genspark sẽ không khả dụng.',
     setGithub: 'Mã nguồn mở',
     starOnGitHub: 'Gắn sao trên GitHub',
-    starPromptTitle: 'Bạn thích GenOffice chứ?',
-    starPromptTitleN: 'Bạn đã mở {n} tài liệu với GenOffice',
+    starPromptTitle: 'Bạn thích Eoffice chứ?',
+    starPromptTitleN: 'Bạn đã mở {n} tài liệu với Eoffice',
     starPromptBody:
       'GenOffice là phần mềm nguồn mở và miễn phí. Tặng một sao trên GitHub là cách tuyệt vời nhất để ủng hộ đội ngũ phát triển.',
     starPromptGo: 'Gắn sao trên GitHub',
@@ -1297,7 +1296,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'Tab mới',
     // First-run onboarding
-    onbTitle1: 'Chào mừng đến với GenOffice',
+    onbTitle1: 'Chào mừng đến với Eoffice',
     onbSubtitle1: 'Bộ ứng dụng văn phòng AI nguồn mở đầu tiên',
     onbBody1:
       'Tạo tài liệu, xây dựng bảng tính, tạo bản trình bày và xem lại PDF. AI được tích hợp trong từng bước.',
@@ -1550,9 +1549,8 @@ export const strings = {
     aiFontSizeCustom: 'カスタム',
     setAiSpellcheck: 'AI チャットのスペルチェック',
     setDefaultApp: 'Office 文書の既定のアプリ',
-    setDefaultAppDesc:
-      '.docx、.xlsx、.pptx ファイルをダブルクリックしたとき GenOffice で開きます。',
-    setDefaultAppIs: 'GenOffice はすでに既定のアプリです。',
+    setDefaultAppDesc: '.docx、.xlsx、.pptx ファイルをダブルクリックしたとき Eoffice で開きます。',
+    setDefaultAppIs: 'Eoffice はすでに既定のアプリです。',
     setDefaultAppOther: '現在の既定：{app}',
     setDefaultAppSet: '既定にする',
     setDefaultAppOpenSettings: 'システム設定を開く',
@@ -1591,7 +1589,7 @@ export const strings = {
     setMcpLogEmpty: 'ログはまだありません',
     setSecAbout: '情報',
     setSecIntegrations: '連携',
-    intgHeroTitle: 'AI アシスタントから GenOffice を使う',
+    intgHeroTitle: 'AI アシスタントから Eoffice を使う',
     intgHeroDesc:
       '接続すると、Claude Code、Codex、Cursor、Claude Desktop などのアシスタントが Word、Excel、PowerPoint、PDF、Markdown ファイルの作成・変換・読み取り・編集を代行します。すべてこの PC 上で完結し、何もアップロードされません。',
     intgHeroStep1:
@@ -1602,7 +1600,7 @@ export const strings = {
     intgStep1Desc:
       'このパソコンで見つかったアシスタントだけを表示しています。実際に使っているものにだけインストールすれば十分で、すべてに入れる必要はありません。',
     intgStep1Update:
-      'GenOffice の更新で新しいスキルが届くと、そのアシスタントの横に「更新」ボタンが表示されます。',
+      'Eoffice の更新で新しいスキルが届くと、そのアシスタントの横に「更新」ボタンが表示されます。',
     intgSkillVersion: 'スキル {v}',
     intgStateMissing: 'スキル未インストール',
     intgStateInstalled: 'スキル {v} をインストール済み · 次のチャットから使えます',
@@ -1610,7 +1608,7 @@ export const strings = {
     intgOtherDesc:
       '次の 3 つの方法からどれか 1 つを選んでください。どれも同じスキルをインストールするので、複数行う必要はありません。',
     intgOtherFolderTitle: 'SKILL.md フォルダーを読むアシスタント全般',
-    intgOtherFolderDesc: 'その skills フォルダーを選ぶと、GenOffice がファイルを書き込みます。',
+    intgOtherFolderDesc: 'その skills フォルダーを選ぶと、Eoffice がファイルを書き込みます。',
     intgOtherZipTitle: 'ファイルをアシスタントに渡す',
     intgOtherZipDesc: 'スキルを zip で保存し、アシスタントにインストールを頼みます。',
     intgOtherNpxTitle: 'skills コマンドで入れる（Node.js が必要）',
@@ -1622,7 +1620,7 @@ export const strings = {
       'インストール後、アシスタントで新しいチャットを開き、普通の言葉で頼んでください。例：',
     intgExample1: '~/Downloads/report.md を Word 文書にして',
     intgExample2: '第 3 四半期の業績について 6 枚のスライドを作って',
-    intgExample3: 'budget.xlsx を PDF に変換して GenOffice で開いて',
+    intgExample3: 'budget.xlsx を PDF に変換して Eoffice で開いて',
     intgStep2Note:
       'genoffice コマンドラインはアシスタントが自分で実行します。あなたが入力する必要はありません。',
     intgCliPartTitle: 'CLI · コマンドライン + skill',
@@ -1630,16 +1628,16 @@ export const strings = {
       'ターミナルコマンドを実行できるアシスタント（Claude Code、Codex、Cursor など）向け。skill をインストールすると、アシスタントが自分で genoffice コマンドラインを呼び出してファイルを作成・変換・読み取り・編集します。コマンドを入力する必要はありません。',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP は AI アシスタントが外部ツールを呼び出すための共通プロトコルです。アシスタントがコマンドを実行できない場合（Claude Desktop など）や、GenOffice のウィンドウを直接操作させたい場合に使います。下の 2 つの方法からどちらか 1 つを選んでください。',
+      'MCP は AI アシスタントが外部ツールを呼び出すための共通プロトコルです。アシスタントがコマンドを実行できない場合（Claude Desktop など）や、Eoffice のウィンドウを直接操作させたい場合に使います。下の 2 つの方法からどちらか 1 つを選んでください。',
     intgMcpStdioTitle: 'アシスタントが起動する（推奨）',
     intgMcpStdioDesc:
-      'アシスタントが genoffice mcp を自分で起動します。ここで何かをオンにする必要はなく、GenOffice を開いておく必要もありません。機能は CLI と同じです。',
+      'アシスタントが genoffice mcp を自分で起動します。ここで何かをオンにする必要はなく、Eoffice を開いておく必要もありません。機能は CLI と同じです。',
     intgMcpHttpTitle: 'ローカル HTTP サーバー',
     intgMcpHttpDesc:
-      'GenOffice 内で動作し、アシスタントは URL で接続します。Word エディター上で文書が段階的に生成される様子を見られます。GenOffice を開いたままにする必要があり、現時点では Word のみ対応です。',
+      'Eoffice 内で動作し、アシスタントは URL で接続します。Word エディター上で文書が段階的に生成される様子を見られます。Eoffice を開いたままにする必要があり、現時点では Word のみ対応です。',
     intgMcpHttpAdvanced: '詳細：その他のエンドポイントとログ',
     intgMcpTryNote:
-      'アシスタントが MCP 経由で GenOffice を呼び出します。コマンドを入力する必要はありません。',
+      'アシスタントが MCP 経由で Eoffice を呼び出します。コマンドを入力する必要はありません。',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'ターミナルで一度だけ実行します：',
     intgMcpOtherTitle: 'Cursor、Claude Desktop、その他 MCP 対応のアシスタント',
@@ -1675,10 +1673,10 @@ export const strings = {
     intgSavedTo: '{path} に保存しました',
     intgCopied: 'コピーしました',
     intgCliEphemeral:
-      '先に GenOffice を「アプリケーション」に移してから、コマンドラインを使ってください。',
+      '先に Eoffice を「アプリケーション」に移してから、コマンドラインを使ってください。',
     intgCopyPath: 'パスをコピー',
     intgCliNeedsUpdate:
-      'このスキルにはコマンドライン {v} 以降が必要です。GenOffice を更新してください。',
+      'このスキルにはコマンドライン {v} 以降が必要です。Eoffice を更新してください。',
     intgLoading: '確認中…',
     intgUpdateDue: 'スキルの更新があります',
     setSecAiModel: 'AIモデル',
@@ -1733,8 +1731,8 @@ export const strings = {
       'プロバイダーが Genspark のとき、Web 検索・画像生成・メディア解析は Genspark 経由でクレジットを消費します。オフにすると検索は無料ソースを使い、Genspark の画像ツールは利用できません。',
     setGithub: 'オープンソース',
     starOnGitHub: 'GitHub でスターを付ける',
-    starPromptTitle: 'GenOffice はいかがですか？',
-    starPromptTitleN: 'GenOffice で {n} 件のドキュメントを開きました',
+    starPromptTitle: 'Eoffice はいかがですか？',
+    starPromptTitleN: 'Eoffice で {n} 件のドキュメントを開きました',
     starPromptBody:
       'GenOffice は無料のオープンソースソフトウェアです。GitHub のスターがチームへの何よりの応援になります。',
     starPromptGo: 'スターを付ける',
@@ -1756,7 +1754,7 @@ export const strings = {
     appMenu: 'メニュー',
     newTab: '新しいタブ',
     // First-run onboarding
-    onbTitle1: 'GenOffice へようこそ',
+    onbTitle1: 'Eoffice へようこそ',
     onbSubtitle1: '初のオープンソース AI ネイティブ Office スイート',
     onbBody1:
       '文書の作成、表計算、プレゼン作成、PDF のレビュー。あらゆるステップに AI が組み込まれています。',
@@ -2004,8 +2002,8 @@ export const strings = {
     aiFontSizeCustom: '사용자 지정',
     setAiSpellcheck: 'AI 채팅 맞춤법 검사',
     setDefaultApp: 'Office 문서 기본 앱',
-    setDefaultAppDesc: '.docx, .xlsx, .pptx 파일을 두 번 클릭하면 GenOffice로 엽니다.',
-    setDefaultAppIs: 'GenOffice가 이미 기본 앱입니다.',
+    setDefaultAppDesc: '.docx, .xlsx, .pptx 파일을 두 번 클릭하면 Eoffice로 엽니다.',
+    setDefaultAppIs: 'Eoffice가 이미 기본 앱입니다.',
     setDefaultAppOther: '현재 기본 앱: {app}',
     setDefaultAppSet: '기본으로 설정',
     setDefaultAppOpenSettings: '시스템 설정 열기',
@@ -2044,7 +2042,7 @@ export const strings = {
     setMcpLogEmpty: '로그가 아직 없습니다',
     setSecAbout: '정보',
     setSecIntegrations: '연동',
-    intgHeroTitle: 'AI 어시스턴트에서 GenOffice 사용하기',
+    intgHeroTitle: 'AI 어시스턴트에서 Eoffice 사용하기',
     intgHeroDesc:
       '연결하면 Claude Code, Codex, Cursor, Claude Desktop 등의 어시스턴트가 Word, Excel, PowerPoint, PDF, Markdown 파일을 대신 만들고 변환하고 읽고 편집합니다. 모두 이 컴퓨터에서 처리되며 어떤 내용도 업로드되지 않습니다.',
     intgHeroStep1: '연결 방식 선택: 어시스턴트가 터미널 명령을 실행할 수 있으면 CLI, 없으면 MCP',
@@ -2054,7 +2052,7 @@ export const strings = {
     intgStep1Desc:
       '이 컴퓨터에서 발견된 어시스턴트만 표시됩니다. 실제로 사용하는 하나에만 설치하면 되고, 모두 설치할 필요는 없습니다.',
     intgStep1Update:
-      'GenOffice 업데이트에 새 스킬이 포함되면 해당 어시스턴트 옆에 업데이트 버튼이 나타납니다.',
+      'Eoffice 업데이트에 새 스킬이 포함되면 해당 어시스턴트 옆에 업데이트 버튼이 나타납니다.',
     intgSkillVersion: '스킬 {v}',
     intgStateMissing: '스킬 미설치',
     intgStateInstalled: '스킬 {v} 설치됨 · 다음 대화부터 사용 가능',
@@ -2062,7 +2060,7 @@ export const strings = {
     intgOtherDesc:
       '다음 세 가지 방법 중 하나만 선택하세요. 모두 같은 스킬을 설치하므로 여러 번 할 필요가 없습니다.',
     intgOtherFolderTitle: 'SKILL.md 폴더를 읽는 모든 어시스턴트',
-    intgOtherFolderDesc: '해당 skills 폴더를 선택하면 GenOffice가 파일을 기록합니다.',
+    intgOtherFolderDesc: '해당 skills 폴더를 선택하면 Eoffice가 파일을 기록합니다.',
     intgOtherZipTitle: '파일을 어시스턴트에게 전달',
     intgOtherZipDesc: '스킬을 zip으로 저장한 뒤 어시스턴트에게 설치를 요청하세요.',
     intgOtherNpxTitle: 'skills 명령으로 설치(Node.js 필요)',
@@ -2073,7 +2071,7 @@ export const strings = {
     intgStep2DescBefore: '설치 후 어시스턴트에서 새 대화를 열고 평소 말투로 요청하세요. 예:',
     intgExample1: '~/Downloads/report.md를 Word 문서로 만들어 줘',
     intgExample2: '3분기 실적을 소개하는 6장짜리 슬라이드를 만들어 줘',
-    intgExample3: 'budget.xlsx를 PDF로 변환해서 GenOffice에서 열어 줘',
+    intgExample3: 'budget.xlsx를 PDF로 변환해서 Eoffice에서 열어 줘',
     intgStep2Note:
       'genoffice 명령줄은 어시스턴트가 직접 실행하므로 여러분이 입력할 필요가 없습니다.',
     intgCliPartTitle: 'CLI · 명령줄 + skill',
@@ -2081,16 +2079,16 @@ export const strings = {
       '터미널 명령을 실행할 수 있는 어시스턴트(Claude Code, Codex, Cursor 등)용입니다. skill을 설치하면 어시스턴트가 스스로 genoffice 명령줄을 호출해 파일을 만들고 변환하고 읽고 편집합니다. 명령을 직접 입력할 필요가 없습니다.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP는 AI 어시스턴트가 외부 도구를 호출하는 공통 프로토콜입니다. 어시스턴트가 명령을 실행할 수 없거나(예: Claude Desktop) GenOffice 창을 직접 조작하게 하려면 이 방식을 사용하세요. 아래 두 방법 중 하나를 선택하면 됩니다.',
+      'MCP는 AI 어시스턴트가 외부 도구를 호출하는 공통 프로토콜입니다. 어시스턴트가 명령을 실행할 수 없거나(예: Claude Desktop) Eoffice 창을 직접 조작하게 하려면 이 방식을 사용하세요. 아래 두 방법 중 하나를 선택하면 됩니다.',
     intgMcpStdioTitle: '어시스턴트가 실행(권장)',
     intgMcpStdioDesc:
-      '어시스턴트가 genoffice mcp를 직접 실행합니다. 여기서 켤 것이 없고 GenOffice가 열려 있을 필요도 없습니다. 기능은 CLI와 같습니다.',
+      '어시스턴트가 genoffice mcp를 직접 실행합니다. 여기서 켤 것이 없고 Eoffice가 열려 있을 필요도 없습니다. 기능은 CLI와 같습니다.',
     intgMcpHttpTitle: '로컬 HTTP 서버',
     intgMcpHttpDesc:
-      'GenOffice 안에서 실행되며 어시스턴트가 URL로 연결합니다. Word 편집기에서 문서가 단계별로 만들어지는 과정을 볼 수 있습니다. GenOffice를 열어 두어야 하며 현재는 Word만 지원합니다.',
+      'Eoffice 안에서 실행되며 어시스턴트가 URL로 연결합니다. Word 편집기에서 문서가 단계별로 만들어지는 과정을 볼 수 있습니다. Eoffice를 열어 두어야 하며 현재는 Word만 지원합니다.',
     intgMcpHttpAdvanced: '고급: 기타 주소와 로그',
     intgMcpTryNote:
-      '어시스턴트가 MCP를 통해 GenOffice를 호출합니다. 명령을 직접 입력할 필요가 없습니다.',
+      '어시스턴트가 MCP를 통해 Eoffice를 호출합니다. 명령을 직접 입력할 필요가 없습니다.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: '터미널에서 한 번만 실행하세요:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop 또는 MCP를 지원하는 다른 어시스턴트',
@@ -2125,9 +2123,9 @@ export const strings = {
     intgSaveZipTitle: '스킬 저장',
     intgSavedTo: '{path}에 저장됨',
     intgCopied: '복사됨',
-    intgCliEphemeral: '먼저 GenOffice를 응용 프로그램 폴더로 옮긴 뒤 명령줄을 사용하세요.',
+    intgCliEphemeral: '먼저 Eoffice를 응용 프로그램 폴더로 옮긴 뒤 명령줄을 사용하세요.',
     intgCopyPath: '경로 복사',
-    intgCliNeedsUpdate: '이 스킬은 명령줄 {v} 이상이 필요합니다. GenOffice를 업데이트하세요.',
+    intgCliNeedsUpdate: '이 스킬은 명령줄 {v} 이상이 필요합니다. Eoffice를 업데이트하세요.',
     intgLoading: '확인 중…',
     intgUpdateDue: '스킬 업데이트 가능',
     setSecAiModel: 'AI 모델',
@@ -2182,8 +2180,8 @@ export const strings = {
       '제공자가 Genspark일 때 웹 검색, 이미지 생성, 미디어 분석은 Genspark를 거쳐 크레딧을 사용합니다. 끄면 검색은 무료 소스를 사용하고 Genspark 이미지 도구는 사용할 수 없습니다.',
     setGithub: '오픈 소스',
     starOnGitHub: 'GitHub에서 스타 누르기',
-    starPromptTitle: 'GenOffice가 마음에 드시나요?',
-    starPromptTitleN: 'GenOffice로 문서를 {n}개 열어보셨네요',
+    starPromptTitle: 'Eoffice가 마음에 드시나요?',
+    starPromptTitleN: 'Eoffice로 문서를 {n}개 열어보셨네요',
     starPromptBody:
       'GenOffice는 무료 오픈 소스 소프트웨어입니다. GitHub 스타 하나가 팀에게 가장 큰 응원이 됩니다.',
     starPromptGo: '스타 누르기',
@@ -2205,7 +2203,7 @@ export const strings = {
     appMenu: '메뉴',
     newTab: '새 탭',
     // First-run onboarding
-    onbTitle1: 'GenOffice에 오신 것을 환영합니다',
+    onbTitle1: 'Eoffice에 오신 것을 환영합니다',
     onbSubtitle1: '최초의 오픈소스 AI 네이티브 오피스 제품군',
     onbBody1:
       '문서 작성, 스프레드시트 제작, 프레젠테이션 생성, PDF 검토. 모든 단계에 AI가 녹아 있습니다.',
@@ -2461,8 +2459,8 @@ export const strings = {
     aiFontSizeCustom: 'Personnalisé',
     setAiSpellcheck: 'Correction orthographique dans le chat IA',
     setDefaultApp: 'Application par défaut pour les documents Office',
-    setDefaultAppDesc: 'Ouvrir les fichiers .docx, .xlsx et .pptx dans GenOffice par double-clic.',
-    setDefaultAppIs: 'GenOffice est déjà l’application par défaut.',
+    setDefaultAppDesc: 'Ouvrir les fichiers .docx, .xlsx et .pptx dans Eoffice par double-clic.',
+    setDefaultAppIs: 'Eoffice est déjà l’application par défaut.',
     setDefaultAppOther: 'Par défaut actuellement : {app}',
     setDefaultAppSet: 'Définir par défaut',
     setDefaultAppOpenSettings: 'Ouvrir les réglages système',
@@ -2502,7 +2500,7 @@ export const strings = {
     setMcpLogEmpty: 'Journal vide',
     setSecAbout: 'À propos',
     setSecIntegrations: 'Intégrations',
-    intgHeroTitle: 'Utiliser GenOffice depuis votre assistant IA',
+    intgHeroTitle: 'Utiliser Eoffice depuis votre assistant IA',
     intgHeroDesc:
       'Une fois connectés, Claude Code, Codex, Cursor, Claude Desktop et les assistants similaires peuvent créer, convertir, lire et modifier vos fichiers Word, Excel, PowerPoint, PDF et Markdown. Tout se passe sur cet ordinateur ; rien n’est envoyé.',
     intgHeroStep1:
@@ -2513,7 +2511,7 @@ export const strings = {
     intgStep1Desc:
       'Seuls les assistants trouvés sur cet ordinateur sont listés. Installez-le dans celui que vous utilisez vraiment ; inutile de le faire pour tous.',
     intgStep1Update:
-      'Quand une mise à jour de GenOffice apporte un skill plus récent, un bouton Mettre à jour apparaît à côté de cet assistant.',
+      'Quand une mise à jour de Eoffice apporte un skill plus récent, un bouton Mettre à jour apparaît à côté de cet assistant.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill non installé',
     intgStateInstalled: 'Skill {v} installé · prêt pour votre prochaine discussion',
@@ -2521,7 +2519,7 @@ export const strings = {
     intgOtherDesc:
       "Choisissez une seule de ces trois méthodes. Elles installent toutes le même skill : inutile d'en faire plusieurs.",
     intgOtherFolderTitle: 'Tout assistant qui lit des dossiers SKILL.md',
-    intgOtherFolderDesc: 'Choisissez son dossier skills et GenOffice y écrit le fichier.',
+    intgOtherFolderDesc: 'Choisissez son dossier skills et Eoffice y écrit le fichier.',
     intgOtherZipTitle: "Remettre le fichier à l'assistant",
     intgOtherZipDesc: "Enregistrez le skill en zip, puis demandez à l'assistant de l'installer.",
     intgOtherNpxTitle: 'Avec la commande skills (nécessite Node.js)',
@@ -2534,7 +2532,7 @@ export const strings = {
       'Une fois installé, ouvrez une nouvelle discussion dans votre assistant et demandez simplement, par exemple :',
     intgExample1: 'Transforme ~/Downloads/report.md en document Word',
     intgExample2: 'Prépare une présentation de 6 diapositives sur nos résultats du T3',
-    intgExample3: 'Convertis budget.xlsx en PDF et ouvre-le dans GenOffice',
+    intgExample3: 'Convertis budget.xlsx en PDF et ouvre-le dans Eoffice',
     intgStep2Note:
       "L'assistant lance lui-même la ligne de commande genoffice ; vous n'avez jamais à la saisir.",
     intgCliPartTitle: 'CLI · ligne de commande + skill',
@@ -2542,15 +2540,15 @@ export const strings = {
       'Pour les assistants capables de lancer des commandes dans le terminal (Claude Code, Codex, Cursor, etc.). Une fois le skill installé, l’assistant appelle lui-même la ligne de commande genoffice pour créer, convertir, lire et modifier les fichiers ; vous ne tapez jamais de commande.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP est le protocole commun que les assistants IA utilisent pour appeler des outils externes. Utilisez-le si votre assistant ne peut pas lancer de commandes (Claude Desktop, par exemple) ou si vous voulez qu’il pilote directement la fenêtre GenOffice. Choisissez l’une des deux méthodes ci-dessous.',
+      'MCP est le protocole commun que les assistants IA utilisent pour appeler des outils externes. Utilisez-le si votre assistant ne peut pas lancer de commandes (Claude Desktop, par exemple) ou si vous voulez qu’il pilote directement la fenêtre Eoffice. Choisissez l’une des deux méthodes ci-dessous.',
     intgMcpStdioTitle: 'Lancé par l’assistant (recommandé)',
     intgMcpStdioDesc:
-      'L’assistant lance lui-même genoffice mcp : rien à activer ici, et GenOffice n’a pas besoin d’être ouvert. Mêmes fonctions que la CLI.',
+      'L’assistant lance lui-même genoffice mcp : rien à activer ici, et Eoffice n’a pas besoin d’être ouvert. Mêmes fonctions que la CLI.',
     intgMcpHttpTitle: 'Serveur HTTP local',
     intgMcpHttpDesc:
-      'Tourne dans GenOffice ; l’assistant se connecte à une URL et vous voyez le document se construire pas à pas dans l’éditeur Word. GenOffice doit rester ouvert ; documents Word uniquement pour l’instant.',
+      'Tourne dans Eoffice ; l’assistant se connecte à une URL et vous voyez le document se construire pas à pas dans l’éditeur Word. Eoffice doit rester ouvert ; documents Word uniquement pour l’instant.',
     intgMcpHttpAdvanced: 'Avancé : autres adresses et journal',
-    intgMcpTryNote: 'L’assistant appelle GenOffice via MCP ; vous ne tapez jamais de commande.',
+    intgMcpTryNote: 'L’assistant appelle Eoffice via MCP ; vous ne tapez jamais de commande.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Exécutez ceci une fois dans un terminal :',
     intgMcpOtherTitle: 'Cursor, Claude Desktop ou tout autre assistant compatible MCP',
@@ -2586,10 +2584,10 @@ export const strings = {
     intgSavedTo: 'Enregistré dans {path}',
     intgCopied: 'Copié',
     intgCliEphemeral:
-      "Glissez d'abord GenOffice dans Applications, puis utilisez la ligne de commande.",
+      "Glissez d'abord Eoffice dans Applications, puis utilisez la ligne de commande.",
     intgCopyPath: 'Copier le chemin',
     intgCliNeedsUpdate:
-      'Ce skill requiert la ligne de commande {v} ou plus récente ; mettez GenOffice à jour.',
+      'Ce skill requiert la ligne de commande {v} ou plus récente ; mettez Eoffice à jour.',
     intgLoading: 'Vérification…',
     intgUpdateDue: 'Mise à jour du skill disponible',
     setSecAiModel: 'Modèle IA',
@@ -2648,8 +2646,8 @@ export const strings = {
       "Lorsque leur fournisseur est Genspark, la recherche web, la génération d'images et l'analyse de médias passent par Genspark et consomment des crédits ; désactivé, la recherche utilise des sources gratuites et les outils d'image Genspark sont indisponibles.",
     setGithub: 'Open source',
     starOnGitHub: 'Mettre une étoile sur GitHub',
-    starPromptTitle: 'GenOffice vous plaît ?',
-    starPromptTitleN: 'Vous avez ouvert {n} documents avec GenOffice',
+    starPromptTitle: 'Eoffice vous plaît ?',
+    starPromptTitleN: 'Vous avez ouvert {n} documents avec Eoffice',
     starPromptBody:
       'GenOffice est gratuit et open source. Une étoile sur GitHub est le meilleur moyen de soutenir l’équipe.',
     starPromptGo: 'Mettre une étoile',
@@ -2671,7 +2669,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'Nouvel onglet',
     // First-run onboarding
-    onbTitle1: 'Bienvenue dans GenOffice',
+    onbTitle1: 'Bienvenue dans Eoffice',
     onbSubtitle1: 'La première suite bureautique open source et native IA',
     onbBody1:
       'Créez des documents, des feuilles de calcul et des présentations, et relisez des PDF. L’IA est intégrée à chaque étape.',
@@ -2930,8 +2928,8 @@ export const strings = {
     aiFontSizeCustom: 'Benutzerdefiniert',
     setAiSpellcheck: 'Rechtschreibprüfung im KI-Chat',
     setDefaultApp: 'Standard-App für Office-Dokumente',
-    setDefaultAppDesc: '.docx-, .xlsx- und .pptx-Dateien per Doppelklick in GenOffice öffnen.',
-    setDefaultAppIs: 'GenOffice ist bereits die Standard-App.',
+    setDefaultAppDesc: '.docx-, .xlsx- und .pptx-Dateien per Doppelklick in Eoffice öffnen.',
+    setDefaultAppIs: 'Eoffice ist bereits die Standard-App.',
     setDefaultAppOther: 'Aktueller Standard: {app}',
     setDefaultAppSet: 'Als Standard festlegen',
     setDefaultAppOpenSettings: 'Systemeinstellungen öffnen',
@@ -2971,7 +2969,7 @@ export const strings = {
     setMcpLogEmpty: 'Keine Einträge',
     setSecAbout: 'Über',
     setSecIntegrations: 'Integrationen',
-    intgHeroTitle: 'GenOffice aus Ihrem KI-Assistenten nutzen',
+    intgHeroTitle: 'Eoffice aus Ihrem KI-Assistenten nutzen',
     intgHeroDesc:
       'Einmal verbunden, können Claude Code, Codex, Cursor, Claude Desktop und ähnliche Assistenten Word-, Excel-, PowerPoint-, PDF- und Markdown-Dateien für Sie erstellen, konvertieren, lesen und bearbeiten. Alles läuft auf diesem Rechner; nichts wird hochgeladen.',
     intgHeroStep1: 'Weg wählen: CLI, wenn der Assistent Terminalbefehle ausführen kann, sonst MCP',
@@ -2981,7 +2979,7 @@ export const strings = {
     intgStep1Desc:
       'Es werden nur Assistenten angezeigt, die auf diesem Rechner gefunden wurden. Installieren Sie ihn in dem, den Sie tatsächlich nutzen; Sie brauchen nicht alle.',
     intgStep1Update:
-      'Bringt ein GenOffice-Update einen neueren Skill mit, erscheint neben diesem Assistenten ein Aktualisieren-Button.',
+      'Bringt ein Eoffice-Update einen neueren Skill mit, erscheint neben diesem Assistenten ein Aktualisieren-Button.',
     intgSkillVersion: 'Skill {v}',
     intgStateMissing: 'Skill nicht installiert',
     intgStateInstalled: 'Skill {v} installiert · ab dem nächsten Chat bereit',
@@ -2989,8 +2987,7 @@ export const strings = {
     intgOtherDesc:
       'Wählen Sie genau einen dieser drei Wege. Alle installieren denselben Skill, mehr als einer ist nicht nötig.',
     intgOtherFolderTitle: 'Jeder Assistent, der SKILL.md-Ordner liest',
-    intgOtherFolderDesc:
-      'Wählen Sie seinen Skills-Ordner, und GenOffice schreibt die Datei dorthin.',
+    intgOtherFolderDesc: 'Wählen Sie seinen Skills-Ordner, und Eoffice schreibt die Datei dorthin.',
     intgOtherZipTitle: 'Datei an den Assistenten übergeben',
     intgOtherZipDesc:
       'Speichern Sie den Skill als Zip und bitten Sie den Assistenten, ihn zu installieren.',
@@ -3004,7 +3001,7 @@ export const strings = {
       'Öffnen Sie nach der Installation einen neuen Chat in Ihrem Assistenten und fragen Sie in normalen Worten, zum Beispiel:',
     intgExample1: 'Mach aus ~/Downloads/report.md ein Word-Dokument',
     intgExample2: 'Erstelle eine Präsentation mit 6 Folien zu unseren Q3-Ergebnissen',
-    intgExample3: 'Wandle budget.xlsx in PDF um und öffne es in GenOffice',
+    intgExample3: 'Wandle budget.xlsx in PDF um und öffne es in Eoffice',
     intgStep2Note:
       'Der Assistent ruft die genoffice-Befehlszeile selbst auf; Sie müssen sie nie eintippen.',
     intgCliPartTitle: 'CLI · Kommandozeile + Skill',
@@ -3012,15 +3009,15 @@ export const strings = {
       'Für Assistenten, die Terminalbefehle ausführen können (Claude Code, Codex, Cursor u. a.). Nach der Installation des Skills ruft der Assistent die genoffice-Kommandozeile selbst auf, um Dateien zu erstellen, zu konvertieren, zu lesen und zu bearbeiten; Sie tippen nie einen Befehl.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP ist das gemeinsame Protokoll, über das KI-Assistenten externe Werkzeuge aufrufen. Nutzen Sie es, wenn der Assistent keine Befehle ausführen kann (z. B. Claude Desktop) oder wenn er das GenOffice-Fenster direkt steuern soll. Wählen Sie einen der beiden Wege unten.',
+      'MCP ist das gemeinsame Protokoll, über das KI-Assistenten externe Werkzeuge aufrufen. Nutzen Sie es, wenn der Assistent keine Befehle ausführen kann (z. B. Claude Desktop) oder wenn er das Eoffice-Fenster direkt steuern soll. Wählen Sie einen der beiden Wege unten.',
     intgMcpStdioTitle: 'Vom Assistenten gestartet (empfohlen)',
     intgMcpStdioDesc:
-      'Der Assistent startet genoffice mcp selbst: hier ist nichts einzuschalten, und GenOffice muss nicht geöffnet sein. Gleicher Funktionsumfang wie die CLI.',
+      'Der Assistent startet genoffice mcp selbst: hier ist nichts einzuschalten, und Eoffice muss nicht geöffnet sein. Gleicher Funktionsumfang wie die CLI.',
     intgMcpHttpTitle: 'Lokaler HTTP-Server',
     intgMcpHttpDesc:
-      'Läuft in GenOffice; der Assistent verbindet sich über eine URL, und Sie sehen im Word-Editor zu, wie das Dokument Schritt für Schritt entsteht. GenOffice muss geöffnet bleiben; derzeit nur Word-Dokumente.',
+      'Läuft in Eoffice; der Assistent verbindet sich über eine URL, und Sie sehen im Word-Editor zu, wie das Dokument Schritt für Schritt entsteht. Eoffice muss geöffnet bleiben; derzeit nur Word-Dokumente.',
     intgMcpHttpAdvanced: 'Erweitert: weitere Adressen und Protokoll',
-    intgMcpTryNote: 'Der Assistent ruft GenOffice über MCP auf; Sie tippen nie einen Befehl.',
+    intgMcpTryNote: 'Der Assistent ruft Eoffice über MCP auf; Sie tippen nie einen Befehl.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Einmal im Terminal ausführen:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop oder ein anderer MCP-fähiger Assistent',
@@ -3055,11 +3052,10 @@ export const strings = {
     intgSaveZipTitle: 'Skill speichern',
     intgSavedTo: 'Gespeichert unter {path}',
     intgCopied: 'Kopiert',
-    intgCliEphemeral:
-      'Ziehen Sie GenOffice zuerst in „Programme“, dann nutzen Sie die Befehlszeile.',
+    intgCliEphemeral: 'Ziehen Sie Eoffice zuerst in „Programme“, dann nutzen Sie die Befehlszeile.',
     intgCopyPath: 'Pfad kopieren',
     intgCliNeedsUpdate:
-      'Dieser Skill braucht Befehlszeile {v} oder neuer; aktualisieren Sie GenOffice.',
+      'Dieser Skill braucht Befehlszeile {v} oder neuer; aktualisieren Sie Eoffice.',
     intgLoading: 'Prüfe …',
     intgUpdateDue: 'Skill-Update verfügbar',
     setSecAiModel: 'KI-Modell',
@@ -3116,8 +3112,8 @@ export const strings = {
       'Steht ihr Anbieter auf Genspark, laufen Websuche, Bildgenerierung und Medienanalyse über Genspark und verbrauchen Credits; ausgeschaltet nutzt die Suche kostenlose Quellen und die Genspark-Bildwerkzeuge sind nicht verfügbar.',
     setGithub: 'Open Source',
     starOnGitHub: 'Auf GitHub Stern geben',
-    starPromptTitle: 'Gefällt Ihnen GenOffice?',
-    starPromptTitleN: 'Sie haben {n} Dokumente mit GenOffice geöffnet',
+    starPromptTitle: 'Gefällt Ihnen Eoffice?',
+    starPromptTitleN: 'Sie haben {n} Dokumente mit Eoffice geöffnet',
     starPromptBody:
       'GenOffice ist kostenlos und Open Source. Ein Stern auf GitHub ist die beste Unterstützung für das Team.',
     starPromptGo: 'Stern geben',
@@ -3139,7 +3135,7 @@ export const strings = {
     appMenu: 'Menü',
     newTab: 'Neuer Tab',
     // First-run onboarding
-    onbTitle1: 'Willkommen bei GenOffice',
+    onbTitle1: 'Willkommen bei Eoffice',
     onbSubtitle1: 'Die erste quelloffene, KI-native Office-Suite',
     onbBody1:
       'Dokumente erstellen, Tabellen bauen, Präsentationen gestalten und PDFs prüfen. KI ist in jedem Schritt integriert.',
@@ -3396,8 +3392,8 @@ export const strings = {
     aiFontSizeCustom: 'Personalizado',
     setAiSpellcheck: 'Corrección ortográfica en el chat de IA',
     setDefaultApp: 'App predeterminada para documentos de Office',
-    setDefaultAppDesc: 'Abrir archivos .docx, .xlsx y .pptx en GenOffice al hacer doble clic.',
-    setDefaultAppIs: 'GenOffice ya es la app predeterminada.',
+    setDefaultAppDesc: 'Abrir archivos .docx, .xlsx y .pptx en Eoffice al hacer doble clic.',
+    setDefaultAppIs: 'Eoffice ya es la app predeterminada.',
     setDefaultAppOther: 'Predeterminada actual: {app}',
     setDefaultAppSet: 'Establecer como predeterminada',
     setDefaultAppOpenSettings: 'Abrir ajustes del sistema',
@@ -3438,7 +3434,7 @@ export const strings = {
     setMcpLogEmpty: 'Aún sin entradas',
     setSecAbout: 'Acerca de',
     setSecIntegrations: 'Integraciones',
-    intgHeroTitle: 'Usa GenOffice desde tu asistente de IA',
+    intgHeroTitle: 'Usa Eoffice desde tu asistente de IA',
     intgHeroDesc:
       'Una vez conectados, Claude Code, Codex, Cursor, Claude Desktop y asistentes similares pueden crear, convertir, leer y editar archivos Word, Excel, PowerPoint, PDF y Markdown por ti. Todo ocurre en este equipo; no se sube nada.',
     intgHeroStep1:
@@ -3449,7 +3445,7 @@ export const strings = {
     intgStep1Desc:
       'Solo se muestran los asistentes encontrados en este equipo. Instálalo en el que realmente usas; no necesitas todos.',
     intgStep1Update:
-      'Cuando una actualización de GenOffice traiga un skill más nuevo, aparecerá un botón Actualizar junto a ese asistente.',
+      'Cuando una actualización de Eoffice traiga un skill más nuevo, aparecerá un botón Actualizar junto a ese asistente.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill no instalado',
     intgStateInstalled: 'Skill {v} instalado · listo en tu próximo chat',
@@ -3457,7 +3453,7 @@ export const strings = {
     intgOtherDesc:
       'Elige solo una de estas tres formas. Todas instalan el mismo skill, así que no hace falta hacer más de una.',
     intgOtherFolderTitle: 'Cualquier asistente que lea carpetas SKILL.md',
-    intgOtherFolderDesc: 'Elige su carpeta de skills y GenOffice escribe el archivo ahí.',
+    intgOtherFolderDesc: 'Elige su carpeta de skills y Eoffice escribe el archivo ahí.',
     intgOtherZipTitle: 'Entrega el archivo al asistente',
     intgOtherZipDesc: 'Guarda el skill como zip y pide al asistente que lo instale.',
     intgOtherNpxTitle: 'Con el comando skills (requiere Node.js)',
@@ -3469,7 +3465,7 @@ export const strings = {
       'Una vez instalado, abre un chat nuevo en tu asistente y pídelo con tus palabras, por ejemplo:',
     intgExample1: 'Convierte ~/Downloads/report.md en un documento de Word',
     intgExample2: 'Haz una presentación de 6 diapositivas sobre nuestros resultados del T3',
-    intgExample3: 'Convierte budget.xlsx a PDF y ábrelo en GenOffice',
+    intgExample3: 'Convierte budget.xlsx a PDF y ábrelo en Eoffice',
     intgStep2Note:
       'El asistente ejecuta la línea de comandos genoffice por sí mismo; nunca tienes que escribirla.',
     intgCliPartTitle: 'CLI · línea de comandos + skill',
@@ -3477,15 +3473,15 @@ export const strings = {
       'Para asistentes que pueden ejecutar comandos de terminal (Claude Code, Codex, Cursor y otros). Con el skill instalado, el asistente llama por sí mismo a la línea de comandos genoffice para crear, convertir, leer y editar archivos; nunca escribes un comando.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP es el protocolo común con el que los asistentes de IA llaman a herramientas externas. Úsalo cuando tu asistente no pueda ejecutar comandos (Claude Desktop, por ejemplo) o cuando quieras que controle directamente la ventana de GenOffice. Elige una de las dos formas de abajo.',
+      'MCP es el protocolo común con el que los asistentes de IA llaman a herramientas externas. Úsalo cuando tu asistente no pueda ejecutar comandos (Claude Desktop, por ejemplo) o cuando quieras que controle directamente la ventana de Eoffice. Elige una de las dos formas de abajo.',
     intgMcpStdioTitle: 'Iniciado por el asistente (recomendado)',
     intgMcpStdioDesc:
-      'El asistente lanza genoffice mcp por sí mismo: nada que activar aquí, y GenOffice no necesita estar abierto. Mismas funciones que la CLI.',
+      'El asistente lanza genoffice mcp por sí mismo: nada que activar aquí, y Eoffice no necesita estar abierto. Mismas funciones que la CLI.',
     intgMcpHttpTitle: 'Servidor HTTP local',
     intgMcpHttpDesc:
-      'Se ejecuta dentro de GenOffice; el asistente se conecta a una URL y puedes ver cómo construye el documento paso a paso en el editor de Word. GenOffice debe permanecer abierto; por ahora solo documentos Word.',
+      'Se ejecuta dentro de Eoffice; el asistente se conecta a una URL y puedes ver cómo construye el documento paso a paso en el editor de Word. Eoffice debe permanecer abierto; por ahora solo documentos Word.',
     intgMcpHttpAdvanced: 'Avanzado: otras direcciones y registro',
-    intgMcpTryNote: 'El asistente llama a GenOffice a través de MCP; nunca escribes un comando.',
+    intgMcpTryNote: 'El asistente llama a Eoffice a través de MCP; nunca escribes un comando.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Ejecuta esto una vez en una terminal:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop o cualquier otro asistente compatible con MCP',
@@ -3520,10 +3516,10 @@ export const strings = {
     intgSaveZipTitle: 'Guardar skill',
     intgSavedTo: 'Guardado en {path}',
     intgCopied: 'Copiado',
-    intgCliEphemeral: 'Arrastra primero GenOffice a Aplicaciones y luego usa la línea de comandos.',
+    intgCliEphemeral: 'Arrastra primero Eoffice a Aplicaciones y luego usa la línea de comandos.',
     intgCopyPath: 'Copiar ruta',
     intgCliNeedsUpdate:
-      'Este skill necesita la línea de comandos {v} o superior; actualiza GenOffice.',
+      'Este skill necesita la línea de comandos {v} o superior; actualiza Eoffice.',
     intgLoading: 'Comprobando…',
     intgUpdateDue: 'Actualización del skill disponible',
     setSecAiModel: 'Modelo de IA',
@@ -3580,8 +3576,8 @@ export const strings = {
       'Cuando su proveedor es Genspark, la búsqueda web, la generación de imágenes y el análisis de medios pasan por Genspark y consumen créditos; desactivado, la búsqueda usa fuentes gratuitas y las herramientas de imagen de Genspark no están disponibles.',
     setGithub: 'Código abierto',
     starOnGitHub: 'Dar una estrella en GitHub',
-    starPromptTitle: '¿Te gusta GenOffice?',
-    starPromptTitleN: 'Has abierto {n} documentos con GenOffice',
+    starPromptTitle: '¿Te gusta Eoffice?',
+    starPromptTitleN: 'Has abierto {n} documentos con Eoffice',
     starPromptBody:
       'GenOffice es gratuito y de código abierto. Una estrella en GitHub es la mejor forma de apoyar al equipo.',
     starPromptGo: 'Dar una estrella',
@@ -3603,7 +3599,7 @@ export const strings = {
     appMenu: 'Menú',
     newTab: 'Nueva pestaña',
     // First-run onboarding
-    onbTitle1: 'Bienvenido a GenOffice',
+    onbTitle1: 'Bienvenido a Eoffice',
     onbSubtitle1: 'La primera suite ofimática de código abierto y nativa de IA',
     onbBody1:
       'Crea documentos, hojas de cálculo y presentaciones, y revisa PDF. La IA está integrada en cada paso.',
@@ -3850,8 +3846,8 @@ export const strings = {
     aiFontSizeCustom: 'กำหนดเอง',
     setAiSpellcheck: 'ตรวจการสะกดในแชท AI',
     setDefaultApp: 'แอปเริ่มต้นสำหรับเอกสาร Office',
-    setDefaultAppDesc: 'เปิดไฟล์ .docx, .xlsx และ .pptx ด้วย GenOffice เมื่อดับเบิลคลิก',
-    setDefaultAppIs: 'GenOffice เป็นแอปเริ่มต้นอยู่แล้ว',
+    setDefaultAppDesc: 'เปิดไฟล์ .docx, .xlsx และ .pptx ด้วย Eoffice เมื่อดับเบิลคลิก',
+    setDefaultAppIs: 'Eoffice เป็นแอปเริ่มต้นอยู่แล้ว',
     setDefaultAppOther: 'แอปเริ่มต้นปัจจุบัน: {app}',
     setDefaultAppSet: 'ตั้งเป็นค่าเริ่มต้น',
     setDefaultAppOpenSettings: 'เปิดการตั้งค่าระบบ',
@@ -3889,7 +3885,7 @@ export const strings = {
     setMcpLogEmpty: 'ยังไม่มีปูม',
     setSecAbout: 'เกี่ยวกับ',
     setSecIntegrations: 'การเชื่อมต่อ',
-    intgHeroTitle: 'ใช้ GenOffice จากผู้ช่วย AI ของคุณ',
+    intgHeroTitle: 'ใช้ Eoffice จากผู้ช่วย AI ของคุณ',
     intgHeroDesc:
       'เมื่อเชื่อมต่อแล้ว Claude Code, Codex, Cursor, Claude Desktop และผู้ช่วยลักษณะเดียวกันจะสร้าง แปลง อ่าน และแก้ไขไฟล์ Word, Excel, PowerPoint, PDF และ Markdown แทนคุณได้ ทุกอย่างทำงานบนคอมพิวเตอร์เครื่องนี้ ไม่มีการอัปโหลดใด ๆ',
     intgHeroStep1: 'เลือกวิธี: ใช้ CLI ถ้าผู้ช่วยรันคำสั่งเทอร์มินัลได้ ใช้ MCP ถ้าไม่ได้',
@@ -3899,7 +3895,7 @@ export const strings = {
     intgStep1Desc:
       'แสดงเฉพาะผู้ช่วยที่พบบนคอมพิวเตอร์เครื่องนี้ ติดตั้งเฉพาะตัวที่คุณใช้จริงก็พอ ไม่จำเป็นต้องติดตั้งทั้งหมด',
     intgStep1Update:
-      'เมื่อการอัปเดต GenOffice มาพร้อมสกิลเวอร์ชันใหม่ ปุ่มอัปเดตจะปรากฏข้างผู้ช่วยนั้น',
+      'เมื่อการอัปเดต Eoffice มาพร้อมสกิลเวอร์ชันใหม่ ปุ่มอัปเดตจะปรากฏข้างผู้ช่วยนั้น',
     intgSkillVersion: 'สกิล {v}',
     intgStateMissing: 'ยังไม่ติดตั้งสกิล',
     intgStateInstalled: 'ติดตั้งสกิล {v} แล้ว · พร้อมใช้ในแชตถัดไป',
@@ -3907,7 +3903,7 @@ export const strings = {
     intgOtherDesc:
       'เลือกเพียงวิธีใดวิธีหนึ่งจากสามวิธีนี้ ทุกวิธีติดตั้งสกิลเดียวกัน จึงไม่ต้องทำมากกว่าหนึ่งวิธี',
     intgOtherFolderTitle: 'ผู้ช่วยใดก็ได้ที่อ่านโฟลเดอร์ SKILL.md',
-    intgOtherFolderDesc: 'เลือกโฟลเดอร์ skills ของผู้ช่วย แล้ว GenOffice จะเขียนไฟล์ลงไป',
+    intgOtherFolderDesc: 'เลือกโฟลเดอร์ skills ของผู้ช่วย แล้ว Eoffice จะเขียนไฟล์ลงไป',
     intgOtherZipTitle: 'ส่งไฟล์ให้ผู้ช่วย',
     intgOtherZipDesc: 'บันทึกสกิลเป็น zip แล้วขอให้ผู้ช่วยติดตั้งเอง',
     intgOtherNpxTitle: 'ใช้คำสั่ง skills (ต้องมี Node.js)',
@@ -3918,22 +3914,22 @@ export const strings = {
     intgStep2DescBefore: 'เมื่อติดตั้งแล้ว เปิดแชตใหม่ในผู้ช่วยแล้วสั่งด้วยภาษาธรรมดา เช่น:',
     intgExample1: 'แปลง ~/Downloads/report.md เป็นเอกสาร Word',
     intgExample2: 'ทำสไลด์ 6 หน้าเกี่ยวกับผลประกอบการไตรมาส 3 ของเรา',
-    intgExample3: 'แปลง budget.xlsx เป็น PDF แล้วเปิดใน GenOffice',
+    intgExample3: 'แปลง budget.xlsx เป็น PDF แล้วเปิดใน Eoffice',
     intgStep2Note: 'ผู้ช่วยจะเรียกใช้บรรทัดคำสั่ง genoffice เอง คุณไม่ต้องพิมพ์คำสั่งใด ๆ',
     intgCliPartTitle: 'CLI · บรรทัดคำสั่ง + skill',
     intgCliPartDesc:
       'สำหรับผู้ช่วยที่รันคำสั่งเทอร์มินัลได้ (Claude Code, Codex, Cursor และอื่น ๆ) เมื่อติดตั้ง skill แล้ว ผู้ช่วยจะเรียกบรรทัดคำสั่ง genoffice เองเพื่อสร้าง แปลง อ่าน และแก้ไขไฟล์ คุณไม่ต้องพิมพ์คำสั่งใด ๆ',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP คือโปรโตคอลกลางที่ผู้ช่วย AI ใช้เรียกเครื่องมือภายนอก ใช้เมื่อผู้ช่วยรันคำสั่งไม่ได้ (เช่น Claude Desktop) หรือเมื่อต้องการให้มันควบคุมหน้าต่าง GenOffice โดยตรง เลือกวิธีใดวิธีหนึ่งจากสองวิธีด้านล่าง',
+      'MCP คือโปรโตคอลกลางที่ผู้ช่วย AI ใช้เรียกเครื่องมือภายนอก ใช้เมื่อผู้ช่วยรันคำสั่งไม่ได้ (เช่น Claude Desktop) หรือเมื่อต้องการให้มันควบคุมหน้าต่าง Eoffice โดยตรง เลือกวิธีใดวิธีหนึ่งจากสองวิธีด้านล่าง',
     intgMcpStdioTitle: 'ให้ผู้ช่วยเป็นผู้เริ่ม (แนะนำ)',
     intgMcpStdioDesc:
-      'ผู้ช่วยจะเรียก genoffice mcp ขึ้นมาเอง ไม่ต้องเปิดสวิตช์ใดที่นี่ และไม่ต้องเปิด GenOffice ไว้ ความสามารถเหมือน CLI ทุกประการ',
+      'ผู้ช่วยจะเรียก genoffice mcp ขึ้นมาเอง ไม่ต้องเปิดสวิตช์ใดที่นี่ และไม่ต้องเปิด Eoffice ไว้ ความสามารถเหมือน CLI ทุกประการ',
     intgMcpHttpTitle: 'เซิร์ฟเวอร์ HTTP ในเครื่อง',
     intgMcpHttpDesc:
-      'ทำงานอยู่ใน GenOffice ผู้ช่วยเชื่อมต่อผ่าน URL และคุณจะเห็นเอกสารค่อย ๆ ถูกสร้างขึ้นในตัวแก้ไข Word ต้องเปิด GenOffice ไว้ตลอด ปัจจุบันรองรับเฉพาะ Word',
+      'ทำงานอยู่ใน Eoffice ผู้ช่วยเชื่อมต่อผ่าน URL และคุณจะเห็นเอกสารค่อย ๆ ถูกสร้างขึ้นในตัวแก้ไข Word ต้องเปิด Eoffice ไว้ตลอด ปัจจุบันรองรับเฉพาะ Word',
     intgMcpHttpAdvanced: 'ขั้นสูง: ที่อยู่อื่นและบันทึก',
-    intgMcpTryNote: 'ผู้ช่วยจะเรียก GenOffice ผ่าน MCP คุณไม่ต้องพิมพ์คำสั่งใด ๆ',
+    intgMcpTryNote: 'ผู้ช่วยจะเรียก Eoffice ผ่าน MCP คุณไม่ต้องพิมพ์คำสั่งใด ๆ',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'รันคำสั่งนี้ครั้งเดียวในเทอร์มินัล:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop หรือผู้ช่วยอื่นที่รองรับ MCP',
@@ -3968,9 +3964,9 @@ export const strings = {
     intgSaveZipTitle: 'บันทึกสกิล',
     intgSavedTo: 'บันทึกไว้ที่ {path}',
     intgCopied: 'คัดลอกแล้ว',
-    intgCliEphemeral: 'กรุณาลาก GenOffice ไปที่ Applications ก่อน แล้วจึงใช้บรรทัดคำสั่ง',
+    intgCliEphemeral: 'กรุณาลาก Eoffice ไปที่ Applications ก่อน แล้วจึงใช้บรรทัดคำสั่ง',
     intgCopyPath: 'คัดลอกพาธ',
-    intgCliNeedsUpdate: 'สกิลนี้ต้องใช้บรรทัดคำสั่ง {v} หรือใหม่กว่า โปรดอัปเดต GenOffice',
+    intgCliNeedsUpdate: 'สกิลนี้ต้องใช้บรรทัดคำสั่ง {v} หรือใหม่กว่า โปรดอัปเดต Eoffice',
     intgLoading: 'กำลังตรวจสอบ…',
     intgUpdateDue: 'มีอัปเดตสกิล',
     setSecAiModel: 'โมเดล AI',
@@ -4026,8 +4022,8 @@ export const strings = {
       'เมื่อผู้ให้บริการตั้งเป็น Genspark การค้นหาเว็บ การสร้างภาพ และการวิเคราะห์สื่อจะผ่าน Genspark และใช้เครดิต เมื่อปิด การค้นหาจะใช้แหล่งข้อมูลฟรีและเครื่องมือภาพของ Genspark จะใช้ไม่ได้',
     setGithub: 'โอเพนซอร์ส',
     starOnGitHub: 'กดดาวบน GitHub',
-    starPromptTitle: 'ชอบ GenOffice ไหม?',
-    starPromptTitleN: 'คุณเปิดเอกสารด้วย GenOffice ไปแล้ว {n} ไฟล์',
+    starPromptTitle: 'ชอบ Eoffice ไหม?',
+    starPromptTitleN: 'คุณเปิดเอกสารด้วย Eoffice ไปแล้ว {n} ไฟล์',
     starPromptBody:
       'GenOffice ฟรีและเป็นโอเพนซอร์ส การกดดาวบน GitHub คือกำลังใจที่ดีที่สุดสำหรับทีม',
     starPromptGo: 'กดดาวเลย',
@@ -4049,7 +4045,7 @@ export const strings = {
     appMenu: 'เมนู',
     newTab: 'แท็บใหม่',
     // First-run onboarding
-    onbTitle1: 'ยินดีต้อนรับสู่ GenOffice',
+    onbTitle1: 'ยินดีต้อนรับสู่ Eoffice',
     onbSubtitle1: 'ชุดโปรแกรมออฟฟิศ AI-native โอเพนซอร์สตัวแรก',
     onbBody1: 'สร้างเอกสาร ทำสเปรดชีต สร้างงานนำเสนอ และตรวจทาน PDF ทุกขั้นตอนมี AI ในตัว',
     onbTitle2: 'นี่เป็นเพียงจุดเริ่มต้น',
@@ -4302,8 +4298,8 @@ export const strings = {
     aiFontSizeCustom: 'Kustom',
     setAiSpellcheck: 'Pemeriksaan ejaan di obrolan AI',
     setDefaultApp: 'Aplikasi default untuk dokumen Office',
-    setDefaultAppDesc: 'Buka file .docx, .xlsx, dan .pptx di GenOffice saat diklik dua kali.',
-    setDefaultAppIs: 'GenOffice sudah menjadi aplikasi default.',
+    setDefaultAppDesc: 'Buka file .docx, .xlsx, dan .pptx di Eoffice saat diklik dua kali.',
+    setDefaultAppIs: 'Eoffice sudah menjadi aplikasi default.',
     setDefaultAppOther: 'Default saat ini: {app}',
     setDefaultAppSet: 'Jadikan default',
     setDefaultAppOpenSettings: 'Buka pengaturan sistem',
@@ -4342,7 +4338,7 @@ export const strings = {
     setMcpLogEmpty: 'Belum ada log',
     setSecAbout: 'Tentang',
     setSecIntegrations: 'Integrasi',
-    intgHeroTitle: 'Gunakan GenOffice dari asisten AI Anda',
+    intgHeroTitle: 'Gunakan Eoffice dari asisten AI Anda',
     intgHeroDesc:
       'Setelah terhubung, Claude Code, Codex, Cursor, Claude Desktop, dan asisten serupa dapat membuat, mengonversi, membaca, dan mengedit file Word, Excel, PowerPoint, PDF, dan Markdown untuk Anda. Semuanya berjalan di komputer ini; tidak ada yang diunggah.',
     intgHeroStep1:
@@ -4353,7 +4349,7 @@ export const strings = {
     intgStep1Desc:
       'Hanya asisten yang ditemukan di komputer ini yang ditampilkan. Pasang ke yang benar-benar Anda pakai; tidak perlu semuanya.',
     intgStep1Update:
-      'Saat pembaruan GenOffice membawa skill yang lebih baru, tombol Perbarui muncul di samping asisten itu.',
+      'Saat pembaruan Eoffice membawa skill yang lebih baru, tombol Perbarui muncul di samping asisten itu.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill belum terpasang',
     intgStateInstalled: 'Skill {v} terpasang · siap di obrolan berikutnya',
@@ -4361,7 +4357,7 @@ export const strings = {
     intgOtherDesc:
       'Pilih salah satu saja dari tiga cara ini. Semuanya memasang skill yang sama, jadi tidak perlu lebih dari satu.',
     intgOtherFolderTitle: 'Asisten apa pun yang membaca folder SKILL.md',
-    intgOtherFolderDesc: 'Pilih folder skills-nya dan GenOffice menulis file di sana.',
+    intgOtherFolderDesc: 'Pilih folder skills-nya dan Eoffice menulis file di sana.',
     intgOtherZipTitle: 'Serahkan file ke asisten',
     intgOtherZipDesc: 'Simpan skill sebagai zip, lalu minta asisten memasangnya.',
     intgOtherNpxTitle: 'Dengan perintah skills (butuh Node.js)',
@@ -4373,7 +4369,7 @@ export const strings = {
       'Setelah terpasang, buka obrolan baru di asisten Anda dan minta dengan bahasa biasa, misalnya:',
     intgExample1: 'Ubah ~/Downloads/report.md menjadi dokumen Word',
     intgExample2: 'Buat presentasi 6 slide tentang hasil Q3 kami',
-    intgExample3: 'Konversi budget.xlsx ke PDF dan buka di GenOffice',
+    intgExample3: 'Konversi budget.xlsx ke PDF dan buka di Eoffice',
     intgStep2Note:
       'Asisten menjalankan baris perintah genoffice sendiri; Anda tidak perlu mengetiknya.',
     intgCliPartTitle: 'CLI · baris perintah + skill',
@@ -4381,15 +4377,15 @@ export const strings = {
       'Untuk asisten yang bisa menjalankan perintah terminal (Claude Code, Codex, Cursor, dan lainnya). Setelah skill terpasang, asisten memanggil baris perintah genoffice sendiri untuk membuat, mengonversi, membaca, dan mengedit file; Anda tidak pernah mengetik perintah.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP adalah protokol umum yang dipakai asisten AI untuk memanggil alat eksternal. Gunakan saat asisten Anda tidak bisa menjalankan perintah (misalnya Claude Desktop) atau saat Anda ingin ia mengendalikan jendela GenOffice secara langsung. Pilih salah satu dari dua cara di bawah.',
+      'MCP adalah protokol umum yang dipakai asisten AI untuk memanggil alat eksternal. Gunakan saat asisten Anda tidak bisa menjalankan perintah (misalnya Claude Desktop) atau saat Anda ingin ia mengendalikan jendela Eoffice secara langsung. Pilih salah satu dari dua cara di bawah.',
     intgMcpStdioTitle: 'Dijalankan oleh asisten (disarankan)',
     intgMcpStdioDesc:
-      'Asisten menjalankan genoffice mcp sendiri: tidak ada yang perlu dinyalakan di sini, dan GenOffice tidak perlu terbuka. Fitur sama dengan CLI.',
+      'Asisten menjalankan genoffice mcp sendiri: tidak ada yang perlu dinyalakan di sini, dan Eoffice tidak perlu terbuka. Fitur sama dengan CLI.',
     intgMcpHttpTitle: 'Server HTTP lokal',
     intgMcpHttpDesc:
-      'Berjalan di dalam GenOffice; asisten terhubung lewat URL dan Anda bisa melihat dokumen dibangun langkah demi langkah di editor Word. GenOffice harus tetap terbuka; untuk saat ini hanya dokumen Word.',
+      'Berjalan di dalam Eoffice; asisten terhubung lewat URL dan Anda bisa melihat dokumen dibangun langkah demi langkah di editor Word. Eoffice harus tetap terbuka; untuk saat ini hanya dokumen Word.',
     intgMcpHttpAdvanced: 'Lanjutan: alamat lain dan log',
-    intgMcpTryNote: 'Asisten memanggil GenOffice melalui MCP; Anda tidak pernah mengetik perintah.',
+    intgMcpTryNote: 'Asisten memanggil Eoffice melalui MCP; Anda tidak pernah mengetik perintah.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Jalankan ini sekali di terminal:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop, atau asisten lain yang mendukung MCP',
@@ -4424,10 +4420,10 @@ export const strings = {
     intgSaveZipTitle: 'Simpan skill',
     intgSavedTo: 'Disimpan ke {path}',
     intgCopied: 'Disalin',
-    intgCliEphemeral: 'Seret GenOffice ke Applications dulu, lalu gunakan baris perintah.',
+    intgCliEphemeral: 'Seret Eoffice ke Applications dulu, lalu gunakan baris perintah.',
     intgCopyPath: 'Salin path',
     intgCliNeedsUpdate:
-      'Skill ini memerlukan baris perintah {v} atau lebih baru; perbarui GenOffice.',
+      'Skill ini memerlukan baris perintah {v} atau lebih baru; perbarui Eoffice.',
     intgLoading: 'Memeriksa…',
     intgUpdateDue: 'Pembaruan skill tersedia',
     setSecAiModel: 'Model AI',
@@ -4483,8 +4479,8 @@ export const strings = {
       'Saat penyedianya disetel ke Genspark, pencarian web, pembuatan gambar, dan analisis media berjalan lewat Genspark dan memakai kredit; jika dimatikan, pencarian memakai sumber gratis dan alat gambar Genspark tidak tersedia.',
     setGithub: 'Sumber Terbuka',
     starOnGitHub: 'Beri Bintang di GitHub',
-    starPromptTitle: 'Suka GenOffice?',
-    starPromptTitleN: 'Anda telah membuka {n} dokumen dengan GenOffice',
+    starPromptTitle: 'Suka Eoffice?',
+    starPromptTitleN: 'Anda telah membuka {n} dokumen dengan Eoffice',
     starPromptBody:
       'GenOffice gratis dan open source. Bintang di GitHub adalah dukungan terbaik untuk tim kami.',
     starPromptGo: 'Beri Bintang',
@@ -4506,7 +4502,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'Tab baru',
     // First-run onboarding
-    onbTitle1: 'Selamat datang di GenOffice',
+    onbTitle1: 'Selamat datang di Eoffice',
     onbSubtitle1: 'Suite office open source AI-native pertama',
     onbBody1:
       'Buat dokumen, susun spreadsheet, rancang presentasi, dan tinjau PDF. AI hadir di setiap langkah.',
@@ -4757,8 +4753,8 @@ export const strings = {
     aiFontSizeCustom: 'Другой',
     setAiSpellcheck: 'Проверка орфографии в чате ИИ',
     setDefaultApp: 'Приложение по умолчанию для документов Office',
-    setDefaultAppDesc: 'Открывать файлы .docx, .xlsx и .pptx в GenOffice по двойному щелчку.',
-    setDefaultAppIs: 'GenOffice уже является приложением по умолчанию.',
+    setDefaultAppDesc: 'Открывать файлы .docx, .xlsx и .pptx в Eoffice по двойному щелчку.',
+    setDefaultAppIs: 'Eoffice уже является приложением по умолчанию.',
     setDefaultAppOther: 'Сейчас по умолчанию: {app}',
     setDefaultAppSet: 'Сделать по умолчанию',
     setDefaultAppOpenSettings: 'Открыть системные настройки',
@@ -4797,7 +4793,7 @@ export const strings = {
     setMcpLogEmpty: 'Записей пока нет',
     setSecAbout: 'О программе',
     setSecIntegrations: 'Интеграции',
-    intgHeroTitle: 'Используйте GenOffice из своего ИИ-ассистента',
+    intgHeroTitle: 'Используйте Eoffice из своего ИИ-ассистента',
     intgHeroDesc:
       'После подключения Claude Code, Codex, Cursor, Claude Desktop и похожие ассистенты смогут создавать, конвертировать, читать и редактировать файлы Word, Excel, PowerPoint, PDF и Markdown за вас. Всё выполняется на этом компьютере; ничего не загружается.',
     intgHeroStep1:
@@ -4808,7 +4804,7 @@ export const strings = {
     intgStep1Desc:
       'Показаны только ассистенты, найденные на этом компьютере. Установите скилл в тот, которым действительно пользуетесь; все не нужны.',
     intgStep1Update:
-      'Когда обновление GenOffice принесёт более новый скилл, рядом с этим ассистентом появится кнопка «Обновить».',
+      'Когда обновление Eoffice принесёт более новый скилл, рядом с этим ассистентом появится кнопка «Обновить».',
     intgSkillVersion: 'скилл {v}',
     intgStateMissing: 'Скилл не установлен',
     intgStateInstalled: 'Скилл {v} установлен · готов к следующему чату',
@@ -4816,7 +4812,7 @@ export const strings = {
     intgOtherDesc:
       'Выберите только один из трёх способов. Все они устанавливают один и тот же скилл, повторять не нужно.',
     intgOtherFolderTitle: 'Любой ассистент, читающий папки SKILL.md',
-    intgOtherFolderDesc: 'Выберите его папку skills, и GenOffice запишет файл туда.',
+    intgOtherFolderDesc: 'Выберите его папку skills, и Eoffice запишет файл туда.',
     intgOtherZipTitle: 'Передать файл ассистенту',
     intgOtherZipDesc: 'Сохраните скилл как zip и попросите ассистента установить его.',
     intgOtherNpxTitle: 'Командой skills (нужен Node.js)',
@@ -4828,7 +4824,7 @@ export const strings = {
       'После установки откройте новый чат в ассистенте и попросите обычными словами, например:',
     intgExample1: 'Преврати ~/Downloads/report.md в документ Word',
     intgExample2: 'Сделай презентацию из 6 слайдов о наших результатах за 3-й квартал',
-    intgExample3: 'Конвертируй budget.xlsx в PDF и открой в GenOffice',
+    intgExample3: 'Конвертируй budget.xlsx в PDF и открой в Eoffice',
     intgStep2Note:
       'Ассистент сам запускает командную строку genoffice; вводить её вам не придётся.',
     intgCliPartTitle: 'CLI · командная строка + skill',
@@ -4836,15 +4832,15 @@ export const strings = {
       'Для ассистентов, умеющих выполнять команды терминала (Claude Code, Codex, Cursor и другие). После установки skill ассистент сам вызывает командную строку genoffice, чтобы создавать, конвертировать, читать и редактировать файлы; вам не нужно вводить команды.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP — общий протокол, через который ИИ-ассистенты вызывают внешние инструменты. Используйте его, если ассистент не умеет выполнять команды (например, Claude Desktop) или если хотите, чтобы он напрямую управлял окном GenOffice. Выберите один из двух способов ниже.',
+      'MCP — общий протокол, через который ИИ-ассистенты вызывают внешние инструменты. Используйте его, если ассистент не умеет выполнять команды (например, Claude Desktop) или если хотите, чтобы он напрямую управлял окном Eoffice. Выберите один из двух способов ниже.',
     intgMcpStdioTitle: 'Запускает ассистент (рекомендуется)',
     intgMcpStdioDesc:
-      'Ассистент сам запускает genoffice mcp: здесь ничего включать не нужно, и GenOffice не обязан быть открыт. Те же возможности, что у CLI.',
+      'Ассистент сам запускает genoffice mcp: здесь ничего включать не нужно, и Eoffice не обязан быть открыт. Те же возможности, что у CLI.',
     intgMcpHttpTitle: 'Локальный HTTP-сервер',
     intgMcpHttpDesc:
-      'Работает внутри GenOffice; ассистент подключается по URL, и вы видите, как документ шаг за шагом собирается в редакторе Word. GenOffice должен оставаться открытым; пока только документы Word.',
+      'Работает внутри Eoffice; ассистент подключается по URL, и вы видите, как документ шаг за шагом собирается в редакторе Word. Eoffice должен оставаться открытым; пока только документы Word.',
     intgMcpHttpAdvanced: 'Дополнительно: другие адреса и журнал',
-    intgMcpTryNote: 'Ассистент обращается к GenOffice через MCP; вам не нужно вводить команды.',
+    intgMcpTryNote: 'Ассистент обращается к Eoffice через MCP; вам не нужно вводить команды.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Выполните один раз в терминале:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop или другой ассистент с поддержкой MCP',
@@ -4880,9 +4876,9 @@ export const strings = {
     intgSavedTo: 'Сохранено в {path}',
     intgCopied: 'Скопировано',
     intgCliEphemeral:
-      'Сначала перетащите GenOffice в «Программы», затем используйте командную строку.',
+      'Сначала перетащите Eoffice в «Программы», затем используйте командную строку.',
     intgCopyPath: 'Копировать путь',
-    intgCliNeedsUpdate: 'Этому скиллу нужна командная строка {v} или новее; обновите GenOffice.',
+    intgCliNeedsUpdate: 'Этому скиллу нужна командная строка {v} или новее; обновите Eoffice.',
     intgLoading: 'Проверка…',
     intgUpdateDue: 'Доступно обновление скилла',
     setSecAiModel: 'Модель ИИ',
@@ -4939,8 +4935,8 @@ export const strings = {
       'Когда провайдером выбран Genspark, веб-поиск, генерация изображений и анализ медиа идут через Genspark и расходуют кредиты; при выключении поиск использует бесплатные источники, а инструменты изображений Genspark недоступны.',
     setGithub: 'Открытый код',
     starOnGitHub: 'Поставить звезду на GitHub',
-    starPromptTitle: 'Нравится GenOffice?',
-    starPromptTitleN: 'Вы уже открыли {n} документов в GenOffice',
+    starPromptTitle: 'Нравится Eoffice?',
+    starPromptTitleN: 'Вы уже открыли {n} документов в Eoffice',
     starPromptBody:
       'GenOffice — бесплатное ПО с открытым кодом. Звезда на GitHub — лучшая поддержка для команды.',
     starPromptGo: 'Поставить звезду',
@@ -4962,7 +4958,7 @@ export const strings = {
     appMenu: 'Меню',
     newTab: 'Новая вкладка',
     // First-run onboarding
-    onbTitle1: 'Добро пожаловать в GenOffice',
+    onbTitle1: 'Добро пожаловать в Eoffice',
     onbSubtitle1: 'Первый открытый ИИ-нативный офисный пакет',
     onbBody1:
       'Создавайте документы, таблицы и презентации, работайте с PDF. ИИ встроен в каждый шаг.',
@@ -5211,8 +5207,8 @@ export const strings = {
     aiFontSizeCustom: 'مخصص',
     setAiSpellcheck: 'التدقيق الإملائي في محادثة الذكاء الاصطناعي',
     setDefaultApp: 'التطبيق الافتراضي لمستندات Office',
-    setDefaultAppDesc: 'فتح ملفات .docx و.xlsx و.pptx في GenOffice عند النقر المزدوج.',
-    setDefaultAppIs: 'GenOffice هو التطبيق الافتراضي بالفعل.',
+    setDefaultAppDesc: 'فتح ملفات .docx و.xlsx و.pptx في Eoffice عند النقر المزدوج.',
+    setDefaultAppIs: 'Eoffice هو التطبيق الافتراضي بالفعل.',
     setDefaultAppOther: 'الافتراضي الحالي: {app}',
     setDefaultAppSet: 'تعيين كافتراضي',
     setDefaultAppOpenSettings: 'فتح إعدادات النظام',
@@ -5252,7 +5248,7 @@ export const strings = {
     setMcpLogEmpty: 'لا توجد سجلات بعد',
     setSecAbout: 'حول',
     setSecIntegrations: 'التكاملات',
-    intgHeroTitle: 'استخدم GenOffice من مساعد الذكاء الاصطناعي',
+    intgHeroTitle: 'استخدم Eoffice من مساعد الذكاء الاصطناعي',
     intgHeroDesc:
       'بعد الربط، يمكن لـ Claude Code وCodex وCursor وClaude Desktop والمساعدين المشابهين إنشاء ملفات Word وExcel وPowerPoint وPDF وMarkdown وتحويلها وقراءتها وتحريرها نيابةً عنك. كل شيء يعمل على هذا الجهاز؛ لا يُرفع أي شيء.',
     intgHeroStep1: 'اختر الطريقة: CLI إذا كان مساعدك يستطيع تنفيذ أوامر الطرفية، وMCP إذا لم يستطع',
@@ -5261,7 +5257,7 @@ export const strings = {
     intgStep1Title: 'ثبّت المهارة في مساعدك',
     intgStep1Desc:
       'تُعرض فقط المساعدات الموجودة على هذا الجهاز. ثبّتها في المساعد الذي تستخدمه فعلاً؛ لا حاجة لتثبيتها في الجميع.',
-    intgStep1Update: 'عندما يجلب تحديث GenOffice مهارة أحدث، يظهر زر «تحديث» بجوار ذلك المساعد.',
+    intgStep1Update: 'عندما يجلب تحديث Eoffice مهارة أحدث، يظهر زر «تحديث» بجوار ذلك المساعد.',
     intgSkillVersion: 'المهارة {v}',
     intgStateMissing: 'المهارة غير مثبّتة',
     intgStateInstalled: 'المهارة {v} مثبّتة · جاهزة في محادثتك التالية',
@@ -5269,7 +5265,7 @@ export const strings = {
     intgOtherDesc:
       'اختر طريقة واحدة فقط من هذه الطرق الثلاث. جميعها تثبّت المهارة نفسها، فلا حاجة لأكثر من واحدة.',
     intgOtherFolderTitle: 'أي مساعد يقرأ مجلدات SKILL.md',
-    intgOtherFolderDesc: 'اختر مجلد skills الخاص به وسيكتب GenOffice الملف هناك.',
+    intgOtherFolderDesc: 'اختر مجلد skills الخاص به وسيكتب Eoffice الملف هناك.',
     intgOtherZipTitle: 'سلّم الملف إلى المساعد',
     intgOtherZipDesc: 'احفظ المهارة كملف zip ثم اطلب من المساعد تثبيتها.',
     intgOtherNpxTitle: 'بأمر skills (يتطلب Node.js)',
@@ -5280,22 +5276,22 @@ export const strings = {
     intgStep2DescBefore: 'بعد التثبيت، افتح محادثة جديدة في مساعدك واطلب بكلمات عادية، مثلاً:',
     intgExample1: 'حوّل ~/Downloads/report.md إلى مستند Word',
     intgExample2: 'أنشئ عرضاً من 6 شرائح عن نتائج الربع الثالث',
-    intgExample3: 'حوّل budget.xlsx إلى PDF وافتحه في GenOffice',
+    intgExample3: 'حوّل budget.xlsx إلى PDF وافتحه في Eoffice',
     intgStep2Note: 'المساعد يشغّل سطر أوامر genoffice بنفسه؛ لن تحتاج إلى كتابته أبداً.',
     intgCliPartTitle: 'CLI · سطر الأوامر + skill',
     intgCliPartDesc:
       'للمساعدين الذين يستطيعون تنفيذ أوامر الطرفية (Claude Code وCodex وCursor وغيرها). بعد تثبيت skill، يستدعي المساعد سطر أوامر genoffice بنفسه لإنشاء الملفات وتحويلها وقراءتها وتحريرها؛ لن تكتب أي أمر.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP هو البروتوكول المشترك الذي يستخدمه مساعدو الذكاء الاصطناعي لاستدعاء أدوات خارجية. استخدمه إذا كان مساعدك لا يستطيع تنفيذ الأوامر (مثل Claude Desktop) أو إذا أردت أن يتحكم في نافذة GenOffice مباشرة. اختر إحدى الطريقتين أدناه.',
+      'MCP هو البروتوكول المشترك الذي يستخدمه مساعدو الذكاء الاصطناعي لاستدعاء أدوات خارجية. استخدمه إذا كان مساعدك لا يستطيع تنفيذ الأوامر (مثل Claude Desktop) أو إذا أردت أن يتحكم في نافذة Eoffice مباشرة. اختر إحدى الطريقتين أدناه.',
     intgMcpStdioTitle: 'يشغّله المساعد (موصى به)',
     intgMcpStdioDesc:
-      'يشغّل المساعد genoffice mcp بنفسه: لا شيء لتفعيله هنا، ولا يلزم أن يكون GenOffice مفتوحًا. نفس إمكانات CLI.',
+      'يشغّل المساعد genoffice mcp بنفسه: لا شيء لتفعيله هنا، ولا يلزم أن يكون Eoffice مفتوحًا. نفس إمكانات CLI.',
     intgMcpHttpTitle: 'خادم HTTP محلي',
     intgMcpHttpDesc:
-      'يعمل داخل GenOffice؛ يتصل المساعد عبر عنوان URL ويمكنك مشاهدة المستند يُبنى خطوة بخطوة في محرر Word. يجب أن يبقى GenOffice مفتوحًا؛ مستندات Word فقط حاليًا.',
+      'يعمل داخل Eoffice؛ يتصل المساعد عبر عنوان URL ويمكنك مشاهدة المستند يُبنى خطوة بخطوة في محرر Word. يجب أن يبقى Eoffice مفتوحًا؛ مستندات Word فقط حاليًا.',
     intgMcpHttpAdvanced: 'متقدم: عناوين أخرى والسجل',
-    intgMcpTryNote: 'يستدعي المساعد GenOffice عبر MCP؛ لن تكتب أي أمر.',
+    intgMcpTryNote: 'يستدعي المساعد Eoffice عبر MCP؛ لن تكتب أي أمر.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'شغّل هذا مرة واحدة في الطرفية:',
     intgMcpOtherTitle: 'Cursor أو Claude Desktop أو أي مساعد آخر يدعم MCP',
@@ -5330,9 +5326,9 @@ export const strings = {
     intgSaveZipTitle: 'حفظ المهارة',
     intgSavedTo: 'تم الحفظ في {path}',
     intgCopied: 'تم النسخ',
-    intgCliEphemeral: 'اسحب GenOffice إلى مجلد التطبيقات أولاً، ثم استخدم سطر الأوامر.',
+    intgCliEphemeral: 'اسحب Eoffice إلى مجلد التطبيقات أولاً، ثم استخدم سطر الأوامر.',
     intgCopyPath: 'نسخ المسار',
-    intgCliNeedsUpdate: 'تحتاج هذه المهارة إلى سطر الأوامر {v} أو أحدث؛ حدّث GenOffice.',
+    intgCliNeedsUpdate: 'تحتاج هذه المهارة إلى سطر الأوامر {v} أو أحدث؛ حدّث Eoffice.',
     intgLoading: 'جارٍ التحقق…',
     intgUpdateDue: 'يتوفر تحديث للمهارة',
     setSecAiModel: 'نموذج الذكاء الاصطناعي',
@@ -5387,8 +5383,8 @@ export const strings = {
       'عندما يكون المزوّد Genspark، يمر البحث في الويب وتوليد الصور وتحليل الوسائط عبر Genspark ويستهلك الرصيد؛ عند الإيقاف يستخدم البحث مصادر مجانية وتصبح أدوات صور Genspark غير متاحة.',
     setGithub: 'مفتوح المصدر',
     starOnGitHub: 'ضع نجمة على GitHub',
-    starPromptTitle: 'هل أعجبك GenOffice؟',
-    starPromptTitleN: 'لقد فتحت {n} من المستندات في GenOffice',
+    starPromptTitle: 'هل أعجبك Eoffice؟',
+    starPromptTitleN: 'لقد فتحت {n} من المستندات في Eoffice',
     starPromptBody: 'GenOffice مجاني ومفتوح المصدر. نجمة على GitHub هي أفضل دعم للفريق.',
     starPromptGo: 'ضع نجمة',
     starPromptDone: 'وضعتها بالفعل',
@@ -5409,7 +5405,7 @@ export const strings = {
     appMenu: 'القائمة',
     newTab: 'علامة تبويب جديدة',
     // First-run onboarding
-    onbTitle1: 'مرحبًا بك في GenOffice',
+    onbTitle1: 'مرحبًا بك في Eoffice',
     onbSubtitle1: 'أول حزمة مكتبية مفتوحة المصدر وأصيلة في الذكاء الاصطناعي',
     onbBody1:
       'أنشئ المستندات وجداول البيانات والعروض التقديمية وراجع ملفات PDF. الذكاء الاصطناعي مدمج في كل خطوة.',
@@ -5657,8 +5653,8 @@ export const strings = {
     aiFontSizeCustom: 'Personalizado',
     setAiSpellcheck: 'Verificação ortográfica no chat de IA',
     setDefaultApp: 'App padrão para documentos do Office',
-    setDefaultAppDesc: 'Abrir arquivos .docx, .xlsx e .pptx no GenOffice ao clicar duas vezes.',
-    setDefaultAppIs: 'O GenOffice já é o app padrão.',
+    setDefaultAppDesc: 'Abrir arquivos .docx, .xlsx e .pptx no Eoffice ao clicar duas vezes.',
+    setDefaultAppIs: 'O Eoffice já é o app padrão.',
     setDefaultAppOther: 'Padrão atual: {app}',
     setDefaultAppSet: 'Definir como padrão',
     setDefaultAppOpenSettings: 'Abrir configurações do sistema',
@@ -5699,7 +5695,7 @@ export const strings = {
     setMcpLogEmpty: 'Ainda sem registros',
     setSecAbout: 'Sobre',
     setSecIntegrations: 'Integrações',
-    intgHeroTitle: 'Use o GenOffice a partir do seu assistente de IA',
+    intgHeroTitle: 'Use o Eoffice a partir do seu assistente de IA',
     intgHeroDesc:
       'Depois de conectados, Claude Code, Codex, Cursor, Claude Desktop e assistentes semelhantes podem criar, converter, ler e editar arquivos Word, Excel, PowerPoint, PDF e Markdown por você. Tudo roda neste computador; nada é enviado.',
     intgHeroStep1:
@@ -5710,7 +5706,7 @@ export const strings = {
     intgStep1Desc:
       'Só aparecem os assistentes encontrados neste computador. Instale no que você realmente usa; não precisa de todos.',
     intgStep1Update:
-      'Quando uma atualização do GenOffice trouxer um skill mais novo, um botão Atualizar aparece ao lado desse assistente.',
+      'Quando uma atualização do Eoffice trouxer um skill mais novo, um botão Atualizar aparece ao lado desse assistente.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill não instalado',
     intgStateInstalled: 'Skill {v} instalado · pronto no seu próximo chat',
@@ -5718,7 +5714,7 @@ export const strings = {
     intgOtherDesc:
       'Escolha apenas uma destas três formas. Todas instalam o mesmo skill, então não é preciso fazer mais de uma.',
     intgOtherFolderTitle: 'Qualquer assistente que leia pastas SKILL.md',
-    intgOtherFolderDesc: 'Escolha a pasta de skills dele e o GenOffice grava o arquivo lá.',
+    intgOtherFolderDesc: 'Escolha a pasta de skills dele e o Eoffice grava o arquivo lá.',
     intgOtherZipTitle: 'Entregue o arquivo ao assistente',
     intgOtherZipDesc: 'Salve o skill como zip e peça ao assistente para instalá-lo.',
     intgOtherNpxTitle: 'Com o comando skills (requer Node.js)',
@@ -5730,7 +5726,7 @@ export const strings = {
       'Depois de instalar, abra um chat novo no seu assistente e peça com suas palavras, por exemplo:',
     intgExample1: 'Transforme ~/Downloads/report.md em um documento Word',
     intgExample2: 'Monte uma apresentação de 6 slides sobre nossos resultados do 3º trimestre',
-    intgExample3: 'Converta budget.xlsx para PDF e abra no GenOffice',
+    intgExample3: 'Converta budget.xlsx para PDF e abra no Eoffice',
     intgStep2Note:
       'O assistente executa a linha de comando genoffice sozinho; você nunca precisa digitá-la.',
     intgCliPartTitle: 'CLI · linha de comando + skill',
@@ -5738,15 +5734,15 @@ export const strings = {
       'Para assistentes que executam comandos de terminal (Claude Code, Codex, Cursor e outros). Com o skill instalado, o assistente chama a linha de comando genoffice sozinho para criar, converter, ler e editar arquivos; você nunca digita um comando.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP é o protocolo comum que assistentes de IA usam para chamar ferramentas externas. Use-o quando o assistente não puder executar comandos (Claude Desktop, por exemplo) ou quando quiser que ele controle a janela do GenOffice diretamente. Escolha uma das duas formas abaixo.',
+      'MCP é o protocolo comum que assistentes de IA usam para chamar ferramentas externas. Use-o quando o assistente não puder executar comandos (Claude Desktop, por exemplo) ou quando quiser que ele controle a janela do Eoffice diretamente. Escolha uma das duas formas abaixo.',
     intgMcpStdioTitle: 'Iniciado pelo assistente (recomendado)',
     intgMcpStdioDesc:
-      'O assistente inicia o genoffice mcp sozinho: nada para ligar aqui, e o GenOffice não precisa estar aberto. Mesmos recursos da CLI.',
+      'O assistente inicia o genoffice mcp sozinho: nada para ligar aqui, e o Eoffice não precisa estar aberto. Mesmos recursos da CLI.',
     intgMcpHttpTitle: 'Servidor HTTP local',
     intgMcpHttpDesc:
-      'Roda dentro do GenOffice; o assistente conecta por URL e você acompanha o documento sendo montado passo a passo no editor Word. O GenOffice precisa ficar aberto; por enquanto só documentos Word.',
+      'Roda dentro do Eoffice; o assistente conecta por URL e você acompanha o documento sendo montado passo a passo no editor Word. O Eoffice precisa ficar aberto; por enquanto só documentos Word.',
     intgMcpHttpAdvanced: 'Avançado: outros endereços e log',
-    intgMcpTryNote: 'O assistente chama o GenOffice via MCP; você nunca digita um comando.',
+    intgMcpTryNote: 'O assistente chama o Eoffice via MCP; você nunca digita um comando.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Execute isto uma vez no terminal:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop ou qualquer outro assistente compatível com MCP',
@@ -5782,10 +5778,10 @@ export const strings = {
     intgSavedTo: 'Salvo em {path}',
     intgCopied: 'Copiado',
     intgCliEphemeral:
-      'Arraste o GenOffice para Aplicativos primeiro e depois use a linha de comando.',
+      'Arraste o Eoffice para Aplicativos primeiro e depois use a linha de comando.',
     intgCopyPath: 'Copiar caminho',
     intgCliNeedsUpdate:
-      'Este skill precisa da linha de comando {v} ou mais recente; atualize o GenOffice.',
+      'Este skill precisa da linha de comando {v} ou mais recente; atualize o Eoffice.',
     intgLoading: 'Verificando…',
     intgUpdateDue: 'Atualização do skill disponível',
     setSecAiModel: 'Modelo de IA',
@@ -5842,8 +5838,8 @@ export const strings = {
       'Quando o provedor é o Genspark, a busca na web, a geração de imagens e a análise de mídia passam pelo Genspark e consomem créditos; desativado, a busca usa fontes gratuitas e as ferramentas de imagem do Genspark ficam indisponíveis.',
     setGithub: 'Código aberto',
     starOnGitHub: 'Dar uma estrela no GitHub',
-    starPromptTitle: 'Gostando do GenOffice?',
-    starPromptTitleN: 'Você já abriu {n} documentos com o GenOffice',
+    starPromptTitle: 'Gostando do Eoffice?',
+    starPromptTitleN: 'Você já abriu {n} documentos com o Eoffice',
     starPromptBody:
       'O GenOffice é gratuito e de código aberto. Uma estrela no GitHub é a melhor forma de apoiar a equipe.',
     starPromptGo: 'Dar uma estrela',
@@ -5863,7 +5859,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'Nova guia',
     // First-run onboarding
-    onbTitle1: 'Bem-vindo ao GenOffice',
+    onbTitle1: 'Bem-vindo ao Eoffice',
     onbSubtitle1: 'A primeira suíte de escritório open source e nativa de IA',
     onbBody1:
       'Crie documentos, planilhas e apresentações e revise PDFs. A IA está integrada em cada etapa.',
@@ -6110,8 +6106,8 @@ export const strings = {
     aiFontSizeCustom: 'Personalizzato',
     setAiSpellcheck: 'Controllo ortografico nella chat IA',
     setDefaultApp: 'App predefinita per i documenti Office',
-    setDefaultAppDesc: 'Apri i file .docx, .xlsx e .pptx in GenOffice con un doppio clic.',
-    setDefaultAppIs: 'GenOffice è già l’app predefinita.',
+    setDefaultAppDesc: 'Apri i file .docx, .xlsx e .pptx in Eoffice con un doppio clic.',
+    setDefaultAppIs: 'Eoffice è già l’app predefinita.',
     setDefaultAppOther: 'Predefinita attuale: {app}',
     setDefaultAppSet: 'Imposta come predefinita',
     setDefaultAppOpenSettings: 'Apri impostazioni di sistema',
@@ -6151,7 +6147,7 @@ export const strings = {
     setMcpLogEmpty: 'Nessuna voce di registro',
     setSecAbout: 'Informazioni',
     setSecIntegrations: 'Integrazioni',
-    intgHeroTitle: 'Usa GenOffice dal tuo assistente IA',
+    intgHeroTitle: 'Usa Eoffice dal tuo assistente IA',
     intgHeroDesc:
       'Una volta collegati, Claude Code, Codex, Cursor, Claude Desktop e assistenti simili possono creare, convertire, leggere e modificare file Word, Excel, PowerPoint, PDF e Markdown per te. Tutto avviene su questo computer; nulla viene caricato.',
     intgHeroStep1:
@@ -6162,7 +6158,7 @@ export const strings = {
     intgStep1Desc:
       'Sono elencati solo gli assistenti trovati su questo computer. Installalo in quello che usi davvero; non servono tutti.',
     intgStep1Update:
-      "Quando un aggiornamento di GenOffice porta uno skill più recente, accanto a quell'assistente compare un pulsante Aggiorna.",
+      "Quando un aggiornamento di Eoffice porta uno skill più recente, accanto a quell'assistente compare un pulsante Aggiorna.",
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill non installato',
     intgStateInstalled: 'Skill {v} installato · pronto nella prossima chat',
@@ -6170,7 +6166,7 @@ export const strings = {
     intgOtherDesc:
       'Scegli una sola di queste tre strade. Installano tutte lo stesso skill, quindi non serve farne più di una.',
     intgOtherFolderTitle: 'Qualsiasi assistente che legge cartelle SKILL.md',
-    intgOtherFolderDesc: 'Scegli la sua cartella skills e GenOffice vi scrive il file.',
+    intgOtherFolderDesc: 'Scegli la sua cartella skills e Eoffice vi scrive il file.',
     intgOtherZipTitle: "Consegna il file all'assistente",
     intgOtherZipDesc: "Salva lo skill come zip, poi chiedi all'assistente di installarlo.",
     intgOtherNpxTitle: 'Con il comando skills (richiede Node.js)',
@@ -6183,7 +6179,7 @@ export const strings = {
       "Dopo l'installazione, apri una nuova chat nel tuo assistente e chiedi con parole semplici, ad esempio:",
     intgExample1: 'Trasforma ~/Downloads/report.md in un documento Word',
     intgExample2: 'Prepara una presentazione di 6 slide sui nostri risultati del terzo trimestre',
-    intgExample3: 'Converti budget.xlsx in PDF e aprilo in GenOffice',
+    intgExample3: 'Converti budget.xlsx in PDF e aprilo in Eoffice',
     intgStep2Note:
       "L'assistente esegue da solo la riga di comando genoffice; non dovrai mai digitarla.",
     intgCliPartTitle: 'CLI · riga di comando + skill',
@@ -6191,15 +6187,15 @@ export const strings = {
       'Per assistenti che possono eseguire comandi da terminale (Claude Code, Codex, Cursor e altri). Installato lo skill, l’assistente richiama da sé la riga di comando genoffice per creare, convertire, leggere e modificare file; non digiti mai un comando.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP è il protocollo comune con cui gli assistenti IA richiamano strumenti esterni. Usalo quando l’assistente non può eseguire comandi (Claude Desktop, ad esempio) o quando vuoi che controlli direttamente la finestra di GenOffice. Scegli uno dei due modi qui sotto.',
+      'MCP è il protocollo comune con cui gli assistenti IA richiamano strumenti esterni. Usalo quando l’assistente non può eseguire comandi (Claude Desktop, ad esempio) o quando vuoi che controlli direttamente la finestra di Eoffice. Scegli uno dei due modi qui sotto.',
     intgMcpStdioTitle: 'Avviato dall’assistente (consigliato)',
     intgMcpStdioDesc:
-      'L’assistente avvia genoffice mcp da sé: niente da attivare qui, e GenOffice non deve essere aperto. Stesse funzioni della CLI.',
+      'L’assistente avvia genoffice mcp da sé: niente da attivare qui, e Eoffice non deve essere aperto. Stesse funzioni della CLI.',
     intgMcpHttpTitle: 'Server HTTP locale',
     intgMcpHttpDesc:
-      'Gira dentro GenOffice; l’assistente si collega a un URL e puoi vedere il documento prendere forma passo dopo passo nell’editor Word. GenOffice deve restare aperto; per ora solo documenti Word.',
+      'Gira dentro Eoffice; l’assistente si collega a un URL e puoi vedere il documento prendere forma passo dopo passo nell’editor Word. Eoffice deve restare aperto; per ora solo documenti Word.',
     intgMcpHttpAdvanced: 'Avanzato: altri indirizzi e registro',
-    intgMcpTryNote: 'L’assistente richiama GenOffice tramite MCP; non digiti mai un comando.',
+    intgMcpTryNote: 'L’assistente richiama Eoffice tramite MCP; non digiti mai un comando.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Esegui questo una volta nel terminale:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop o qualsiasi altro assistente compatibile con MCP',
@@ -6234,10 +6230,10 @@ export const strings = {
     intgSaveZipTitle: 'Salva skill',
     intgSavedTo: 'Salvato in {path}',
     intgCopied: 'Copiato',
-    intgCliEphemeral: 'Trascina prima GenOffice in Applicazioni, poi usa la riga di comando.',
+    intgCliEphemeral: 'Trascina prima Eoffice in Applicazioni, poi usa la riga di comando.',
     intgCopyPath: 'Copia percorso',
     intgCliNeedsUpdate:
-      'Questo skill richiede la riga di comando {v} o successiva; aggiorna GenOffice.',
+      'Questo skill richiede la riga di comando {v} o successiva; aggiorna Eoffice.',
     intgLoading: 'Verifica in corso…',
     intgUpdateDue: 'Aggiornamento dello skill disponibile',
     setSecAiModel: 'Modello IA',
@@ -6294,8 +6290,8 @@ export const strings = {
       "Quando il provider è Genspark, la ricerca web, la generazione di immagini e l'analisi dei media passano da Genspark e consumano crediti; se disattivato, la ricerca usa fonti gratuite e gli strumenti immagine di Genspark non sono disponibili.",
     setGithub: 'Open source',
     starOnGitHub: 'Metti una stella su GitHub',
-    starPromptTitle: 'Ti piace GenOffice?',
-    starPromptTitleN: 'Hai aperto {n} documenti con GenOffice',
+    starPromptTitle: 'Ti piace Eoffice?',
+    starPromptTitleN: 'Hai aperto {n} documenti con Eoffice',
     starPromptBody:
       'GenOffice è gratuito e open source. Una stella su GitHub è il modo migliore per sostenere il team.',
     starPromptGo: 'Metti una stella',
@@ -6315,7 +6311,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'Nuova scheda',
     // First-run onboarding
-    onbTitle1: 'Benvenuto in GenOffice',
+    onbTitle1: 'Benvenuto in Eoffice',
     onbSubtitle1: 'La prima suite per ufficio open source e nativa per l’IA',
     onbBody1:
       'Crea documenti, fogli di calcolo e presentazioni e rivedi i PDF. L’IA è integrata in ogni passaggio.',
@@ -6560,8 +6556,8 @@ export const strings = {
     aiFontSizeCustom: 'Niestandardowy',
     setAiSpellcheck: 'Sprawdzanie pisowni w czacie AI',
     setDefaultApp: 'Domyślna aplikacja dla dokumentów Office',
-    setDefaultAppDesc: 'Otwieraj pliki .docx, .xlsx i .pptx w GenOffice po dwukrotnym kliknięciu.',
-    setDefaultAppIs: 'GenOffice jest już aplikacją domyślną.',
+    setDefaultAppDesc: 'Otwieraj pliki .docx, .xlsx i .pptx w Eoffice po dwukrotnym kliknięciu.',
+    setDefaultAppIs: 'Eoffice jest już aplikacją domyślną.',
     setDefaultAppOther: 'Obecnie domyślna: {app}',
     setDefaultAppSet: 'Ustaw jako domyślną',
     setDefaultAppOpenSettings: 'Otwórz ustawienia systemu',
@@ -6600,7 +6596,7 @@ export const strings = {
     setMcpLogEmpty: 'Brak wpisów',
     setSecAbout: 'O aplikacji',
     setSecIntegrations: 'Integracje',
-    intgHeroTitle: 'Używaj GenOffice ze swojego asystenta AI',
+    intgHeroTitle: 'Używaj Eoffice ze swojego asystenta AI',
     intgHeroDesc:
       'Po połączeniu Claude Code, Codex, Cursor, Claude Desktop i podobni asystenci mogą tworzyć, konwertować, czytać i edytować pliki Word, Excel, PowerPoint, PDF i Markdown za Ciebie. Wszystko działa na tym komputerze; nic nie jest przesyłane.',
     intgHeroStep1:
@@ -6611,7 +6607,7 @@ export const strings = {
     intgStep1Desc:
       'Widoczne są tylko asystenty znalezione na tym komputerze. Zainstaluj w tym, którego naprawdę używasz; nie potrzebujesz wszystkich.',
     intgStep1Update:
-      'Gdy aktualizacja GenOffice przyniesie nowszy skill, obok tego asystenta pojawi się przycisk Aktualizuj.',
+      'Gdy aktualizacja Eoffice przyniesie nowszy skill, obok tego asystenta pojawi się przycisk Aktualizuj.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill niezainstalowany',
     intgStateInstalled: 'Skill {v} zainstalowany · gotowy w następnym czacie',
@@ -6619,7 +6615,7 @@ export const strings = {
     intgOtherDesc:
       'Wybierz tylko jeden z tych trzech sposobów. Wszystkie instalują ten sam skill, więc nie trzeba robić więcej niż jednego.',
     intgOtherFolderTitle: 'Dowolny asystent czytający foldery SKILL.md',
-    intgOtherFolderDesc: 'Wybierz jego folder skills, a GenOffice zapisze tam plik.',
+    intgOtherFolderDesc: 'Wybierz jego folder skills, a Eoffice zapisze tam plik.',
     intgOtherZipTitle: 'Przekaż plik asystentowi',
     intgOtherZipDesc: 'Zapisz skill jako zip, a potem poproś asystenta o instalację.',
     intgOtherNpxTitle: 'Poleceniem skills (wymaga Node.js)',
@@ -6631,22 +6627,22 @@ export const strings = {
       'Po instalacji otwórz nowy czat w asystencie i poproś zwykłymi słowami, na przykład:',
     intgExample1: 'Zamień ~/Downloads/report.md na dokument Word',
     intgExample2: 'Zrób prezentację z 6 slajdów o naszych wynikach za III kwartał',
-    intgExample3: 'Przekonwertuj budget.xlsx do PDF i otwórz w GenOffice',
+    intgExample3: 'Przekonwertuj budget.xlsx do PDF i otwórz w Eoffice',
     intgStep2Note: 'Asystent sam uruchamia wiersz poleceń genoffice; nigdy nie musisz go wpisywać.',
     intgCliPartTitle: 'CLI · wiersz poleceń + skill',
     intgCliPartDesc:
       'Dla asystentów, które potrafią uruchamiać polecenia terminala (Claude Code, Codex, Cursor i inne). Po zainstalowaniu skilla asystent sam wywołuje wiersz poleceń genoffice, aby tworzyć, konwertować, czytać i edytować pliki; nigdy nie wpisujesz polecenia.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP to wspólny protokół, którym asystenci AI wywołują zewnętrzne narzędzia. Użyj go, gdy asystent nie potrafi uruchamiać poleceń (np. Claude Desktop) lub gdy chcesz, aby bezpośrednio sterował oknem GenOffice. Wybierz jeden z dwóch sposobów poniżej.',
+      'MCP to wspólny protokół, którym asystenci AI wywołują zewnętrzne narzędzia. Użyj go, gdy asystent nie potrafi uruchamiać poleceń (np. Claude Desktop) lub gdy chcesz, aby bezpośrednio sterował oknem Eoffice. Wybierz jeden z dwóch sposobów poniżej.',
     intgMcpStdioTitle: 'Uruchamiany przez asystenta (zalecane)',
     intgMcpStdioDesc:
-      'Asystent sam uruchamia genoffice mcp: nic tu nie trzeba włączać, a GenOffice nie musi być otwarty. Te same funkcje co CLI.',
+      'Asystent sam uruchamia genoffice mcp: nic tu nie trzeba włączać, a Eoffice nie musi być otwarty. Te same funkcje co CLI.',
     intgMcpHttpTitle: 'Lokalny serwer HTTP',
     intgMcpHttpDesc:
-      'Działa wewnątrz GenOffice; asystent łączy się przez URL, a Ty widzisz, jak dokument powstaje krok po kroku w edytorze Word. GenOffice musi pozostać otwarty; na razie tylko dokumenty Word.',
+      'Działa wewnątrz Eoffice; asystent łączy się przez URL, a Ty widzisz, jak dokument powstaje krok po kroku w edytorze Word. Eoffice musi pozostać otwarty; na razie tylko dokumenty Word.',
     intgMcpHttpAdvanced: 'Zaawansowane: inne adresy i dziennik',
-    intgMcpTryNote: 'Asystent wywołuje GenOffice przez MCP; nigdy nie wpisujesz polecenia.',
+    intgMcpTryNote: 'Asystent wywołuje Eoffice przez MCP; nigdy nie wpisujesz polecenia.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Uruchom to raz w terminalu:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop lub inny asystent obsługujący MCP',
@@ -6681,9 +6677,9 @@ export const strings = {
     intgSaveZipTitle: 'Zapisz skill',
     intgSavedTo: 'Zapisano w {path}',
     intgCopied: 'Skopiowano',
-    intgCliEphemeral: 'Najpierw przenieś GenOffice do Aplikacji, potem użyj wiersza poleceń.',
+    intgCliEphemeral: 'Najpierw przenieś Eoffice do Aplikacji, potem użyj wiersza poleceń.',
     intgCopyPath: 'Kopiuj ścieżkę',
-    intgCliNeedsUpdate: 'Ten skill wymaga wiersza poleceń {v} lub nowszego; zaktualizuj GenOffice.',
+    intgCliNeedsUpdate: 'Ten skill wymaga wiersza poleceń {v} lub nowszego; zaktualizuj Eoffice.',
     intgLoading: 'Sprawdzanie…',
     intgUpdateDue: 'Dostępna aktualizacja skilla',
     setSecAiModel: 'Model AI',
@@ -6741,8 +6737,8 @@ export const strings = {
       'Gdy dostawcą jest Genspark, wyszukiwanie w sieci, generowanie obrazów i analiza mediów przechodzą przez Genspark i zużywają kredyty; po wyłączeniu wyszukiwanie używa darmowych źródeł, a narzędzia obrazów Genspark są niedostępne.',
     setGithub: 'Open source',
     starOnGitHub: 'Gwiazdka na GitHubie',
-    starPromptTitle: 'Podoba Ci się GenOffice?',
-    starPromptTitleN: 'Otwarto już {n} dokumentów w GenOffice',
+    starPromptTitle: 'Podoba Ci się Eoffice?',
+    starPromptTitleN: 'Otwarto już {n} dokumentów w Eoffice',
     starPromptBody:
       'GenOffice jest darmowy i open source. Gwiazdka na GitHubie to najlepsze wsparcie dla zespołu.',
     starPromptGo: 'Daj gwiazdkę',
@@ -6762,7 +6758,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'Nowa karta',
     // First-run onboarding
-    onbTitle1: 'Witamy w GenOffice',
+    onbTitle1: 'Witamy w Eoffice',
     onbSubtitle1: 'Pierwszy otwartoźródłowy, natywnie oparty na AI pakiet biurowy',
     onbBody1:
       'Twórz dokumenty, arkusze i prezentacje oraz przeglądaj pliki PDF. AI jest wbudowana w każdy etap.',
@@ -7014,7 +7010,7 @@ export const strings = {
     setMcpLogEmpty: 'Zatím žádné záznamy',
     setSecAbout: 'O aplikaci',
     setSecIntegrations: 'Integrace',
-    intgHeroTitle: 'Používejte GenOffice ze svého AI asistenta',
+    intgHeroTitle: 'Používejte Eoffice ze svého AI asistenta',
     intgHeroDesc:
       'Po připojení mohou Claude Code, Codex, Cursor, Claude Desktop a podobní asistenti za vás vytvářet, převádět, číst a upravovat soubory Word, Excel, PowerPoint, PDF a Markdown. Vše běží na tomto počítači; nic se neodesílá.',
     intgHeroStep1: 'Zvolte cestu: CLI, pokud asistent umí spouštět příkazy terminálu, jinak MCP',
@@ -7024,7 +7020,7 @@ export const strings = {
     intgStep1Desc:
       'Zobrazeni jsou jen asistenti nalezení na tomto počítači. Nainstalujte jej do toho, který skutečně používáte; všechny nepotřebujete.',
     intgStep1Update:
-      'Když aktualizace GenOffice přinese novější skill, u daného asistenta se objeví tlačítko Aktualizovat.',
+      'Když aktualizace Eoffice přinese novější skill, u daného asistenta se objeví tlačítko Aktualizovat.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill není nainstalován',
     intgStateInstalled: 'Skill {v} nainstalován · připraven v příštím chatu',
@@ -7032,7 +7028,7 @@ export const strings = {
     intgOtherDesc:
       'Zvolte pouze jeden z těchto tří způsobů. Všechny instalují stejný skill, takže není třeba dělat více než jeden.',
     intgOtherFolderTitle: 'Jakýkoli asistent, který čte složky SKILL.md',
-    intgOtherFolderDesc: 'Vyberte jeho složku skills a GenOffice tam soubor zapíše.',
+    intgOtherFolderDesc: 'Vyberte jeho složku skills a Eoffice tam soubor zapíše.',
     intgOtherZipTitle: 'Předejte soubor asistentovi',
     intgOtherZipDesc: 'Uložte skill jako zip a požádejte asistenta, aby jej nainstaloval.',
     intgOtherNpxTitle: 'Příkazem skills (vyžaduje Node.js)',
@@ -7044,22 +7040,22 @@ export const strings = {
       'Po instalaci otevřete v asistentovi nový chat a požádejte běžnými slovy, například:',
     intgExample1: 'Převeď ~/Downloads/report.md na dokument Word',
     intgExample2: 'Udělej prezentaci o 6 snímcích o našich výsledcích za 3. čtvrtletí',
-    intgExample3: 'Převeď budget.xlsx do PDF a otevři ho v GenOffice',
+    intgExample3: 'Převeď budget.xlsx do PDF a otevři ho v Eoffice',
     intgStep2Note: 'Asistent spouští příkazový řádek genoffice sám; nikdy ho nemusíte psát.',
     intgCliPartTitle: 'CLI · příkazový řádek + skill',
     intgCliPartDesc:
       'Pro asistenty, kteří umí spouštět příkazy terminálu (Claude Code, Codex, Cursor a další). Po instalaci skillu asistent sám volá příkazový řádek genoffice k vytváření, převodu, čtení a úpravám souborů; žádný příkaz nepíšete.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP je společný protokol, kterým AI asistenti volají externí nástroje. Použijte ho, když asistent neumí spouštět příkazy (např. Claude Desktop) nebo když chcete, aby přímo ovládal okno GenOffice. Vyberte jeden ze dvou způsobů níže.',
+      'MCP je společný protokol, kterým AI asistenti volají externí nástroje. Použijte ho, když asistent neumí spouštět příkazy (např. Claude Desktop) nebo když chcete, aby přímo ovládal okno Eoffice. Vyberte jeden ze dvou způsobů níže.',
     intgMcpStdioTitle: 'Spouští asistent (doporučeno)',
     intgMcpStdioDesc:
-      'Asistent spustí genoffice mcp sám: tady není co zapínat a GenOffice nemusí být otevřený. Stejné funkce jako CLI.',
+      'Asistent spustí genoffice mcp sám: tady není co zapínat a Eoffice nemusí být otevřený. Stejné funkce jako CLI.',
     intgMcpHttpTitle: 'Místní HTTP server',
     intgMcpHttpDesc:
-      'Běží uvnitř GenOffice; asistent se připojí přes URL a v editoru Word sledujete, jak dokument krok za krokem vzniká. GenOffice musí zůstat otevřený; zatím jen dokumenty Word.',
+      'Běží uvnitř Eoffice; asistent se připojí přes URL a v editoru Word sledujete, jak dokument krok za krokem vzniká. Eoffice musí zůstat otevřený; zatím jen dokumenty Word.',
     intgMcpHttpAdvanced: 'Pokročilé: další adresy a protokol',
-    intgMcpTryNote: 'Asistent volá GenOffice přes MCP; žádný příkaz nepíšete.',
+    intgMcpTryNote: 'Asistent volá Eoffice přes MCP; žádný příkaz nepíšete.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Spusťte jednou v terminálu:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop nebo jiný asistent s podporou MCP',
@@ -7094,10 +7090,10 @@ export const strings = {
     intgSaveZipTitle: 'Uložit skill',
     intgSavedTo: 'Uloženo do {path}',
     intgCopied: 'Zkopírováno',
-    intgCliEphemeral: 'Nejprve přetáhněte GenOffice do Aplikací a poté použijte příkazový řádek.',
+    intgCliEphemeral: 'Nejprve přetáhněte Eoffice do Aplikací a poté použijte příkazový řádek.',
     intgCopyPath: 'Kopírovat cestu',
     intgCliNeedsUpdate:
-      'Tento skill vyžaduje příkazový řádek {v} nebo novější; aktualizujte GenOffice.',
+      'Tento skill vyžaduje příkazový řádek {v} nebo novější; aktualizujte Eoffice.',
     intgLoading: 'Kontrola…',
     intgUpdateDue: 'K dispozici je aktualizace skillu',
     setSecAiModel: 'Model AI',
@@ -7155,8 +7151,8 @@ export const strings = {
       'Webové vyhledávání, generování obrázků a analýza médií běží přes Genspark a čerpají kredity, pokud je jejich poskytovatel nastaven na Genspark; při vypnutí vyhledávání používá bezplatné zdroje a obrázkové nástroje Genspark nejsou dostupné.',
     setGithub: 'Open source',
     starOnGitHub: 'Dát hvězdičku na GitHubu',
-    starPromptTitle: 'Líbí se vám GenOffice?',
-    starPromptTitleN: 'V GenOffice jste otevřeli už {n} dokumentů',
+    starPromptTitle: 'Líbí se vám Eoffice?',
+    starPromptTitleN: 'V Eoffice jste otevřeli už {n} dokumentů',
     starPromptBody:
       'GenOffice je zdarma a open source. Hvězdička na GitHubu je nejlepší způsob, jak tým podpořit.',
     starPromptGo: 'Dát hvězdičku na GitHubu',
@@ -7176,7 +7172,7 @@ export const strings = {
     appMenu: 'Nabídka',
     newTab: 'Nová karta',
     // First-run onboarding
-    onbTitle1: 'Vítejte v GenOffice',
+    onbTitle1: 'Vítejte v Eoffice',
     onbSubtitle1: 'První open-source kancelářský balík s nativní AI',
     onbBody1:
       'Vytvářejte dokumenty, tabulky a prezentace a kontrolujte PDF. AI je součástí každého kroku.',
@@ -7215,8 +7211,8 @@ export const strings = {
     aiFontSizeCustom: 'Vlastní',
     setAiSpellcheck: 'Kontrola pravopisu v chatu AI',
     setDefaultApp: 'Výchozí aplikace pro dokumenty Office',
-    setDefaultAppDesc: 'Otevírat soubory .docx, .xlsx a .pptx v GenOffice poklepáním.',
-    setDefaultAppIs: 'GenOffice už je výchozí aplikací.',
+    setDefaultAppDesc: 'Otevírat soubory .docx, .xlsx a .pptx v Eoffice poklepáním.',
+    setDefaultAppIs: 'Eoffice už je výchozí aplikací.',
     setDefaultAppOther: 'Aktuální výchozí: {app}',
     setDefaultAppSet: 'Nastavit jako výchozí',
     setDefaultAppOpenSettings: 'Otevřít nastavení systému',
@@ -7452,8 +7448,8 @@ export const strings = {
     aiFontSizeCustom: 'Aangepast',
     setAiSpellcheck: 'Spellingcontrole in AI-chat',
     setDefaultApp: 'Standaardapp voor Office-documenten',
-    setDefaultAppDesc: '.docx-, .xlsx- en .pptx-bestanden in GenOffice openen bij dubbelklikken.',
-    setDefaultAppIs: 'GenOffice is al de standaardapp.',
+    setDefaultAppDesc: '.docx-, .xlsx- en .pptx-bestanden in Eoffice openen bij dubbelklikken.',
+    setDefaultAppIs: 'Eoffice is al de standaardapp.',
     setDefaultAppOther: 'Huidige standaard: {app}',
     setDefaultAppSet: 'Als standaard instellen',
     setDefaultAppOpenSettings: 'Systeeminstellingen openen',
@@ -7493,7 +7489,7 @@ export const strings = {
     setMcpLogEmpty: 'Nog geen logregels',
     setSecAbout: 'Over',
     setSecIntegrations: 'Integraties',
-    intgHeroTitle: 'GenOffice gebruiken vanuit uw AI-assistent',
+    intgHeroTitle: 'Eoffice gebruiken vanuit uw AI-assistent',
     intgHeroDesc:
       'Eenmaal verbonden kunnen Claude Code, Codex, Cursor, Claude Desktop en vergelijkbare assistenten Word-, Excel-, PowerPoint-, PDF- en Markdown-bestanden voor je maken, converteren, lezen en bewerken. Alles draait op deze computer; er wordt niets geüpload.',
     intgHeroStep1:
@@ -7504,7 +7500,7 @@ export const strings = {
     intgStep1Desc:
       'Alleen assistenten die op deze computer zijn gevonden staan hier. Installeer in die u echt gebruikt; u hebt ze niet allemaal nodig.',
     intgStep1Update:
-      'Wanneer een GenOffice-update een nieuwere skill meebrengt, verschijnt naast die assistent een knop Bijwerken.',
+      'Wanneer een Eoffice-update een nieuwere skill meebrengt, verschijnt naast die assistent een knop Bijwerken.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill niet geïnstalleerd',
     intgStateInstalled: 'Skill {v} geïnstalleerd · klaar in uw volgende chat',
@@ -7512,7 +7508,7 @@ export const strings = {
     intgOtherDesc:
       'Kies één van deze drie manieren. Ze installeren allemaal dezelfde skill, dus meer dan één is niet nodig.',
     intgOtherFolderTitle: 'Elke assistent die SKILL.md-mappen leest',
-    intgOtherFolderDesc: 'Kies zijn skills-map en GenOffice schrijft het bestand daar.',
+    intgOtherFolderDesc: 'Kies zijn skills-map en Eoffice schrijft het bestand daar.',
     intgOtherZipTitle: 'Geef het bestand aan de assistent',
     intgOtherZipDesc: 'Sla de skill op als zip en vraag de assistent hem te installeren.',
     intgOtherNpxTitle: 'Met de skills-opdracht (vereist Node.js)',
@@ -7525,7 +7521,7 @@ export const strings = {
       'Open na de installatie een nieuwe chat in uw assistent en vraag het in gewone woorden, bijvoorbeeld:',
     intgExample1: 'Maak van ~/Downloads/report.md een Word-document',
     intgExample2: 'Maak een presentatie van 6 dia’s over onze Q3-resultaten',
-    intgExample3: 'Zet budget.xlsx om naar PDF en open het in GenOffice',
+    intgExample3: 'Zet budget.xlsx om naar PDF en open het in Eoffice',
     intgStep2Note:
       'De assistent voert de genoffice-opdrachtregel zelf uit; u hoeft die nooit te typen.',
     intgCliPartTitle: 'CLI · opdrachtregel + skill',
@@ -7533,15 +7529,15 @@ export const strings = {
       'Voor assistenten die terminalopdrachten kunnen uitvoeren (Claude Code, Codex, Cursor en andere). Na installatie van de skill roept de assistent zelf de genoffice-opdrachtregel aan om bestanden te maken, converteren, lezen en bewerken; je typt nooit een opdracht.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP is het gemeenschappelijke protocol waarmee AI-assistenten externe tools aanroepen. Gebruik het als je assistent geen opdrachten kan uitvoeren (bijvoorbeeld Claude Desktop) of als je wilt dat hij het GenOffice-venster rechtstreeks bestuurt. Kies een van de twee manieren hieronder.',
+      'MCP is het gemeenschappelijke protocol waarmee AI-assistenten externe tools aanroepen. Gebruik het als je assistent geen opdrachten kan uitvoeren (bijvoorbeeld Claude Desktop) of als je wilt dat hij het Eoffice-venster rechtstreeks bestuurt. Kies een van de twee manieren hieronder.',
     intgMcpStdioTitle: 'Gestart door de assistent (aanbevolen)',
     intgMcpStdioDesc:
-      'De assistent start genoffice mcp zelf: hier hoeft niets aan, en GenOffice hoeft niet open te staan. Dezelfde functies als de CLI.',
+      'De assistent start genoffice mcp zelf: hier hoeft niets aan, en Eoffice hoeft niet open te staan. Dezelfde functies als de CLI.',
     intgMcpHttpTitle: 'Lokale HTTP-server',
     intgMcpHttpDesc:
-      'Draait in GenOffice; de assistent verbindt via een URL en je ziet het document stap voor stap ontstaan in de Word-editor. GenOffice moet open blijven; voorlopig alleen Word-documenten.',
+      'Draait in Eoffice; de assistent verbindt via een URL en je ziet het document stap voor stap ontstaan in de Word-editor. Eoffice moet open blijven; voorlopig alleen Word-documenten.',
     intgMcpHttpAdvanced: 'Geavanceerd: andere adressen en logboek',
-    intgMcpTryNote: 'De assistent roept GenOffice aan via MCP; je typt nooit een opdracht.',
+    intgMcpTryNote: 'De assistent roept Eoffice aan via MCP; je typt nooit een opdracht.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Voer dit één keer uit in een terminal:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop of een andere assistent met MCP-ondersteuning',
@@ -7576,9 +7572,9 @@ export const strings = {
     intgSaveZipTitle: 'Skill opslaan',
     intgSavedTo: 'Opgeslagen in {path}',
     intgCopied: 'Gekopieerd',
-    intgCliEphemeral: "Sleep GenOffice eerst naar Programma's en gebruik daarna de opdrachtregel.",
+    intgCliEphemeral: "Sleep Eoffice eerst naar Programma's en gebruik daarna de opdrachtregel.",
     intgCopyPath: 'Pad kopiëren',
-    intgCliNeedsUpdate: 'Deze skill vereist opdrachtregel {v} of nieuwer; werk GenOffice bij.',
+    intgCliNeedsUpdate: 'Deze skill vereist opdrachtregel {v} of nieuwer; werk Eoffice bij.',
     intgLoading: 'Controleren…',
     intgUpdateDue: 'Skill-update beschikbaar',
     setSecAiModel: 'AI-model',
@@ -7635,8 +7631,8 @@ export const strings = {
       'Staat de provider op Genspark, dan lopen zoeken op het web, afbeeldingen genereren en media-analyse via Genspark en kosten ze credits; uitgeschakeld gebruikt zoeken gratis bronnen en zijn de Genspark-afbeeldingstools niet beschikbaar.',
     setGithub: 'Open source',
     starOnGitHub: 'Geef een ster op GitHub',
-    starPromptTitle: 'Bevalt GenOffice?',
-    starPromptTitleN: 'Je hebt al {n} documenten geopend met GenOffice',
+    starPromptTitle: 'Bevalt Eoffice?',
+    starPromptTitleN: 'Je hebt al {n} documenten geopend met Eoffice',
     starPromptBody:
       'GenOffice is gratis en open source. Een ster op GitHub is de beste steun voor het team.',
     starPromptGo: 'Geef een ster',
@@ -7656,7 +7652,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'Nieuw tabblad',
     // First-run onboarding
-    onbTitle1: 'Welkom bij GenOffice',
+    onbTitle1: 'Welkom bij Eoffice',
     onbSubtitle1: 'De eerste open source, AI-native officesuite',
     onbBody1:
       'Maak documenten, bouw spreadsheets, maak presentaties en beoordeel PDF-bestanden. AI zit in elke stap ingebouwd.',
@@ -7901,8 +7897,8 @@ export const strings = {
     aiFontSizeCustom: 'Tersuai',
     setAiSpellcheck: 'Semakan ejaan dalam sembang AI',
     setDefaultApp: 'Apl lalai untuk dokumen Office',
-    setDefaultAppDesc: 'Buka fail .docx, .xlsx dan .pptx dalam GenOffice apabila diklik dua kali.',
-    setDefaultAppIs: 'GenOffice sudah menjadi apl lalai.',
+    setDefaultAppDesc: 'Buka fail .docx, .xlsx dan .pptx dalam Eoffice apabila diklik dua kali.',
+    setDefaultAppIs: 'Eoffice sudah menjadi apl lalai.',
     setDefaultAppOther: 'Lalai semasa: {app}',
     setDefaultAppSet: 'Jadikan lalai',
     setDefaultAppOpenSettings: 'Buka tetapan sistem',
@@ -7942,7 +7938,7 @@ export const strings = {
     setMcpLogEmpty: 'Belum ada log',
     setSecAbout: 'Perihal',
     setSecIntegrations: 'Integrasi',
-    intgHeroTitle: 'Gunakan GenOffice daripada pembantu AI anda',
+    intgHeroTitle: 'Gunakan Eoffice daripada pembantu AI anda',
     intgHeroDesc:
       'Setelah disambungkan, Claude Code, Codex, Cursor, Claude Desktop dan pembantu serupa boleh mencipta, menukar, membaca dan mengedit fail Word, Excel, PowerPoint, PDF dan Markdown untuk anda. Semuanya berjalan di komputer ini; tiada apa yang dimuat naik.',
     intgHeroStep1:
@@ -7953,7 +7949,7 @@ export const strings = {
     intgStep1Desc:
       'Hanya pembantu yang ditemui pada komputer ini disenaraikan. Pasang pada yang anda benar-benar guna; tidak perlu kesemuanya.',
     intgStep1Update:
-      'Apabila kemas kini GenOffice membawa skill yang lebih baharu, butang Kemas kini muncul di sebelah pembantu itu.',
+      'Apabila kemas kini Eoffice membawa skill yang lebih baharu, butang Kemas kini muncul di sebelah pembantu itu.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'Skill belum dipasang',
     intgStateInstalled: 'Skill {v} dipasang · sedia dalam sembang seterusnya',
@@ -7961,7 +7957,7 @@ export const strings = {
     intgOtherDesc:
       'Pilih satu sahaja daripada tiga cara ini. Semuanya memasang skill yang sama, jadi tidak perlu lebih daripada satu.',
     intgOtherFolderTitle: 'Mana-mana pembantu yang membaca folder SKILL.md',
-    intgOtherFolderDesc: 'Pilih folder skills pembantu itu dan GenOffice menulis fail di sana.',
+    intgOtherFolderDesc: 'Pilih folder skills pembantu itu dan Eoffice menulis fail di sana.',
     intgOtherZipTitle: 'Serahkan fail kepada pembantu',
     intgOtherZipDesc: 'Simpan skill sebagai zip, kemudian minta pembantu memasangnya.',
     intgOtherNpxTitle: 'Dengan arahan skills (perlukan Node.js)',
@@ -7974,7 +7970,7 @@ export const strings = {
       'Selepas dipasang, buka sembang baharu dalam pembantu anda dan minta dengan bahasa biasa, contohnya:',
     intgExample1: 'Tukar ~/Downloads/report.md kepada dokumen Word',
     intgExample2: 'Buat pembentangan 6 slaid tentang hasil S3 kami',
-    intgExample3: 'Tukar budget.xlsx kepada PDF dan buka dalam GenOffice',
+    intgExample3: 'Tukar budget.xlsx kepada PDF dan buka dalam Eoffice',
     intgStep2Note:
       'Pembantu menjalankan baris arahan genoffice sendiri; anda tidak perlu menaipnya.',
     intgCliPartTitle: 'CLI · baris arahan + skill',
@@ -7982,16 +7978,16 @@ export const strings = {
       'Untuk pembantu yang boleh menjalankan arahan terminal (Claude Code, Codex, Cursor dan lain-lain). Setelah skill dipasang, pembantu memanggil baris arahan genoffice sendiri untuk mencipta, menukar, membaca dan mengedit fail; anda tidak perlu menaip sebarang arahan.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP ialah protokol umum yang digunakan pembantu AI untuk memanggil alat luaran. Gunakannya apabila pembantu anda tidak boleh menjalankan arahan (contohnya Claude Desktop) atau apabila anda mahu ia mengawal tetingkap GenOffice secara langsung. Pilih salah satu daripada dua cara di bawah.',
+      'MCP ialah protokol umum yang digunakan pembantu AI untuk memanggil alat luaran. Gunakannya apabila pembantu anda tidak boleh menjalankan arahan (contohnya Claude Desktop) atau apabila anda mahu ia mengawal tetingkap Eoffice secara langsung. Pilih salah satu daripada dua cara di bawah.',
     intgMcpStdioTitle: 'Dimulakan oleh pembantu (disyorkan)',
     intgMcpStdioDesc:
-      'Pembantu melancarkan genoffice mcp sendiri: tiada apa yang perlu dihidupkan di sini, dan GenOffice tidak perlu dibuka. Ciri sama seperti CLI.',
+      'Pembantu melancarkan genoffice mcp sendiri: tiada apa yang perlu dihidupkan di sini, dan Eoffice tidak perlu dibuka. Ciri sama seperti CLI.',
     intgMcpHttpTitle: 'Pelayan HTTP tempatan',
     intgMcpHttpDesc:
-      'Berjalan di dalam GenOffice; pembantu menyambung melalui URL dan anda boleh melihat dokumen dibina langkah demi langkah dalam editor Word. GenOffice mesti kekal dibuka; buat masa ini dokumen Word sahaja.',
+      'Berjalan di dalam Eoffice; pembantu menyambung melalui URL dan anda boleh melihat dokumen dibina langkah demi langkah dalam editor Word. Eoffice mesti kekal dibuka; buat masa ini dokumen Word sahaja.',
     intgMcpHttpAdvanced: 'Lanjutan: alamat lain dan log',
     intgMcpTryNote:
-      'Pembantu memanggil GenOffice melalui MCP; anda tidak perlu menaip sebarang arahan.',
+      'Pembantu memanggil Eoffice melalui MCP; anda tidak perlu menaip sebarang arahan.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'Jalankan ini sekali dalam terminal:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop atau pembantu lain yang menyokong MCP',
@@ -8026,10 +8022,10 @@ export const strings = {
     intgSaveZipTitle: 'Simpan skill',
     intgSavedTo: 'Disimpan ke {path}',
     intgCopied: 'Disalin',
-    intgCliEphemeral: 'Seret GenOffice ke Applications dahulu, kemudian gunakan baris arahan.',
+    intgCliEphemeral: 'Seret Eoffice ke Applications dahulu, kemudian gunakan baris arahan.',
     intgCopyPath: 'Salin laluan',
     intgCliNeedsUpdate:
-      'Skill ini memerlukan baris arahan {v} atau lebih baharu; kemas kini GenOffice.',
+      'Skill ini memerlukan baris arahan {v} atau lebih baharu; kemas kini Eoffice.',
     intgLoading: 'Menyemak…',
     intgUpdateDue: 'Kemas kini skill tersedia',
     setSecAiModel: 'Model AI',
@@ -8087,8 +8083,8 @@ export const strings = {
       'Apabila pembekalnya ditetapkan kepada Genspark, carian web, penjanaan imej dan analisis media melalui Genspark dan menggunakan kredit; apabila dimatikan, carian menggunakan sumber percuma dan alat imej Genspark tidak tersedia.',
     setGithub: 'Sumber Terbuka',
     starOnGitHub: 'Beri Bintang di GitHub',
-    starPromptTitle: 'Suka GenOffice?',
-    starPromptTitleN: 'Anda telah membuka {n} dokumen dengan GenOffice',
+    starPromptTitle: 'Suka Eoffice?',
+    starPromptTitleN: 'Anda telah membuka {n} dokumen dengan Eoffice',
     starPromptBody:
       'GenOffice percuma dan sumber terbuka. Bintang di GitHub ialah sokongan terbaik untuk pasukan kami.',
     starPromptGo: 'Beri Bintang',
@@ -8108,7 +8104,7 @@ export const strings = {
     appMenu: 'Menu',
     newTab: 'Tab baharu',
     // First-run onboarding
-    onbTitle1: 'Selamat datang ke GenOffice',
+    onbTitle1: 'Selamat datang ke Eoffice',
     onbSubtitle1: 'Suite pejabat sumber terbuka natif AI yang pertama',
     onbBody1:
       'Cipta dokumen, bina hamparan, hasilkan persembahan dan semak PDF. AI tersedia pada setiap langkah.',
@@ -8349,8 +8345,8 @@ export const strings = {
     aiFontSizeCustom: 'מותאם אישית',
     setAiSpellcheck: 'בדיקת איות בצ׳אט ה-AI',
     setDefaultApp: 'אפליקציית ברירת המחדל למסמכי Office',
-    setDefaultAppDesc: 'פתיחת קובצי .docx‏, .xlsx ו‑.pptx ב‑GenOffice בלחיצה כפולה.',
-    setDefaultAppIs: 'GenOffice היא כבר ברירת המחדל.',
+    setDefaultAppDesc: 'פתיחת קובצי .docx‏, .xlsx ו‑.pptx ב‑Eoffice בלחיצה כפולה.',
+    setDefaultAppIs: 'Eoffice היא כבר ברירת המחדל.',
     setDefaultAppOther: 'ברירת המחדל הנוכחית: {app}',
     setDefaultAppSet: 'הגדרה כברירת מחדל',
     setDefaultAppOpenSettings: 'פתיחת הגדרות המערכת',
@@ -8389,7 +8385,7 @@ export const strings = {
     setMcpLogEmpty: 'עדיין אין רישומים',
     setSecAbout: 'אודות',
     setSecIntegrations: 'שילובים',
-    intgHeroTitle: 'שימוש ב-GenOffice מתוך עוזר ה-AI שלכם',
+    intgHeroTitle: 'שימוש ב-Eoffice מתוך עוזר ה-AI שלכם',
     intgHeroDesc:
       'לאחר החיבור, Claude Code‏, Codex‏, Cursor‏, Claude Desktop ועוזרים דומים יכולים ליצור, להמיר, לקרוא ולערוך עבורך קובצי Word‏, Excel‏, PowerPoint‏, PDF ו‑Markdown. הכול פועל במחשב זה; דבר אינו נשלח.',
     intgHeroStep1: 'בחרו מסלול: CLI אם העוזר יכול להריץ פקודות טרמינל, MCP אם לא',
@@ -8398,7 +8394,7 @@ export const strings = {
     intgStep1Title: 'התקינו את ה-skill בעוזר שלכם',
     intgStep1Desc:
       'מוצגים רק עוזרים שנמצאו במחשב הזה. התקינו בזה שבו אתם משתמשים באמת; אין צורך בכולם.',
-    intgStep1Update: 'כשעדכון של GenOffice מביא skill חדש יותר, ליד אותו עוזר יופיע כפתור עדכון.',
+    intgStep1Update: 'כשעדכון של Eoffice מביא skill חדש יותר, ליד אותו עוזר יופיע כפתור עדכון.',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'ה-skill לא מותקן',
     intgStateInstalled: 'skill {v} מותקן · מוכן בשיחה הבאה',
@@ -8406,7 +8402,7 @@ export const strings = {
     intgOtherDesc:
       'בחרו רק דרך אחת מבין השלוש. כולן מתקינות את אותו skill, ולכן אין צורך ביותר מאחת.',
     intgOtherFolderTitle: 'כל עוזר שקורא תיקיות SKILL.md',
-    intgOtherFolderDesc: 'בחרו את תיקיית ה-skills שלו ו-GenOffice יכתוב שם את הקובץ.',
+    intgOtherFolderDesc: 'בחרו את תיקיית ה-skills שלו ו-Eoffice יכתוב שם את הקובץ.',
     intgOtherZipTitle: 'מסרו את הקובץ לעוזר',
     intgOtherZipDesc: 'שמרו את ה-skill כ-zip ובקשו מהעוזר להתקין אותו.',
     intgOtherNpxTitle: 'באמצעות פקודת skills (דורש Node.js)',
@@ -8417,22 +8413,22 @@ export const strings = {
     intgStep2DescBefore: 'לאחר ההתקנה, פתחו שיחה חדשה בעוזר ובקשו במילים פשוטות, למשל:',
     intgExample1: 'הפוך את ~/Downloads/report.md למסמך Word',
     intgExample2: 'הכן מצגת של 6 שקופיות על תוצאות הרבעון השלישי שלנו',
-    intgExample3: 'המר את budget.xlsx ל-PDF ופתח אותו ב-GenOffice',
+    intgExample3: 'המר את budget.xlsx ל-PDF ופתח אותו ב-Eoffice',
     intgStep2Note: 'העוזר מריץ בעצמו את שורת הפקודה genoffice; לעולם לא תצטרכו להקליד אותה.',
     intgCliPartTitle: 'CLI · שורת פקודה + skill',
     intgCliPartDesc:
       'לעוזרים שיכולים להריץ פקודות טרמינל (Claude Code‏, Codex‏, Cursor ואחרים). לאחר התקנת ה‑skill העוזר קורא בעצמו לשורת הפקודה genoffice כדי ליצור, להמיר, לקרוא ולערוך קבצים; אתם לא מקלידים שום פקודה.',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP הוא הפרוטוקול המשותף שבו עוזרי AI קוראים לכלים חיצוניים. השתמשו בו כשהעוזר אינו יכול להריץ פקודות (למשל Claude Desktop) או כשאתם רוצים שהוא ישלוט ישירות בחלון GenOffice. בחרו אחת משתי הדרכים למטה.',
+      'MCP הוא הפרוטוקול המשותף שבו עוזרי AI קוראים לכלים חיצוניים. השתמשו בו כשהעוזר אינו יכול להריץ פקודות (למשל Claude Desktop) או כשאתם רוצים שהוא ישלוט ישירות בחלון Eoffice. בחרו אחת משתי הדרכים למטה.',
     intgMcpStdioTitle: 'מופעל על ידי העוזר (מומלץ)',
     intgMcpStdioDesc:
-      'העוזר מפעיל את genoffice mcp בעצמו: אין מה להפעיל כאן, ו‑GenOffice לא חייב להיות פתוח. אותן יכולות כמו ב‑CLI.',
+      'העוזר מפעיל את genoffice mcp בעצמו: אין מה להפעיל כאן, ו‑Eoffice לא חייב להיות פתוח. אותן יכולות כמו ב‑CLI.',
     intgMcpHttpTitle: 'שרת HTTP מקומי',
     intgMcpHttpDesc:
-      'פועל בתוך GenOffice; העוזר מתחבר דרך כתובת URL ואפשר לראות את המסמך נבנה צעד אחר צעד בעורך Word. GenOffice חייב להישאר פתוח; בשלב זה מסמכי Word בלבד.',
+      'פועל בתוך Eoffice; העוזר מתחבר דרך כתובת URL ואפשר לראות את המסמך נבנה צעד אחר צעד בעורך Word. Eoffice חייב להישאר פתוח; בשלב זה מסמכי Word בלבד.',
     intgMcpHttpAdvanced: 'מתקדם: כתובות נוספות ויומן',
-    intgMcpTryNote: 'העוזר קורא ל‑GenOffice דרך MCP; אתם לא מקלידים שום פקודה.',
+    intgMcpTryNote: 'העוזר קורא ל‑Eoffice דרך MCP; אתם לא מקלידים שום פקודה.',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'הריצו זאת פעם אחת בטרמינל:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop או כל עוזר אחר התומך ב-MCP',
@@ -8466,9 +8462,9 @@ export const strings = {
     intgSaveZipTitle: 'שמירת skill',
     intgSavedTo: 'נשמר אל {path}',
     intgCopied: 'הועתק',
-    intgCliEphemeral: 'גררו קודם את GenOffice לתיקיית היישומים, ואז השתמשו בשורת הפקודה.',
+    intgCliEphemeral: 'גררו קודם את Eoffice לתיקיית היישומים, ואז השתמשו בשורת הפקודה.',
     intgCopyPath: 'העתקת נתיב',
-    intgCliNeedsUpdate: 'skill זה דורש שורת פקודה {v} ומעלה; עדכנו את GenOffice.',
+    intgCliNeedsUpdate: 'skill זה דורש שורת פקודה {v} ומעלה; עדכנו את Eoffice.',
     intgLoading: 'בודק…',
     intgUpdateDue: 'עדכון skill זמין',
     setSecAiModel: 'מודל AI',
@@ -8523,8 +8519,8 @@ export const strings = {
       'כשהספק מוגדר ל-Genspark, חיפוש באינטרנט, יצירת תמונות וניתוח מדיה עוברים דרך Genspark וצורכים קרדיטים; כשהוא כבוי החיפוש משתמש במקורות חינמיים וכלי התמונות של Genspark אינם זמינים.',
     setGithub: 'קוד פתוח',
     starOnGitHub: 'תנו כוכב ב-GitHub',
-    starPromptTitle: 'נהנים מ-GenOffice?',
-    starPromptTitleN: 'פתחת {n} מסמכים עם GenOffice',
+    starPromptTitle: 'נהנים מ-Eoffice?',
+    starPromptTitleN: 'פתחת {n} מסמכים עם Eoffice',
     starPromptBody: 'GenOffice חינמי ובקוד פתוח. כוכב ב-GitHub הוא התמיכה הטובה ביותר בצוות.',
     starPromptGo: 'לתת כוכב',
     starPromptDone: 'כבר נתתי',
@@ -8543,7 +8539,7 @@ export const strings = {
     appMenu: 'תפריט',
     newTab: 'כרטיסייה חדשה',
     // First-run onboarding
-    onbTitle1: 'ברוכים הבאים ל-GenOffice',
+    onbTitle1: 'ברוכים הבאים ל-Eoffice',
     onbSubtitle1: 'חבילת המשרד הראשונה בקוד פתוח שהיא AI-נייטיב',
     onbBody1: 'צרו מסמכים, בנו גיליונות, הכינו מצגות ובדקו קובצי PDF. ה-AI מובנה בכל שלב.',
     onbTitle2: 'זו רק ההתחלה',
@@ -8788,8 +8784,8 @@ export const strings = {
     aiFontSizeCustom: 'कस्टम',
     setAiSpellcheck: 'AI चैट में वर्तनी जाँच',
     setDefaultApp: 'Office दस्तावेज़ों के लिए डिफ़ॉल्ट ऐप',
-    setDefaultAppDesc: '.docx, .xlsx और .pptx फ़ाइलें डबल-क्लिक करने पर GenOffice में खोलें।',
-    setDefaultAppIs: 'GenOffice पहले से डिफ़ॉल्ट ऐप है।',
+    setDefaultAppDesc: '.docx, .xlsx और .pptx फ़ाइलें डबल-क्लिक करने पर Eoffice में खोलें।',
+    setDefaultAppIs: 'Eoffice पहले से डिफ़ॉल्ट ऐप है।',
     setDefaultAppOther: 'वर्तमान डिफ़ॉल्ट: {app}',
     setDefaultAppSet: 'डिफ़ॉल्ट बनाएँ',
     setDefaultAppOpenSettings: 'सिस्टम सेटिंग खोलें',
@@ -8828,7 +8824,7 @@ export const strings = {
     setMcpLogEmpty: 'अभी कोई लॉग नहीं',
     setSecAbout: 'जानकारी',
     setSecIntegrations: 'इंटीग्रेशन',
-    intgHeroTitle: 'अपने AI असिस्टेंट से GenOffice इस्तेमाल करें',
+    intgHeroTitle: 'अपने AI असिस्टेंट से Eoffice इस्तेमाल करें',
     intgHeroDesc:
       'कनेक्ट होने के बाद Claude Code, Codex, Cursor, Claude Desktop और ऐसे ही सहायक आपके लिए Word, Excel, PowerPoint, PDF और Markdown फ़ाइलें बना, बदल, पढ़ और संपादित कर सकते हैं। सब कुछ इसी कंप्यूटर पर चलता है; कुछ भी अपलोड नहीं होता।',
     intgHeroStep1: 'रास्ता चुनें: सहायक टर्मिनल कमांड चला सकता है तो CLI, नहीं तो MCP',
@@ -8838,7 +8834,7 @@ export const strings = {
     intgStep1Desc:
       'यहाँ केवल इस कंप्यूटर पर मिले असिस्टेंट दिखते हैं। जिसे आप सच में इस्तेमाल करते हैं उसी में इंस्टॉल करें; सभी की ज़रूरत नहीं।',
     intgStep1Update:
-      'जब GenOffice के अपडेट में नया skill आता है, तो उस असिस्टेंट के पास अपडेट बटन दिखता है।',
+      'जब Eoffice के अपडेट में नया skill आता है, तो उस असिस्टेंट के पास अपडेट बटन दिखता है।',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'skill इंस्टॉल नहीं है',
     intgStateInstalled: 'skill {v} इंस्टॉल हो गया · अगली चैट में तैयार',
@@ -8846,7 +8842,7 @@ export const strings = {
     intgOtherDesc:
       'इन तीन तरीकों में से कोई एक ही चुनें। सभी एक ही skill इंस्टॉल करते हैं, इसलिए एक से ज़्यादा की ज़रूरत नहीं।',
     intgOtherFolderTitle: 'कोई भी असिस्टेंट जो SKILL.md फ़ोल्डर पढ़ता है',
-    intgOtherFolderDesc: 'उसका skills फ़ोल्डर चुनें, GenOffice वहाँ फ़ाइल लिख देगा।',
+    intgOtherFolderDesc: 'उसका skills फ़ोल्डर चुनें, Eoffice वहाँ फ़ाइल लिख देगा।',
     intgOtherZipTitle: 'फ़ाइल असिस्टेंट को दें',
     intgOtherZipDesc: 'skill को zip के रूप में सहेजें, फिर असिस्टेंट से इंस्टॉल करने को कहें।',
     intgOtherNpxTitle: 'skills कमांड से (Node.js ज़रूरी)',
@@ -8858,23 +8854,23 @@ export const strings = {
       'इंस्टॉल होने के बाद अपने असिस्टेंट में नई चैट खोलें और सादे शब्दों में कहें, जैसे:',
     intgExample1: '~/Downloads/report.md को Word दस्तावेज़ बना दो',
     intgExample2: 'हमारे Q3 नतीजों पर 6 स्लाइड का प्रेज़ेंटेशन बनाओ',
-    intgExample3: 'budget.xlsx को PDF में बदलो और GenOffice में खोलो',
+    intgExample3: 'budget.xlsx को PDF में बदलो और Eoffice में खोलो',
     intgStep2Note: 'genoffice कमांड लाइन असिस्टेंट खुद चलाता है; आपको कभी टाइप नहीं करना पड़ता।',
     intgCliPartTitle: 'CLI · कमांड लाइन + skill',
     intgCliPartDesc:
       'उन सहायकों के लिए जो टर्मिनल कमांड चला सकते हैं (Claude Code, Codex, Cursor आदि)। skill इंस्टॉल होने के बाद सहायक फ़ाइलें बनाने, बदलने, पढ़ने और संपादित करने के लिए खुद genoffice कमांड लाइन चलाता है; आपको कोई कमांड टाइप नहीं करना पड़ता।',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP वह साझा प्रोटोकॉल है जिससे AI सहायक बाहरी टूल बुलाते हैं। इसे तब चुनें जब सहायक कमांड न चला सके (जैसे Claude Desktop) या आप चाहें कि वह GenOffice की विंडो को सीधे चलाए। नीचे दिए दो तरीकों में से कोई एक चुनें।',
+      'MCP वह साझा प्रोटोकॉल है जिससे AI सहायक बाहरी टूल बुलाते हैं। इसे तब चुनें जब सहायक कमांड न चला सके (जैसे Claude Desktop) या आप चाहें कि वह Eoffice की विंडो को सीधे चलाए। नीचे दिए दो तरीकों में से कोई एक चुनें।',
     intgMcpStdioTitle: 'सहायक द्वारा शुरू (अनुशंसित)',
     intgMcpStdioDesc:
-      'सहायक खुद genoffice mcp चलाता है: यहाँ कुछ चालू करने की ज़रूरत नहीं, और GenOffice खुला होना भी ज़रूरी नहीं। सुविधाएँ CLI जैसी ही।',
+      'सहायक खुद genoffice mcp चलाता है: यहाँ कुछ चालू करने की ज़रूरत नहीं, और Eoffice खुला होना भी ज़रूरी नहीं। सुविधाएँ CLI जैसी ही।',
     intgMcpHttpTitle: 'स्थानीय HTTP सर्वर',
     intgMcpHttpDesc:
-      'GenOffice के अंदर चलता है; सहायक URL से जुड़ता है और आप Word संपादक में दस्तावेज़ को चरण-दर-चरण बनते देख सकते हैं। GenOffice खुला रहना चाहिए; अभी केवल Word दस्तावेज़।',
+      'Eoffice के अंदर चलता है; सहायक URL से जुड़ता है और आप Word संपादक में दस्तावेज़ को चरण-दर-चरण बनते देख सकते हैं। Eoffice खुला रहना चाहिए; अभी केवल Word दस्तावेज़।',
     intgMcpHttpAdvanced: 'उन्नत: अन्य पते और लॉग',
     intgMcpTryNote:
-      'सहायक MCP के ज़रिये GenOffice को बुलाता है; आपको कोई कमांड टाइप नहीं करना पड़ता।',
+      'सहायक MCP के ज़रिये Eoffice को बुलाता है; आपको कोई कमांड टाइप नहीं करना पड़ता।',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: 'टर्मिनल में इसे एक बार चलाएँ:',
     intgMcpOtherTitle: 'Cursor, Claude Desktop या कोई अन्य MCP-समर्थित असिस्टेंट',
@@ -8909,9 +8905,9 @@ export const strings = {
     intgSaveZipTitle: 'skill सहेजें',
     intgSavedTo: '{path} में सहेजा गया',
     intgCopied: 'कॉपी हो गया',
-    intgCliEphemeral: 'पहले GenOffice को Applications में खींचें, फिर कमांड लाइन का उपयोग करें।',
+    intgCliEphemeral: 'पहले Eoffice को Applications में खींचें, फिर कमांड लाइन का उपयोग करें।',
     intgCopyPath: 'पथ कॉपी करें',
-    intgCliNeedsUpdate: 'इस skill को कमांड लाइन {v} या नया चाहिए; GenOffice अपडेट करें।',
+    intgCliNeedsUpdate: 'इस skill को कमांड लाइन {v} या नया चाहिए; Eoffice अपडेट करें।',
     intgLoading: 'जाँच हो रही है…',
     intgUpdateDue: 'skill अपडेट उपलब्ध',
     setSecAiModel: 'AI मॉडल',
@@ -8968,8 +8964,8 @@ export const strings = {
       'जब प्रदाता Genspark हो, वेब खोज, इमेज जनरेशन और मीडिया विश्लेषण Genspark से होकर चलते हैं और क्रेडिट खर्च करते हैं; बंद होने पर खोज मुफ़्त स्रोत उपयोग करती है और Genspark इमेज टूल उपलब्ध नहीं रहते।',
     setGithub: 'ओपन सोर्स',
     starOnGitHub: 'GitHub पर स्टार दें',
-    starPromptTitle: 'GenOffice पसंद आ रहा है?',
-    starPromptTitleN: 'आपने GenOffice में {n} दस्तावेज़ खोले हैं',
+    starPromptTitle: 'Eoffice पसंद आ रहा है?',
+    starPromptTitleN: 'आपने Eoffice में {n} दस्तावेज़ खोले हैं',
     starPromptBody:
       'GenOffice मुफ़्त और ओपन सोर्स है। GitHub पर एक स्टार टीम का सबसे अच्छा समर्थन है।',
     starPromptGo: 'स्टार दें',
@@ -8989,7 +8985,7 @@ export const strings = {
     appMenu: 'मेनू',
     newTab: 'नया टैब',
     // First-run onboarding
-    onbTitle1: 'GenOffice में आपका स्वागत है',
+    onbTitle1: 'Eoffice में आपका स्वागत है',
     onbSubtitle1: 'पहला ओपन-सोर्स, AI-नेटिव ऑफ़िस सुइट',
     onbBody1:
       'दस्तावेज़ बनाएँ, स्प्रेडशीट तैयार करें, प्रस्तुतियाँ बनाएँ और PDF की समीक्षा करें। AI हर चरण में शामिल है।',
@@ -9227,8 +9223,8 @@ export const strings = {
     aiFontSizeCustom: '自訂',
     setAiSpellcheck: 'AI 對話拼字檢查',
     setDefaultApp: '設為 Office 文件預設程式',
-    setDefaultAppDesc: '雙擊 .docx、.xlsx、.pptx 檔案時用 GenOffice 開啟。',
-    setDefaultAppIs: 'GenOffice 已是預設程式。',
+    setDefaultAppDesc: '雙擊 .docx、.xlsx、.pptx 檔案時用 Eoffice 開啟。',
+    setDefaultAppIs: 'Eoffice 已是預設程式。',
     setDefaultAppOther: '目前預設程式：{app}',
     setDefaultAppSet: '設為預設',
     setDefaultAppOpenSettings: '開啟系統設定',
@@ -9265,7 +9261,7 @@ export const strings = {
     setMcpLogEmpty: '尚無日誌',
     setSecAbout: '關於',
     setSecIntegrations: '整合',
-    intgHeroTitle: '在 AI 助理中使用 GenOffice',
+    intgHeroTitle: '在 AI 助理中使用 Eoffice',
     intgHeroDesc:
       '接好後，Claude Code、Codex、Cursor、Claude Desktop 等助理就能替你建立、轉換、讀取和編輯 Word、Excel、PowerPoint、PDF 和 Markdown 檔案。全部在本機完成，不會上傳任何內容。',
     intgHeroStep1: '選接法：助理能執行終端機指令就用 CLI，不能就用 MCP',
@@ -9273,14 +9269,14 @@ export const strings = {
     intgHeroStep3: '開一個新對話，直接提需求',
     intgStep1Title: '將 skill 安裝到你的助理',
     intgStep1Desc: '這裡只列出本機偵測到的助理。安裝到你實際使用的那一個即可，不必全部安裝。',
-    intgStep1Update: 'GenOffice 升級帶來新版 skill 時，對應助理旁會出現「更新」按鈕。',
+    intgStep1Update: 'Eoffice 升級帶來新版 skill 時，對應助理旁會出現「更新」按鈕。',
     intgSkillVersion: 'skill {v}',
     intgStateMissing: 'skill 未安裝',
     intgStateInstalled: '已安裝 skill {v} · 下次對話即可使用',
     intgOtherToggle: '沒有列出我的助理',
     intgOtherDesc: '以下三種方式任選一種即可。安裝的是同一份 skill，不需要重複操作。',
     intgOtherFolderTitle: '任何能讀取 SKILL.md 資料夾的助理',
-    intgOtherFolderDesc: '選擇它的 skills 資料夾，GenOffice 會把檔案寫進去。',
+    intgOtherFolderDesc: '選擇它的 skills 資料夾，Eoffice 會把檔案寫進去。',
     intgOtherZipTitle: '把檔案交給助理',
     intgOtherZipDesc: '把 skill 儲存為 zip，然後讓助理自行安裝。',
     intgOtherNpxTitle: '用 skills 指令安裝（需要 Node.js）',
@@ -9291,22 +9287,22 @@ export const strings = {
     intgStep2DescBefore: '安裝好後，在助理中開一個新對話，用平常說話的方式提出需求，例如：',
     intgExample1: '把 ~/Downloads/report.md 轉成 Word 文件',
     intgExample2: '做一份 6 頁的簡報，介紹我們第三季的業績',
-    intgExample3: '把 budget.xlsx 轉成 PDF，並在 GenOffice 中開啟',
+    intgExample3: '把 budget.xlsx 轉成 PDF，並在 Eoffice 中開啟',
     intgStep2Note: '助理會自行呼叫 genoffice 命令列，你不需要輸入任何指令。',
     intgCliPartTitle: 'CLI · 命令列 + skill',
     intgCliPartDesc:
       '適合能執行終端機指令的助理（Claude Code、Codex、Cursor 等）。安裝 skill 後，助理會自己呼叫 genoffice 命令列建立、轉換、讀取和編輯檔案，你不需要輸入任何指令。',
     intgMcpPartTitle: 'MCP',
     intgMcpPartDesc:
-      'MCP 是 AI 助理呼叫外部工具的通用協定。助理不能執行指令（如 Claude Desktop），或你想讓它直接操作 GenOffice 視窗時用這條路。下面兩種接法任選一種。',
+      'MCP 是 AI 助理呼叫外部工具的通用協定。助理不能執行指令（如 Claude Desktop），或你想讓它直接操作 Eoffice 視窗時用這條路。下面兩種接法任選一種。',
     intgMcpStdioTitle: '由助理啟動（建議）',
     intgMcpStdioDesc:
-      '助理自己啟動 genoffice mcp，不需要在這裡開任何開關，GenOffice 也不用開著。功能與 CLI 完全相同。',
+      '助理自己啟動 genoffice mcp，不需要在這裡開任何開關，Eoffice 也不用開著。功能與 CLI 完全相同。',
     intgMcpHttpTitle: '本機 HTTP 服務',
     intgMcpHttpDesc:
-      '在 GenOffice 內執行，助理透過網址連線，可以看著它在 Word 編輯器裡逐步產生。需要 GenOffice 保持開啟；目前只支援 Word。',
+      '在 Eoffice 內執行，助理透過網址連線，可以看著它在 Word 編輯器裡逐步產生。需要 Eoffice 保持開啟；目前只支援 Word。',
     intgMcpHttpAdvanced: '進階：其他位址與記錄',
-    intgMcpTryNote: '助理會透過 MCP 呼叫 GenOffice，你不需要輸入任何指令。',
+    intgMcpTryNote: '助理會透過 MCP 呼叫 Eoffice，你不需要輸入任何指令。',
     intgMcpClaudeTitle: 'Claude Code',
     intgMcpClaudeDesc: '在終端機執行一次：',
     intgMcpOtherTitle: 'Cursor、Claude Desktop 或其他支援 MCP 的助理',
@@ -9340,9 +9336,9 @@ export const strings = {
     intgSaveZipTitle: '儲存 skill',
     intgSavedTo: '已儲存至 {path}',
     intgCopied: '已複製',
-    intgCliEphemeral: '請先把 GenOffice 拖到「應用程式」，再使用命令列。',
+    intgCliEphemeral: '請先把 Eoffice 拖到「應用程式」，再使用命令列。',
     intgCopyPath: '複製路徑',
-    intgCliNeedsUpdate: '此 skill 需要命令列 {v} 或更新版本，請更新 GenOffice。',
+    intgCliNeedsUpdate: '此 skill 需要命令列 {v} 或更新版本，請更新 Eoffice。',
     intgLoading: '正在檢查…',
     intgUpdateDue: 'skill 有新版本可更新',
     setSecAiModel: 'AI 模型',
@@ -9396,8 +9392,8 @@ export const strings = {
       '服務商選擇 Genspark 時，網頁搜尋、生圖與媒體解析經 Genspark 雲端並消耗點數；關閉後搜尋改用免費來源，Genspark 生圖工具不可用。',
     setGithub: '開源專案',
     starOnGitHub: '到 GitHub 給我們一顆星',
-    starPromptTitle: '喜歡 GenOffice 嗎？',
-    starPromptTitleN: '你已經用 GenOffice 開啟了 {n} 個文件',
+    starPromptTitle: '喜歡 Eoffice 嗎？',
+    starPromptTitleN: '你已經用 Eoffice 開啟了 {n} 個文件',
     starPromptBody: 'GenOffice 是免費的開源軟體。到 GitHub 給我們一顆星，是對團隊最好的支持。',
     starPromptGo: '去給星星',
     starPromptDone: '已經給過了',
@@ -9416,7 +9412,7 @@ export const strings = {
     appMenu: '選單',
     newTab: '新分頁',
     // First-run onboarding
-    onbTitle1: '歡迎使用 GenOffice',
+    onbTitle1: '歡迎使用 Eoffice',
     onbSubtitle1: '第一個開源的 AI 原生 Office 套件',
     onbBody1: '建立文件、製作試算表、產生簡報、審閱 PDF。AI 深度融入每個環節。',
     onbTitle2: '這只是一個開始',

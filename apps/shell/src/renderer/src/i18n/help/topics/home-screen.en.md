@@ -1,6 +1,6 @@
 # The Home screen: where your files live
 
-Home is GenOffice's start page: a navigation sidebar on the left, file lists and quick-create cards on the right.
+Home is Eoffice's start page: a navigation sidebar on the left, file lists and quick-create cards on the right.
 
 ![The Home screen](img/home-screen.png)
 
@@ -37,7 +37,7 @@ Tick the checkbox on a row, or ⌘/ctrl-click, to build a selection; the header 
 The search box at the top matches two things at once:
 
 - **File names**: quick filtering by name.
-- **File contents**: GenOffice indexes your files in the background (text inside docx/xlsx/pptx/pdf/md/html), so searching body text finds files too. Scope and toggles live in the search settings.
+- **File contents**: Eoffice indexes your files in the background (text inside docx/xlsx/pptx/pdf/md/html), so searching body text finds files too. Scope and toggles live in the search settings.
 
 ## Quick start cards
 
@@ -67,6 +67,6 @@ What each card does:
 
 ## Cloud projects (Genspark Projects)
 
-- First use requires signing in to your Genspark account (device-code flow: GenOffice shows a code, you finish logging in in the browser).
+- First use requires signing in to your Genspark account (device-code flow: Eoffice shows a code, you finish logging in in the browser).
 - The project list syncs with the web; Open in browser jumps there to continue.
 - Not signing in affects none of the local features.

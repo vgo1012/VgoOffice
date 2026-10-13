@@ -1,14 +1,14 @@
 # Connecting a coding agent
 
-GenOffice speaks the Model Context Protocol, so a coding agent can read, write and render your documents through the same engines the app uses. The agent is not guessing at a file format: it gets the typed op schemas from the same definitions the executor validates against.
+Eoffice speaks the Model Context Protocol, so a coding agent can read, write and render your documents through the same engines the app uses. The agent is not guessing at a file format: it gets the typed op schemas from the same definitions the executor validates against.
 
 ## Registering it from the app
 
 **Settings ▸ Integrations** is the place to do this. The pane has two halves, and you can use either or both.
 
-**The skill.** One row per coding agent found on this machine — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf — each with **Install**, **Update** and **Uninstall**, plus **Install into another folder…**, **Download skill (zip)** and **Copy path**. If your assistant is not listed, point GenOffice at a folder it reads `SKILL.md` from, or save the zip and let the assistant install it. The skill and MCP can sit side by side: the assistant picks one, and they do exactly the same things.
+**The skill.** One row per coding agent found on this machine — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf — each with **Install**, **Update** and **Uninstall**, plus **Install into another folder…**, **Download skill (zip)** and **Copy path**. If your assistant is not listed, point Eoffice at a folder it reads `SKILL.md` from, or save the zip and let the assistant install it. The skill and MCP can sit side by side: the assistant picks one, and they do exactly the same things.
 
-**MCP.** Two routes are offered: **Started by the assistant (recommended)**, where you add the shown config to your client and the assistant launches the server itself, and **Local HTTP server**, which the app runs for you. Either way the assistant ends up talking to GenOffice and you never type a command.
+**MCP.** Two routes are offered: **Started by the assistant (recommended)**, where you add the shown config to your client and the assistant launches the server itself, and **Local HTTP server**, which the app runs for you. Either way the assistant ends up talking to Eoffice and you never type a command.
 
 ## Registering it from the command line
 
@@ -70,7 +70,7 @@ An agent that does not know the op vocabulary will guess. The skill carries the 
 
 ## What it can reach in the app
 
-The server is not limited to files on disk. While GenOffice is running, the agent can also work through the window:
+The server is not limited to files on disk. While Eoffice is running, the agent can also work through the window:
 
 - **`open_in_genoffice`** opens a file in a tab and focuses it.
 - **`open_documents`** lists every document you have open — id, type, path, and whether it has unsaved changes — then reads one's live content or closes it, saving first unless you ask it to discard.

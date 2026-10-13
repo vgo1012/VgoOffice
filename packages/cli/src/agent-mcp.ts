@@ -226,7 +226,13 @@ export function removeMcpEntry(id: AgentId, file: string): boolean {
   return true
 }
 
-const LAUNCHER_NAMES = new Set(['genoffice', 'genoffice.cmd', 'genoffice.exe'])
+const LAUNCHER_NAMES = new Set([
+  'genoffice',
+  'genoffice.cmd',
+  'genoffice.exe',
+  'eoffice',
+  'eoffice.exe',
+])
 
 /**
  * Any genoffice launcher, whatever install it came from (an older app path is

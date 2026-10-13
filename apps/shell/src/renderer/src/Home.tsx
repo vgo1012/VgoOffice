@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { DragEvent as ReactDragEvent, ReactElement } from 'react'
-import logoLockup from './assets/ezaigc-logo.png'
+import logoLockup from './assets/eoffice-logo.png'
 import { KbAskPanel } from './KbAskPanel'
 import iconDocx from './assets/file-docx.svg'
 import iconXlsx from './assets/file-xlsx.svg'
@@ -3438,7 +3438,8 @@ export function Home() {
     <div className="home">
       <aside className="sidebar">
         <div className="sidebar-logo">
-          <img className="logo-lockup" src={logoLockup} alt="EZAIGC" />
+          <img className="logo-lockup" src={logoLockup} alt="" />
+          <span className="logo-wordmark">Eoffice</span>
         </div>
         <nav className="sidebar-nav">
           <button

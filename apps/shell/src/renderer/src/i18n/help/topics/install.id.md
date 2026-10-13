@@ -1,5 +1,7 @@
 # Memasang GenOffice
 
+> Berikut adalah panduan instalasi proyek asal GenOffice. Untuk Eoffice, gunakan penginstal Windows yang disediakan.
+
 Setiap build dipublikasikan di [halaman Rilis](https://github.com/genspark-ai/genoffice/releases/latest). Semuanya berasal dari `main`; installer untuk macOS dan Windows sudah ditandatangani.
 
 ## Pilih berkas untuk komputer Anda
