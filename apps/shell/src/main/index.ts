@@ -548,7 +548,7 @@ let cachedTheme: UiTheme | null = null
 function currentTheme(): UiTheme {
   if (cachedTheme) return cachedTheme
   const saved = readAppSettings(APP_SETTINGS_PATH()).theme
-  cachedTheme = saved === 'light' || saved === 'dark' ? saved : 'system'
+  cachedTheme = saved === 'light' || saved === 'dark' || saved === 'system' ? saved : 'light'
   return cachedTheme
 }
 

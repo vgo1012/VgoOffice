@@ -340,7 +340,7 @@ const homeApi: HomeApi = {
   },
   async getTheme() {
     const result: unknown = await ipcRenderer.invoke(HOME_CHANNELS.getTheme)
-    return result === 'dark' || result === 'light' ? result : 'system'
+    return result === 'dark' || result === 'light' || result === 'system' ? result : 'light'
   },
   async setTheme(theme) {
     if (theme !== 'light' && theme !== 'dark' && theme !== 'system')

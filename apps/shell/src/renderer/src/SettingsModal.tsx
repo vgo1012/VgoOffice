@@ -1466,7 +1466,7 @@ export function SettingsModal({
   useEffect(() => {
     if (target) setSection(target.section)
   }, [target])
-  const [theme, setTheme] = useState<UiTheme>('system')
+  const [theme, setTheme] = useState<UiTheme>('light')
   const [docTheme, setDocTheme] = useState<DocTheme>('follow')
   const [saveDir, setSaveDir] = useState('')
   const [analyticsOn, setAnalyticsOn] = useState(true)

@@ -8,9 +8,9 @@
 :root {
   /* chrome */
   --surface: #f6f9fd;
-  --surface-subtle: #e9f0f8;
-  --chrome-bg: #e9f0f8;
-  --canvas: #dfe9f4;
+  --surface-subtle: #e8eef7;
+  --chrome-bg: #e8eef7;
+  --canvas: #e1e9f4;
   --border: #d6e2f0;
   --border-subtle: #e3ecf6;
   --border-strong: #bbcddf;
@@ -18,9 +18,9 @@
   --text: #172c47;
   --text-primary: #172c47;
   --text-secondary: #4a607b;
-  --text-tertiary: #586e89;
+  --text-tertiary: #576d87;
   --text-muted: #516884;
-  --text-dim: #586e89;
+  --text-dim: #576d87;
   --hover: #e2ecf7;
   --pressed: #d5e2f1;
   --active-bg: #dce8f5;
@@ -28,7 +28,7 @@
   --bg-hover-subtle: #e3ecf7;
   --bg-hover-strong: #d5e2f1;
   --bg-hover-accent: #ccdced;
-  --bg-content: #edf3fa;
+  --bg-content: #e8eef7;
   --icon-muted: #6b819c;
   --danger: #d13438;
   --danger-bg: #fdf3f3;
@@ -59,9 +59,9 @@
   --color-brand-secondary: #35648f;
   --color-text-primary: #172c47;
   --color-text-secondary: #4a607b;
-  --color-text-tertiary: #586e89;
+  --color-text-tertiary: #576d87;
   --color-bg-page: #f6f9fd;
-  --color-bg-subtle: #e9f0f8;
+  --color-bg-subtle: #e8eef7;
   --color-border-default: #d6e2f0;
   --color-border-strong: #bbcddf;
   --color-border-brand: #35648f;

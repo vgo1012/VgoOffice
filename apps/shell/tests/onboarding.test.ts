@@ -45,6 +45,14 @@ async function click(selector: string): Promise<void> {
 }
 
 describe('analytics consent in onboarding', () => {
+  it('keeps two local introduction steps without GitHub or community promotion', () => {
+    renderOnboarding(vi.fn(async () => true))
+    expect(host.querySelectorAll('.onb-slide')).toHaveLength(2)
+    expect(host.textContent).not.toMatch(/GitHub|GenTeam|alpha/i)
+    expect(host.querySelector('.onb-star')).toBeNull()
+    expect(host.querySelector('.onb-offer')).toBeNull()
+  })
+
   it('explains default-on analytics without an onboarding control', () => {
     renderOnboarding(vi.fn(async () => true))
     expect(host.querySelector('[role="switch"]')).toBeNull()
@@ -71,7 +79,6 @@ describe('analytics consent in onboarding', () => {
     const onDone = vi.fn(async () => true)
     renderOnboarding(onDone)
 
-    await click('.onb-next')
     await click('.onb-next')
     await click('.onb-next')
     expect(onDone).toHaveBeenCalledWith()

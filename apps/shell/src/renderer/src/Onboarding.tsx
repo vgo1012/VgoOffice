@@ -15,65 +15,30 @@ interface Slide {
   subtitleKey: StringKey
   /** 16px muted paragraph below the title block */
   bodyKey?: StringKey
-  /** render the body in the dimmer footnote gray (slide 3's credits disclaimer) */
+  /** render the credits disclaimer as a footnote */
   bodyDim?: boolean
-  /** community slide shows the credits offer panel with the "Join GenTeam" call-to-action */
-  showOffer?: boolean
-  /** closing slide shows the "star us on GitHub" hint */
-  showStar?: boolean
   /** closing slide explains default-on analytics and how to disable it */
   showAnalyticsNotice?: boolean
-  art: 'logo' | 'gift' | 'check'
+  art: 'logo' | 'check'
 }
 
 const SLIDES: readonly Slide[] = [
-  { titleKey: 'onbTitle1', subtitleKey: 'onbSubtitle1', bodyKey: 'onbBody1', art: 'logo' },
-  { titleKey: 'onbTitle2', subtitleKey: 'onbBody2', showOffer: true, art: 'gift' },
+  { titleKey: 'onbTitle1', subtitleKey: 'onbBody1', art: 'logo' },
   {
     titleKey: 'onbTitle3',
     subtitleKey: 'onbBody3',
     bodyKey: 'onbNote3',
     bodyDim: true,
-    showStar: true,
     showAnalyticsNotice: true,
     art: 'check',
   },
 ]
-
-/** render `**emphasized**` segments of a localized string as <strong> */
-function renderEmphasis(text: string) {
-  return text
-    .split('**')
-    .map((part, i) => (i % 2 === 1 ? <strong key={part}>{part}</strong> : part))
-}
 
 /* exact vectors from the design spec:
  * 60px canvas, 4px strokes — same visual mass as the 60px app icon */
 function SlideArt({ kind }: { kind: Slide['art'] }) {
   if (kind === 'logo') {
     return <img className="onb-art onb-art-logo" src={appIcon} alt="" />
-  }
-  if (kind === 'gift') {
-    // hand-drawn gift kept over the spec vector deliberately; 48 canvas at
-    // strokeWidth 3.2 renders the same 4px strokes at 60px as the check icon
-    return (
-      <span className="onb-art onb-art-badge onb-art-gift" aria-hidden="true">
-        <svg
-          viewBox="0 0 48 48"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect x="6" y="14" width="36" height="9" rx="2" />
-          <path d="M9.5 23v15a4 4 0 0 0 4 4h21a4 4 0 0 0 4-4V23" />
-          <path d="M24 14v28" />
-          <path d="M24 14c-7 0-10.5-2.6-10.5-6 0-2.5 2-4.5 4.5-4.5 4.2 0 6 5.3 6 10.5Z" />
-          <path d="M24 14c7 0 10.5-2.6 10.5-6 0-2.5-2-4.5-4.5-4.5-4.2 0-6 5.3-6 10.5Z" />
-        </svg>
-      </span>
-    )
   }
   return (
     <span className="onb-art onb-art-badge onb-art-check" aria-hidden="true">
@@ -119,9 +84,7 @@ export function Onboarding({ onDone }: OnboardingProps) {
     cardRef.current?.focus()
   }, [])
 
-  // slide changes can strip focus from the active control (leaving slide 2
-  // makes its GenTeam button inert, which blurs it) — pull focus back onto the
-  // card so it never drops to body
+  // Keep focus inside the dialog when a slide change hides the active control.
   useEffect(() => {
     const card = cardRef.current
     const active = document.activeElement
@@ -192,49 +155,12 @@ export function Onboarding({ onDone }: OnboardingProps) {
               {s.bodyKey && (
                 <p className={`onb-body${s.bodyDim ? ' onb-body-dim' : ''}`}>{t(s.bodyKey)}</p>
               )}
-              {s.showStar && (
-                <div className="onb-star">
-                  <p className="onb-star-hint">{t('onbStarHint')}</p>
-                  <button
-                    className="onb-star-btn"
-                    onClick={() => void window.aiOffice.openGitHubRepo()}
-                  >
-                    <svg
-                      width="13"
-                      height="13"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3l-5.8 3.1 1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" />
-                    </svg>
-                    {t('starOnGitHub')}
-                  </button>
-                </div>
-              )}
               {s.showAnalyticsNotice && (
                 <div className="onb-consent">
                   <span className="onb-consent-copy">
                     <span className="onb-consent-title">{t('setAnalytics')}</span>
                     <span className="onb-consent-desc">{t('setAnalyticsDesc')}</span>
                   </span>
-                </div>
-              )}
-              {s.showOffer && (
-                <div className="onb-offer">
-                  <p className="onb-credits">{renderEmphasis(t('onbCredits'))}</p>
-                  <button className="onb-join" onClick={() => void window.aiOffice.openGenTeam()}>
-                    {t('onbJoinGenTeam')}
-                    <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                      <path
-                        d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"
-                        stroke="currentColor"
-                        strokeWidth="1.4"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
                 </div>
               )}
             </div>
