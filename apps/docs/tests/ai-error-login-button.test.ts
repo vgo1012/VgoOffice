@@ -1,6 +1,5 @@
-// A failed run marks the error bubble with a "Sign in to Genspark" button only
-// when Genspark is the active provider — a BYOK user's failure (their own
-// provider's rate limit, say) must not advertise a Genspark sign-in (#1948).
+// The desktop has no account login. Provider failures remain visible without
+// offering sign-in, including an error bubble with legacy Genspark settings.
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { act, createElement } from 'react'
 import { createRoot, type Root } from 'react-dom/client'
@@ -141,7 +140,7 @@ describe('AI error bubble sign-in button', () => {
     }
   })
 
-  it('offers the sign-in button when Genspark is the provider', async () => {
+  it('has no sign-in button even with legacy Genspark settings', async () => {
     const editor = createEditor()
     try {
       let listener: ChunkListener | null = null
@@ -180,7 +179,7 @@ describe('AI error bubble sign-in button', () => {
         await flush()
       })
       expect(container.querySelector('.ai-msg-error')).not.toBeNull()
-      expect(container.querySelector('.ai-login-btn')).not.toBeNull()
+      expect(container.querySelector('.ai-login-btn')).toBeNull()
       act(() => mounted.root.unmount())
     } finally {
       editor.destroy()

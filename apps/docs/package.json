@@ -1,6 +1,6 @@
 {
   "name": "@genoffice/docs",
-  "productName": "Eoffice Docs",
+  "productName": "VgoOffice Docs",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "private": true,
@@ -50,7 +50,7 @@
   "author": "GenOffice",
   "build": {
     "appId": "com.genoffice.docs",
-    "productName": "Eoffice Docs",
+    "productName": "VgoOffice Docs",
     "electronVersion": "43.3.0",
     "artifactName": "AIDocx-${version}-${arch}.${ext}",
     "directories": {

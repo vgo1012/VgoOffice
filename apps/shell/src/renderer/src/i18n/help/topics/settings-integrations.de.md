@@ -2,7 +2,7 @@
 
 ## Einstellungen öffnen
 
-Die Kontenzeile unten links auf der Startseite öffnet den Einstellungsbereich (wenn Sie abgemeldet sind, steht dort „Anmelden“). Er hat sechs Abschnitte: Konto, KI-Modell, KI-Medien & Suche, Allgemein, Integrationen und Über.
+Die Schaltfläche Einstellungen unten links auf der Startseite öffnet den Einstellungsbereich. Er hat fünf Abschnitte: KI-Modell, KI-Medien & Suche, Allgemein, Integrationen und Über.
 
 ![Einstellungen ▸ Allgemein, wo Sprache, Design, AutoSave und der Schalter für die Nutzungsstatistik liegen](img/settings-general.png)
 
@@ -23,7 +23,7 @@ Hell / Dunkel / System folgen. „System folgen“ richtet sich nach dem Erschei
 - **Position der KI-Seitenleiste** (links oder rechts), **Textgröße im KI-Bereich** und **Rechtschreibprüfung im KI-Chat**.
 - **KI-Panel in neuen Dokumenten öffnen** — aus, ein neues Dokument startet mit eingeklapptem Panel, einen Klick entfernt.
 - **Alle Dokumente automatisch speichern** schaltet AutoSave in jedem Editor standardmäßig ein; für ein einzelnes Fenster können Sie es weiterhin abschalten.
-- **Speicherort** mit der Schaltfläche **Ändern** und **Standard-App für Office-Dokumente**, um .docx / .xlsx / .pptx für Eoffice zu beanspruchen.
+- **Speicherort** mit der Schaltfläche **Ändern** und **Standard-App für Office-Dokumente**, um .docx / .xlsx / .pptx für VgoOffice zu beanspruchen.
 
 ## KI-Medien & Suche
 
@@ -34,27 +34,21 @@ Keine Schalter — jede Fähigkeit wählt den Anbieter, der sie bedient, und Sch
 
 ## Über
 
-- **Version**, der GitHub-Link des Projekts und eine Schaltfläche **Auf GitHub Stern geben**.
+- **Version**
 - **Update-Kanal**: Stabil oder Beta. Eine Änderung wirkt sofort und prüft auf ein Update; eine Beta-Installation wird nicht auf Stabil zurückgestuft.
 
 ## Standard-App-Zuordnungen
 
-Die Einstellungen können Eoffice als Programm für .docx / .xlsx / .pptx / .pdf und verwandte Formate hinterlegen (Registrierung als Standard-App auf Plattformebene; bestätigen Sie, wenn Sie dazu aufgefordert werden).
+Die Einstellungen können VgoOffice als Programm für .docx / .xlsx / .pptx / .pdf und verwandte Formate hinterlegen (Registrierung als Standard-App auf Plattformebene; bestätigen Sie, wenn Sie dazu aufgefordert werden).
 
 ## Hinweise zu Drittanbietersoftware und Updates
 
 - Hilfe ▸ Hinweise zu Drittanbietersoftware: das vollständige Verzeichnis der mitgelieferten Open-Source-Lizenzen.
 - Hilfe ▸ Nach Updates suchen: löst eine manuelle Prüfung aus; bei einer neueren Version werden Sie zur Installation aufgefordert.
 
-## Bei Genspark anmelden
-
-- Der Anmeldeeinstieg (Einstellungen oder Liste der Cloud-Projekte) nutzt ein **Gerätecode**-Verfahren: Eoffice zeigt einen Code und öffnet die Anmeldung im Browser; danach geht es automatisch weiter.
-- Die Anmeldung wird nur genutzt für: die Liste der Cloud-Projekte und die gehosteten Modelle von Genspark. Ohne sie funktionieren alle lokalen Funktionen und benutzerdefinierten Modelle weiter.
-- Das Abmelden ist in den Einstellungen ein Klick.
-
 ## MCP-Integration (für erfahrene Anwender / KI-Clients)
 
-**Integrationen** ist der Bereich, der Eoffice mit einem Coding-Agenten verbindet, und er hat einen eigenen Artikel: Einen Coding-Agenten anbinden. Die Kurzfassung — wählen Sie einen Weg (die Kommandozeile oder MCP), folgen Sie dem jeweiligen Abschnitt und starten Sie dann einen neuen Chat.
+**Integrationen** ist der Bereich, der VgoOffice mit einem Coding-Agenten verbindet, und er hat einen eigenen Artikel: Einen Coding-Agenten anbinden. Die Kurzfassung — wählen Sie einen Weg (die Kommandozeile oder MCP), folgen Sie dem jeweiligen Abschnitt und starten Sie dann einen neuen Chat.
 
 ![Einstellungen ▸ Integrationen: die drei Schritte, dann die Skill-Zeilen und die MCP-Optionen](img/settings-integrations.png)
 

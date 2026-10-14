@@ -85,6 +85,19 @@ function row(): HTMLElement | null {
 }
 
 describe('Settings default-app row', () => {
+  it('has no account section or GitHub promotion and makes no stars request', async () => {
+    const stars = vi.fn(async () => 9600)
+    await openGeneral({ githubStars: stars })
+    const navigation = Array.from(host.querySelectorAll<HTMLButtonElement>('.set-nav-item'))
+    expect(navigation).toHaveLength(5)
+    expect(navigation.map((button) => button.textContent)).not.toContain('Account')
+    const about = navigation.find((button) => button.textContent?.includes('About'))!
+    await click(about)
+    expect(host.textContent).toContain('1.0.0')
+    expect(host.textContent).not.toMatch(/GitHub|Open source|Sign in/)
+    expect(stars).not.toHaveBeenCalled()
+  })
+
   it('is hidden when the platform/build cannot manage defaults', async () => {
     await openGeneral({
       getDefaultAppStatus: async () => ({ state: 'unsupported', others: [], manualOnly: false }),
@@ -106,7 +119,7 @@ describe('Settings default-app row', () => {
 
     await click(button)
     expect(set).toHaveBeenCalledTimes(1)
-    expect(row()?.textContent).toContain('Eoffice is already the default.')
+    expect(row()?.textContent).toContain('VgoOffice is already the default.')
     expect(row()!.querySelector<HTMLButtonElement>('button')!.disabled).toBe(true)
   })
 
@@ -115,7 +128,7 @@ describe('Settings default-app row', () => {
       getDefaultAppStatus: async () => ({ state: 'other', others: [], manualOnly: false }),
     })
     const field = row()!
-    expect(field.textContent).toContain('Open .docx, .xlsx and .pptx files in Eoffice')
+    expect(field.textContent).toContain('Open .docx, .xlsx and .pptx files in VgoOffice')
     expect(field.querySelector<HTMLButtonElement>('button')!.disabled).toBe(false)
   })
 

@@ -2,7 +2,7 @@
 
 ## Membuka pengaturan
 
-Baris akun di kiri bawah Beranda membuka panel pengaturan (bacaannya Masuk saat Anda belum masuk). Panel ini punya enam bagian: Akun, Model AI, Media & Pencarian AI, Umum, Integrasi, dan Tentang.
+Tombol Pengaturan di kiri bawah Beranda membuka panel pengaturan. Panel ini punya lima bagian: Model AI, Media & Pencarian AI, Umum, Integrasi, dan Tentang.
 
 ![Pengaturan ▸ Umum, tempat bahasa, tema, Autosave, dan sakelar statistik penggunaan berada](img/settings-general.png)
 
@@ -23,7 +23,7 @@ Terang / Gelap / Ikuti Sistem. Mode Ikuti Sistem mengikuti tampilan sistem opera
 - **Posisi bilah samping AI** (kiri atau kanan), **Ukuran teks panel AI** dan **Pemeriksaan ejaan di obrolan AI**.
 - **Buka panel AI di dokumen baru** — nonaktif, dokumen baru dimulai dengan panel tertutup, sekali klik lagi.
 - **Simpan otomatis semua dokumen** menyalakan AutoSave secara default di setiap editor; Anda tetap bisa mematikannya untuk satu jendela.
-- **Lokasi penyimpanan** dengan tombol **Ubah**, dan **Aplikasi default untuk dokumen Office** untuk mengambil alih .docx / .xlsx / .pptx bagi Eoffice.
+- **Lokasi penyimpanan** dengan tombol **Ubah**, dan **Aplikasi default untuk dokumen Office** untuk mengambil alih .docx / .xlsx / .pptx bagi VgoOffice.
 
 ## Media & Pencarian AI
 
@@ -34,27 +34,21 @@ Bukan sakelar — setiap kemampuan memilih vendor yang melayaninya, dan kunci se
 
 ## Tentang
 
-- **Versi**, tautan GitHub proyek, dan tombol **Beri Bintang di GitHub**.
+- **Versi**
 - **Saluran Pembaruan**: Stabil atau Beta. Mengubahnya langsung berlaku dan memeriksa pembaruan; ini tidak akan menurunkan instalasi Beta kembali ke Stabil.
 
 ## Pengikatan aplikasi predefinida
 
-Pengaturan dapat mendaftarkan Eoffice sebagai aplikasi penangan .docx / .xlsx / .pptx / .pdf dan sejenisnya (pendaftaran aplikasi predefinida tingkat sistem; konfirmasi saat diminta).
+Pengaturan dapat mendaftarkan VgoOffice sebagai aplikasi penangan .docx / .xlsx / .pptx / .pdf dan sejenisnya (pendaftaran aplikasi predefinida tingkat sistem; konfirmasi saat diminta).
 
 ## Pemberitahuan pihak ketiga dan pembaruan
 
 - Bantuan ▸ Pemberitahuan Perangkat Lunak Pihak Ketiga: inventaris lengkap lisensi OSS yang disertakan dengan aplikasi.
 - Bantuan ▸ Periksa Pembaruan…: memicu pemeriksaan manual; versi yang lebih baru menawarkan dipasang.
 
-## Masuk dengan Genspark
-
-- Jalur masuk (di pengaturan atau di daftar proyek cloud) memakai alur **device-code**: Eoffice menampilkan kode dan membuka login di browser; prosesnya dilanjutkan otomatis setelah selesai.
-- Login hanya dipakai untuk: daftar proyek cloud dan model terkelola Genspark. Tanpa login, semua fitur lokal dan model kustom tetap berfungsi.
-- Keluar cukup satu klik di pengaturan.
-
 ## Integrasi MCP (untuk pengguna lanjutan / klien AI)
 
-**Integrasi** adalah panel yang menghubungkan Eoffice dengan agen pemrograman, dan ia punya artikel tersendiri: Menghubungkan agen pemrograman. Versi singkat — pilih jalurnya (baris perintah, atau MCP), ikuti bagian itu, lalu mulai obrolan baru dan bertanya.
+**Integrasi** adalah panel yang menghubungkan VgoOffice dengan agen pemrograman, dan ia punya artikel tersendiri: Menghubungkan agen pemrograman. Versi singkat — pilih jalurnya (baris perintah, atau MCP), ikuti bagian itu, lalu mulai obrolan baru dan bertanya.
 
 ![Pengaturan ▸ Integrasi: tiga langkah, lalu baris skill dan opsi MCP](img/settings-integrations.png)
 

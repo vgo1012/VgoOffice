@@ -9,6 +9,11 @@
 
 <h1 align="center">GenOffice</h1>
 
+**公司 Windows 定制版：** 安装、设置与 AI 配置请看
+[VgoOffice 0.11.2 使用手册](VgoOffice-manual.zh-CN.md)。下文为上游 GenOffice
+的介绍，部分账户功能与本定制版不同；[Eoffice 0.11.1 手册](Eoffice-manual.zh-CN.md)
+保留为历史参考。
+
 <p align="center"><b>全球首款功能完整的开源 AI 办公套件。</b><br>
 Word、Excel、PowerPoint 和 PDF 文件，由你与你的 AI 共同编辑，并以原生格式保存。</p>
 

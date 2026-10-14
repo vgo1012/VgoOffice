@@ -1,6 +1,6 @@
 # GenOffice のインストール
 
-> 以下は元プロジェクト GenOffice のインストール情報です。Eoffice には付属の Windows インストーラーを使用してください。
+> 以下は元プロジェクト GenOffice のインストール情報です。VgoOffice には付属の Windows インストーラーを使用してください。
 
 すべてのビルドは [Releases ページ](https://github.com/genspark-ai/genoffice/releases/latest) で公開されています。すべて `main` 由来で、macOS と Windows のインストーラーは署名済みです。
 

@@ -122,6 +122,8 @@ function installedAppBinaries(
     case 'darwin':
       return [
         ...(shipped ? [shipped] : []),
+        '/Applications/VgoOffice.app/Contents/MacOS/VgoOffice',
+        join(homedir(), 'Applications/VgoOffice.app/Contents/MacOS/VgoOffice'),
         '/Applications/Eoffice.app/Contents/MacOS/Eoffice',
         join(homedir(), 'Applications/Eoffice.app/Contents/MacOS/Eoffice'),
         '/Applications/GenOffice.app/Contents/MacOS/GenOffice',
@@ -130,6 +132,10 @@ function installedAppBinaries(
     case 'win32':
       return [
         ...(shipped ? [shipped] : []),
+        env.LOCALAPPDATA ? join(env.LOCALAPPDATA, 'Programs', 'Eoffice', 'VgoOffice.exe') : '',
+        env.ProgramFiles ? join(env.ProgramFiles, 'Eoffice', 'VgoOffice.exe') : '',
+        env.LOCALAPPDATA ? join(env.LOCALAPPDATA, 'Programs', 'VgoOffice', 'VgoOffice.exe') : '',
+        env.ProgramFiles ? join(env.ProgramFiles, 'VgoOffice', 'VgoOffice.exe') : '',
         env.LOCALAPPDATA ? join(env.LOCALAPPDATA, 'Programs', 'Eoffice', 'Eoffice.exe') : '',
         env.ProgramFiles ? join(env.ProgramFiles, 'Eoffice', 'Eoffice.exe') : '',
         env.LOCALAPPDATA ? join(env.LOCALAPPDATA, 'Programs', 'GenOffice', 'GenOffice.exe') : '',
@@ -152,7 +158,7 @@ export function appBinaryForResources(
 ): string {
   const install = dirname(resources)
   if (platform !== 'darwin' && platform !== 'win32') return join(install, 'genoffice')
-  const binaries = ['Eoffice', 'GenOffice'].map((name) =>
+  const binaries = ['VgoOffice', 'Eoffice', 'GenOffice'].map((name) =>
     platform === 'darwin' ? join(install, 'MacOS', name) : join(install, `${name}.exe`),
   )
   return binaries.find(exists) ?? binaries[0]

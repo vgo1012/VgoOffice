@@ -42,7 +42,7 @@ describe('GUI-open documents', () => {
     expect(genofficeUserDataDir(env)).toBe(current)
   })
 
-  it('protects documents open in both app names and their current/legacy dev profiles', () => {
+  it('protects documents in the stable Eoffice profile and all current/legacy app profiles', () => {
     const home = tempDir()
     const env = { HOME: home, APPDATA: home, XDG_CONFIG_HOME: home }
     const primary = genofficeUserDataDir(env)
@@ -51,6 +51,9 @@ describe('GUI-open documents', () => {
       'Eoffice',
       'Eoffice-Dev',
       'Eoffice Dev',
+      'VgoOffice',
+      'VgoOffice-Dev',
+      'VgoOffice Dev',
       'GenOffice',
       'GenOffice-Dev',
       'GenOffice Dev',

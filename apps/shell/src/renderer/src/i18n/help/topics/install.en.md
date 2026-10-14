@@ -1,6 +1,6 @@
 # Installing GenOffice
 
-> The following is the upstream GenOffice installation reference. For Eoffice, use the supplied Windows installer.
+> The following is the upstream GenOffice installation reference. For VgoOffice, use the supplied Windows installer.
 
 Every build is published on the [Releases page](https://github.com/genspark-ai/genoffice/releases/latest). All of them come from `main`; the macOS and Windows installers are signed.
 

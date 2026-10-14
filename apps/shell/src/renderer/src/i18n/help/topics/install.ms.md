@@ -1,6 +1,6 @@
 # Pemasangan GenOffice
 
-> Berikut ialah panduan pemasangan projek asal GenOffice. Untuk Eoffice, gunakan pemasang Windows yang disediakan.
+> Berikut ialah panduan pemasangan projek asal GenOffice. Untuk VgoOffice, gunakan pemasang Windows yang disediakan.
 
 Setiap keluaran diterbitkan pada [halaman Keluaran](https://github.com/genspark-ai/genoffice/releases/latest). Semuanya datang daripada `main`; pemasang untuk macOS dan Windows adalah bertanda tangan.
 

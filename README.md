@@ -9,6 +9,8 @@
 
 <h1 align="center">GenOffice</h1>
 
+**Company Windows edition:** see the [VgoOffice 0.11.2 manual (Simplified Chinese)](docs/i18n/VgoOffice-manual.zh-CN.md) for this customization's installation, settings, and AI configuration. The overview below describes upstream GenOffice. The [Eoffice 0.11.1 manual](docs/i18n/Eoffice-manual.zh-CN.md) is retained as a historical reference.
+
 <p align="center"><b>The world's first full-featured open-source AI Office suite.</b><br>
 Word, Excel, PowerPoint and PDF files, edited by you and your AI, saved back in the real formats.</p>
 

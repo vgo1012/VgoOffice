@@ -100,21 +100,13 @@ import {
   withShown,
 } from './star-prompt'
 import {
-  clearCloudProjectsStore,
   cloudProjectExternalUrl,
   readCloudProjectsStore,
   syncCloudProjects,
 } from './cloud-projects'
 import { handleDroppedFiles } from './dropped-files'
 import { collectLaunchPaths } from './launch-paths'
-import {
-  genofficeLogout,
-  gskLoginInfo,
-  loadGenofficeAuth,
-  setGskProxyUrl,
-  startGenofficeLogin,
-  watchGskApiKey,
-} from '@genoffice/ai-search'
+import { loadGenofficeAuth, setGskProxyUrl, watchGskApiKey } from '@genoffice/ai-search'
 
 import {
   buildDocsMenu,
@@ -255,7 +247,6 @@ import {
   setHtmlProvisionalTitleHook,
 } from '../../../html/src/main/html-main'
 import type {
-  AccountLoginEvent,
   AutoSaveDefault,
   FolderListing,
   FolderRoot,
@@ -367,6 +358,11 @@ import { isUpdateChannel, type UpdateChannel } from '../shared/update-api'
  */
 
 if (process.platform === 'win32') app.setAppUserModelId('com.eoffice.app')
+if (app.isPackaged)
+  app.setPath(
+    'userData',
+    process.env.GENOFFICE_USER_DATA || join(app.getPath('appData'), 'Eoffice'),
+  )
 
 // ANY unpacked run (`npm run shell`, `npm run dev`, `npx electron .`) must not
 // share the installed app's userData or single-instance lock — otherwise a dev
@@ -377,15 +373,15 @@ if (!app.isPackaged) {
   if (process.env.GENOFFICE_USER_DATA) {
     app.setPath('userData', process.env.GENOFFICE_USER_DATA)
   } else {
-    // The dev profile used to live in "Eoffice Dev"; the space breaks
+    // The dev profile used to live in "VgoOffice Dev"; the space breaks
     // unquoted shell expansions, rsync targets and .desktop Exec= lines, and
-    // XDG config entries are single tokens (genoffice#1817). "Eoffice-Dev" keeps the
-    // family naming of the packaged profile ("Eoffice"). The old directory
+    // XDG config entries are single tokens (genoffice#1817). "VgoOffice-Dev" keeps the
+    // family naming of the packaged profile ("VgoOffice"). The old directory
     // moves once — it sits on the same volume as appData, so the rename is
     // atomic, and a concurrent dev instance keeps its open file handles.
     const appData = app.getPath('appData')
-    const devDir = join(appData, 'Eoffice-Dev')
-    const oldDevDir = join(appData, 'Eoffice Dev')
+    const devDir = join(appData, 'VgoOffice-Dev')
+    const oldDevDir = join(appData, 'VgoOffice Dev')
     let userData = devDir
     if (existsSync(oldDevDir) && !existsSync(devDir)) {
       try {
@@ -3165,7 +3161,7 @@ function createShellWindow(): void {
     height: 900,
     minWidth: 720,
     minHeight: 550,
-    title: 'Eoffice',
+    title: 'VgoOffice',
     // vibrancy: editor modules punch translucent regions (e.g. the slides
     // thumbnail pane) through to the desktop
     ...(process.platform === 'darwin'
@@ -3637,7 +3633,7 @@ function newDocTab(): void {
 
 /** MCP: open a blank docs tab and return its webContents id, for the visible-editor bridge */
 function openBlankDocsTabForMcp(): number {
-  if (!tabManager) throw new Error('Eoffice is not ready')
+  if (!tabManager) throw new Error('VgoOffice is not ready')
   const tabId = tabManager.openDocsTab(undefined, { newBlank: true })
   const view = tabManager.docsTabs().find((t) => t.id === tabId)
   if (!view) throw new Error('the new document tab could not be opened')
@@ -3654,7 +3650,7 @@ function openBlankDocsTabForMcp(): number {
  * marking is skipped, the file name is the agent's business.
  */
 async function openBlankSheetsTabForMcp(): Promise<number> {
-  if (!tabManager) throw new Error('Eoffice is not ready')
+  if (!tabManager) throw new Error('VgoOffice is not ready')
   const filePath = uniquePathIn(defaultSaveDir(), `${tm('untitledSheet')}.xlsx`)
   await atomicWriteFile(filePath, await blankXlsxBuffer())
   const tabId = tabManager.openSheetsTab(filePath)
@@ -3725,7 +3721,7 @@ function abandonBlankTabForMcp(
 
 /** MCP: open a blank slides tab and return its webContents id, for the visible-deck bridge */
 function openBlankSlidesTabForMcp(): number {
-  if (!tabManager) throw new Error('Eoffice is not ready')
+  if (!tabManager) throw new Error('VgoOffice is not ready')
   const tabId = tabManager.openSlidesTab()
   const view = tabManager.slidesTabs().find((t) => t.id === tabId)
   if (!view) throw new Error('the new presentation tab could not be opened')
@@ -3820,54 +3816,10 @@ function statEntries(paths: string[]): RecentEntry[] {
 }
 
 function registerHomeIpc(): void {
-  // signed-in means GenOffice's own device-code login; the shared gsk CLI key
-  // is only a silent fallback, deliberately not shown here to nudge users onto our key
-  ipcMain.handle(HOME_CHANNELS.accountStatus, async () => {
-    if (!loadGenofficeAuth()) return { loggedIn: false }
-    await proxyBootstrap
-    const info = await gskLoginInfo()
-    if (info) return { loggedIn: true, email: info.email, creditBalance: info.creditBalance }
-    // login-info answering 401 drops an expired key: report signed-out right away
-    return { loggedIn: !!loadGenofficeAuth() }
-  })
-
-  // login progress is streamed to the requesting renderer; the auth URL is
-  // kept main-side so the "open manually" rescue never opens a renderer-supplied URL
-  let pendingLoginUrl = ''
-  ipcMain.handle(HOME_CHANNELS.accountLogin, async (event) => {
-    analytics.track('login_click')
-    const sender = event.sender
-    pendingLoginUrl = ''
-    await proxyBootstrap
-    const send = (payload: AccountLoginEvent) => {
-      if (!sender.isDestroyed()) sender.send(HOME_CHANNELS.accountLoginEvent, payload)
-    }
-    // open the browser on the first url event only; later events refresh the rescue URL
-    let opened = false
-    const launched = startGenofficeLogin((progress) => {
-      if (progress.url) {
-        pendingLoginUrl = progress.url
-        if (!opened) {
-          opened = true
-          void shell.openExternal(progress.url)
-        }
-      }
-      if (progress.phase === 'success') analytics.track('login_success')
-      send(progress)
-    })
-    if (launched) send({ phase: 'launched' })
-    return launched
-  })
-
-  ipcMain.handle(HOME_CHANNELS.accountLoginOpenUrl, () => {
-    if (pendingLoginUrl) void shell.openExternal(pendingLoginUrl)
-  })
-
-  ipcMain.handle(HOME_CHANNELS.accountLogout, async () => {
-    await genofficeLogout()
-    // the cloud projects cache belongs to the account that just signed out
-    clearCloudProjectsStore(cloudProjectsStorePath())
-  })
+  ipcMain.handle(HOME_CHANNELS.accountStatus, () => ({ loggedIn: false }))
+  ipcMain.handle(HOME_CHANNELS.accountLogin, () => false)
+  ipcMain.handle(HOME_CHANNELS.accountLoginOpenUrl, () => false)
+  ipcMain.handle(HOME_CHANNELS.accountLogout, () => false)
 
   ipcMain.handle(HOME_CHANNELS.getAppVersion, (): string => app.getVersion())
 
@@ -5668,8 +5620,6 @@ function installDockMenu(): void {
 // Prefer proxy env vars (terminal launch); a packaged app launched from Finder inherits no shell
 // env vars, so fall back to the system HTTP proxy. The renderer uses Chromium's system proxy and
 // is unaffected. Same bootstrap as slides-main startSlidesStandalone.
-// awaited by login IPC so the first status probe / login click cannot race the proxy resolution
-let proxyBootstrap: Promise<void> = Promise.resolve()
 
 async function installMainProcessProxy(): Promise<void> {
   let proxyUrl = [
@@ -5890,7 +5840,7 @@ app.whenReady().then(async () => {
     }
   }
 
-  proxyBootstrap = installMainProcessProxy()
+  void installMainProcessProxy()
   app.setAccessibilitySupportEnabled(true)
   // Settle the shared uiLang from saved settings BEFORE any tab renderer can
   // ask 'app:get-language': the editor handlers return the i18n module's

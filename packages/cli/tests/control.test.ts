@@ -145,6 +145,21 @@ describe('control endpoint', () => {
     )
     expect(controlEndpoint(env)?.endpoint).toBe('/eoffice')
   })
+
+  it('prioritises the stable Eoffice profile over a renamed-app profile', () => {
+    const home = mkdtempSync(join(tmpdir(), 'vgooffice-ctl-'))
+    const env = { HOME: home, APPDATA: home, XDG_CONFIG_HOME: home }
+    const current = genofficeUserDataDir(env)
+    const renamed = current.slice(0, -'Eoffice'.length) + 'VgoOffice'
+    for (const profile of [renamed, current]) {
+      mkdirSync(profile, { recursive: true })
+      writeFileSync(
+        join(profile, 'control.json'),
+        JSON.stringify({ protocol: 1, pid: process.pid, endpoint: profile, token: 't' }),
+      )
+    }
+    expect(controlEndpoint(env)?.endpoint).toBe(current)
+  })
 })
 
 describe('open / selection through the control channel', () => {

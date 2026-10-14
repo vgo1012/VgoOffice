@@ -21,11 +21,11 @@ export function genofficeUserDataDir(env: NodeJS.ProcessEnv): string {
   return existsSync(current) || !existsSync(legacy) ? current : legacy
 }
 
-/** Check both app names and their current/legacy development profiles for live files and endpoints. */
+/** Check stable and legacy app profiles for live files and endpoints. */
 export function genofficeUserDataDirs(env: NodeJS.ProcessEnv): string[] {
   if (env.GENOFFICE_USER_DATA) return [env.GENOFFICE_USER_DATA]
   const base = dirname(genofficeUserDataDir(env))
-  return ['Eoffice', 'GenOffice'].flatMap((name) => [
+  return ['Eoffice', 'VgoOffice', 'GenOffice'].flatMap((name) => [
     join(base, name),
     join(base, `${name}-Dev`),
     join(base, `${name} Dev`),
@@ -81,12 +81,12 @@ export function assertNotOpenInGui(abs: string, env: NodeJS.ProcessEnv): void {
     if (!open.paths.some((p) => realizedPath(p) === target)) continue
     throw new CliError(
       EXIT.file,
-      `GenOffice has this file open: ${abs}`,
+      `VgoOffice has this file open: ${abs}`,
       { gui_pid: open.pid },
       {
         reason: 'file_open_in_gui',
         suggestion:
-          'close the tab in GenOffice first, or pass --force to write anyway (the editor may overwrite your change on its next save)',
+          'close the tab in VgoOffice first, or pass --force to write anyway (the editor may overwrite your change on its next save)',
       },
     )
   }

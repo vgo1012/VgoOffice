@@ -19,12 +19,14 @@ fi
 
 case "$here" in
   */Contents/Resources/cli)
-    app="$here/../../MacOS/Eoffice"
+    app="$here/../../MacOS/VgoOffice"
+    if [ ! -x "$app" ]; then app="$here/../../MacOS/Eoffice"; fi
     if [ ! -x "$app" ]; then app="$here/../../MacOS/GenOffice"; fi
     ;;
   */resources/cli)
     # Linux install, or the Windows install reached from Git Bash / MSYS
-    app="$here/../../Eoffice.exe"
+    app="$here/../../VgoOffice.exe"
+    if [ ! -x "$app" ]; then app="$here/../../Eoffice.exe"; fi
     if [ ! -x "$app" ]; then app="$here/../../GenOffice.exe"; fi
     if [ ! -x "$app" ]; then app="$here/../../genoffice"; fi
     ;;

@@ -2,7 +2,7 @@
 
 ## Mở cài đặt
 
-Hàng tài khoản ở góc dưới bên trái của Trang chủ mở bảng cài đặt (khi bạn chưa đăng nhập, hàng đó ghi "Đăng nhập"). Bảng đó có sáu mục: Tài khoản, Mô hình AI, Phương tiện AI & Tìm kiếm, Chung, Tích hợp và Giới thiệu.
+Nút Cài đặt ở góc dưới bên trái của Trang chủ mở bảng cài đặt. Bảng có năm mục: Mô hình AI, Phương tiện AI & Tìm kiếm, Chung, Tích hợp và Giới thiệu.
 
 ![Cài đặt ▸ Chung, nơi có ngôn ngữ, chủ đề, tự động lưu và công tắc thống kê sử dụng](img/settings-general.png)
 
@@ -23,7 +23,7 @@ Sáng / Tối / Theo hệ thống. Khi chọn Theo hệ thống, giao diện bá
 - **Vị trí thanh bên AI** (trái hoặc phải), **Cỡ chữ bảng điều khiển AI** và **Kiểm tra chính tả trong trò chuyện AI**.
 - **Mở bảng AI trong tài liệu mới** — tắt, tài liệu mới sẽ bắt đầu với bảng AI đã thu gọn, chỉ một cú nhấp là mở ra.
 - **Tự động lưu tất cả tài liệu** bật AutoSave theo mặc định trong mọi trình soạn thảo; bạn vẫn có thể tắt nó cho một cửa sổ.
-- **Vị trí lữu** kèm nút **Thay đổi**, và **Ứng dụng mặc định cho tài liệu Office** để nhận .docx / .xlsx / .pptx về cho Eoffice.
+- **Vị trí lữu** kèm nút **Thay đổi**, và **Ứng dụng mặc định cho tài liệu Office** để nhận .docx / .xlsx / .pptx về cho VgoOffice.
 
 ## Phương tiện AI & Tìm kiếm
 
@@ -34,27 +34,21 @@ Sáng / Tối / Theo hệ thống. Khi chọn Theo hệ thống, giao diện bá
 
 ## Giới thiệu
 
-- **Phiên bản**, liên kết GitHub của dự án và nút **Gắn sao trên GitHub**.
+- **Phiên bản**
 - **Kênh cập nhật**: Ổn định hoặc Beta. Đổi kênh sẽ có hiệu lực ngay và kiểm tra bản cập nhật; nó sẽ không hạ bản cài đặt Beta về lại Ổn định.
 
 ## Đăng ký ứng dụng mặc định
 
-Cài đặt có thể đăng ký Eoffice làm ứng dụng xử lý .docx / .xlsx / .pptx / .pdf và các định dạng liên quan (đăng ký ứng dụng mặc định ở cấp nền tảng; xác nhận khi được hỏi).
+Cài đặt có thể đăng ký VgoOffice làm ứng dụng xử lý .docx / .xlsx / .pptx / .pdf và các định dạng liên quan (đăng ký ứng dụng mặc định ở cấp nền tảng; xác nhận khi được hỏi).
 
 ## Thông báo bên thứ ba và cập nhật
 
 - Trợ giúp ▸ Thông báo của bên thứ ba: danh mục giấy phép nguồn mở đầy đủ đi kèm ứng dụng.
 - Trợ giúp ▸ Kiểm tra bản cập nhật: kích hoạt một lần kiểm tra thủ công; nếu có bản mới sẽ nhắc cài đặt.
 
-## Đăng nhập Genspark
-
-- Lối đăng nhập (trong cài đặt hoặc danh sách dự án đám mây) dùng luồng **mã thiết bị**: Eoffice hiển thị một mã và mở trang đăng nhập trong trình duyệt; xong thì nó tự tiếp tục.
-- Đăng nhập chỉ dùng cho: danh sách dự án đám mây và các mô hình đám mây của Genspark. Không đăng nhập thì mọi tính năng cục bộ và mô hình tùy chỉnh vẫn hoạt động bình thường.
-- Đăng xuất chỉ cần một cú nhấp trong cài đặt.
-
 ## Tích hợp MCP (dành cho người dùng nâng cao / ứng dụng AI)
 
-**Tích hợp** là bảng nối Eoffice với một tác nhân lập trình, và nó có bài riêng: Kết nối tác nhân lập trình. Nói ngắn gọn — chọn một lối (dòng lệnh, hoặc MCP), làm theo phần đó, rồi mở một cuộc trò chuyện mới và hỏi.
+**Tích hợp** là bảng nối VgoOffice với một tác nhân lập trình, và nó có bài riêng: Kết nối tác nhân lập trình. Nói ngắn gọn — chọn một lối (dòng lệnh, hoặc MCP), làm theo phần đó, rồi mở một cuộc trò chuyện mới và hỏi.
 
 ![Cài đặt ▸ Tích hợp: ba bước, rồi đến các hàng kỹ năng và tuỳ chọn MCP](img/settings-integrations.png)
 

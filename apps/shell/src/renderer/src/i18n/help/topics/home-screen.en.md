@@ -1,6 +1,6 @@
 # The Home screen: where your files live
 
-Home is Eoffice's start page: a navigation sidebar on the left, file lists and quick-create cards on the right.
+Home is VgoOffice's start page: a navigation sidebar on the left, file lists and quick-create cards on the right.
 
 ![The Home screen](img/home-screen.png)
 
@@ -10,7 +10,6 @@ Home is Eoffice's start page: a navigation sidebar on the left, file lists and q
 - **Starred**: files you starred. Hover a file row and click the star to add or remove it. The ⋯ menu's **Move to group** sorts starred files into named groups; the Starred view filters by them.
 - **User Guide**: opens this manual.
 - **Ask AI**: the knowledge-base panel — ask questions and get answers cited from your starred files (see below).
-- **Genspark Projects**: after signing in to your Genspark account, shows the projects you created with Genspark AI on the web; click one to continue editing in the browser. Search, sort by time, refresh and load-more are supported.
 - **Folders**: directories you add to the sidebar with **Add folder…**, or drag in from the file manager. Each becomes a root you can open, create subfolders in, rename and remove; one that goes offline shows as unavailable and can be taken off the list. **New folder** makes another one.
 
 There is no Trash entry here. Deleted files go to the system trash, and restoring one is the OS's business.
@@ -37,7 +36,7 @@ Tick the checkbox on a row, or ⌘/ctrl-click, to build a selection; the header 
 The search box at the top matches two things at once:
 
 - **File names**: quick filtering by name.
-- **File contents**: Eoffice indexes your files in the background (text inside docx/xlsx/pptx/pdf/md/html), so searching body text finds files too. Scope and toggles live in the search settings.
+- **File contents**: VgoOffice indexes your files in the background (text inside docx/xlsx/pptx/pdf/md/html), so searching body text finds files too. Scope and toggles live in the search settings.
 
 ## Quick start cards
 
@@ -61,12 +60,6 @@ What each card does:
 
 - Star files first (any type the app reads); the panel header counts the corpus, and an empty knowledge base tells you to go star something.
 - Answers cite the files they came from; click a citation to open the file in its editor.
-- Requires signing in to Genspark. The conversation lives in memory only — closing the app ends it.
+- The conversation lives in memory only — closing the app ends it.
 - Search runs on the local file index, like Home search; files that have disappeared quietly drop out of the corpus.
 - Groups organise the Starred list only — the knowledge base always spans every starred file.
-
-## Cloud projects (Genspark Projects)
-
-- First use requires signing in to your Genspark account (device-code flow: Eoffice shows a code, you finish logging in in the browser).
-- The project list syncs with the web; Open in browser jumps there to continue.
-- Not signing in affects none of the local features.

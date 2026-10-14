@@ -1,6 +1,6 @@
 # La pantalla de inicio: dónde están sus archivos
 
-Inicio es la página de arranque de Eoffice: una barra de navegación a la izquierda, listas de archivos y tarjetas de creación rápida a la derecha.
+Inicio es la página de arranque de VgoOffice: una barra de navegación a la izquierda, listas de archivos y tarjetas de creación rápida a la derecha.
 
 ![La pantalla de inicio](img/home-screen.png)
 
@@ -10,7 +10,6 @@ Inicio es la página de arranque de Eoffice: una barra de navegación a la izqui
 - **Destacados**: los archivos que marcó como destacados. Pase el cursor por una fila y haga clic en la estrella para añadirlos o quitarlos. **Mover a grupo** en el menú ⋯ ordena los archivos destacados en grupos con nombre; la vista Destacados filtra por ellos.
 - **Guía del usuario**: abre este manual.
 - **Ask AI**: el panel de base de conocimiento — pregunta y recibe respuestas citadas desde tus archivos destacados (ver abajo).
-- **Genspark Projects**: tras iniciar sesión en su cuenta de Genspark, muestra los proyectos que creó con Genspark AI en la web; haga clic en uno para seguir editando en el navegador. Admite búsqueda, ordenación por fecha, actualización y cargar más.
 - **Carpetas**: los directorios que añade a la barra lateral con **Añadir carpeta…**, o que arrastra hasta ella desde el explorador de archivos. Cada uno se convierte en una raíz que puede abrir, en la que crear subcarpetas, renombrar y quitar; la que se quede sin conexión se muestra como no disponible y se puede quitar de la lista. **Nueva carpeta** crea otra.
 
 Aquí no hay ninguna entrada Papelera. Los archivos borrados van a la papelera del sistema, y restaurarlos es asunto del sistema operativo.
@@ -37,7 +36,7 @@ Marque la casilla de una fila, o haga ⌘/ctrl-clic, para ir formando una selecc
 El cuadro de búsqueda de arriba cubre dos cosas a la vez:
 
 - **Nombres de archivo**: filtrado rápido por nombre.
-- **Contenido de los archivos**: Eoffice indexa sus archivos en segundo plano (el texto de los .docx/xlsx/pptx/pdf/md/html), así que buscar en el cuerpo del texto también encuentra archivos. El ámbito y los interruptores se ajustan en los ajustes de búsqueda.
+- **Contenido de los archivos**: VgoOffice indexa sus archivos en segundo plano (el texto de los .docx/xlsx/pptx/pdf/md/html), así que buscar en el cuerpo del texto también encuentra archivos. El ámbito y los interruptores se ajustan en los ajustes de búsqueda.
 
 ## Tarjetas de inicio rápido
 
@@ -61,12 +60,6 @@ Qué hace cada tarjeta:
 
 - Destaca primero archivos (cualquier tipo que la app lea); la cabecera del panel cuenta el corpus, y una base vacía te invita a destacar algo.
 - Las respuestas citan los archivos de origen; haz clic en una cita para abrir el archivo en su editor.
-- Requiere iniciar sesión en Genspark. La conversación vive solo en memoria — cerrar la app la termina.
+- La conversación vive solo en memoria — cerrar la app la termina.
 - La búsqueda usa el índice local de archivos, como la de Inicio; los archivos desaparecidos se salen del corpus sin ruido.
 - Los grupos solo organizan la lista Destacados — la base de conocimiento siempre abarca todos los archivos destacados.
-
-## Proyectos en la nube (Genspark Projects)
-
-- El primer uso requiere iniciar sesión en su cuenta de Genspark (flujo por código de dispositivo: Eoffice muestra un código y usted completa el inicio de sesión en el navegador).
-- La lista de proyectos se sincroniza con la web; Abrir en el navegador lleva allí para continuar.
-- No iniciar sesión no afecta a ninguna función local.

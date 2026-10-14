@@ -1,3 +1,4 @@
+export { withoutAccountLogin } from './account-free'
 export type {
   AiChatRequest,
   AiChatResponse,

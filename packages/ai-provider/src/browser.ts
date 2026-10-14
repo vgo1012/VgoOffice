@@ -1,3 +1,4 @@
+export { withoutAccountLogin } from './account-free'
 /** Browser-safe settings surface. Keep Node-backed transports out of renderer bundles. */
 export type {
   AiCustomEndpoint,

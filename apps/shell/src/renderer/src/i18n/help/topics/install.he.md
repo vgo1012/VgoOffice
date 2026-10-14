@@ -1,6 +1,6 @@
 # התקנת GenOffice
 
-> להלן הוראות ההתקנה של פרויקט המקור GenOffice. עבור Eoffice, השתמשו בתוכנית ההתקנה המצורפת ל-Windows.
+> להלן הוראות ההתקנה של פרויקט המקור GenOffice. עבור VgoOffice, השתמשו בתוכנית ההתקנה המצורפת ל-Windows.
 
 כל גרסה מתפרסמת ב[עמוד ההפצות](https://github.com/genspark-ai/genoffice/releases/latest). כולן מגיעות מ-`main`; ומתקיני macOS ו-Windows חתומים.
 

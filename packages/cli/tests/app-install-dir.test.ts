@@ -33,19 +33,36 @@ describe('appBinaryForResources', () => {
     )
   })
 
-  it('uses Eoffice in arbitrary install directories and prefers it when both binaries exist', () => {
-    const install = join('D:\\Company Tools', 'Office')
+  it('uses VgoOffice independently of directory names and prefers it over legacy binaries', () => {
+    const install = join('D:\\Company Tools', '办公软件')
     const resources = join(install, 'resources')
     expect(appBinaryForResources(resources, 'win32', () => false)).toBe(
-      join(install, 'Eoffice.exe'),
+      join(install, 'VgoOffice.exe'),
     )
-    expect(appBinaryForResources(resources, 'win32', () => true)).toBe(join(install, 'Eoffice.exe'))
+    expect(appBinaryForResources(resources, 'win32', () => true)).toBe(
+      join(install, 'VgoOffice.exe'),
+    )
     expect(
       appBinaryForResources(
         join('/Volumes/Work/Custom.app/Contents/Resources'),
         'darwin',
         () => true,
       ),
-    ).toBe(join('/Volumes/Work/Custom.app/Contents/MacOS/Eoffice'))
+    ).toBe(join('/Volumes/Work/Custom.app/Contents/MacOS/VgoOffice'))
+  })
+
+  it('still finds Eoffice installations after the executable is renamed', () => {
+    for (const platform of ['win32', 'darwin'] as const) {
+      const resources = join('D:\\Company Tools', 'resources')
+      expect(
+        appBinaryForResources(resources, platform, (p) =>
+          p.endsWith(`Eoffice${platform === 'win32' ? '.exe' : ''}`),
+        ),
+      ).toBe(
+        platform === 'win32'
+          ? join('D:\\Company Tools', 'Eoffice.exe')
+          : join('D:\\Company Tools', 'MacOS', 'Eoffice'),
+      )
+    }
   })
 })

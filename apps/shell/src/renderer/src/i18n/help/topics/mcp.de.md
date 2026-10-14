@@ -1,14 +1,14 @@
 # Einen Coding-Agenten anbinden
 
-Eoffice spricht das Model Context Protocol: Ein Coding-Agent kann Ihre Dokumente also über dieselben Engines lesen, schreiben und rendern wie die App. Der Agent rät nicht an einem Dateiformat — er erhält die typisierten op-Schemas aus genau den Definitionen, gegen die der Executor prüft.
+VgoOffice spricht das Model Context Protocol: Ein Coding-Agent kann Ihre Dokumente also über dieselben Engines lesen, schreiben und rendern wie die App. Der Agent rät nicht an einem Dateiformat — er erhält die typisierten op-Schemas aus genau den Definitionen, gegen die der Executor prüft.
 
 ## In der App einrichten
 
 **Einstellungen ▸ Integrationen** ist der Ort dafür. Der Bereich hat zwei Hälften, und Sie können eine davon oder beide nutzen.
 
-**Der Skill.** Eine Zeile pro Coding-Agent, der auf diesem Rechner gefunden wurde — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, jede mit **Installieren**, **Aktualisieren** und **Deinstallieren**, dazu **In anderen Ordner installieren …**, **Skill herunterladen (zip)** und **Pfad kopieren**. Steht Ihr Assistent nicht in der Liste, zeigen Sie Eoffice auf einen Ordner, aus dem er `SKILL.md` liest, oder speichern Sie das Zip und lassen Sie den Assistenten es installieren. Skill und MCP können nebeneinander liegen: Der Assistent nimmt eines davon, und beide tun genau dieselben Dinge.
+**Der Skill.** Eine Zeile pro Coding-Agent, der auf diesem Rechner gefunden wurde — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, jede mit **Installieren**, **Aktualisieren** und **Deinstallieren**, dazu **In anderen Ordner installieren …**, **Skill herunterladen (zip)** und **Pfad kopieren**. Steht Ihr Assistent nicht in der Liste, zeigen Sie VgoOffice auf einen Ordner, aus dem er `SKILL.md` liest, oder speichern Sie das Zip und lassen Sie den Assistenten es installieren. Skill und MCP können nebeneinander liegen: Der Assistent nimmt eines davon, und beide tun genau dieselben Dinge.
 
-**MCP.** Zwei Wege stehen bereit: **Vom Assistenten gestartet (empfohlen)** — dort tragen Sie die angezeigte Konfiguration in Ihren Client ein, und der Assistent startet den Server selbst —, und **Lokaler HTTP-Server**, den die App für Sie betreibt. So oder so redet der Assistent am Ende mit Eoffice, und Sie tippen nie einen Befehl.
+**MCP.** Zwei Wege stehen bereit: **Vom Assistenten gestartet (empfohlen)** — dort tragen Sie die angezeigte Konfiguration in Ihren Client ein, und der Assistent startet den Server selbst —, und **Lokaler HTTP-Server**, den die App für Sie betreibt. So oder so redet der Assistent am Ende mit VgoOffice, und Sie tippen nie einen Befehl.
 
 ## Über die Kommandozeile einrichten
 
@@ -70,7 +70,7 @@ Ein Agent, der das op-Vokabular nicht kennt, wird raten. Der Skill bringt die Re
 
 ## Was er in der App erreichen kann
 
-Der Server ist nicht auf Dateien auf der Festplatte beschränkt. Solange Eoffice läuft, kann der Agent auch durch das Fenster arbeiten:
+Der Server ist nicht auf Dateien auf der Festplatte beschränkt. Solange VgoOffice läuft, kann der Agent auch durch das Fenster arbeiten:
 
 - **`open_in_genoffice`** öffnet eine Datei in einem Tab und holt ihn in den Vordergrund.
 - **`open_documents`** listet jedes Dokument auf, das Sie geöffnet haben — id, Typ, Pfad und ob es ungespeicherte Änderungen gibt —, und liest dann den aktuellen Inhalt eines Dokuments oder schließt es, wobei vorher gesichert wird, sofern Sie es nicht dem Verwerfen überlassen.

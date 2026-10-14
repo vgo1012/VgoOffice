@@ -30,7 +30,7 @@ export function mcpLaunch(cli: {
 function windowsAppLaunch(dir: string, appBinary?: string): McpLaunch {
   const sep = isWindowsPath(dir) ? '\\' : '/'
   return {
-    command: appBinary ?? `${dir}${sep}..${sep}..${sep}Eoffice.exe`,
+    command: appBinary ?? `${dir}${sep}..${sep}..${sep}VgoOffice.exe`,
     args: [`${dir}${sep}genoffice.cjs`, 'mcp'],
     env: { ELECTRON_RUN_AS_NODE: '1' },
   }
@@ -57,7 +57,7 @@ export function mcpLaunchFromLauncher(
   const sep = isWindowsPath(launcher) ? '\\' : '/'
   const dir = launcher.slice(0, Math.max(launcher.lastIndexOf('\\'), launcher.lastIndexOf('/')))
   const exists = opts.exists ?? (() => false)
-  for (const name of ['Eoffice.exe', 'GenOffice.exe']) {
+  for (const name of ['VgoOffice.exe', 'Eoffice.exe', 'GenOffice.exe']) {
     const binary = `${dir}${sep}..${sep}..${sep}${name}`
     if (exists(binary)) return windowsAppLaunch(dir, binary)
   }

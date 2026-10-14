@@ -17,7 +17,7 @@ Règles : l’extension est conservée automatiquement ; les caractères interdi
 
 ## Supprimer
 
-- **⋯ ▸ Supprimer** sur l’accueil : demande quels fichiers, puis les déplace vers la **corbeille du système**, où l’OS peut les restaurer. Eoffice ne conserve aucune annulation propre pour cela — la récupération relève de la corbeille, pas d’une notification.
+- **⋯ ▸ Supprimer** sur l’accueil : demande quels fichiers, puis les déplace vers la **corbeille du système**, où l’OS peut les restaurer. VgoOffice ne conserve aucune annulation propre pour cela — la récupération relève de la corbeille, pas d’une notification.
 
 ## Dupliquer
 

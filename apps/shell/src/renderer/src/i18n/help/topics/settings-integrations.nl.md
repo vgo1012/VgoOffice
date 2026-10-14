@@ -2,7 +2,7 @@
 
 ## Instellingen openen
 
-De accountregel linksonder op Start opent het instellingenpaneel (als je niet bent aangemeld staat er Inloggen). Het paneel heeft zes secties: Account, AI-model, AI-media en zoeken, Algemeen, Integraties en Over.
+De knop Instellingen linksonder op Start opent het instellingenpaneel. Het paneel heeft vijf secties: AI-model, AI-media en zoeken, Algemeen, Integraties en Over.
 
 ![Instellingen ▸ Algemeen, waar taal, thema, automatisch opslaan en de schakelaar voor gebruiksstatistieken staan](img/settings-general.png)
 
@@ -23,7 +23,7 @@ Licht / Donker / Systeem volgen. Systeem volgen volgt het uiterlijk van het best
 - **Positie AI-zijbalk** (links of rechts), **Tekstgrootte AI-paneel** en **Spellingcontrole in AI-chat**.
 - **AI-paneel openen in nieuwe documenten** — uit, een nieuw document begint met het paneel ingeklapt, één klik verderop.
 - **Alle documenten automatisch opslaan** zet AutoSave standaard aan in elke editor; u kunt het voor één venster nog steeds uitschakelen.
-- **Opslaglocatie** met de knop **Wijzigen** en **Standaardapp voor Office-documenten** om .docx / .xlsx / .pptx aan Eoffice toe te kennen.
+- **Opslaglocatie** met de knop **Wijzigen** en **Standaardapp voor Office-documenten** om .docx / .xlsx / .pptx aan VgoOffice toe te kennen.
 
 ## AI-media en zoeken
 
@@ -34,27 +34,21 @@ Geen schakelaars — elke functie kiest de leverancier die haar bedient, en de s
 
 ## Over
 
-- **Versie**, de GitHub-link van het project en een knop **Geef een ster op GitHub**.
+- **Versie**
 - **Updatekanaal**: Stabiel of Bèta. Wijzigen gaat meteen in en controleert op een update; een Bèta-installatie wordt niet teruggezet naar Stabiel.
 
 ## Standaardapp-koppelingen
 
-Met de instellingen kun je Eoffice registreren als verwerker van .docx / .xlsx / .pptx / .pdf en vergelijkbare bestanden (registratie van de standaardapp op systeemniveau; bevestiging wanneer daarom wordt gevraagd).
+Met de instellingen kun je VgoOffice registreren als verwerker van .docx / .xlsx / .pptx / .pdf en vergelijkbare bestanden (registratie van de standaardapp op systeemniveau; bevestiging wanneer daarom wordt gevraagd).
 
 ## Mededelingen over software van derden en updates
 
 - Help ▸ Kennisgevingen over software van derden: het volledige overzicht van opensourcelicenties dat met de app is meegeleverd.
 - Help ▸ Controleren op updates…: start een handmatige controle; bij een nieuwere versie wordt je gevraagd die te installeren.
 
-## Aanmelden bij Genspark
-
-- Het aanmeldpunt (in de instellingen of in de lijst met cloudprojecten) gebruikt een flow met **apparaatcode**: Eoffice toont een code en opent de aanmeldpagina in de browser; daarna gaat het automatisch verder.
-- Aanmelden wordt alleen gebruikt voor: de lijst met cloudprojecten en de modellen die Genspark host. Zonder aanmelden blijven alle lokale functies en eigen modellen werken.
-- Uitloggen is in de instellingen met één klik te doen.
-
 ## MCP-integratie (voor gevorderde gebruikers / AI-clients)
 
-**Integraties** is het paneel dat Eoffice met een coding agent verbindt, en daarvoor is er een eigen artikel: Verbinden met een coding agent. De korte versie — kies een route (de opdrachtregel, of MCP), volg dat onderdeel en start daarna een nieuw gesprek en stel je vraag.
+**Integraties** is het paneel dat VgoOffice met een coding agent verbindt, en daarvoor is er een eigen artikel: Verbinden met een coding agent. De korte versie — kies een route (de opdrachtregel, of MCP), volg dat onderdeel en start daarna een nieuw gesprek en stel je vraag.
 
 ![Instellingen ▸ Integraties: de drie stappen, daarna de skill-rijen en de MCP-opties](img/settings-integrations.png)
 

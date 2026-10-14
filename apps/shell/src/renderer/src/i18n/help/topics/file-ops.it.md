@@ -17,7 +17,7 @@ Regole: l'estensione viene conservata automaticamente; i caratteri non ammessi, 
 
 ## Eliminazione
 
-- **⋯ ▸ Elimina** su Home: chiede quali file, poi li sposta nel **cestino di sistema**, dove il sistema operativo può recuperarli. Eoffice non mantiene un annulla tutto suo per questo — il recupero è compito del cestino, non di un avviso.
+- **⋯ ▸ Elimina** su Home: chiede quali file, poi li sposta nel **cestino di sistema**, dove il sistema operativo può recuperarli. VgoOffice non mantiene un annulla tutto suo per questo — il recupero è compito del cestino, non di un avviso.
 
 ## Duplicazione
 

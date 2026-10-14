@@ -1,6 +1,6 @@
 # Quick start: the interface and the basics
 
-Eoffice is an office suite that runs entirely on your machine: one window, one row of tabs, holding six editors — Docs (word processing), Sheets (spreadsheets), Slides (presentations), PDF, Markdown and HTML. Files are genuine .docx / .xlsx / .pptx / .pdf, fully interchangeable with Word, Excel and PowerPoint. No network required.
+VgoOffice is an office suite that runs entirely on your machine: one window, one row of tabs, holding six editors — Docs (word processing), Sheets (spreadsheets), Slides (presentations), PDF, Markdown and HTML. Files are genuine .docx / .xlsx / .pptx / .pdf, fully interchangeable with Word, Excel and PowerPoint. No network required.
 
 ## Interface overview
 
@@ -18,7 +18,7 @@ Any of:
 
 - Click a quick-create card in the [Quick start](help://getting-started) section of **Home** (AI Docs, AI Sheets, AI Slides, ...).
 - Menu **File ▸ New**: Docs (⌘N/ctrl+N), Sheets, Slides, Markdown, HTML or PDF.
-- Drag a file onto the window, or double-click it in your file manager (if Eoffice is the default app).
+- Drag a file onto the window, or double-click it in your file manager (if VgoOffice is the default app).
 
 A new document opens untitled; the file on disk is only created at the first save.
 
@@ -52,7 +52,7 @@ Shortcuts inside each editor (format painter, find & replace, table ops, ...) ar
 
 ## The Option+Command chords
 
-Option+Command is the layer Word reserves for structured jumps, and Eoffice fills it the same way. Docs takes most of it; Sheets takes two of its own for Excel parity; one chord works everywhere.
+Option+Command is the layer Word reserves for structured jumps, and VgoOffice fills it the same way. Docs takes most of it; Sheets takes two of its own for Excel parity; one chord works everywhere.
 
 **Docs**
 
@@ -81,7 +81,7 @@ Note that **⌥⌘0 means Normal in Docs and Outside borders in Sheets**. They n
 
 **Every editor**: **⌥⌘R / Ctrl+F1** folds the ribbon, as described above.
 
-That leaves ⌥⌘D free for Eoffice to use on macOS, if a future command wants it.
+That leaves ⌥⌘D free for VgoOffice to use on macOS, if a future command wants it.
 
 ## Where to go next
 

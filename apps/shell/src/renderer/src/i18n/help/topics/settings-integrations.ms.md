@@ -2,7 +2,7 @@
 
 ## Membuka tetapan
 
-Baris akaun di penjuru kiri bawah pada Laman Utama akan membuka panel tetapan. Ia memaparkan Log masuk apabila anda belum log masuk. Panel ini mempunyai enam bahagian: Akaun, Model AI, Media & Carian AI, Umum, Integrasi dan Perihal.
+Butang Tetapan di penjuru kiri bawah pada Laman Utama membuka panel tetapan. Panel ini mempunyai lima bahagian: Model AI, Media & Carian AI, Umum, Integrasi dan Perihal.
 
 ![Tetapan ▸ Umum, tempat bahasa, tema, autosimpan dan suis statistik penggunaan berada](img/settings-general.png)
 
@@ -23,7 +23,7 @@ Tiga pilihan ialah Cerah, Gelap, dan Ikut Sistem. Mod Ikut Sistem mengikut rupa 
 - **Kedudukan bar sisi AI** (kiri atau kanan), **Saiz teks panel AI** dan **Semakan ejaan dalam sembang AI**.
 - **Buka panel AI dalam dokumen baharu** — dimatikan, dokumen baharu bermula dengan panel tertutup, sekali klik sahaja.
 - **Simpan automatik semua dokumen** membolehkan AutoSave secara lalai dalam setiap editor; anda masih boleh mematikannya untuk satu tetingkap sahaja.
-- **Lokasi simpanan** dengan butang **Tukar**, dan **Apl lalai untuk dokumen Office** untuk menuntut .docx / .xlsx / .pptx bagi Eoffice.
+- **Lokasi simpanan** dengan butang **Tukar**, dan **Apl lalai untuk dokumen Office** untuk menuntut .docx / .xlsx / .pptx bagi VgoOffice.
 
 ## Media & Carian AI
 
@@ -34,27 +34,21 @@ Ia bukan suis — setiap keupayaan memilih pembekal yang menyediakannya, dan kun
 
 ## Perihal
 
-- **Versi**, pautan GitHub projek dan butang **Beri Bintang di GitHub**.
+- **Versi**
 - **Saluran Kemas Kini**: Stabil atau Beta. Menukarnya berkuat kuasa serta-merta dan akan menyemak kemas kini; ia tidak akan menurunkan pemasangan Beta kembali ke Stabil.
 
 ## Penetapan sebagai aplikasi lalai
 
-Tetapan boleh mendaftar Eoffice sebagai aplikasi yang mengendalikan fail .docx, .xlsx, .pptx, .pdf, dan yang lain. Pendaftaran ini dilakukan pada peringkat sistem, dan pengesahan diperlukan apabila diminta.
+Tetapan boleh mendaftar VgoOffice sebagai aplikasi yang mengendalikan fail .docx, .xlsx, .pptx, .pdf, dan yang lain. Pendaftaran ini dilakukan pada peringkat sistem, dan pengesahan diperlukan apabila diminta.
 
 ## Notis perisian pihak ketiga dan kemas kini
 
 - Bantuan ▸ Notis Perisian Pihak Kedua memaparkan senarai penuh lesen perisian sumber terbuka yang disertakan dengan aplikasi.
 - Bantuan ▸ Semak Kemas Kini memulakan pemeriksaan secara manual. Jika terdapat versi yang lebih baharu, aplikasi akan meminta anda memasangnya.
 
-## Log masuk ke Genspark
-
-- Kemasukan log masuk, sama ada melalui tetapan atau senarai projek awan, menggunakan aliran **kod peranti**. Eoffice memaparkan kod tersebut dan membuka halaman log masuk dalam pelayar, dan aliran ini akan diteruskan secara automatik selepas selesai.
-- Log masuk hanya digunakan untuk dua perkara, iaitu senarai projek awan dan model yang dihoskan oleh Genspark. Tanpa log masuk, setiap fungsi setempat dan model tersuai akan terus berfungsi.
-- Log keluar boleh dilakukan dengan satu klik dalam tetapan.
-
 ## Integrasi MCP
 
-**Integrasi** ialah panel yang menyambungkan Eoffice kepada ejen penulisan kod, dan ia ada babnya sendiri: Menyambungkan ejen penulisan kod. Versi ringkas — pilih satu laluan (baris arahan, atau MCP), ikut bahagian itu, kemudian mulakan sembang baharu dan bertanya.
+**Integrasi** ialah panel yang menyambungkan VgoOffice kepada ejen penulisan kod, dan ia ada babnya sendiri: Menyambungkan ejen penulisan kod. Versi ringkas — pilih satu laluan (baris arahan, atau MCP), ikut bahagian itu, kemudian mulakan sembang baharu dan bertanya.
 
 ![Tetapan ▸ Integrasi: tiga langkah, kemudian baris kemahiran dan pilihan MCP](img/settings-integrations.png)
 

@@ -1,6 +1,6 @@
 # GenOffice installieren
 
-> Die folgenden Installationshinweise beziehen sich auf das Ursprungsprojekt GenOffice. Verwenden Sie für Eoffice das bereitgestellte Windows-Installationsprogramm.
+> Die folgenden Installationshinweise beziehen sich auf das Ursprungsprojekt GenOffice. Verwenden Sie für VgoOffice das bereitgestellte Windows-Installationsprogramm.
 
 Jeder Build wird auf der [Releases-Seite](https://github.com/genspark-ai/genoffice/releases/latest) veröffentlicht. Alle stammen aus `main`; die Installer für macOS und Windows sind signiert.
 

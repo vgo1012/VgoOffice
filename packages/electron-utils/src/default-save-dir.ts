@@ -1,7 +1,7 @@
 /// The default folder where new/untitled files land on their first (silent)
-/// save and where AI-generated drafts go. Defaults to <Documents>/Eoffice
+/// save and where AI-generated drafts go. Defaults to <Documents>/VgoOffice
 /// and is user-configurable via the `defaultSaveDir` key
-/// in userData/app-settings.json (set from the home screen's account menu).
+/// in userData/app-settings.json (set from the home screen's settings menu).
 /// Every editor main module resolves through here so they all honor the same
 /// setting.
 import { accessSync, constants, mkdirSync, readFileSync } from 'node:fs'
@@ -52,6 +52,6 @@ export function resolveDefaultSaveDir(configured: string | null, fallbackDir: st
 /** convenience for the Electron mains: settings lookup + fallback in one call */
 export function configuredDefaultSaveDir(app: PathProvider): string {
   const settingsPath = join(app.getPath('userData'), 'app-settings.json')
-  const fallback = join(app.getPath('documents'), 'Eoffice')
+  const fallback = join(app.getPath('documents'), 'VgoOffice')
   return resolveDefaultSaveDir(readDefaultSaveDirSetting(settingsPath), fallback)
 }

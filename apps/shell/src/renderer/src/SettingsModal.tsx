@@ -12,6 +12,7 @@ import type { AiFontSize, AiPanelPrefs, AiPanelSide } from '@genoffice/ui'
 import type { DecisionEndpoint, DefaultAppStatus, FileSearchSettings } from '../../shared/home-api'
 import type { UpdateUiState } from '../../shared/update-api'
 import {
+  withoutAccountLogin,
   DEFAULT_MAX_OUTPUT_TOKENS,
   MAX_MAX_OUTPUT_TOKENS,
   MIN_MAX_OUTPUT_TOKENS,
@@ -38,7 +39,7 @@ import { ProviderLogo } from './provider-logos'
 import { IntegrationsPane, skillUpdateDue } from './IntegrationsPane'
 import './settings.css'
 
-// ── Settings modal (opened from the account menu) ─────────
+// ── Settings modal ───────────────────────────────────────
 // Genspark-style two-pane dialog: section nav on the left, fields on the right.
 // All values go through the existing home IPC; nothing is stored locally.
 
@@ -95,14 +96,6 @@ const CHANNEL_OPTIONS = [
   { value: 'beta', labelKey: 'channelBeta' },
 ] as const satisfies readonly { value: 'stable' | 'beta'; labelKey: StringKey }[]
 
-/** GitHub-style abbreviated stargazer count (2591 → "2.6k") — the number is
- * social proof, not a metric; the cached/exact value would only look stale */
-function formatStars(n: number): string {
-  if (n < 1000) return String(n)
-  const k = n / 1000
-  return `${k >= 100 ? Math.round(k) : (Math.round(k * 10) / 10).toString().replace(/\.0$/, '')}k`
-}
-
 /** px stepper for the custom AI panel text size; in-range values apply live,
  * out-of-range or partial input is clamped on blur */
 function CustomFontSizeInput({
@@ -155,10 +148,34 @@ function CustomFontSizeInput({
   )
 }
 
-export type SectionId = 'account' | 'aiModel' | 'aiMedia' | 'general' | 'integrations' | 'about'
+export type SectionId = 'aiModel' | 'aiMedia' | 'general' | 'integrations' | 'about'
+
+/** Label and value with an optional right-aligned action. */
+function Field({
+  label,
+  value,
+  valueTitle,
+  action,
+}: {
+  label: string
+  value: string
+  valueTitle?: string
+  action?: ReactNode
+}) {
+  return (
+    <div className="set-field">
+      <div className="set-field-text">
+        <div className="set-field-label">{label}</div>
+        <div className="set-field-value" data-tip={valueTitle}>
+          {value}
+        </div>
+      </div>
+      {action}
+    </div>
+  )
+}
 
 const SECTIONS: readonly { id: SectionId; labelKey: StringKey }[] = [
-  { id: 'account', labelKey: 'setSecAccount' },
   { id: 'aiModel', labelKey: 'setSecAiModel' },
   { id: 'aiMedia', labelKey: 'setSecAiMedia' },
   { id: 'general', labelKey: 'setSecGeneral' },
@@ -200,19 +217,6 @@ function SectionIcon({ id }: { id: SectionId }) {
       </svg>
     )
   }
-  if (id === 'account') {
-    return (
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <circle cx="8" cy="5.2" r="2.9" stroke="currentColor" strokeWidth="1.3" />
-        <path
-          d="M2.7 13.6a5.5 5.5 0 0 1 10.6 0"
-          stroke="currentColor"
-          strokeWidth="1.3"
-          strokeLinecap="round"
-        />
-      </svg>
-    )
-  }
   if (id === 'integrations') {
     return (
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -249,31 +253,6 @@ function SectionIcon({ id }: { id: SectionId }) {
   )
 }
 
-/** label-over-value field row with an optional right-aligned action */
-function Field({
-  label,
-  value,
-  valueTitle,
-  action,
-}: {
-  label: string
-  value: string
-  valueTitle?: string
-  action?: ReactNode
-}) {
-  return (
-    <div className="set-field">
-      <div className="set-field-text">
-        <div className="set-field-label">{label}</div>
-        <div className="set-field-value" data-tip={valueTitle}>
-          {value}
-        </div>
-      </div>
-      {action}
-    </div>
-  )
-}
-
 /**
  * Long enough that typing an address does not fire a request per keystroke,
  * short enough that the picker is populated by the time the eye reaches it.
@@ -290,8 +269,8 @@ function foldModels(providerId: string, models: string[]) {
 
 /** AI model pane: provider / model / key / base URL, saved to userData/ai-settings.json */
 function AiModelPane({ t }: { t: TFunc }) {
-  const [catalog, setCatalog] = useState<AiCatalogEntry[]>(
-    () => window.aiOffice.getAiProviders?.() ?? [],
+  const [catalog, setCatalog] = useState<AiCatalogEntry[]>(() =>
+    (window.aiOffice.getAiProviders?.() ?? []).filter((p) => p.id !== 'genspark'),
   )
   const [settings, setSettings] = useState<AiSettings | null>(null)
   const [dirty, setDirty] = useState(false)
@@ -331,15 +310,7 @@ function AiModelPane({ t }: { t: TFunc }) {
         setTesting(false)
         setTestResult(null)
         setSaved(false)
-        // The switch is disabled with genspark, so never present it stranded
-        // off. Display-only: s.provider may be the activeProvider fallback for
-        // a half-configured BYOK selection, so writing anything back here would
-        // clobber the stored choice — the main process heals a genuine legacy
-        // genspark+off file itself, judged on the raw stored provider.
-        if (s.provider === 'genspark' && s.gskToolsEnabled === false) {
-          s = { ...s, gskToolsEnabled: true }
-        }
-        setSettings(s)
+        setSettings(withoutAccountLogin(s))
         const codex = s.providers.codex
         if (codex) {
           void refreshCodexModels(codex.cliPath ?? '', codex.model).catch(() => undefined)
@@ -750,26 +721,6 @@ function AiModelPane({ t }: { t: TFunc }) {
           onBlur={commitMaxTokens}
         />
       </div>
-      <div className="set-field">
-        <div className="set-field-text">
-          <div className="set-field-stack">
-            <div className="set-field-label">{t('setAiGskTools')}</div>
-            <div className="set-field-desc">{t('setAiGskToolsDesc')}</div>
-          </div>
-        </div>
-        {/* locked on with the genspark provider — chat runs through gsk anyway */}
-        <button
-          className="set-switch"
-          role="switch"
-          aria-checked={settings.gskToolsEnabled !== false}
-          aria-label={t('setAiGskTools')}
-          disabled={isGenspark}
-          onClick={() => {
-            setSettings({ ...settings, gskToolsEnabled: settings.gskToolsEnabled === false })
-            touch()
-          }}
-        />
-      </div>
     </>
   )
 }
@@ -812,11 +763,11 @@ function AiMediaPane({
   onFileSearchChange?: () => void
   focusBlock?: TestedBlock
 }) {
-  const [mediaCatalog] = useState<AiMediaProviderMeta[]>(
-    () => window.aiOffice.getAiMediaProviders?.() ?? [],
+  const [mediaCatalog] = useState<AiMediaProviderMeta[]>(() =>
+    (window.aiOffice.getAiMediaProviders?.() ?? []).filter((p) => p.id !== 'genspark'),
   )
-  const [searchCatalog] = useState<AiSearchProviderMeta[]>(
-    () => window.aiOffice.getAiSearchProviders?.() ?? [],
+  const [searchCatalog] = useState<AiSearchProviderMeta[]>(() =>
+    (window.aiOffice.getAiSearchProviders?.() ?? []).filter((p) => p.id !== 'genspark'),
   )
   const [settings, setSettings] = useState<AiSettings | null>(null)
   const [fileSearch, setFileSearchState] = useState<FileSearchSettings | null>(null)
@@ -845,7 +796,7 @@ function AiMediaPane({
         setTesting(false)
         setTestResults(null)
         setSaved(false)
-        setSettings(s)
+        setSettings(withoutAccountLogin(s))
       })
     }
     load()
@@ -1423,21 +1374,21 @@ function AiStatusPill({ status }: { status: AiStatus | null }) {
 }
 
 export interface SettingsModalProps {
-  status: AccountStatus | null
-  loggingOut: boolean
+  status?: AccountStatus | null
+  loggingOut?: boolean
   /** browser sign-in in progress (spinner shows on the account entry) */
-  loginWaiting: boolean
+  loginWaiting?: boolean
   /** device auth URL while waiting — rescue actions when the browser did not auto-open */
-  loginUrl: string | null
-  urlCopied: boolean
-  onOpenLoginUrl: () => void
-  onCopyLoginUrl: () => void
+  loginUrl?: string | null
+  urlCopied?: boolean
+  onOpenLoginUrl?: () => void
+  onCopyLoginUrl?: () => void
   onClose: () => void
   /** the decision-model search settings were saved; the home search re-judges or drops its current order */
   onFileSearchChange?: () => void
   /** closes the modal and launches the Genspark login flow (progress shows on the account entry) */
-  onLogin: () => void
-  onLogout: () => void
+  onLogin?: () => void
+  onLogout?: () => void
   /** an installed skill is older than the bundled one: dot on the Integrations entry */
   skillUpdateDue?: boolean
   onSkillUpdateDue?: (due: boolean) => void
@@ -1446,25 +1397,17 @@ export interface SettingsModalProps {
 }
 
 export function SettingsModal({
-  status,
-  loggingOut,
-  loginWaiting,
-  loginUrl,
-  urlCopied,
-  onOpenLoginUrl,
-  onCopyLoginUrl,
   onClose,
   onFileSearchChange,
-  onLogin,
-  onLogout,
   skillUpdateDue: updateDue = false,
   onSkillUpdateDue,
   target,
 }: SettingsModalProps) {
   const { lang, setLang, t } = useI18n()
-  const [section, setSection] = useState<SectionId>(target?.section ?? 'account')
+  const [section, setSection] = useState<SectionId>(target?.section ?? 'general')
   useEffect(() => {
-    if (target) setSection(target.section)
+    if (target)
+      setSection(SECTIONS.some((s) => s.id === target.section) ? target.section : 'general')
   }, [target])
   const [theme, setTheme] = useState<UiTheme>('light')
   const [docTheme, setDocTheme] = useState<DocTheme>('follow')
@@ -1478,7 +1421,6 @@ export function SettingsModal({
   const [aiPrefs, setAiPrefs] = useState<AiPanelPrefs>(DEFAULT_AI_PANEL_PREFS)
   const [channel, setChannel] = useState<'stable' | 'beta'>('stable')
   const [appVersion, setAppVersion] = useState('')
-  const [githubStars, setGithubStars] = useState<number | null>(null)
   const [updateState, setUpdateState] = useState<UpdateUiState | null>(null)
 
   useEffect(() => {
@@ -1519,9 +1461,6 @@ export function SettingsModal({
         if (alive) setUpdateState(s)
       })
       .catch(() => undefined)
-    void window.aiOffice.githubStars?.().then((n) => {
-      if (alive && n !== null) setGithubStars(n)
-    })
     return () => {
       alive = false
     }
@@ -1596,9 +1535,6 @@ export function SettingsModal({
     return t('setDefaultAppDesc')
   })()
 
-  const loggedIn = status?.loggedIn ?? false
-  const email = status?.email ?? ''
-
   return (
     <div
       className="set-overlay"
@@ -1638,54 +1574,6 @@ export function SettingsModal({
             ))}
           </nav>
           <div className="set-pane">
-            {section === 'account' && (
-              <>
-                <h3 className="set-pane-title">{t('setSecAccount')}</h3>
-                <Field label={t('setEmail')} value={loggedIn ? email : t('setNotLoggedIn')} />
-                {loggedIn && (
-                  <Field
-                    label={t('credits')}
-                    value={
-                      status?.creditBalance === undefined
-                        ? '—'
-                        : Math.floor(status.creditBalance).toLocaleString('en-US')
-                    }
-                    action={
-                      <button
-                        className="set-btn"
-                        data-tip={t('creditsTip')}
-                        onClick={() => void window.aiOffice.openCreditUsage?.()}
-                      >
-                        {t('setViewUsage')}
-                      </button>
-                    }
-                  />
-                )}
-                <div className="set-pane-footer">
-                  {loggedIn ? (
-                    <button className="set-btn danger" disabled={loggingOut} onClick={onLogout}>
-                      {loggingOut ? t('loggingOut') : t('logout')}
-                    </button>
-                  ) : (
-                    <>
-                      {loginWaiting && loginUrl && (
-                        <>
-                          <button className="set-btn" onClick={onOpenLoginUrl}>
-                            {t('loginOpenManually')}
-                          </button>
-                          <button className="set-btn" onClick={onCopyLoginUrl}>
-                            {urlCopied ? t('loginCopied') : t('loginCopyUrl')}
-                          </button>
-                        </>
-                      )}
-                      <button className="set-btn primary" onClick={onLogin}>
-                        {loginWaiting ? t('waitingShort') : t('loginGenspark')}
-                      </button>
-                    </>
-                  )}
-                </div>
-              </>
-            )}
             {section === 'aiModel' && <AiModelPane t={t} />}
             {section === 'aiMedia' && (
               <AiMediaPane
@@ -1936,22 +1824,6 @@ export function SettingsModal({
                     }}
                   />
                 </div>
-                <Field
-                  label={t('setGithub')}
-                  value={
-                    githubStars === null
-                      ? 'GenOffice · github.com/genspark-ai/genoffice'
-                      : `GenOffice · github.com/genspark-ai/genoffice · ★ ${formatStars(githubStars)}`
-                  }
-                  action={
-                    <button
-                      className="set-btn"
-                      onClick={() => void window.aiOffice.openGitHubRepo?.()}
-                    >
-                      {t('starOnGitHub')}
-                    </button>
-                  }
-                />
               </>
             )}
           </div>

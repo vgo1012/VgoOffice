@@ -1,3 +1,4 @@
+import { withoutAccountLogin } from '@genoffice/ai-provider'
 import { createHash, randomUUID } from 'node:crypto'
 import {
   createReadStream,
@@ -70,7 +71,6 @@ import {
   isAiOverloadedError,
   chatForProvider,
   defaultAiSettings,
-  activeProvider,
   maxOutputTokensOf,
   resolveAiSettings,
   setAiUserAgent,
@@ -79,7 +79,6 @@ import {
   type AiProviderId,
   type AiSettings,
   type AiStreamChunk,
-  type GenSparkAccountStatus,
   type LegacyAiSettings,
 } from '@genoffice/ai-provider'
 import { shutdownCodexAppServers } from '@genoffice/ai-provider/codex-app-server'
@@ -89,12 +88,9 @@ import {
   sheetCsvToXlsxBuffer,
 } from '@genoffice/xlsx-gateway/gateway/csv-import'
 import {
-  ensureGenofficeLogin,
   noteGskCallFailure,
   setGenofficeLoginOpener,
   gskApiKey,
-  gskLoginInfo,
-  hasGskAuth,
   setGskProxyUrl,
   webSearchTool,
   imageSearchTool,
@@ -1596,7 +1592,7 @@ async function createStandaloneSheetsDocument(
   request: SheetsAiHostDocumentRequest,
 ): Promise<WorkbookCreateDocumentResult> {
   if (request.type === 'docx') {
-    return { ok: false, error: 'Creating DOCX files requires the Eoffice shell or Docs app.' }
+    return { ok: false, error: 'Creating DOCX files requires the VgoOffice shell or Docs app.' }
   }
   const title = sanitizeGeneratedFileBase(request.title)
   try {
@@ -2182,7 +2178,7 @@ export async function createSheetsWindow(
     minWidth: 720,
     minHeight: 550,
     show: false,
-    title: 'Eoffice Sheets',
+    title: 'VgoOffice Sheets',
     // Traffic lights sit inside the toolbar row.
     ...(process.platform === 'darwin' ? { titleBarStyle: 'hiddenInset' as const } : {}),
     webPreferences: {
@@ -3639,33 +3635,17 @@ export function registerSheetsAiIpc(): void {
     const stored = readJson<Partial<AiSettings> & LegacyAiSettings>(SETTINGS_PATH(), {})
     const settings = resolveAiSettings(stored, defaultAiSettings())
     // a stored BYOK provider is honored when usable; half-filled configs fall back to genspark
-    settings.provider = activeProvider(settings)
-    return settings
+    return withoutAccountLogin(settings)
   })
 
-  // Genspark account (gsk login state): the auth source for AI features; the
-  // frontend uses it to guide sign-in when logged out
-  ipcMain.handle(
-    IPC_CHANNELS.aiGskStatus,
-    async (_event, withEmail?: unknown): Promise<GenSparkAccountStatus> => {
-      if (!hasGskAuth()) return { loggedIn: false }
-      if (!withEmail) return { loggedIn: true }
-      const info = await gskLoginInfo()
-      return info?.email ? { loggedIn: true, email: info.email } : { loggedIn: true }
-    },
-  )
-
-  // a 401 on the gsk key opens the device-code login once (genoffice-auth recovery)
-  setGenofficeLoginOpener((url) => void shell.openExternal(url))
-
-  ipcMain.handle(IPC_CHANNELS.aiGskLogin, () => {
-    ensureGenofficeLogin((url) => void shell.openExternal(url))
-  })
+  ipcMain.handle(IPC_CHANNELS.aiGskStatus, () => ({ loggedIn: false }))
+  setGenofficeLoginOpener(null)
+  ipcMain.handle(IPC_CHANNELS.aiGskLogin, () => false)
 
   ipcMain.handle(IPC_CHANNELS.aiSetSettings, async (event, input: unknown) => {
     sessionFor(event)
     const settings = aiSettingsInputSchema.parse(input)
-    writeJsonAtomic(SETTINGS_PATH(), settings)
+    writeJsonAtomic(SETTINGS_PATH(), withoutAccountLogin(settings as AiSettings))
     for (const wc of webContents.getAllWebContents())
       if (!wc.isDestroyed()) wc.send(IPC_CHANNELS.aiSettingsChanged)
   })

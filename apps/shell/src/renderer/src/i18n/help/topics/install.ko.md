@@ -1,6 +1,6 @@
 # GenOffice 설치
 
-> 아래는 원본 GenOffice 프로젝트의 설치 안내입니다. Eoffice는 제공된 Windows 설치 프로그램을 사용하세요.
+> 아래는 원본 GenOffice 프로젝트의 설치 안내입니다. VgoOffice는 제공된 Windows 설치 프로그램을 사용하세요.
 
 모든 빌드는 [Releases 페이지](https://github.com/genspark-ai/genoffice/releases/latest)에 올라 있습니다. 모두 `main`에서 나오며, macOS와 Windows 설치 프로그램은 서명되어 있습니다.
 

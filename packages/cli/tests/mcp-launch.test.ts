@@ -49,9 +49,9 @@ describe('mcp launch entry', () => {
     )
   })
 
-  it('prefers Eoffice and uses the actual executable in snippets for custom install directories', () => {
-    const launcherDir = 'D:\\Company Tools\\resources\\cli'
-    const command = `${launcherDir}\\..\\..\\Eoffice.exe`
+  it('prefers VgoOffice and uses the actual executable in snippets for custom install directories', () => {
+    const launcherDir = 'D:\\Company Tools\\办公软件\\resources\\cli'
+    const command = `${launcherDir}\\..\\..\\VgoOffice.exe`
     const expected = {
       command,
       args: [`${launcherDir}\\genoffice.cjs`, 'mcp'],
@@ -66,6 +66,18 @@ describe('mcp launch entry', () => {
     ).toEqual({
       ...expected,
       command: 'D:\\Company Tools\\GenOffice.exe',
+    })
+  })
+
+  it('falls back to Eoffice when a previous installer is still present', () => {
+    const launcherDir = 'D:\\Company Tools\\resources\\cli'
+    const command = `${launcherDir}\\..\\..\\Eoffice.exe`
+    expect(
+      mcpLaunchFromLauncher(`${launcherDir}\\genoffice.cmd`, { exists: (p) => p === command }),
+    ).toEqual({
+      command,
+      args: [`${launcherDir}\\genoffice.cjs`, 'mcp'],
+      env: { ELECTRON_RUN_AS_NODE: '1' },
     })
   })
 
@@ -88,12 +100,15 @@ describe('mcp launch entry', () => {
     expect(isGenofficeLauncher('C:\\GenOffice\\resources\\cli\\genoffice.cmd')).toBe(true)
     expect(isGenofficeLauncher('C:\\Program Files\\GenOffice\\GenOffice.exe')).toBe(true)
     expect(isGenofficeLauncher('D:\\Company Tools\\Eoffice.exe')).toBe(true)
+    expect(isGenofficeLauncher('D:\\Company Tools\\办公软件\\VgoOffice.exe')).toBe(true)
+    expect(isGenofficeLauncher('/Applications/Custom.app/Contents/MacOS/VgoOffice')).toBe(true)
     expect(isGenofficeLauncher('/Applications/Custom.app/Contents/MacOS/Eoffice')).toBe(true)
     expect(isGenofficeLauncher(WIN_APP.command, WIN_APP.args)).toBe(true)
     expect(
       isGenofficeLauncher('node', ['C:\\src\\packages\\cli\\dist\\genoffice.cjs', 'mcp']),
     ).toBe(true)
     expect(isGenofficeLauncher('npx', ['-y', 'other-mcp'])).toBe(false)
+    expect(isGenofficeLauncher('D:\\Tools\\OtherOffice.exe')).toBe(false)
     expect(isGenofficeLauncher(null)).toBe(false)
   })
 

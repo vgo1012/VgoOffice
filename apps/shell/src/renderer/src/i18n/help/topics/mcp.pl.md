@@ -1,14 +1,14 @@
 # Podłączenie z agentem programistycznym
 
-Eoffice mówi językiem Model Context Protocol, więc agent programistyczny może czytać, zapisywać i renderować twoje dokumenty przez te same silniki, których używa aplikacja. Agent nie zgaduje formatu pliku: otrzymuje typowane schematy op z tych samych definicji, względem których waliduje executor.
+VgoOffice mówi językiem Model Context Protocol, więc agent programistyczny może czytać, zapisywać i renderować twoje dokumenty przez te same silniki, których używa aplikacja. Agent nie zgaduje formatu pliku: otrzymuje typowane schematy op z tych samych definicji, względem których waliduje executor.
 
 ## Rejestrowanie w aplikacji
 
 Robisz to w **Ustawienia ▸ Integracje**. Panel ma dwie połowy i możesz skorzystać z jednej albo z obu.
 
-**Skill.** Po jednym wierszu na każdego znalezionego na tym komputerze agenta programistycznego — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, każdy z przyciskami **Zainstaluj**, **Aktualizuj** i **Odinstaluj**, a także **Zainstaluj w innym folderze…**, **Pobierz skill (zip)** i **Kopiuj ścieżkę**. Jeśli twojego asystenta nie ma na liście, wskaż Eoffice folder, z którego czyta `SKILL.md`, albo zapisz zip i pozwól asystentowi go zainstalować. Skill i MCP mogą działać obok siebie: asystent wybiera jedno z nich, a robią dokładnie te same rzeczy.
+**Skill.** Po jednym wierszu na każdego znalezionego na tym komputerze agenta programistycznego — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, każdy z przyciskami **Zainstaluj**, **Aktualizuj** i **Odinstaluj**, a także **Zainstaluj w innym folderze…**, **Pobierz skill (zip)** i **Kopiuj ścieżkę**. Jeśli twojego asystenta nie ma na liście, wskaż VgoOffice folder, z którego czyta `SKILL.md`, albo zapisz zip i pozwól asystentowi go zainstalować. Skill i MCP mogą działać obok siebie: asystent wybiera jedno z nich, a robią dokładnie te same rzeczy.
 
-**MCP.** Dostępne są dwie drogi: **Uruchamiany przez asystenta (zalecane)** — tam dodajesz pokazaną konfigurację do swojego klienta, a asystent sam uruchamia serwer — oraz **Lokalny serwer HTTP**, który aplikacja prowadzi za ciebie. Tak czy inaczej asystent ostatecznie rozmawia z Eoffice, a ty nie wpisujesz żadnej komendy.
+**MCP.** Dostępne są dwie drogi: **Uruchamiany przez asystenta (zalecane)** — tam dodajesz pokazaną konfigurację do swojego klienta, a asystent sam uruchamia serwer — oraz **Lokalny serwer HTTP**, który aplikacja prowadzi za ciebie. Tak czy inaczej asystent ostatecznie rozmawia z VgoOffice, a ty nie wpisujesz żadnej komendy.
 
 ## Rejestrowanie z wiersza poleceń
 
@@ -70,7 +70,7 @@ Agent, który nie zna słownictwa op, będzie zgadywał. Skill zabiera ze sobą 
 
 ## Do czego sięga w aplikacji
 
-Serwer nie ogranicza się do plików na dysku. Dopóki Eoffice działa, agent może pracować także przez okno:
+Serwer nie ogranicza się do plików na dysku. Dopóki VgoOffice działa, agent może pracować także przez okno:
 
 - **`open_in_genoffice`** otwiera plik w karcie i ustawia na niej fokus.
 - **`open_documents`** wymienia każdy otwarty dokument — id, typ, ścieżkę i to, czy ma niezapisane zmiany —, a następnie czyta bieżącą zawartość jednego z nich albo go zamyka, najpierw zapisując, chyba że każesz mu odrzucić zmiany.

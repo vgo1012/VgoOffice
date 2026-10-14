@@ -232,6 +232,8 @@ const LAUNCHER_NAMES = new Set([
   'genoffice.exe',
   'eoffice',
   'eoffice.exe',
+  'vgooffice',
+  'vgooffice.exe',
 ])
 
 /**

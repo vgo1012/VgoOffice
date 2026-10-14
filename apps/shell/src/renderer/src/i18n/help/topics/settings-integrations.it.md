@@ -2,7 +2,7 @@
 
 ## Apertura delle impostazioni
 
-La riga dell'account in basso a sinistra in Home apre il pannello delle impostazioni (quando non hai effettuato l'accesso riporta Accedi). Ha sei sezioni: Account, Modello IA, Media e ricerca IA, Generale, Integrazioni e Informazioni.
+Il pulsante Impostazioni in basso a sinistra in Home apre il pannello delle impostazioni. Ha cinque sezioni: Modello IA, Media e ricerca IA, Generale, Integrazioni e Informazioni.
 
 ![Impostazioni ▸ Generale, dove si trovano la lingua, il tema, il salvataggio automatico e l'interruttore delle statistiche di utilizzo](img/settings-general.png)
 
@@ -23,7 +23,7 @@ Chiaro / Scuro / Segui il sistema. L'opzione Segui il sistema segue l'aspetto de
 - **Posizione della barra laterale IA** (sinistra o destra), **Dimensione del testo del pannello IA** e **Controllo ortografico nella chat IA**.
 - **Apri il pannello IA nei nuovi documenti** — disattivato, un nuovo documento si apre con il pannello richiuso, a un clic di distanza.
 - **Salva automaticamente tutti i documenti** attiva il salvataggio automatico per impostazione predefinita in ogni editor; puoi comunque disattivarlo per una singola finestra.
-- **Posizione di salvataggio** con il pulsante **Cambia** e **App predefinita per i documenti Office** per far gestire a Eoffice .docx / .xlsx / .pptx.
+- **Posizione di salvataggio** con il pulsante **Cambia** e **App predefinita per i documenti Office** per far gestire a VgoOffice .docx / .xlsx / .pptx.
 
 ## Media e ricerca IA
 
@@ -34,27 +34,21 @@ Non sono interruttori: ogni capacità sceglie il fornitore che la serve e la chi
 
 ## Informazioni
 
-- **Versione**, il collegamento GitHub del progetto e un pulsante **Metti una stella su GitHub**.
+- **Versione**
 - **Canale di aggiornamento**: Stabile o Beta. Modificarlo ha effetto immediato e controlla la presenza di un aggiornamento; non riporta un'installazione Beta alla versione Stabile.
 
 ## Associazioni come app predefinita
 
-Le impostazioni possono registrare Eoffice come gestore dei file .docx / .xlsx / .pptx / .pdf e simili (registrazione dell'app predefinita a livello di sistema; conferma quando richiesto).
+Le impostazioni possono registrare VgoOffice come gestore dei file .docx / .xlsx / .pptx / .pdf e simili (registrazione dell'app predefinita a livello di sistema; conferma quando richiesto).
 
 ## Note sul software di terze parti e aggiornamenti
 
 - Aiuto ▸ Note sul software di terze parti: l'elenco completo delle licenze open source incluso nell'app.
 - Aiuto ▸ Controlla aggiornamenti…: avvia un controllo manuale; se c'è una versione più recente ti propone di installarla.
 
-## Accesso a Genspark
-
-- Il punto d'ingresso per l'accesso (nelle impostazioni o nell'elenco dei progetti cloud) usa un flusso con **codice dispositivo**: Eoffice mostra un codice e apre la pagina di accesso nel browser; una volta completato, l'operazione prosegue automaticamente.
-- L'accesso serve soltanto per: l'elenco dei progetti cloud e i modelli ospitati da Genspark. Senza di esso ogni funzione locale e i modelli personalizzati continuano a funzionare.
-- La disconnessione si fa con un clic nelle impostazioni.
-
 ## Integrazione MCP (per utenti avanzati / client IA)
 
-**Integrazioni** è il riquadro che collega Eoffice a un agente di programmazione, e ha un articolo tutto suo: Collegare un agente di programmazione. In breve — scegli una strada (la riga di comando, oppure MCP), segui quella sezione, poi apri una nuova conversazione e fai la domanda.
+**Integrazioni** è il riquadro che collega VgoOffice a un agente di programmazione, e ha un articolo tutto suo: Collegare un agente di programmazione. In breve — scegli una strada (la riga di comando, oppure MCP), segui quella sezione, poi apri una nuova conversazione e fai la domanda.
 
 ![Impostazioni ▸ Integrazioni: i tre passaggi, poi le righe delle skill e le opzioni MCP](img/settings-integrations.png)
 

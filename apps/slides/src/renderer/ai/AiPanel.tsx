@@ -2308,11 +2308,6 @@ export function AiPanel({
               {entry.error && (
                 <div className="ai-msg-error">{t('aiMsgError', { error: entry.error })}</div>
               )}
-              {entry.loginRequired && (
-                <button className="ai-login-btn" onClick={() => void window.slidesApi.aiGskLogin()}>
-                  {t('aiGskLoginBtn')}
-                </button>
-              )}
               {entry.deckProgress && <DeckProgressCard progress={entry.deckProgress} />}
               {showToolbar && (
                 <div className="ai-msg-toolbar">

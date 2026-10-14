@@ -1,14 +1,14 @@
 # Verbinden met een coding agent
 
-Eoffice spreekt het Model Context Protocol, zodat een coding agent je documenten kan lezen, schrijven en renderen via dezelfde engines die de app gebruikt. De agent hoeft niet te gokken naar een bestandsformaat: hij krijgt de getypte op-schemas uit dezelfde definities waarop de executor valideert.
+VgoOffice spreekt het Model Context Protocol, zodat een coding agent je documenten kan lezen, schrijven en renderen via dezelfde engines die de app gebruikt. De agent hoeft niet te gokken naar een bestandsformaat: hij krijgt de getypte op-schemas uit dezelfde definities waarop de executor valideert.
 
 ## Registreren vanuit de app
 
 **Instellingen ▸ Integraties** is de plek waar dit gebeurt. Het paneel heeft twee helften, en je kunt een van beide gebruiken of allebei.
 
-**De skill.** Eén rij per coding agent die op deze computer is gevonden — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, elk met **Installeren**, **Bijwerken** en **Verwijderen**, plus **In een andere map installeren…**, **Skill downloaden (zip)** en **Pad kopiëren**. Staat je assistent er niet bij, wijs Eoffice dan een map aan waaruit hij `SKILL.md` leest, of sla de zip op en laat de assistent hem installeren. Skill en MCP kunnen naast elkaar staan: de assistent kiest er één, en ze doen precies hetzelfde.
+**De skill.** Eén rij per coding agent die op deze computer is gevonden — Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode, Windsurf —, elk met **Installeren**, **Bijwerken** en **Verwijderen**, plus **In een andere map installeren…**, **Skill downloaden (zip)** en **Pad kopiëren**. Staat je assistent er niet bij, wijs VgoOffice dan een map aan waaruit hij `SKILL.md` leest, of sla de zip op en laat de assistent hem installeren. Skill en MCP kunnen naast elkaar staan: de assistent kiest er één, en ze doen precies hetzelfde.
 
-**MCP.** Er worden twee routes aangeboden: **Gestart door de assistent (aanbevolen)**, waarbij je de getoonde configuratie aan je client toevoegt en de assistent de server zelf start, en de **Lokale HTTP-server**, die de app voor je draait. Hoe dan ook eindigt de assistent tegen Eoffice te praten en typ je nooit een commando.
+**MCP.** Er worden twee routes aangeboden: **Gestart door de assistent (aanbevolen)**, waarbij je de getoonde configuratie aan je client toevoegt en de assistent de server zelf start, en de **Lokale HTTP-server**, die de app voor je draait. Hoe dan ook eindigt de assistent tegen VgoOffice te praten en typ je nooit een commando.
 
 ## Registreren vanaf de opdrachtregel
 
@@ -70,7 +70,7 @@ Een agent die de op-woordenlijst niet kent, gaat gokken. De skill neemt de refer
 
 ## Wat hij in de app kan bereiken
 
-De server is niet beperkt tot bestanden op schijf. Zolang Eoffice draait, kan de agent ook via het venster werken:
+De server is niet beperkt tot bestanden op schijf. Zolang VgoOffice draait, kan de agent ook via het venster werken:
 
 - **`open_in_genoffice`** opent een bestand in een tabblad en brengt dat tabblad op de voorgrond.
 - **`open_documents`** somt elk document op dat je open hebt — id, type, pad en of er onopgeslagen wijzigingen zijn —, en leest daarna de actuele inhoud van een document of sluit het, waarbij eerst wordt opgeslagen tenzij je hem vraagt het weg te gooien.

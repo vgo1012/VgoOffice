@@ -1,6 +1,6 @@
 # Rychlý start: rozhraní a základy
 
-Eoffice je kancelářský balík, který běží celý na vašem počítači: jedno okno, jeden řádek karet a v něm šest editorů — Docs (textový editor), Sheets (tabulky), Slides (prezentace), PDF, Markdown a HTML. Soubory jsou skutečné soubory .docx / .xlsx / .pptx / .pdf, plně zaměnitelné s Wordem, Excelem a PowerPointem. Není potřeba žádné připojení k síti.
+VgoOffice je kancelářský balík, který běží celý na vašem počítači: jedno okno, jeden řádek karet a v něm šest editorů — Docs (textový editor), Sheets (tabulky), Slides (prezentace), PDF, Markdown a HTML. Soubory jsou skutečné soubory .docx / .xlsx / .pptx / .pdf, plně zaměnitelné s Wordem, Excelem a PowerPointem. Není potřeba žádné připojení k síti.
 
 ## Přehled rozhraní
 
@@ -18,7 +18,7 @@ Kterýkoli z těchto způsobů:
 
 - Klikněte na kartu rychlého vytvoření v části [Rychlý start](help://getting-started) na **domovské stránce** (AI Docs, AI Sheets, AI Slides, ...).
 - Nabídka **Soubor ▸ Nový**: Docs (⌘N/ctrl+N), Sheets, Slides, Markdown, HTML nebo PDF.
-- Přetáhněte soubor do okna, nebo na něj v Průzkumníku dvakrát klikněte (pokud je Eoffice výchozí aplikací).
+- Přetáhněte soubor do okna, nebo na něj v Průzkumníku dvakrát klikněte (pokud je VgoOffice výchozí aplikací).
 
 Nový dokument se otevře bez názvu; soubor na disku vznikne až při prvním uložení.
 
@@ -52,7 +52,7 @@ Zkratky uvnitř jednotlivých editorů (formátovací štětec, najít a nahradi
 
 ## Zkratky s kombinací Option+Command
 
-Option+Command je vrstva, kterou Word vyhrazuje pro strukturované skoky, a Eoffice ji vyplňuje stejným způsobem. Docs zabere většinu z nich, Sheets si bere dva vlastní pro shodu s Excelem a jedna zkratka funguje všude.
+Option+Command je vrstva, kterou Word vyhrazuje pro strukturované skoky, a VgoOffice ji vyplňuje stejným způsobem. Docs zabere většinu z nich, Sheets si bere dva vlastní pro shodu s Excelem a jedna zkratka funguje všude.
 
 **Docs**
 
@@ -81,7 +81,7 @@ Všimněte si, že **⌥⌘0 znamená Normální v Docs a Vnější ohraničení
 
 **Každý editor**: **⌥⌘R / Ctrl+F1** sbalí pás karet, jak je popsáno výše.
 
-Tím pádem zůstává ⌥⌘D volný, aby ho Eoffice na macOS mohla použít, pokud ho některý budoucí příkaz potřebuje.
+Tím pádem zůstává ⌥⌘D volný, aby ho VgoOffice na macOS mohla použít, pokud ho některý budoucí příkaz potřebuje.
 
 ## Kam dál
 

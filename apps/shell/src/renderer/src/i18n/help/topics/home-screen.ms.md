@@ -1,6 +1,6 @@
 # Skrin Laman Utama: di mana fail anda berada
 
-Laman Utama ialah halaman permulaan Eoffice: bar navigasi di kiri, senarai fail dan kad penciptaan pantas di kanan.
+Laman Utama ialah halaman permulaan VgoOffice: bar navigasi di kiri, senarai fail dan kad penciptaan pantas di kanan.
 
 ![Skrin Laman Utama](img/home-screen.png)
 
@@ -10,7 +10,6 @@ Laman Utama ialah halaman permulaan Eoffice: bar navigasi di kiri, senarai fail 
 - **Berbintang**: fail yang anda tandakan dengan bintang. Halakan kursor ke baris fail dan klik bintang untuk menambah atau membuangnya. **Alih ke kumpulan** dalam menu ⋯ menyusun fail berbintang ke kumpulan bernama; paparan Berbintang menapis mengikutnya.
 - **Panduan Pengguna**: membuka manual ini.
 - **Ask AI**: panel pangkalan pengetahuan — ajukan soalan dan terima jawapan yang memetik fail anda yang berbintang (lihat bawah).
-- **Genspark Projects**: selepas anda log masuk ke akaun Genspark, ia memaparkan projek yang anda cipta di web dengan Genspark AI. Klik satu untuk menyuntingnya terus dalam pelayar. Carian, isihan mengikut masa, muat semula dan muat lagi disokong.
 - **Folder**: direktori yang anda tambah ke bar sisi dengan **Tambah folder…**, atau yang anda seret masuk daripada pengurus fail. Setiap satu menjadi lokasi yang boleh dibuka, boleh dicipta subdirektori di dalamnya, boleh dinamakan semula dan boleh dibuang; lokasi yang menjadi luar talian ditandakan sebagai tidak tersedia dan boleh dibuang daripada senarai. **Folder baharu** mencipta satu lagi.
 
 Tiada entri Tong sampah di sini. Fail yang dipadam akan masuk ke tong sampah sistem, dan memulihkannya ialah urusan sistem pengendalian.
@@ -37,7 +36,7 @@ Tandakan kotak pada satu baris, atau ⌘/ctrl-klik, untuk membina satu pilihan; 
 Kotak carian di atas menapis dua perkara serentak:
 
 - **Nama fail**: penapisan pantas mengikut nama.
-- **Kandungan fail**: Eoffice mengindeks fail anda di latar belakang, iaitu teks di dalam docx/xlsx/pptx/pdf/md/html. Oleh itu, mencari dalam teks badan turut menemui fail. Skop dan suis ditetapkan dalam tetapan carian.
+- **Kandungan fail**: VgoOffice mengindeks fail anda di latar belakang, iaitu teks di dalam docx/xlsx/pptx/pdf/md/html. Oleh itu, mencari dalam teks badan turut menemui fail. Skop dan suis ditetapkan dalam tetapan carian.
 
 ## Kad mula pantas
 
@@ -61,12 +60,6 @@ Apa yang setiap kad lakukan:
 
 - Bintangi fail dahulu (jenis apa pun yang aplikasi baca); kepala panel mengira korpus, dan pangkalan kosong menjemput anda membintangi sesuatu.
 - Jawapan memetik fail sumbernya; klik petikan untuk membuka fail dalam penyuntingnya.
-- Perlu log masuk Genspark. Perbualan hanya hidup dalam ingatan — menutup aplikasi mengakhirinya.
+- Perbualan hanya hidup dalam ingatan — menutup aplikasi mengakhirinya.
 - Carian berjalan pada indeks fail setempat, seperti carian Laman Utama; fail yang hilang gugur senyap daripada korpus.
 - Kumpulan hanya menyusun senarai Berbintang — pangkalan pengetahuan sentiasa merangkumi semua fail berbintang.
-
-## Projek awan (Genspark Projects)
-
-- Kegunaan kali pertama memerlukan anda log masuk ke akaun Genspark melalui aliran kod peranti. Eoffice memaparkan satu kod, dan anda melengkapkan log masuk dalam pelayar.
-- Senarai projek disegerakkan dengan web. Arahan Buka dalam pelayar membawa anda ke sana untuk menyambung.
-- Tidak log masuk tidak menjejaskan sebarang fungsi setempat.

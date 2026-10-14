@@ -1,12 +1,19 @@
-import { describe, expect, it, vi } from 'vitest'
+import { ChildProcess, execFile } from 'node:child_process'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   OFFICE_TYPES,
   createDefaultAppService,
+  execFileRunner,
   macAppBundlePath,
   parseMacStatus,
   parseRegValue,
 } from '../src/main/default-app'
 import type { RunCommand } from '../src/main/default-app'
+
+vi.mock('node:child_process', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('node:child_process')>()),
+  execFile: vi.fn(),
+}))
 
 const ME = 'com.genoffice.app'
 const WPS = 'com.kingsoft.wpsoffice.mac'
@@ -84,6 +91,61 @@ describe('parseRegValue', () => {
     expect(
       parseRegValue('ERROR: The system was unable to find the specified registry key'),
     ).toBeNull()
+  })
+})
+
+describe('execFileRunner', () => {
+  afterEach(() => vi.clearAllMocks())
+
+  it('preserves Unicode registry names through an ASCII transport', async () => {
+    const value = 'Microsoft Office Excel 2007 启用宏的工作簿'
+    vi.mocked(execFile).mockImplementation((_cmd, _args, _options, callback) => {
+      callback!(null, Buffer.from(`    Value    REG_SZ    ${value}`, 'utf8').toString('base64'), '')
+      return new ChildProcess()
+    })
+    const result = await execFileRunner('reg', ['query', 'HKCR\\ET.Xlsm.6', '/ve'])
+    expect(parseRegValue(result)).toBe(value)
+    const [, args, options] = vi.mocked(execFile).mock.calls[0]
+    expect(vi.mocked(execFile).mock.calls[0][0]).toBe('powershell.exe')
+    expect(options).toEqual({ timeout: 15_000, windowsHide: true })
+    expect(args?.slice(0, 3)).toEqual(['-NoProfile', '-NonInteractive', '-EncodedCommand'])
+    const script = Buffer.from(args![3], 'base64').toString('utf16le')
+    const payload = /FromBase64String\('([^']+)'\)/.exec(script)![1]
+    expect(JSON.parse(Buffer.from(payload, 'base64').toString('utf8'))).toEqual({
+      key: 'HKEY_CLASSES_ROOT\\ET.Xlsm.6',
+      name: '',
+    })
+  })
+
+  it('passes registry keys and value names as data rather than executable PowerShell', async () => {
+    vi.mocked(execFile).mockImplementation((_cmd, _args, _options, callback) => {
+      callback!(null, Buffer.from('    Value    REG_SZ    WPS.Docx.6').toString('base64'), '')
+      return new ChildProcess()
+    })
+    const key = "HKCU\\Software\\中文';exit 99;#"
+    const name = "ProgId';exit 99;#"
+    expect(parseRegValue(await execFileRunner('reg', ['query', key, '/v', name]))).toBe(
+      'WPS.Docx.6',
+    )
+    const args = vi.mocked(execFile).mock.calls[0][1]!
+    const script = Buffer.from(args[3], 'base64').toString('utf16le')
+    expect(script).not.toContain('exit 99')
+    const payload = /FromBase64String\('([^']+)'\)/.exec(script)![1]
+    expect(JSON.parse(Buffer.from(payload, 'base64').toString('utf8'))).toEqual({
+      key: key.replace('HKCU', 'HKEY_CURRENT_USER'),
+      name,
+    })
+  })
+
+  it('keeps non-registry commands and their output unchanged', async () => {
+    vi.mocked(execFile).mockImplementation((_cmd, _args, _options, callback) => {
+      callback!(null, 'genoffice.desktop\n', '')
+      return new ChildProcess()
+    })
+    expect(await execFileRunner('xdg-mime', ['query', 'default', 'application/msword'])).toBe(
+      'genoffice.desktop\n',
+    )
+    expect(vi.mocked(execFile).mock.calls[0][0]).toBe('xdg-mime')
   })
 })
 

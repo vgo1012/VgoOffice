@@ -1,3 +1,4 @@
+import { withoutAccountLogin } from '@genoffice/ai-provider'
 import { createHash, randomUUID } from 'node:crypto'
 import { handOffBytes } from './byte-handoff'
 import {
@@ -89,7 +90,6 @@ import {
   isAiOverloadedError,
   chatForProvider,
   defaultAiSettings,
-  activeProvider,
   testMediaProvider,
   type AiMediaProviderConfig,
   type AiMediaProviderId,
@@ -105,19 +105,16 @@ import {
   type AiSettings,
   type AiStreamChunk,
   type AiStreamRequest,
-  type GenSparkAccountStatus,
   type LegacyAiSettings,
 } from '@genoffice/ai-provider'
 import { listCodexModels, shutdownCodexAppServers } from '@genoffice/ai-provider/codex-app-server'
 import { listCustomModelsForIpc } from '@genoffice/ai-provider/custom-models'
 import {
-  ensureGenofficeLogin,
   noteGskCallFailure,
   setGenofficeLoginOpener,
   gskApiKey,
   generateImageTool,
   testSearchProvider,
-  gskLoginInfo,
   hasGskAuth,
   webSearchTool,
   imageSearchTool,
@@ -3081,7 +3078,7 @@ async function saveDialog(event: IpcMainInvokeEvent, options: SaveDialogOptions)
   return showSaveDialogWithMemory(dialog, dialogParent(event), options, defaultSaveDir())
 }
 
-/** default folder where new files land on their first (silent) save; shared with the other editors via shell. User-configurable (app-settings.json), falls back to <Documents>/GenOffice. */
+/** default folder where new files land on their first (silent) save; shared with the other editors via shell. User-configurable (app-settings.json), falls back to <Documents>/VgoOffice. */
 export function defaultSaveDir(): string {
   return configuredDefaultSaveDir(app)
 }
@@ -3803,33 +3800,14 @@ export function registerAiIpc(): void {
     // file live, so heal the stored flag once. Judged on the *stored* provider
     // — never the activeProvider fallback below, which must not leak into the
     // file and clobber a saved (half-configured) BYOK selection.
-    if ((stored.provider ?? 'genspark') === 'genspark' && stored.gskToolsEnabled === false) {
-      stored.gskToolsEnabled = true
-      writeJsonAtomic(SETTINGS_PATH(), stored)
-    }
     const settings = resolveAiSettings(stored, defaultAiSettings())
     // a stored BYOK provider is honored when usable; half-filled configs fall back to genspark
-    settings.provider = activeProvider(settings)
-    return settings
+    return withoutAccountLogin(settings)
   })
 
-  // Genspark account (gsk login state): auth source for AI features; the frontend uses it to prompt login when logged out
-  ipcMain.handle(
-    'ai:gsk-status',
-    async (_event, withEmail?: boolean): Promise<GenSparkAccountStatus> => {
-      if (!hasGskAuth()) return { loggedIn: false }
-      if (!withEmail) return { loggedIn: true }
-      const info = await gskLoginInfo()
-      return info?.email ? { loggedIn: true, email: info.email } : { loggedIn: true }
-    },
-  )
-
-  // a 401 on the gsk key opens the device-code login once (genoffice-auth recovery)
-  setGenofficeLoginOpener((url) => void shell.openExternal(url))
-
-  ipcMain.handle('ai:gsk-login', () => {
-    ensureGenofficeLogin((url) => void shell.openExternal(url))
-  })
+  ipcMain.handle('ai:gsk-status', () => ({ loggedIn: false }))
+  setGenofficeLoginOpener(null)
+  ipcMain.handle('ai:gsk-login', () => false)
 
   ipcMain.handle('ai:set-settings', (_event, settings: AiSettings) => {
     // SECURITY.md: payloads are schema-checked in the main process. The settings
@@ -3840,7 +3818,7 @@ export function registerAiIpc(): void {
       console.warn('[ai] rejected invalid ai:set-settings payload')
       return
     }
-    writeJsonAtomic(SETTINGS_PATH(), sanitized)
+    writeJsonAtomic(SETTINGS_PATH(), withoutAccountLogin(sanitized))
     broadcastAiSettingsChanged()
   })
 
@@ -5836,7 +5814,7 @@ export function createDocsWindow(openPath?: string): BrowserWindow {
     height: 900,
     minWidth: 720,
     minHeight: 550,
-    title: 'Eoffice Docs',
+    title: 'VgoOffice Docs',
     // Word-like custom title bar (document name centered, quick-access buttons)
     ...(process.platform === 'darwin'
       ? { titleBarStyle: 'hiddenInset' as const }

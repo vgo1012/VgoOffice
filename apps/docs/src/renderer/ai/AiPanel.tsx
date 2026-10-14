@@ -1526,11 +1526,6 @@ export function AiPanel({
               {entry.error && (
                 <div className="ai-msg-error">{t('aiErrorPrefix', { error: entry.error })}</div>
               )}
-              {entry.loginRequired && (
-                <button className="ai-login-btn" onClick={() => void window.desktop.aiGskLogin()}>
-                  {t('aiGskLoginBtn')}
-                </button>
-              )}
               {showToolbar && (
                 <div className="ai-msg-toolbar">
                   {entry.text && (

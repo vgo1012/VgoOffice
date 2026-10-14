@@ -53,7 +53,7 @@ describe('resolveDefaultSaveDir', () => {
   })
 
   it('creates and returns the fallback when nothing is configured', () => {
-    const fallback = join(root, 'Documents', 'Eoffice')
+    const fallback = join(root, 'Documents', 'VgoOffice')
     expect(resolveDefaultSaveDir(null, fallback)).toBe(fallback)
     expect(existsSync(fallback)).toBe(true)
   })
@@ -90,14 +90,14 @@ describe('configuredDefaultSaveDir', () => {
     expect(configuredDefaultSaveDir(app)).toBe(custom)
   })
 
-  it('falls back to <Documents>/Eoffice without a setting', () => {
+  it('falls back to <Documents>/VgoOffice without a setting', () => {
     const userData = join(root, 'userData')
     const documents = join(root, 'Documents')
     mkdirSync(userData, { recursive: true })
     const app = {
       getPath: (name: 'userData' | 'documents') => (name === 'userData' ? userData : documents),
     }
-    expect(configuredDefaultSaveDir(app)).toBe(join(documents, 'Eoffice'))
-    expect(existsSync(join(documents, 'Eoffice'))).toBe(true)
+    expect(configuredDefaultSaveDir(app)).toBe(join(documents, 'VgoOffice'))
+    expect(existsSync(join(documents, 'VgoOffice'))).toBe(true)
   })
 })

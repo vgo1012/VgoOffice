@@ -72,10 +72,41 @@ export interface DefaultAppService {
 const UNSUPPORTED: DefaultAppStatus = { state: 'unsupported', others: [], manualOnly: false }
 
 export function execFileRunner(cmd: string, args: string[]): Promise<string> {
+  const registryQuery =
+    cmd === 'reg' &&
+    args[0] === 'query' &&
+    ((args.length === 3 && args[2] === '/ve') || (args.length === 4 && args[2] === '/v'))
+  if (registryQuery) {
+    const query = Buffer.from(
+      JSON.stringify({
+        key: args[1]
+          .replace(/^HKCU\\/i, 'HKEY_CURRENT_USER\\')
+          .replace(/^HKCR\\/i, 'HKEY_CLASSES_ROOT\\'),
+        name: args[2] === '/ve' ? '' : args[3],
+      }),
+      'utf8',
+    ).toString('base64')
+    // Registry strings are Unicode; ASCII base64 avoids reg.exe's locale-dependent output encoding.
+    const script = `$ErrorActionPreference='Stop'
+$q=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('${query}')) | ConvertFrom-Json
+$v=[Microsoft.Win32.Registry]::GetValue($q.key,$q.name,$null)
+if($null -eq $v){exit 1}
+[Console]::Write([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('    Value    REG_SZ    '+$v)))`
+    cmd = 'powershell.exe'
+    args = [
+      '-NoProfile',
+      '-NonInteractive',
+      '-EncodedCommand',
+      Buffer.from(script, 'utf16le').toString('base64'),
+    ]
+  }
   return new Promise((resolve, reject) => {
     execFile(cmd, args, { timeout: 15_000, windowsHide: true }, (err, stdout) => {
       if (err) reject(err)
-      else resolve(String(stdout))
+      else
+        resolve(
+          registryQuery ? Buffer.from(String(stdout), 'base64').toString('utf8') : String(stdout),
+        )
     })
   })
 }

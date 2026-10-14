@@ -186,7 +186,7 @@ describe('Settings → Integrations', () => {
     ).toEqual({ command: 'genoffice', args: ['mcp'] })
     const winDir = 'C:\\Users\\Jane Doe\\AppData\\Local\\Programs\\Eoffice\\resources\\cli'
     const win = {
-      command: `${winDir}\\..\\..\\Eoffice.exe`,
+      command: `${winDir}\\..\\..\\VgoOffice.exe`,
       args: [`${winDir}\\genoffice.cjs`, 'mcp'],
       env: { ELECTRON_RUN_AS_NODE: '1' },
     }

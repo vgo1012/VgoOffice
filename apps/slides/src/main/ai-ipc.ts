@@ -1,10 +1,11 @@
+import { withoutAccountLogin } from '@genoffice/ai-provider'
 /**
  * AI IPC for the slides main process, extracted from slides-main.ts:
  * settings persistence, the streaming proxy (main process does the networking
  * to avoid renderer CORS), search tools, and the slides-only ai:* channels
  * (image generation, media analysis, style templates).
  */
-import { app, ipcMain, nativeImage, net, shell, webContents } from 'electron'
+import { app, ipcMain, nativeImage, net, webContents } from 'electron'
 import {
   appendFileSync,
   existsSync,
@@ -21,7 +22,6 @@ import {
   isAiNetworkError,
   isAiOverloadedError,
   defaultAiSettings,
-  activeProvider,
   maxOutputTokensOf,
   resolveAiSettings,
   sanitizeAiSettings,
@@ -31,7 +31,6 @@ import {
   type AiSettings,
   type AiStreamChunk,
   type AiStreamRequest,
-  type GenSparkAccountStatus,
   type LegacyAiSettings,
 } from '@genoffice/ai-provider'
 import { shutdownCodexAppServers } from '@genoffice/ai-provider/codex-app-server'
@@ -45,15 +44,12 @@ import {
 import {
   webSearchTool,
   imageSearchTool,
-  ensureGenofficeLogin,
   noteGskCallFailure,
   setGenofficeLoginOpener,
   gskApiKey,
   generateImageTool,
   analyzeMediaTool,
   documentMediaRoots,
-  gskLoginInfo,
-  hasGskAuth,
 } from '@genoffice/ai-search'
 import { addPicture, editPictureSrcRect, replacePictureBytes } from '@genoffice/pptx-engine'
 import { matchesElementRef } from '@genoffice/pptx-engine/identity'
@@ -126,27 +122,12 @@ export function registerAiIpc(): void {
     const stored = readJson<Partial<AiSettings> & LegacyAiSettings>(AI_SETTINGS_PATH(), {})
     const settings = resolveAiSettings(stored, defaultAiSettings())
     // a stored BYOK provider is honored when usable; half-filled configs fall back to genspark
-    settings.provider = activeProvider(settings)
-    return settings
+    return withoutAccountLogin(settings)
   })
 
-  // Genspark account (gsk login state): the auth source for AI features; when logged out the frontend uses this to guide login
-  ipcMain.handle(
-    'ai:gsk-status',
-    async (_event, withEmail?: boolean): Promise<GenSparkAccountStatus> => {
-      if (!hasGskAuth()) return { loggedIn: false }
-      if (!withEmail) return { loggedIn: true }
-      const info = await gskLoginInfo()
-      return info?.email ? { loggedIn: true, email: info.email } : { loggedIn: true }
-    },
-  )
-
-  // a 401 on the gsk key opens the device-code login once (genoffice-auth recovery)
-  setGenofficeLoginOpener((url) => void shell.openExternal(url))
-
-  ipcMain.handle('ai:gsk-login', () => {
-    ensureGenofficeLogin((url) => void shell.openExternal(url))
-  })
+  ipcMain.handle('ai:gsk-status', () => ({ loggedIn: false }))
+  setGenofficeLoginOpener(null)
+  ipcMain.handle('ai:gsk-login', () => false)
 
   ipcMain.handle('ai:set-settings', (_event, settings: AiSettings) => {
     // SECURITY.md: payloads are schema-checked in the main process. The settings
@@ -157,7 +138,7 @@ export function registerAiIpc(): void {
       console.warn('[ai] rejected invalid ai:set-settings payload')
       return
     }
-    writeJsonAtomic(AI_SETTINGS_PATH(), sanitized)
+    writeJsonAtomic(AI_SETTINGS_PATH(), withoutAccountLogin(sanitized))
     for (const wc of webContents.getAllWebContents())
       if (!wc.isDestroyed()) wc.send('ai:settings-changed')
   })
