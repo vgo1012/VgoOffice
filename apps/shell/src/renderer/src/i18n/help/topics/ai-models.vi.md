@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Mô hình AI và cài đặt
 
 ## Nhà cung cấp và mô hình

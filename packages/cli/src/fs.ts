@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { randomBytes } from 'node:crypto'
 import {
   chmodSync,
@@ -148,7 +149,7 @@ export interface OutputOptions {
 
 /**
  * The single place an output path is resolved, policy-checked and its
- * directory created. A file the running GenOffice shell has open is refused
+ * directory created. A file the running VgoOffice shell has open is refused
  * without --force, so a CLI edit cannot race the editor's own save.
  */
 export function resolveOutput(

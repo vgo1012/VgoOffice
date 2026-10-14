@@ -1,3 +1,4 @@
+/* Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. */
 /* Per-app accent (word-blue family) + docs-only tokens.
  * Chrome tokens (surface/text/border/…, AI panel --color-*) come from
  * @genoffice/ui/tokens.css; nothing here may shadow those names. */
@@ -995,7 +996,7 @@ html.genoffice-popover-open .ribbon-tabs {
   background: var(--active-bg);
 }
 
-/* The Genspark AI entry keeps a black label even while the panel is open. */
+/* The VgoOffice AI entry keeps a black label even while the panel is open. */
 .rb-big.ai-entry.active {
   color: var(--text);
 }
@@ -1423,7 +1424,7 @@ html.genoffice-popover-open .ribbon-tabs {
 }
 
 /* line spacing dropdown */
-/* Home-tab Genspark AI entry: black circular "+" badge with a dropdown caret,
+/* Home-tab VgoOffice AI entry: black circular "+" badge with a dropdown caret,
    brand label below (mirrors the sheets Home ribbon). */
 /* AI feature buttons next to the entry: purple glyphs, label below */
 .ai-feature-icon {

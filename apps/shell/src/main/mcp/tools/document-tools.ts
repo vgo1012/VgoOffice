@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { existsSync } from 'node:fs'
 import { basename, extname, isAbsolute, join } from 'node:path'
 import { z } from 'zod'
@@ -26,7 +27,7 @@ export interface DocToolDeps {
   /** expose the headless create_docx tool (generation without opening the UI);
    *  default true — the shell passes the user's "background generation" setting */
   background?: boolean
-  /** open a file in the GenOffice UI; wired in M4 (optional in tests) */
+  /** open a file in the VgoOffice UI; wired in M4 (optional in tests) */
   openInTab?: (filePath: string) => Promise<void> | void
   /** visible-editor control for the MCP-driven document session (optional in tests) */
   docs?: DocsControl
@@ -207,7 +208,7 @@ export function createDocumentTools(deps: DocToolDeps, host: SessionHost): McpTo
     },
     {
       name: 'open_in_genoffice',
-      description: 'Open an existing file in the running GenOffice app, focusing its tab.',
+      description: 'Open an existing file in the running VgoOffice app, focusing its tab.',
       inputSchema: {
         path: z.string().describe('absolute path to the file to open'),
       },
@@ -223,11 +224,11 @@ export function createDocumentTools(deps: DocToolDeps, host: SessionHost): McpTo
     {
       name: 'get_app_info',
       description:
-        'Report GenOffice version, the default save folder, the document formats this server can ' +
+        'Report VgoOffice version, the default save folder, the document formats this server can ' +
         "generate, and the editor's full open/save/export format matrix per family.",
       inputSchema: {},
       handler: () => ({
-        name: 'GenOffice',
+        name: 'VgoOffice',
         version: deps.version,
         defaultSaveDir: deps.defaultSaveDir(),
         // Every format listed here is written by a headless create/read tool, and

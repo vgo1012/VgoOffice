@@ -1,3 +1,4 @@
+@rem Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 @echo off
 rem genoffice launcher for the packaged Windows app: <install>\resources\cli\genoffice.cmd
 setlocal

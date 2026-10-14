@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Menghubungkan agen pemrograman
 
 VgoOffice berbicara dalam Model Context Protocol, jadi agen pemrograman dapat membaca, menulis, dan merender dokumen Anda lewat mesin yang sama dengan yang dipakai aplikasi. Agen itu tidak sedang menebak-nebak format berkas: ia memperoleh skema op bertipe dari definisi yang sama dengan yang dipakai eksekutor untuk memvalidasi.

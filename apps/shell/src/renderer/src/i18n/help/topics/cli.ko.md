@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 명령줄과 에이전트
 
 모든 설치본에는 `genoffice` 명령이 들어 있으며, 창이 쓰는 바로 그 엔진을 구동합니다. 같은 파서, 같은 writer, 같은 렌더러입니다. 앱이 저장한 파일과 명령이 쓴 파일은 같은 파일이고, 앱의 AI 패널이 통과한 검사는 명령도 통과합니다.
@@ -32,7 +34,7 @@ macOS와 Windows에서는 앱 번들 안에 들어 있습니다. 이름으로 �
 | `capabilities`    | 이 컴퓨터에서 클라우드 기능이 어떻게 설정되어 있는지 보고합니다.                                                                                                                                               |
 | `guide`           | op 레퍼런스와 디자인 가이드입니다. executor가 검증하는 바로 그 정의에서 만들어지므로 `apply`가 받아들이는 것과 어긋날 수 없습니다. `--json`을 주면 각 op의 스키마와 함께 나옵니다.                             |
 | `install-cli`     | `genoffice`를 `PATH`에 넣습니다.                                                                                                                                                                               |
-| `skill`           | 이 컴퓨터에서 찾은 코딩 에이전트를 나열하고, 그 안에 GenOffice 스킬을 설치하거나 갱신합니다.                                                                                                                   |
+| `skill`           | 이 컴퓨터에서 찾은 코딩 에이전트를 나열하고, 그 안에 VgoOffice 스킬을 설치하거나 갱신합니다.                                                                                                                   |
 | `mcp`             | 모든 명령을 Model Context Protocol 도구로 제공합니다. **코딩 에이전트 연결**를 보세요.                                                                                                                         |
 
 ## 편집: 문서, 스프레드시트, 슬라이드

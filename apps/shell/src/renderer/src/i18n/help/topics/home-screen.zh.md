@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 主屏（Home）：文件都在哪
 
 主屏是 VgoOffice 的起点：左边是导航栏，右边是文件列表和快速创建卡片。

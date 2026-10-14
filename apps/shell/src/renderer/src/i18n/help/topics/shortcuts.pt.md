@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Atalhos de teclado
 
 Cada editor tem as suas próprias combinações de teclas, e apenas algumas funcionam em todo o lado. Esta página é a lista completa, agrupada por aplicação, com a combinação de macOS e a de Windows / Linux lado a lado.

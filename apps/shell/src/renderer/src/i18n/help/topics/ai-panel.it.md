@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Il pannello dell'assistente IA
 
 Ogni editor può richiamare il pannello IA: seleziona qualcosa, dai un'istruzione, guarda il risultato che arriva in streaming.

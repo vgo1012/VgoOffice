@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # פעולות קבצים: שינוי שם, מחיקה, ייצוא
 
 פרק זה מכסה את פעולות הקבצים המשותפות לכל העורכים; אפשרויות הייצוא של כל עורך נמצאות בפרק שלו.

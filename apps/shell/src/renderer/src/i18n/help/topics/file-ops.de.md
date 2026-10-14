@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Dateivorgänge: umbenennen, löschen, exportieren
 
 Dieses Kapitel behandelt die Dateivorgänge, die allen Editoren gemeinsam sind; die eigenen Exportoptionen jedes Editors stehen in seinem Kapitel.

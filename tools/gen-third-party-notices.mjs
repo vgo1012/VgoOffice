@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /**
  * Aggregates licenses of third-party components shipped with the installer
  * into apps/shell/build/THIRD-PARTY-NOTICES.txt.
@@ -232,7 +233,7 @@ const seed = importedNames()
 const { resolved, missing } = closure(seed)
 resolved.sort(([a], [b]) => a.localeCompare(b))
 
-let out = `GenOffice — Third-Party Software Notices
+let out = `VgoOffice — Third-Party Software Notices
 
 This application includes third-party software components under the licenses
 reproduced below.

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const th = {
@@ -18,7 +19,7 @@ export const th = {
   aiQcStopped: 'หยุดการตรวจสอบเลย์เอาต์แล้ว',
   aiQcCapped: 'อีก {count} หน้าไม่ได้ตรวจสอบ (ขีดจำกัดต่อครั้ง)',
   aiGskLoginBtn: 'ลงชื่อเข้าใช้ Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'เปิดผู้ช่วย AI',
   aiFactCheckBtn: 'ตรวจสอบข้อเท็จจริง AI',
   aiFactCheckPrompt:

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 快捷键一览
 
 每个编辑器都有自己的按键绑定，其中只有少数在任何地方都通用。本页是完整清单，按应用分组，macOS 与 Windows / Linux 的组合键并排列出。

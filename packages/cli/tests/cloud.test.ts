@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { aiSettingsPath, proxyUrlFromEnv } from '../src/cloud'

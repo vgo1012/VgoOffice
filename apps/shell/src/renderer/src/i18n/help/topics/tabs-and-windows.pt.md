@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Guias e gestão de janelas
 
 Todos os ficheiros abertos partilham uma janela; a barra de guias no topo muda entre eles, ao estilo de um navegador.

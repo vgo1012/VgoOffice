@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /**
  * electron-builder configuration (moved out of package.json "build" so the
  * auto-update feed URL can be injected at build time instead of living in
@@ -410,6 +411,7 @@ const FILE_ASSOCIATIONS = [
 const config = {
   appId: 'com.eoffice.app',
   productName: 'VgoOffice',
+  copyright: 'Copyright 2026 Mainfunc, Inc. and VgoOffice contributors',
   // Resolved from the installed electron package so dependency bumps can
   // never leave a stale hard-coded pin behind (packaging would silently ship
   // the old runtime).
@@ -426,6 +428,10 @@ const config = {
     {
       from: '../../NOTICE',
       to: 'NOTICE',
+    },
+    {
+      from: '../../MODIFICATIONS.md',
+      to: 'MODIFICATIONS.md',
     },
     {
       from: 'build/THIRD-PARTY-NOTICES.txt',
@@ -601,12 +607,10 @@ const config = {
       { target: 'deb', arch: ['x64'] },
       { target: 'rpm', arch: ['x64'] },
     ],
-    // deb control metadata; values match the manually published 0.5.149 deb
-    // so apt sees the new packages as the same lineage. Homepage comes from
-    // package.json "homepage"; the Package field is pinned in the deb block
-    // below (packageName is a per-target option, rejected here by the schema).
-    maintainer: 'Mainfunc, Inc. <team@genspark.ai>',
-    vendor: 'Mainfunc, Inc. <team@genspark.ai>',
+    // VgoOffice source-build metadata. The legacy package name below remains
+    // compatible with existing installations; homepage comes from package.json.
+    maintainer: 'VgoOffice <vgo1012@users.noreply.github.com>',
+    vendor: 'VgoOffice',
     category: 'Office',
     // Icon SET directory, not the single 1024px png: electron-builder does
     // not resize a lone png, so deb/rpm would install only

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # קיצורי מקלדת
 
 לכל עורך יש מקשים משלו, ורק מעט מהם עובדים בכל מקום. זו הרשימה המלאה, מקובצת לפי אפליקציה, עם קיצורי macOS ושל Windows / Linux זה מול זה.

@@ -3,7 +3,7 @@
 此手册记录历史 EZAIGC Logo 版本。当前交付已更名为 **Eoffice**，使用新 V Logo、
 蓝色背景及安装后直接启动模式，请参阅 [Eoffice 安装版手册](Eoffice-manual.zh-CN.md)。
 
-本手册适用于 `D:\code\EOffice` 中的本地定制源码。上游项目为
+本手册适用于 `<repo>` 中的本地定制源码。上游项目为
 [genspark-ai/genoffice](https://github.com/genspark-ai/genoffice)，基线提交为
 `fc754f7a90619289942602ebcce68bd57a90515c`，定制分支为 `codex/ezaigc-logo`。
 
@@ -15,7 +15,7 @@
 ## 直接使用交付的 EXE
 
 本次生成 **0.11.0 / Windows x64** 的两个完整软件包，位于
-`D:\code\EOffice\apps\shell\release\`：
+`<repo>\apps\shell\release\`：
 
 | 文件                         | 使用方式                                                     | 文件大小                     |
 | ---------------------------- | ------------------------------------------------------------ | ---------------------------- |
@@ -79,7 +79,7 @@ Studio C++ Build Tools 和 Windows SDK。已打包应用的普通使用者无需
 执行策略的限制；每一步成功后再执行下一步。
 
 ```powershell
-Set-Location -LiteralPath 'D:\code\EOffice'
+Set-Location -LiteralPath '<repo>'
 node --version
 npm.cmd --version
 cargo --version
@@ -139,11 +139,11 @@ Logo 定制没有附带公司模型、公司统一登录或额外服务额度。
 按上游支持的方式，先编译并将本机 x64 可执行文件暂存到打包读取的目录：
 
 ```powershell
-Set-Location -LiteralPath 'D:\code\EOffice'
+Set-Location -LiteralPath '<repo>'
 npm.cmd run native:build -w '@genoffice/sheets'
-$sidecarStage = 'D:\code\EOffice\apps\sheets\native\xlsx-engine\target\x86_64-pc-windows-gnu\release'
+$sidecarStage = '<repo>\apps\sheets\native\xlsx-engine\target\x86_64-pc-windows-gnu\release'
 New-Item -ItemType Directory -Path $sidecarStage -Force
-Copy-Item -LiteralPath 'D:\code\EOffice\apps\sheets\native\xlsx-engine\target\release\xlsx-sidecar.exe' -Destination $sidecarStage
+Copy-Item -LiteralPath '<repo>\apps\sheets\native\xlsx-engine\target\release\xlsx-sidecar.exe' -Destination $sidecarStage
 npm.cmd run dist:win
 ```
 
@@ -167,13 +167,13 @@ EZAIGC。没有签名凭证时生成未签名包，Windows 可能显示安全提
 的当前工作区；`.local/` 不进入 Git，其他构建机器需自行准备上述开发工具。
 
 ```powershell
-Set-Location -LiteralPath 'D:\code\EOffice'
+Set-Location -LiteralPath '<repo>'
 . .local/packaging/env.ps1
 $env:CSC_IDENTITY_AUTO_DISCOVERY = 'false'
 npm.cmd run notices
 npm.cmd run build:all
-Set-Location -LiteralPath 'D:\code\EOffice\apps\shell'
-& ../../node_modules/.bin/electron-builder.cmd --win nsis portable --x64 --publish never --config electron-builder.cjs --config.electronDist=D:/code/EOffice/node_modules/electron/dist
+Set-Location -LiteralPath '<repo>\apps\shell'
+& ../../node_modules/.bin/electron-builder.cmd --win nsis portable --x64 --publish never --config electron-builder.cjs --config.electronDist=<repo>/node_modules/electron/dist
 ```
 
 每一步确认成功后再执行下一步。隔离环境将 native sidecar 直接编译到打包所需的
@@ -239,7 +239,7 @@ npm.cmd run licenses
 获取远端提交，不会覆盖工作区文件：
 
 ```powershell
-Set-Location -LiteralPath 'D:\code\EOffice'
+Set-Location -LiteralPath '<repo>'
 git status --short
 git remote -v
 git fetch origin

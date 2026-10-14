@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { controlEndpoint, controlRequest } from '../control'
 import { resolveInput } from '../fs'
 import type { CommandDef } from '../registry'
@@ -6,13 +7,13 @@ import { CliError, EXIT } from '../result'
 export const selectionCommand: CommandDef = {
   name: 'selection',
   summary:
-    "What the user has selected in the GenOffice editor showing this file (the user's own pointer for 'this one', 'here').",
+    "What the user has selected in the VgoOffice editor showing this file (the user's own pointer for 'this one', 'here').",
   usage: 'selection <file> --json',
   async run(args, ctx) {
     const path = resolveInput(args.positionals[0], ctx)
     const endpoint = controlEndpoint(ctx.env)
     if (!endpoint) {
-      throw new CliError(EXIT.app, 'GenOffice is not running', undefined, {
+      throw new CliError(EXIT.app, 'VgoOffice is not running', undefined, {
         reason: 'app_unavailable',
         suggestion: `run \`genoffice open ${path}\` and ask the user to select something`,
       })

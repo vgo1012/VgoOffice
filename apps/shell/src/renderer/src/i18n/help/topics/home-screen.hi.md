@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # होम स्क्रीन: आपकी फ़ाइलें कहाँ हैं
 
 होम, VgoOffice का शुरुआती पृष्ठ है: बाईं ओर नेविगेशन साइडबार, दाईं ओर फ़ाइल सूचियाँ और त्वरित-निर्माण कार्ड।

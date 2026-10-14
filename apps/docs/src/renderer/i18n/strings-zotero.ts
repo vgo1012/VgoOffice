@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { defineStrings } from '@genoffice/i18n'
 
 /** Strings for the Zotero integration in the References tab. */

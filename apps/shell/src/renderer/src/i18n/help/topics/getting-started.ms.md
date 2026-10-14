@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Mula pantas: antara muka dan asas
 
 VgoOffice ialah satu pek pejabat yang berjalan sepenuhnya pada mesin anda: satu tingkap, satu baris tab, dengan enam editor — Docs (penyuntingan teks), Sheets (hamparan), Slides (persembahan), PDF, Markdown dan HTML. Fail yang digunakan ialah fail .docx / .xlsx / .pptx / .pdf yang sebenar, serasi sepenuhnya dengan Word, Excel dan PowerPoint. Tiada rangkaian diperlukan.

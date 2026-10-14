@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # O painel do assistente de IA
 
 Todos os editores podem chamar o painel de IA: selecione algo, dê uma instrução e veja o resultado a chegar.

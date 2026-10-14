@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /**
  * @vitest-environment jsdom
  */
@@ -85,16 +86,23 @@ function row(): HTMLElement | null {
 }
 
 describe('Settings default-app row', () => {
-  it('has no account section or GitHub promotion and makes no stars request', async () => {
+  it('offers the VgoOffice repository without account UI or a stars request', async () => {
     const stars = vi.fn(async () => 9600)
-    await openGeneral({ githubStars: stars })
+    const openRepository = vi.fn(async () => undefined)
+    await openGeneral({ githubStars: stars, openGitHubRepo: openRepository })
     const navigation = Array.from(host.querySelectorAll<HTMLButtonElement>('.set-nav-item'))
     expect(navigation).toHaveLength(5)
     expect(navigation.map((button) => button.textContent)).not.toContain('Account')
     const about = navigation.find((button) => button.textContent?.includes('About'))!
     await click(about)
     expect(host.textContent).toContain('1.0.0')
-    expect(host.textContent).not.toMatch(/GitHub|Open source|Sign in/)
+    expect(host.textContent).not.toMatch(/GenOffice|Genspark|Sign in/)
+    expect(host.textContent).toContain('github.com/vgo1012/VgoOffice')
+    const star = Array.from(host.querySelectorAll<HTMLButtonElement>('button')).find(
+      (button) => button.textContent === 'Star on GitHub',
+    )!
+    await click(star)
+    expect(openRepository).toHaveBeenCalledTimes(1)
     expect(stars).not.toHaveBeenCalled()
   })
 

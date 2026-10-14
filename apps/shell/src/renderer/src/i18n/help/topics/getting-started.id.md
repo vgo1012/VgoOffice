@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Mulai cepat: antarmuka dan dasar-dasarnya
 
 VgoOffice adalah rangkaian perkantoran yang berjalan sepenuhnya di komputer Anda: satu jendela, satu deret tab, dengan enam editor — Docs (pemrosesan kata), Sheets (spreadsheet), Slides (presentasi), PDF, Markdown, dan HTML. File yang dibuka dan disimpan adalah .docx / .xlsx / .pptx / .pdf asli, sepenuhnya serasi dengan Word, Excel, dan PowerPoint. Tidak perlu jaringan.

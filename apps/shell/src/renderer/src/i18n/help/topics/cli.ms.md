@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Baris arahan dan ejen
 
 Setiap pemasangan meliputi satu perintah `genoffice` yang memandu enjin yang sama seperti yang digunakan oleh tetingkap — penghurai yang sama, penulis yang sama, penjana yang sama. Fail yang disimpan aplikasi dan fail yang ditulis oleh perintah itu ialah fail yang sama, dan semakan yang melepasi panel AI aplikasi juga melepasi perintah itu.
@@ -32,7 +34,7 @@ macOS dan Windows menyertainya dalam bungkusan aplikasi. Untuk memanggilnya deng
 | `capabilities`    | Melaporkan keupayaan awan yang dikonfigurasi pada mesin ini.                                                                                                                                                                                        |
 | `guide`           | Rujukan op dan panduan reka bentuk, dijana daripada definisi yang sama seperti yang disahkan oleh pelaku — jadi ia tidak mungkin berbeza daripada apa yang diterima oleh `apply`. `--json` mengembalikannya bersama skema setiap op.                |
 | `install-cli`     | Meletakkan `genoffice` pada `PATH`.                                                                                                                                                                                                                 |
-| `skill`           | Menyenaraikan ejen penulisan kod yang ditemui pada mesin ini, dan memasang atau mengemas kini kemahiran GenOffice di dalamnya.                                                                                                                      |
+| `skill`           | Menyenaraikan ejen penulisan kod yang ditemui pada mesin ini, dan memasang atau mengemas kini kemahiran VgoOffice di dalamnya.                                                                                                                      |
 | `mcp`             | Menyediakan setiap perintah sebagai alat Model Context Protocol. Lihat **Menyambungkan ejen penulisan kod**.                                                                                                                                        |
 
 ## Penyuntingan: docs, sheets, slides

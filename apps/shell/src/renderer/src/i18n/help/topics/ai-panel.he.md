@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # חלונית העוזר AI
 
 כל עורך יכול להפעיל את חלונית ה-AI: בחרו משהו, תנו הוראה, צפו בתוצאה הזורמת.

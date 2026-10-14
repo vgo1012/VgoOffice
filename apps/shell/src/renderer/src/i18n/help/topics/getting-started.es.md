@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Inicio rápido: la interfaz y lo esencial
 
 VgoOffice es una suite ofimática que funciona por completo en su equipo: una ventana, una fila de pestañas, con seis editores: Docs (procesamiento de texto), Sheets (hojas de cálculo), Slides (presentaciones), PDF, Markdown y HTML. Los archivos son .docx / .xlsx / .pptx / .pdf reales, totalmente intercambiables con Word, Excel y PowerPoint. No necesita red.

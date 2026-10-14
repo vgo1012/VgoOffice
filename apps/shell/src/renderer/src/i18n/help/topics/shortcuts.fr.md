@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Raccourcis clavier
 
 Chaque éditeur a ses propres combinaisons de touches, et seules quelques-unes fonctionnent partout. Cette page en donne la liste complète, regroupée par application, avec la combinaison macOS et celle de Windows / Linux côte à côte.

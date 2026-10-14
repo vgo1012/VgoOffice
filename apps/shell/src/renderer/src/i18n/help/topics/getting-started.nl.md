@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Snel starten: de interface en de basis
 
 VgoOffice is een kantoorsuite die volledig op je eigen computer draait: één venster, één rij tabbladen, met zes editors — Docs (tekstverwerking), Sheets (spreadsheets), Slides (presentaties), PDF, Markdown en HTML. De bestanden zijn echte .docx / .xlsx / .pptx / .pdf-bestanden, volledig uitwisselbaar met Word, Excel en PowerPoint. Er is geen netwerk nodig.

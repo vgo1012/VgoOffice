@@ -1,3 +1,4 @@
+/* Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. */
 /* GenOffice design tokens — the single source of truth for UI chrome colors.
  * Theme switching: light defaults in :root, [data-theme='dark'] overrides,
  * prefers-color-scheme fallback for system mode (no data-theme attribute).

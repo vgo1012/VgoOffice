@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Klávesové zkratky
 
 Každý editor má vlastní přiřazení kláves a funguje všude jen několik z nich. Tato strana je úplný seznam, rozdělený podle aplikace, s chordem pro macOS a pro Windows / Linux vedle sebe.

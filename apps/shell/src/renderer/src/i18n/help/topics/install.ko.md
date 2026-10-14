@@ -1,69 +1,39 @@
-# GenOffice 설치
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
 
-> 아래는 원본 GenOffice 프로젝트의 설치 안내입니다. VgoOffice는 제공된 Windows 설치 프로그램을 사용하세요.
+# VgoOffice 설치
 
-모든 빌드는 [Releases 페이지](https://github.com/genspark-ai/genoffice/releases/latest)에 올라 있습니다. 모두 `main`에서 나오며, macOS와 Windows 설치 프로그램은 서명되어 있습니다.
+[릴리스](https://github.com/vgo1012/VgoOffice/releases) — 릴리스에 첨부된 설치 파일을 사용하세요. 이 문서가 GitHub에 바이너리 파일이 이미 공개되었음을 의미하지는 않습니다. 서명 자격 증명을 제공하지 않은 로컬 빌드는 서명되지 않습니다.
 
-## 내 컴퓨터에 맞는 파일 고르기
+## 설치 전 확인
 
-| 플랫폼                               | 필요한 것                                            | 파일                       |
-| ------------------------------------ | ---------------------------------------------------- | -------------------------- |
-| **macOS** — Apple Silicon            | macOS 11+                                            | `.dmg` (arm64)             |
-| **macOS** — Intel                    | macOS 11+                                            | `.dmg` (x64)               |
-| **Windows** — 대부분의 PC            | Windows 10+, Intel/AMD                               | `-x64.exe` 설치 프로그램   |
-| **Windows** on Arm                   | Arm 버전 Windows 11(Snapdragon X 등)                 | `-arm64.exe` 설치 프로그램 |
-| **Linux** — Debian / Ubuntu          | x86_64, glibc 2.34+(Ubuntu 22.04 이상)               | `.deb`                     |
-| **Linux** — Fedora / RHEL / openSUSE | x86_64, glibc 2.34+(Fedora 35+, RHEL 9+, Leap 15.6+) | `.rpm`                     |
-| **Linux** — 그 외                    | x86_64, glibc 2.34+, FUSE 2                          | `.AppImage`                |
+이 버전은 Windows x64에서 검증했습니다. macOS와 Linux 소스 대상은 유지하지만 해당 플랫폼에서 이 버전을 검증하지 않았습니다. 릴리스가 운영 체제 지원을 명시할 때만 해당 패키지를 선택하세요.
 
-이전 버전은 Releases 페이지에 그대로 남아 있습니다.
+## 설치와 실행
 
-## macOS에서
+1. 열린 문서를 저장하고 업데이트 전에 이전 버전을 닫으세요.
+2. Windows .exe 설치 파일을 실행해 설치를 완료하세요.
+3. 바탕 화면 또는 시작 메뉴의 바로 가기로 VgoOffice를 실행하세요.
 
-`.dmg`을 열고 **GenOffice**를 Applications로 끌어다 놓습니다. Intel 빌드에서는 첫 실행 때 열기 확인을 요구합니다. Applications에서 앱을 오른쪽 클릭하고 ▸ 열기 하세요. 이건 손상된 다운로드가 아니라, 서명되지 않은 것처럼 보이는 디스크 이미지를 만난 Gatekeeper의 동작입니다.
+설치 프로그램은 리소스를 한 번 저장하므로 매번 휴대용 실행 파일을 풀 필요가 없습니다. VgoOffice.exe만 복사하면 편집기에 필요한 리소스가 빠집니다.
 
-## Windows에서
+## 업데이트와 환경 설정
 
-`.exe` 설치 프로그램을 실행합니다. GenOffice를 시작 메뉴에 넣고 `.docx`, `.xlsx`, `.pptx`, `.pdf` 등을 등록해서, 파일을 두 번 클릭하면 열립니다.
+업데이트는 기존 Eoffice 설치 식별자와 프로필 폴더를 유지합니다. 호환성을 위해 폴더 이름이 Eoffice로 남는 것은 정상입니다. 설정 → 일반에서 밝게, 어둡게 또는 시스템 모드를 선택하세요. 기본 배경은 밝은 청회색이며 문서 색상은 별도로 제어합니다.
 
-## Linux에서
+## 버전과 프로젝트
 
-**Debian / Ubuntu**
+설정 → 정보에서 설치된 버전과 VgoOffice 프로젝트 링크를 확인할 수 있습니다. 도움이 된다면 저장소에 Star를 주세요. 업데이트는 빌드 구성에 따라 제공됩니다. 앱 업데이트가 없으면 프로젝트 릴리스 페이지를 확인하세요.
 
-```sh
-sudo apt install ./genoffice_<version>_amd64.deb
-```
+[VgoOffice · Star](https://github.com/vgo1012/VgoOffice)
 
-**Fedora / RHEL / openSUSE**
+## 명령줄과 AI
+
+호환 명령은 genoffice로 유지됩니다. 설정 → 통합에서 설치 경로와 구성을 확인하세요. 해당 경로로 아래 명령을 실행하거나 CLI를 PATH에 추가한 뒤 실행하세요.
 
 ```sh
-sudo dnf install ./genoffice-<version>.x86_64.rpm     # Fedora / RHEL family
-sudo zypper install ./genoffice-<version>.x86_64.rpm  # openSUSE
+genoffice --version
 ```
 
-**AppImage** — 설치 단계 없이, 그 자리에서 실행됩니다:
+앱 계정 로그인은 제거되었습니다. 모델 API, OpenAI 호환 엔드포인트 또는 설치된 Codex CLI를 직접 구성하세요. 외부 서비스 인증과 비용은 별도로 처리되며 로컬 편집에는 VgoOffice 계정이 필요하지 않습니다.
 
-```sh
-chmod +x GenOffice-<version>.AppImage
-./GenOffice-<version>.AppImage
-```
-
-FUSE 2 런타임이 필요합니다. 설치하기를 꺼리면 `--appimage-extract-and-run`으로 실행하세요. 풀린 디렉터리에서 샌드박스가 동작합니다.
-
-## 지금 실행 중인 빌드
-
-**설정 ▸ 정보**는 앱이 지금 가진 빌드, 따르는 업데이트 채널, 프로젝트가 있는 곳을 보고하는 곳입니다. 그 채널에 더 새 빌드가 올라오면 같은 패널이 그 업데이트를 제안합니다. Flatpak, Nix, Docker로 설치한 경우에는 제안하지 않습니다. 그 설치들을 놓아 준 도구가 대신 교체하기 때문입니다.
-
-![설정 ▸ 정보 — 설치된 버전, 앱이 따르는 업데이트 채널, 프로젝트의 GitHub 링크](img/install.png)
-
-## 또 다른 세 가지 경로
-
-셋 다 앱을 다시 빌드하는 것이 아니라 배포된 산출물을 감싸서 쓰므로, 공식 바이너리를 그대로 따라갑니다.
-
-- **Flatpak** — Flatpak의 `extra-data` 방식으로 `.deb`를 설치하고, Electron 자체 샌드박스를 그에 맞춰 조정하는 Zypak 아래에서 실행합니다. `/app` 트리는 읽기 전용이라 업데이트는 앱 내 업데이트 대화상자가 아니라 Flatpak으로 갑니다.
-- **Nix** — 체크아웃을 `nix-build packaging/nix`로 빌드하는 패키지 식입니다. `packaging/nix`을 보세요.
-- **Docker** — 헤드리스 일괄 변환 이미지(`packaging/docker`)입니다. Office, Markdown, HTML 문서 트리 전체를 앱 자체 내보내기 파이프라인으로 PDF로 바꿔 주므로, 결과는 파일 ▸ 내보내기로 내보낸 것과 같습니다. 서버가 아니라 CLI 유틸리티입니다.
-
-## 명령줄도 함께 옵니다
-
-모든 설치본에는 `genoffice` 명령이 들어 있고, 창이 쓰는 바로 그 엔진을 구동합니다. 같은 파일에 대한 둘의 판단이 어긋날 일은 없습니다. macOS와 Windows에서는 앱 번들 안에 있으며, `genoffice install-cli`로 `PATH`에 넣습니다. 무엇을 할 수 있는지는 **명령줄과 에이전트**를 보세요.
+[통합 설정](help://settings-integrations) · [AI 모델](help://ai-models)

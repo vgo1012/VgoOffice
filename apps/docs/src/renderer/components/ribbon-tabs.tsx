@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { useRef, useState } from 'react'
 import type { Editor, JSONContent } from '@tiptap/core'
 import type { Node as PmNode } from '@tiptap/pm/model'

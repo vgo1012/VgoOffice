@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Operazioni sui file: rinomina, eliminazione, esportazione
 
 Questo capitolo raccoglie le operazioni sui file comuni a tutti gli editor; le opzioni di esportazione specifiche di ciascun editor sono nel suo capitolo.

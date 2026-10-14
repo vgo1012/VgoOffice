@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /**
  * Threaded (modern Excel) comments live outside Univer's note model: notes
  * are legacy comments with a yellow marker, threads carry an author, a time,
@@ -30,7 +31,7 @@ export interface CellThread {
   readonly replies: readonly ThreadReply[]
 }
 
-export const FALLBACK_AUTHOR = 'GenOffice User'
+export const FALLBACK_AUTHOR = 'VgoOffice User'
 
 export interface CellRange {
   readonly startRow: number

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Ekran strony głównej: gdzie mieszkają Twoje pliki
 
 Strona główna to punkt wyjścia VgoOffice: pasek nawigacyjny po lewej, listy plików i karty szybkiego tworzenia po prawej.

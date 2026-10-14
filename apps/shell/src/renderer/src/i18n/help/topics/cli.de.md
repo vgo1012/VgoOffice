@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Kommandozeile und Agenten
 
 Jede Installation bringt den Befehl `genoffice` mit, der dieselben Engines antreibt wie das Fenster: dieselben Parser, denselben Writer, denselben Renderer. Eine Datei, die die App speichert, und eine Datei, die der Befehl schreibt, sind dieselbe Datei, und eine Prüfung, die der KI-Bereich der App besteht, besteht auch der Befehl.
@@ -32,7 +34,7 @@ macOS und Windows liefern es im App-Bundle mit. Um es beim Namen aufzurufen, ein
 | `capabilities`    | Melden, welche Cloud-Funktionen auf diesem Rechner konfiguriert sind.                                                                                                                                                                                                 |
 | `guide`           | Die op-Referenz und die Design-Leitfäden, erzeugt aus genau den Definitionen, gegen die der Executor prüft — sie kann also nicht von dem abweichen, was `apply` akzeptiert. `--json` liefert sie mit dem Schema jedes ops.                                            |
 | `install-cli`     | `genoffice` in den `PATH` legen.                                                                                                                                                                                                                                      |
-| `skill`           | Die auf diesem Rechner gefundenen Coding-Agenten auflisten und den GenOffice-Skill dort installieren oder aktualisieren.                                                                                                                                              |
+| `skill`           | Die auf diesem Rechner gefundenen Coding-Agenten auflisten und den VgoOffice-Skill dort installieren oder aktualisieren.                                                                                                                                              |
 | `mcp`             | Jeden Befehl als Model-Context-Protocol-Werkzeug bereitstellen. Siehe **Einen Coding-Agenten anbinden**.                                                                                                                                                              |
 
 ## Bearbeiten: Dokumente, Tabellen, Folien

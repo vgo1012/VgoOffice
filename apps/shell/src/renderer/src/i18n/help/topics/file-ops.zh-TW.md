@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 檔案操作：重新命名、刪除、匯出
 
 本章說明各編輯器共用的檔案操作；各編輯器自己的匯出選項請見對應章節。

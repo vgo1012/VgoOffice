@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Scorciatoie da tastiera
 
 Ogni editor ha le proprie combinazioni di tasti, e solo poche funzionano ovunque. Questa pagina è l’elenco completo, raggruppato per applicazione, con la combinazione di macOS e quella di Windows / Linux una accanto all’altra.

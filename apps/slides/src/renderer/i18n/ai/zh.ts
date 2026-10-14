@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /** ai strings, zh: defines the key set every other locale shard must match. */
 export const zh = {
   aiInputPlaceholderGen: '描述要生成的演示文稿,或直接提问',
@@ -17,7 +18,7 @@ export const zh = {
   aiQcStopped: '版式检查已停止',
   aiQcCapped: '其余 {count} 页未检查(单次上限)',
   aiGskLoginBtn: '登录 Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: '打开 AI 助手',
   aiFactCheckBtn: 'AI 事实核查',
   aiFactCheckPrompt: '核查这份幻灯片的内容:检查数据、日期、名称和论断是否属实,指出并纠正错误',

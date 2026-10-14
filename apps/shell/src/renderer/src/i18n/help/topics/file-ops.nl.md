@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Bestandsbewerkingen: hernoemen, verwijderen, exporteren
 
 Dit hoofdstuk behandelt de bestandsbewerkingen die alle editors delen; de eigen exportopties van elke editor staan in het bijbehorende hoofdstuk.

@@ -1,69 +1,39 @@
-# 安装 GenOffice
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
 
-> 以下为上游 GenOffice 的安装参考。VgoOffice 请使用随附的 Windows 安装包。
+# 安装 VgoOffice
 
-每个构建都发布在 [Releases 页面](https://github.com/genspark-ai/genoffice/releases/latest)。它们全部出自 `main`；macOS 与 Windows 的安装包已签名。
+[版本发布](https://github.com/vgo1012/VgoOffice/releases) — 选择发布条目随附的安装包。本说明不代表 GitHub 上已经上传了二进制程序；没有代码签名凭据的本地构建会生成未签名程序。
 
-## 选择适合你机器的文件
+## 安装前确认
 
-| 平台                                 | 需求                                                   | 文件                |
-| ------------------------------------ | ------------------------------------------------------ | ------------------- |
-| **macOS** — Apple Silicon            | macOS 11+                                              | `.dmg` (arm64)      |
-| **macOS** — Intel                    | macOS 11+                                              | `.dmg` (x64)        |
-| **Windows** — 大多数 PC              | Windows 10+、Intel/AMD                                 | `-x64.exe` 安装包   |
-| **Windows** on Arm                   | Arm 版 Windows 11（Snapdragon X 等）                   | `-arm64.exe` 安装包 |
-| **Linux** — Debian / Ubuntu          | x86_64、glibc 2.34+（Ubuntu 22.04 或更新）             | `.deb`              |
-| **Linux** — Fedora / RHEL / openSUSE | x86_64、glibc 2.34+（Fedora 35+、RHEL 9+、Leap 15.6+） | `.rpm`              |
-| **Linux** — 其他                     | x86_64、glibc 2.34+、FUSE 2                            | `.AppImage`         |
+本定制版已在 Windows x64 上验证。macOS 和 Linux 的源码目标仍然保留，但尚未验证本定制版在这些平台的运行。只有发布说明明确支持你的系统时，才使用对应安装包。
 
-旧版本仍保留在 Releases 页面上。
+## 安装与启动
 
-## 在 macOS 上
+1. 保存打开的办公文件，升级前关闭旧版软件。
+2. 运行 Windows .exe 安装包，完成安装。
+3. 从桌面或开始菜单的快捷方式启动 VgoOffice。
 
-打开 `.dmg`，把 **GenOffice** 拖进「应用程序」文件夹。Intel 版首次启动时会请你确认打开：在「应用程序」里右键点这个应用 ▸ 打开。这只是 Gatekeeper 遇到一个看起来未签名的磁盘映像，并不是下载损坏。
+安装包只需写入一次资源，日常启动不再反复解压免安装程序。单独复制 VgoOffice.exe 会缺少编辑器所需资源。
 
-## 在 Windows 上
+## 升级与偏好设置
 
-运行 `.exe` 安装程序。它会把 GenOffice 放进开始菜单，并注册 `.docx`、`.xlsx`、`.pptx`、`.pdf` 等格式，双击文件就会用 GenOffice 打开。
+升级保留原有 Eoffice 安装身份和配置目录。目录仍叫 Eoffice 是为了兼容，属于正常情况。在「设置 → 通用」选择浅色、深色或跟随系统；默认主背景为浅蓝灰色。文档内容颜色单独控制。
 
-## 在 Linux 上
+## 软件版本与项目
 
-**Debian / Ubuntu**
+「设置 → 关于」显示已安装版本，并提供 VgoOffice 项目链接。项目有帮助时欢迎点 Star。更新是否可用取决于构建配置；无法在软件内更新时，到项目发布页查看。
 
-```sh
-sudo apt install ./genoffice_<version>_amd64.deb
-```
+[VgoOffice · Star](https://github.com/vgo1012/VgoOffice)
 
-**Fedora / RHEL / openSUSE**
+## 命令行与 AI
+
+兼容命令仍叫 genoffice。「设置 → 集成」显示已安装路径和集成配置。使用该路径运行下方命令，或先将 CLI 添加到 PATH。
 
 ```sh
-sudo dnf install ./genoffice-<version>.x86_64.rpm     # Fedora / RHEL family
-sudo zypper install ./genoffice-<version>.x86_64.rpm  # openSUSE
+genoffice --version
 ```
 
-**AppImage** — 免安装，放在哪儿就在哪儿运行：
+本版已移除桌面账户登录。配置自己的模型 API、OpenAI 兼容接口或已安装的 Codex CLI。第三方认证和服务费用单独处理；本地编辑不需要 VgoOffice 软件账户。
 
-```sh
-chmod +x GenOffice-<version>.AppImage
-./GenOffice-<version>.AppImage
-```
-
-它需要 FUSE 2 运行时。如果不想安装它，可以用 `--appimage-extract-and-run` 来运行，沙箱会从解压出来的目录工作。
-
-## 你正在运行的构建
-
-**设置 ▸ 关于** 是应用报告你所用的构建、它跟随的更新渠道以及项目所在地的地方。当该渠道上发布了更新的构建时，同一个面板会提示更新；Flatpak、Nix 或 Docker 安装则不会，因为这些安装会被当初装上它们的工具替换掉。
-
-![设置 ▸ 关于，其中显示已安装的版本、应用跟随的更新渠道，以及项目的 GitHub 链接](img/install.png)
-
-## 另外三条路
-
-这三种方式都只是包装已发布的构建产物，而不是重新编译应用，所以跟的是官方二进制。
-
-- **Flatpak** — 通过 Flatpak 的 `extra-data` 机制安装 `.deb`，并在 Zypak 沙箱下运行，由 Zypak 适配 Electron 自带的沙箱。`/app` 目录是只读的，所以更新要走 Flatpak，而不是应用内的更新对话框。
-- **Nix** — 一个包表达式，用 `nix-build packaging/nix` 从源码检出构建；详见 `packaging/nix`。
-- **Docker** — 一个无头批量转换镜像（`packaging/docker`）。它通过应用自己的导出流程，把整棵目录树里的 Office、Markdown 和 HTML 文档转成 PDF，产出的结果与 文件 ▸ 导出 相同。它是一个命令行工具，不是服务器。
-
-## 命令行随包附带
-
-每个安装版本都带一个 `genoffice` 命令，它和窗口调用的是同一套引擎，因此两者对同一个文件不会给出不同的结果。在 macOS 和 Windows 上它位于应用包内；`genoffice install-cli` 会把它放进你的 `PATH`。它能做什么，见**命令行与代理**。
+[集成设置](help://settings-integrations) · [AI 模型](help://ai-models)

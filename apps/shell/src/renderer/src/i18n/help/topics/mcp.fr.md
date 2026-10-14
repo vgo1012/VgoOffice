@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Connecter un agent de codage
 
 VgoOffice parle le Model Context Protocol : un agent de programmation peut donc lire, écrire et rendre vos documents avec les mêmes moteurs que l’application. L’agent ne devine pas un format de fichier : il reçoit les schémas typés des ops à partir des définitions mêmes contre lesquelles l’executor valide.

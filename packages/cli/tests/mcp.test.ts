@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { copyFileSync, existsSync, readFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { Client } from '@modelcontextprotocol/sdk/client/index.js'
@@ -155,6 +156,7 @@ describe('mcp server', () => {
   }
 
   it('lists the command tools and the deck tools with schemas', async () => {
+    expect(client.getServerVersion()?.name).toBe('VgoOffice')
     const { tools } = await client.listTools()
     const names = tools.map((t) => t.name)
     expect(names).toEqual(

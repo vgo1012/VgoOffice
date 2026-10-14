@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { mcpLaunch, type McpLaunch } from '@genoffice/cli/mcp-launch'
 import { useCallback, useEffect, useState } from 'react'
 import type { TFunc } from './locale'
@@ -28,7 +29,7 @@ interface Pending {
   agentId?: AgentId
 }
 
-export const NPX_INSTALL_COMMAND = 'npx skills add genspark-ai/genoffice'
+export const NPX_INSTALL_COMMAND = 'npx skills add vgo1012/VgoOffice'
 
 /** some detected assistant holds an older copy of the skill than the bundled one */
 export const skillUpdateDue = (s: IntegrationsStatus): boolean =>

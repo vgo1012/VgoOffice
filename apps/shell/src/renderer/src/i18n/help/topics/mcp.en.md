@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Connecting a coding agent
 
 VgoOffice speaks the Model Context Protocol, so a coding agent can read, write and render your documents through the same engines the app uses. The agent is not guessing at a file format: it gets the typed op schemas from the same definitions the executor validates against.

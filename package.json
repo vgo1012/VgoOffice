@@ -2,7 +2,7 @@
   "name": "genoffice",
   "version": "0.1.0",
   "private": true,
-  "description": "AI-native office suite (docs, sheets, slides, pdf, markdown, html)",
+  "description": "VgoOffice: a local-first office suite with configurable AI for documents, spreadsheets, presentations, PDF, Markdown and HTML",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=22.12.0",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/genspark-ai/genoffice.git"
+    "url": "git+https://github.com/vgo1012/VgoOffice.git"
   },
   "workspaces": [
     "apps/*",

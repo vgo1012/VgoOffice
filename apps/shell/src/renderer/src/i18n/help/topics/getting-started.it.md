@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Avvio rapido: l'interfaccia e le basi
 
 VgoOffice è una suite per ufficio che funziona interamente sulla tua macchina: una sola finestra, una fila di schede, con sei editor — Docs (elaborazione testi), Sheets (fogli di calcolo), Slides (presentazioni), PDF, Markdown e HTML. I file sono veri file .docx / .xlsx / .pptx / .pdf, completamente intercambiabili con Word, Excel e PowerPoint. Nessuna connessione di rete richiesta.

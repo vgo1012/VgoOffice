@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { randomUUID } from 'node:crypto'
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -58,7 +59,7 @@ export function outputDirectory(spec: string | undefined, ctx: PathContext): str
 
 /**
  * One PNG per page: the document is printed to a temporary PDF by the hidden
- * GenOffice process (a PDF input skips that step) and rasterized with pdfium.
+ * VgoOffice process (a PDF input skips that step) and rasterized with pdfium.
  * Files are `<stem>-NN.png`, NN 1-based, in `outDir`.
  */
 export async function renderToPngs(

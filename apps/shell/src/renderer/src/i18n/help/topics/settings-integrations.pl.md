@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Ustawienia, język, motyw i integracje MCP
 
 ## Otwieranie ustawień

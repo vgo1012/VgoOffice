@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 连接编程代理
 
 VgoOffice 说 Model Context Protocol，所以编程代理可以通过应用所用的同一套引擎来读写并渲染你的文档。代理不是靠猜文件格式：它拿到的类型化 op schema，与执行器校验所依据的是同一份定义。

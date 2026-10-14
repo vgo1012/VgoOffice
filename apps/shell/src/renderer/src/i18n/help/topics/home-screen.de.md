@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Der Startbildschirm: wo Ihre Dateien liegen
 
 Die Startseite ist VgoOffices Startseite: eine Navigationsleiste links, Dateilisten und Schnellerstellungskarten rechts.

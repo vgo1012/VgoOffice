@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # ファイル操作：名前の変更、削除、書き出し
 
 この章では、すべてのエディターで共通するファイル操作を説明します。各エディター独自の書き出しの選択肢は、それぞれの章にあります。

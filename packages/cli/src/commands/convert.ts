@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { realpathSync } from 'node:fs'
 import { basename, dirname, extname, join } from 'node:path'
 import { PdfLoadError } from '@genoffice/pdf2docx'
@@ -27,7 +28,7 @@ const NODE_ROUTES: Record<string, readonly string[]> = {
 }
 
 /**
- * Conversions the GenOffice binary runs for us in its hidden headless-export
+ * Conversions the VgoOffice binary runs for us in its hidden headless-export
  * mode: anything that needs an app renderer (page layout for pdf, the Word
  * editor's HTML export, html2docx). Mirrors HEADLESS_TARGETS in the shell.
  */
@@ -58,7 +59,7 @@ function appTarget(from: string, to: string): AppExportTarget | null {
 
 export const convertCommand: CommandDef = {
   name: 'convert',
-  summary: 'Convert a document to another format using the GenOffice engines.',
+  summary: 'Convert a document to another format using the VgoOffice engines.',
   usage: 'convert <file> --to <format> [--out <path>] [--force] [--password <pw>] [--sheet <name>]',
   options: [
     { name: 'to', value: 'format', description: 'target format: ' + describeRoutes() },

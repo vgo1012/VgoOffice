@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # コーディングエージェントの接続
 
 VgoOffice は Model Context Protocol を話せます。コーディングエージェントは、アプリが使うのと同じエンジンであなたの文書を読み、書き、レンダリングできます。エージェントがファイル形式を当て推量しているわけではありません。executor が検証するのと同じ定義から、型付きの op スキーマを受け取ります。

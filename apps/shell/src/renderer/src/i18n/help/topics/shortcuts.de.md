@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Tastaturkürzel
 
 Jeder Editor hat eigene Tastenbelegungen, und nur wenige davon funktionieren überall. Diese Seite führt sie vollständig auf, nach Anwendung gruppiert, wobei die macOS- und die Windows-/Linux-Tastenkombination nebeneinander stehen.

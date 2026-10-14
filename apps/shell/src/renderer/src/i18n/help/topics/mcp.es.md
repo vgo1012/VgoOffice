@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Conectar un agente de codificación
 
 VgoOffice habla el Model Context Protocol, de modo que un agente de codificación puede leer, escribir y renderizar sus documentos con los mismos motores que usa la aplicación. El agente no está adivinando un formato de archivo: recibe los esquemas tipados de las op a partir de las mismas definiciones contra las que valida el executor.

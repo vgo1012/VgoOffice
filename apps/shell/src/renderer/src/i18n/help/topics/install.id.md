@@ -1,69 +1,39 @@
-# Memasang GenOffice
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
 
-> Berikut adalah panduan instalasi proyek asal GenOffice. Untuk VgoOffice, gunakan penginstal Windows yang disediakan.
+# Memasang VgoOffice
 
-Setiap build dipublikasikan di [halaman Rilis](https://github.com/genspark-ai/genoffice/releases/latest). Semuanya berasal dari `main`; installer untuk macOS dan Windows sudah ditandatangani.
+[Rilis](https://github.com/vgo1012/VgoOffice/releases) — Gunakan penginstal yang dilampirkan pada rilis. Halaman ini tidak berarti berkas biner sudah diterbitkan di GitHub. Build lokal tidak ditandatangani jika kredensial penandatanganan tidak diberikan.
 
-## Pilih berkas untuk komputer Anda
+## Sebelum memasang
 
-| Platform                             | Kebutuhan                                             | Berkas                 |
-| ------------------------------------ | ----------------------------------------------------- | ---------------------- |
-| **macOS** — Apple Silicon            | macOS 11+                                             | `.dmg` (arm64)         |
-| **macOS** — Intel                    | macOS 11+                                             | `.dmg` (x64)           |
-| **Windows** — kebanyakan PC          | Windows 10+, Intel/AMD                                | installer `-x64.exe`   |
-| **Windows** di Arm                   | Windows 11 di Arm (Snapdragon X dan sejenisnya)       | installer `-arm64.exe` |
-| **Linux** — Debian / Ubuntu          | x86_64, glibc 2.34+ (Ubuntu 22.04 atau lebih baru)    | `.deb`                 |
-| **Linux** — Fedora / RHEL / openSUSE | x86_64, glibc 2.34+ (Fedora 35+, RHEL 9+, Leap 15.6+) | `.rpm`                 |
-| **Linux** — lainnya                  | x86_64, glibc 2.34+, FUSE 2                           | `.AppImage`            |
+Edisi ini telah diuji pada Windows x64. Target kode macOS dan Linux tetap tersedia, tetapi edisi ini belum divalidasi di sana. Pilih paket hanya jika rilisnya mendukung sistem operasi Anda.
 
-Versi lama tetap ada di halaman Rilis.
+## Memasang dan menjalankan
 
-## Di macOS
+1. Simpan dokumen terbuka dan tutup versi lama sebelum memperbarui.
+2. Jalankan penginstal .exe Windows hingga selesai.
+3. Mulai VgoOffice melalui pintasan desktop atau menu Mulai.
 
-Buka `.dmg` lalu seret **GenOffice** ke Applications. Pada build Intel, peluncuran pertama meminta Anda mengonfirmasi pembukaan: klik kanan aplikasinya di Applications ▸ Buka. Itu Gatekeeper bertemu citra disk yang tampak tidak ditandatangani, bukan unduhan yang rusak.
+Penginstal menyimpan sumber daya sekali, tanpa mengekstrak program portabel setiap kali dijalankan. VgoOffice.exe saja tidak menyertakan sumber daya editor yang diperlukan.
 
-## Di Windows
+## Pembaruan dan preferensi
 
-Jalankan installer `.exe`. Ia menaruh GenOffice di menu Start dan mendaftarkan `.docx`, `.xlsx`, `.pptx`, `.pdf` dan sejenisnya sehingga klik ganda pada berkas langsung membukanya.
+Pembaruan mempertahankan identitas pemasangan dan folder profil Eoffice. Nama folder Eoffice adalah normal untuk kompatibilitas. Di Pengaturan → Umum, pilih tampilan terang, gelap, atau sistem; latar bawaan berwarna biru-abu muda. Warna dokumen diatur terpisah.
 
-## Di Linux
+## Versi dan proyek
 
-**Debian / Ubuntu**
+Pengaturan → Tentang menampilkan versi terpasang dan tautan proyek VgoOffice. Beri Star jika bermanfaat. Pembaruan bergantung pada konfigurasi build; periksa halaman rilis jika pembaruan dalam aplikasi tidak tersedia.
 
-```sh
-sudo apt install ./genoffice_<version>_amd64.deb
-```
+[VgoOffice · Star](https://github.com/vgo1012/VgoOffice)
 
-**Fedora / RHEL / openSUSE**
+## Baris perintah dan AI
+
+Perintah kompatibel tetap genoffice. Pengaturan → Integrasi menampilkan jalur terpasang dan konfigurasi. Jalankan perintah berikut dengan jalur itu atau setelah menambahkan CLI ke PATH.
 
 ```sh
-sudo dnf install ./genoffice-<version>.x86_64.rpm     # Fedora / RHEL family
-sudo zypper install ./genoffice-<version>.x86_64.rpm  # openSUSE
+genoffice --version
 ```
 
-**AppImage** — berjalan di mana pun diletakkan, tanpa langkah pemasangan:
+Login akun aplikasi telah dihapus. Konfigurasikan API model Anda, endpoint kompatibel OpenAI, atau Codex CLI terpasang. Autentikasi dan biaya pihak ketiga tetap terpisah; penyuntingan lokal tidak memerlukan akun VgoOffice.
 
-```sh
-chmod +x GenOffice-<version>.AppImage
-./GenOffice-<version>.AppImage
-```
-
-Ia membutuhkan runtime FUSE 2. Jika Anda lebih suka tidak memasangnya, jalankan dengan `--appimage-extract-and-run` dan sandbox tetap berjalan dari direktori hasil ekstrak.
-
-## Build yang sedang Anda jalankan
-
-**Pengaturan ▸ Tentang** adalah tempat aplikasi melaporkan build yang Anda pakai, kanal yang diikutinya, dan letak proyeknya. Ketika build yang lebih baru diterbitkan di kanal itu, panel yang sama menawarkan pembaruan; instalasi Flatpak, Nix, atau Docker tidak, karena semuanya digantikan oleh alat yang memasang mereka di sana.
-
-![Pengaturan ▸ Tentang, menampilkan versi terpasang, kanal pembaruan yang diikuti aplikasi, dan tautan GitHub proyek](img/install.png)
-
-## Tiga jalur lain
-
-Ketiganya membungkus artefak yang sudah diterbitkan, bukan membangun ulang aplikasinya, sehingga selalu mengikuti biner resmi.
-
-- **Flatpak** — memasang `.deb` lewat mekanisme `extra-data` milik Flatpak dan menjalankannya di bawah Zypak, yang menyesuaikan sandbox bawaan Electron. Pohon `/app` bersifat hanya-baca, jadi pembaruan lewat Flatpak, bukan lewat dialog pembaruan di dalam aplikasi.
-- **Nix** — ekspresi paket yang bisa Anda build dari salinan lokal repositori dengan `nix-build packaging/nix`; lihat `packaging/nix`.
-- **Docker** — citra konversi massal tanpa antarmuka (`packaging/docker`). Ia mengonversi seluruh pohon dokumen Office, Markdown, dan HTML ke PDF lewat jalur ekspor milik aplikasi itu sendiri, sehingga hasilnya sama dengan yang dihasilkan File ▸ Ekspor. Ini utilitas baris perintah, bukan server.
-
-## Baris perintahnya sudah ikut
-
-Setiap pemasangan membawa perintah `genoffice` yang berbicara dengan mesin yang sama dengan jendela, sehingga keduanya tidak pernah berbeda pendapat tentang sebuah berkas. Di macOS dan Windows perintahnya berada di dalam bundel aplikasi; `genoffice install-cli` menaruhnya di `PATH` Anda. Lihat **Perintah baris perintah dan agen** untuk mengetahui apa saja yang dapat dilaukannya.
+[Pengaturan integrasi](help://settings-integrations) · [Model AI](help://ai-models)

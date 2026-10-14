@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { Editor } from '@tiptap/core'
 import type { Node as ProseMirrorNode } from '@tiptap/pm/model'
 import { TextSelection } from '@tiptap/pm/state'
@@ -103,7 +104,7 @@ export const HTML_RULES = [
  * answer in chat.
  */
 export const AGENT_SYSTEM_PROMPT = [
-  'You are the document assistant built into the local document editor GenOffice Docs. You read and modify the currently open document exclusively through tools; there is no other modification channel.',
+  'You are the document assistant built into the local document editor VgoOffice Docs. You read and modify the currently open document exclusively through tools; there is no other modification channel.',
   '',
   '# Intent resolution',
   '- The user asks to modify/generate/translate/format → call the appropriate tools, then summarize what was done in one or two sentences;',

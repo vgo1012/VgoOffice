@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Der KI-Bereich
 
 Jeder Editor kann den KI-Bereich aufrufen: Etwas auswählen, eine Anweisung geben und das gestreamte Ergebnis ansehen.

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { TitleBarOverlay } from 'electron'
 
 /// Windows/Linux draw the caption buttons over the tab strip (titleBarStyle

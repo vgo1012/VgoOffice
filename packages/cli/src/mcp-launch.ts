@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /**
  * How an MCP client starts `genoffice mcp`. Shared by the app's Settings snippet
  * and `genoffice mcp install` so the two cannot drift. Clients spawn without a

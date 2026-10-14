@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { execSync, spawn } from 'node:child_process'
 import {
   cpSync,
@@ -667,10 +668,8 @@ function initAnalytics(): void {
 }
 
 // ---- first-run onboarding ----
-// The GenTeam community page opened from the onboarding's second slide.
-// Stable short link served by the genoffice.ai site; it 302s to the tokened
-// invite link, which stays out of this repo and rotates server-side.
-const GENTEAM_URL = 'https://genoffice.ai/join'
+// Retained IPC compatibility route for the removed community onboarding action.
+const GENTEAM_URL = 'https://github.com/vgo1012/VgoOffice/issues'
 
 // Genspark credit-usage page opened from the account menu's credits row.
 // Kept main-side so the renderer never supplies the URL.
@@ -711,7 +710,7 @@ let cachedGithubStars: number | null = null
 async function fetchGithubStars(): Promise<number | null> {
   if (cachedGithubStars !== null) return cachedGithubStars
   try {
-    const response = await fetch('https://api.github.com/repos/genspark-ai/genoffice', {
+    const response = await fetch('https://api.github.com/repos/vgo1012/VgoOffice', {
       headers: { Accept: 'application/vnd.github+json' },
       signal: AbortSignal.timeout(5000),
     })

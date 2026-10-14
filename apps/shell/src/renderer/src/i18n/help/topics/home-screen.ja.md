@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # ホーム画面：ファイルの置き場所
 
 ホームは VgoOffice のスタートページです。左側にナビゲーションサイドバー、右側にファイル一覧とクイック作成カードが並びます。

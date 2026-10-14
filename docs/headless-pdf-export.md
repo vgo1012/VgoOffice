@@ -1,6 +1,8 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Headless PDF export
 
-Every "export to PDF" path in GenOffice can be driven without a visible
+Every "export to PDF" path in VgoOffice can be driven without a visible
 editor window, behind one entry point:
 
 ```
@@ -12,7 +14,7 @@ one line to stdout and exits. It does **not** take the single-instance lock,
 so it runs happily alongside a GUI instance.
 
 ```
-$ GenOffice --headless-export report.docx --to pdf --out report.pdf --json
+$ VgoOffice --headless-export report.docx --to pdf --out report.pdf --json
 {"status":"ok","summary":"Exported /w/report.docx to /w/report.pdf","output_path":"/w/report.pdf"}
 ```
 

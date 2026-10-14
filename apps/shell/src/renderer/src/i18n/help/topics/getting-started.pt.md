@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Início rápido: a interface e o básico
 
 O VgoOffice é um pacote de escritório que funciona inteiramente na sua máquina: uma janela, uma faixa de guias, com seis editores — Docs (processamento de texto), Sheets (folhas de cálculo), Slides (apresentações), PDF, Markdown e HTML. Os ficheiros são .docx / .xlsx / .pptx / .pdf a sério, totalmente compatíveis com o Word, o Excel e o PowerPoint. Não é necessária rede.

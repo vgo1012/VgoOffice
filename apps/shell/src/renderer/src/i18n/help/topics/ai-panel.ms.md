@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Panel pembantu AI
 
 Setiap editor boleh memanggil panel AI. Pilih sesuatu, berikan arahan, dan lihat hasilnya dipaparkan secara berperingkat.

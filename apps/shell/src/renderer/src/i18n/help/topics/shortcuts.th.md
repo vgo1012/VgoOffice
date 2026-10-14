@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # คีย์ลัด
 
 ตัวแก้ไขแต่ละตัวมีการผูกคีย์ของตัวเอง และมีเพียงบางรายการที่ใช้ได้ทุกที่ หน้านี้คือรายการทั้งหมด แยกตามแอป พร้อมวางคีย์ของ macOS กับ Windows / Linux ไว้เคียงกัน

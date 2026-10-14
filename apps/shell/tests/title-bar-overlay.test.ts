@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { describe, expect, it } from 'vitest'
 
 import { TAB_STRIP_HEIGHT, tabStripOverlay } from '../src/main/title-bar-overlay'

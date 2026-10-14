@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # หน้าแรก: ไฟล์ของคุณอยู่ที่ไหน
 
 หน้าแรกคือหน้าเริ่มต้นของ VgoOffice: แถบนำทางอยู่ทางซ้าย ส่วนรายการไฟล์และการ์ดสร้างด่วนอยู่ทางขวา

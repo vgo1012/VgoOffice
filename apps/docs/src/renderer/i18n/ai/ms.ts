@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const ms = {
@@ -9,7 +10,7 @@ export const ms = {
   aiStarterContinue: 'Teruskan menulis dari bahagian akhir dokumen',
   aiStarterFillTemplate: 'Cari dan isi ruang letak dalam dokumen ini',
   aiGskLoginBtn: 'Log masuk ke Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'Buka pembantu AI',
   aiSummarizeBtn: 'Ringkasan AI',
   aiSummarizePrompt: 'Ringkaskan kandungan utama dan perkara penting dokumen ini',

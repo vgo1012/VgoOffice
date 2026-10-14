@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Skróty klawiszowe
 
 Każdy edytor ma własne przypisania klawiszy i tylko kilka z nich działa wszędzie. Ta strona to pełna lista pogrupowana według aplikacji, z układem macOS oraz Windows / Linux obok siebie.

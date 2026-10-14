@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const he = {
@@ -18,7 +19,7 @@ export const he = {
   aiQcStopped: 'בדיקת הפריסה הופסקה',
   aiQcCapped: 'עוד {count} עמודים לא נבדקו (מגבלה לכל הרצה)',
   aiGskLoginBtn: 'התחבר ל-Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'פתיחת עוזר ה-AI',
   aiFactCheckBtn: 'בדיקת עובדות AI',
   aiFactCheckPrompt:

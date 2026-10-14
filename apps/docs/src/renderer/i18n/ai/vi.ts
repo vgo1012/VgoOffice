@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const vi = {
@@ -9,7 +10,7 @@ export const vi = {
   aiStarterContinue: 'Viết tiếp từ nội dung hiện tại của tài liệu',
   aiStarterFillTemplate: 'Tìm và điền vào các vị trí giữ chỗ trong tài liệu này',
   aiGskLoginBtn: 'Đăng nhập vào Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'Mở trợ lý AI',
   aiSummarizeBtn: 'AI Tóm tắt',
   aiSummarizePrompt: 'Tóm tắt nội dung chính và các ý quan trọng của tài liệu này',

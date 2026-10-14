@@ -1,5 +1,6 @@
+# Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 blank_issues_enabled: true
 contact_links:
   - name: Security vulnerability
-    url: https://github.com/genspark-ai/genoffice/security/advisories/new
+    url: https://github.com/vgo1012/VgoOffice/security/advisories/new
     about: Please report security issues privately, never as a public issue.

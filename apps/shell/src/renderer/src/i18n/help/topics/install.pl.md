@@ -1,69 +1,39 @@
-# Instalacja GenOffice
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
 
-> Poniższe instrukcje dotyczą oryginalnego projektu GenOffice. W przypadku VgoOffice użyj dostarczonego instalatora systemu Windows.
+# Instalacja VgoOffice
 
-Każda kompilacja jest publikowana na [stronie Releases](https://github.com/genspark-ai/genoffice/releases/latest). Wszystkie pochodzą z `main`; instalatory dla macOS i Windows są podpisane.
+[Wydania](https://github.com/vgo1012/VgoOffice/releases) — Użyj instalatora dołączonego do wydania. Ta strona nie oznacza, że plik binarny został już opublikowany na GitHub. Kompilacje lokalne są niepodpisane, jeśli nie podano danych do podpisu.
 
-## Wybierz plik dla swojego komputera
+## Przed instalacją
 
-| Platforma                            | Wymagania                                             | Plik                    |
-| ------------------------------------ | ----------------------------------------------------- | ----------------------- |
-| **macOS** — Apple Silicon            | macOS 11+                                             | `.dmg` (arm64)          |
-| **macOS** — Intel                    | macOS 11+                                             | `.dmg` (x64)            |
-| **Windows** — większość komputerów   | Windows 10+, Intel/AMD                                | instalator `-x64.exe`   |
-| **Windows** na Arm                   | Windows 11 on Arm (Snapdragon X i podobne)            | instalator `-arm64.exe` |
-| **Linux** — Debian / Ubuntu          | x86_64, glibc 2.34+ (Ubuntu 22.04 lub nowsze)         | `.deb`                  |
-| **Linux** — Fedora / RHEL / openSUSE | x86_64, glibc 2.34+ (Fedora 35+, RHEL 9+, Leap 15.6+) | `.rpm`                  |
-| **Linux** — wszystko inne            | x86_64, glibc 2.34+, FUSE 2                           | `.AppImage`             |
+Ta wersja została sprawdzona na Windows x64. Cele kodu macOS i Linux pozostają, ale ta wersja nie została na nich zweryfikowana. Wybierz pakiet tylko wtedy, gdy wydanie wyraźnie obsługuje Twój system operacyjny.
 
-Starsze wersje pozostają na stronie Releases.
+## Instalacja i uruchamianie
 
-## W systemie macOS
+1. Zapisz otwarte dokumenty i zamknij poprzednią wersję przed aktualizacją.
+2. Uruchom instalator .exe dla Windows i dokończ instalację.
+3. Uruchom VgoOffice przez skrót na pulpicie lub w menu Start.
 
-Otwórz plik `.dmg` i przeciągnij **GenOffice** do katalogu Aplikacje. W kompilacji Intel przy pierwszym uruchomieniu trzeba potwierdzić otwarcie: kliknij prawym przyciskiem aplikację w Aplikacjach ▸ Otwórz. To Gatekeeper reaguje na obraz dysku wyglądający na niepodpisany, a nie uszkodzone pobranie.
+Instalator zapisuje zasoby raz, bez ponownego rozpakowywania programu przenośnego przy każdym uruchomieniu. Samo skopiowanie VgoOffice.exe pomija zasoby wymagane przez edytory.
 
-## W systemie Windows
+## Aktualizacje i preferencje
 
-Uruchom instalator `.exe`. Umieszcza GenOffice w menu Start i rejestruje `.docx`, `.xlsx`, `.pptx`, `.pdf` i podobne, więc dwuklik na plik go otwiera.
+Aktualizacje zachowują tożsamość instalacji i katalog profilu Eoffice. Nazwa katalogu Eoffice jest normalna ze względu na zgodność. W Ustawienia → Ogólne wybierz motyw jasny, ciemny lub systemowy; domyślne tło jest jasnoszaroniebieskie. Kolory dokumentów ustawia się osobno.
 
-## W systemie Linux
+## Wersja i projekt
 
-**Debian / Ubuntu**
+Ustawienia → O aplikacji pokazuje zainstalowaną wersję i odnośnik do projektu VgoOffice. Dodaj Star, jeśli projekt jest przydatny. Dostępność aktualizacji zależy od konfiguracji kompilacji; sprawdź wydania projektu, gdy aktualizacja w aplikacji nie jest dostępna.
 
-```sh
-sudo apt install ./genoffice_<version>_amd64.deb
-```
+[VgoOffice · Star](https://github.com/vgo1012/VgoOffice)
 
-**Fedora / RHEL / openSUSE**
+## Wiersz poleceń i AI
+
+Polecenie zgodności pozostaje genoffice. Ustawienia → Integracje pokazuje ścieżkę instalacji i konfigurację. Uruchom poniższe polecenie przez tę ścieżkę lub po dodaniu CLI do PATH.
 
 ```sh
-sudo dnf install ./genoffice-<version>.x86_64.rpm     # Fedora / RHEL family
-sudo zypper install ./genoffice-<version>.x86_64.rpm  # openSUSE
+genoffice --version
 ```
 
-**AppImage** — działa tam, gdzie leży, bez żadnego etapu instalacji:
+Logowanie do konta aplikacji zostało usunięte. Skonfiguruj własne API modeli, punkt końcowy zgodny z OpenAI lub zainstalowany Codex CLI. Uwierzytelnianie zewnętrzne i opłaty są niezależne; lokalna edycja nie wymaga konta VgoOffice.
 
-```sh
-chmod +x GenOffice-<version>.AppImage
-./GenOffice-<version>.AppImage
-```
-
-Wymaga środowiska uruchomieniowego FUSE 2. Jeśli wolisz go nie instalować, uruchom go z `--appimage-extract-and-run`, a sandbox zadziała z katalogu wypakowanego.
-
-## Kompilacja, którą uruchamiasz
-
-**Ustawienia ▸ O aplikacji** to miejsce, w którym aplikacja zgłasza posiadaną kompilację, kanał, za którym podąża, i to, gdzie mieszka projekt. Gdy na tym kanale pojawi się nowsza kompilacja, to samo okno zaproponuje aktualizację; instalacja przez Flatpak, Nix albo Docker tego nie robi, bo zastępuje je narzędzie, które je tam umieściło.
-
-![Ustawienia ▸ O aplikacji — zainstalowana wersja, kanał aktualizacji, za którym podąża aplikacja, oraz link do projektu na GitHubie](img/install.png)
-
-## Trzy inne drogi
-
-Wszystkie trzy opakowują opublikowane artefakty zamiast przebudowywać aplikację, więc pozostają zgodne z oficjalnymi plikami binarnymi.
-
-- **Flatpak** — instaluje `.deb` przez mechanizm `extra-data` Flatpaka i uruchamia go pod Zypakiem, który dostosowuje własny sandbox Electrona. Drzewo `/app` jest tylko do odczytu, więc aktualizacje przechodzą przez Flatpak, a nie przez okno aktualizacji w aplikacji.
-- **Nix** — wyrażenie pakietu, które budujesz z checkoutu poleceniem `nix-build packaging/nix`; zobacz `packaging/nix`.
-- **Docker** — obraz headless do konwersji wsadowej (`packaging/docker`). Konwertuje całe drzewo dokumentów Office, Markdown i HTML do PDF przez własny potok eksportu aplikacji, więc wynik jest taki sam jak po Plik ▸ Eksportuj. To narzędzie CLI, a nie serwer.
-
-## Wiersz poleceń jest w zestawie
-
-Każda instalacja zawiera polecenie `genoffice`, które komunikuje się z tymi samymi silnikami co okno, więc nigdy nie rozbieżą się w ocenie pliku. W systemach macOS i Windows znajduje się w pakiecie aplikacji; `genoffice install-cli` umieszcza je w `PATH`. Co potrafi, dowiesz się w rozdziale **Wiersz poleceń i agenci**.
+[Ustawienia integracji](help://settings-integrations) · [Modele AI](help://ai-models)

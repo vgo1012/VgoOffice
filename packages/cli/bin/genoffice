@@ -1,4 +1,5 @@
 #!/bin/sh
+# Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 # genoffice launcher. Inside a packaged GenOffice it runs the bundled CLI on the
 # app's own Node runtime (ELECTRON_RUN_AS_NODE); in a dev checkout it falls
 # back to the system node and the local build output. Usually reached through

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 快捷鍵一覽
 
 每個編輯器都有自己的按鍵綁定，其中只有少數在任何地方都通用。本頁是完整清單，按應用程式分組，macOS 與 Windows / Linux 的組合鍵並排列出。

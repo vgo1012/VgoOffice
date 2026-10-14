@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # PDF：阅读、注释与涂黑
 
 PDF 编辑器有五个功能区标签：**开始 / 注释 / 编辑 / 页面 / 视图**。它既能读也能改：文字可以编辑、可以涂黑（redact）、可以签名、可以填表单。

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Bắt đầu nhanh: giao diện và những điều cơ bản
 
 VgoOffice là bộ ứng dụng văn phòng chạy hoàn toàn trên máy của bạn: một cửa sổ, một hàng thẻ, chứa sáu trình soạn thảo — Docs (xử lý văn bản), Sheets (bảng tính), Slides (trình chiếu), PDF, Markdown và HTML. Tập tin đều là .docx / .xlsx / .pptx / .pdf thật, hoàn toàn tương thích với Word, Excel và PowerPoint. Không cần mạng.

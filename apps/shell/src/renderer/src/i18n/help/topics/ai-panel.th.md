@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # แผงผู้ช่วย AI
 
 ทุกตัวแก้ไขเรียกใช้แผง AI ได้: เลือกสิ่งที่ต้องการ สั่งงาน แล้วดูผลลัพธ์ที่ทยอยทีละส่วน

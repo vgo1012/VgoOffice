@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { existsSync, readFileSync } from 'node:fs'
 import { connect } from 'node:net'
 import { join } from 'node:path'
@@ -74,9 +75,9 @@ export function controlRequest(
     const unavailable = (why: string) =>
       settle(() =>
         reject(
-          new CliError(EXIT.app, `GenOffice did not answer: ${why}`, undefined, {
+          new CliError(EXIT.app, `VgoOffice did not answer: ${why}`, undefined, {
             reason: 'app_unavailable',
-            suggestion: 'start GenOffice (or `genoffice open <file>`) and retry',
+            suggestion: 'start VgoOffice (or `genoffice open <file>`) and retry',
           }),
         ),
       )

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # AI 助理面板
 
 每個編輯器都能叫出 AI 面板：選取內容、下達指令、觀看串流的結果。

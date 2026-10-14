@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { z } from 'zod'
 import type { CommandRegistry, OptionDef } from '../registry'
 import type { McpMode } from './run'
@@ -50,7 +51,7 @@ export interface ToolSpec {
   readOnly?: boolean
   /** the call reaches the configured cloud provider (search, image, media) */
   openWorld?: boolean
-  /** needs the GenOffice window in front of the client, so not registered in http mode */
+  /** needs the VgoOffice window in front of the client, so not registered in http mode */
   localOnly?: boolean
 }
 
@@ -83,7 +84,7 @@ const OPS_JSON = 'inline-json' as const
 const READ_THEN_APPLY =
   'Read the file with the matching *_read tool first: ops target the ids and indexes it lists. '
 const GUI_OPEN =
-  'A file open in a GenOffice tab is refused without force (the editor would overwrite the edit on its next save).'
+  'A file open in a VgoOffice tab is refused without force (the editor would overwrite the edit on its next save).'
 
 export const TOOLS: ToolSpec[] = [
   {
@@ -99,7 +100,7 @@ export const TOOLS: ToolSpec[] = [
     name: 'convert',
     command: 'convert',
     description:
-      'Convert a document to another format with the GenOffice engines (pdf, docx, xlsx, pptx, md, html, csv; the `to` description lists the routes). Targets that need layout (to pdf, docx to html, html to docx) start a hidden GenOffice process for 1-6 s. Output defaults to the input name with the new extension.',
+      'Convert a document to another format with the VgoOffice engines (pdf, docx, xlsx, pptx, md, html, csv; the `to` description lists the routes). Targets that need layout (to pdf, docx to html, html to docx) start a hidden VgoOffice process for 1-6 s. Output defaults to the input name with the new extension.',
     positionals: [{ key: 'file', description: 'path of the source document' }],
     options: ['to', 'out', 'force', 'password', 'sheet'],
   },
@@ -152,7 +153,7 @@ export const TOOLS: ToolSpec[] = [
     name: 'create_pdf',
     command: 'create',
     description:
-      'Print a document (md, html, docx, xlsx, pptx) to a new PDF with the GenOffice renderer, in a hidden GenOffice process.',
+      'Print a document (md, html, docx, xlsx, pptx) to a new PDF with the VgoOffice renderer, in a hidden VgoOffice process.',
     fixed: ['--type', 'pdf'],
     options: [
       { key: 'from', description: 'path of the document to print', required: true },
@@ -193,7 +194,7 @@ export const TOOLS: ToolSpec[] = [
         key: 'render',
         kind: 'boolean',
         description:
-          'render one PNG per slide after writing and return them as images (detail.previews); starts a hidden GenOffice process for a few seconds',
+          'render one PNG per slide after writing and return them as images (detail.previews); starts a hidden VgoOffice process for a few seconds',
       },
       {
         key: 'audit',
@@ -395,7 +396,7 @@ export const TOOLS: ToolSpec[] = [
     readOnly: true,
     images: true,
     description:
-      'One PNG per slide (960x540 at scale 1 for 16:9), written to a directory and returned as images so you can look at the pages. Starts a hidden GenOffice process (a few seconds). Use after building or editing a deck; slide renders one page.',
+      'One PNG per slide (960x540 at scale 1 for 16:9), written to a directory and returned as images so you can look at the pages. Starts a hidden VgoOffice process (a few seconds). Use after building or editing a deck; slide renders one page.',
     positionals: [{ key: 'file', description: 'path of the .pptx' }],
     options: [
       { key: 'out', description: 'directory for the PNGs (required)', required: true },
@@ -434,7 +435,7 @@ export const TOOLS: ToolSpec[] = [
     readOnly: true,
     images: true,
     description:
-      'One PNG per page of a document (docx, xlsx, pptx, pdf, md, html) as the GenOffice renderer lays it out, written to a directory and returned as images. Starts a hidden GenOffice process. page renders one page; grid adds a contact sheet of every page.',
+      'One PNG per page of a document (docx, xlsx, pptx, pdf, md, html) as the VgoOffice renderer lays it out, written to a directory and returned as images. Starts a hidden VgoOffice process. page renders one page; grid adds a contact sheet of every page.',
     positionals: [{ key: 'file', description: 'path of the document' }],
     options: [
       { key: 'out', description: 'directory for the PNGs (required)', required: true },
@@ -469,7 +470,7 @@ export const TOOLS: ToolSpec[] = [
     command: 'capabilities',
     readOnly: true,
     description:
-      'Which cloud features are configured in GenOffice: web search, image search, image generation, media understanding. Check once before planning photos or live facts; everything else runs locally.',
+      'Which cloud features are configured in VgoOffice: web search, image search, image generation, media understanding. Check once before planning photos or live facts; everything else runs locally.',
   },
   {
     name: 'search',
@@ -477,7 +478,7 @@ export const TOOLS: ToolSpec[] = [
     openWorld: true,
     readOnly: true,
     description:
-      'Web search, or image search with images=true, through the provider configured in GenOffice (the query leaves the machine). Image results carry imageUrl, width and height for addPicture / insert_image.',
+      'Web search, or image search with images=true, through the provider configured in VgoOffice (the query leaves the machine). Image results carry imageUrl, width and height for addPicture / insert_image.',
     positionals: [{ key: 'query', description: 'the search query' }],
     options: ['images', 'max'],
   },
@@ -486,7 +487,7 @@ export const TOOLS: ToolSpec[] = [
     command: 'image',
     openWorld: true,
     description:
-      'Generate an image from a prompt with the provider configured in GenOffice and save it; the result names the real format. ref images steer edits (background removal, upscale).',
+      'Generate an image from a prompt with the provider configured in VgoOffice and save it; the result names the real format. ref images steer edits (background removal, upscale).',
     positionals: [{ key: 'prompt', description: 'what to draw' }],
     options: ['out', 'aspect', 'size', 'ref', 'model', 'force'],
   },
@@ -505,7 +506,7 @@ export const TOOLS: ToolSpec[] = [
     command: 'open',
     localOnly: true,
     description:
-      'Open a document in the GenOffice app for the user (starts the app if needed), optionally selecting a slide, element, block, range or page. Only when the user asks to see the file: an open tab makes later *_apply calls refuse to write.',
+      'Open a document in the VgoOffice app for the user (starts the app if needed), optionally selecting a slide, element, block, range or page. Only when the user asks to see the file: an open tab makes later *_apply calls refuse to write.',
     positionals: [{ key: 'file', description: 'path of the document' }],
     options: ['slide', 'el', 'block', 'range', 'sheet', 'page'],
   },
@@ -515,8 +516,8 @@ export const TOOLS: ToolSpec[] = [
     localOnly: true,
     readOnly: true,
     description:
-      "What the user currently has selected in the GenOffice editor showing this file: slide + element ids, a block range with its text, a sheet range, or a pdf page. The user's own pointer for 'this one' / 'here'; needs the file open in the app.",
-    positionals: [{ key: 'file', description: 'path of the document open in GenOffice' }],
+      "What the user currently has selected in the VgoOffice editor showing this file: slide + element ids, a block range with its text, a sheet range, or a pdf page. The user's own pointer for 'this one' / 'here'; needs the file open in the app.",
+    positionals: [{ key: 'file', description: 'path of the document open in VgoOffice' }],
   },
 ]
 

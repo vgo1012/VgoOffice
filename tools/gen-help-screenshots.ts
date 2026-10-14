@@ -1,3 +1,5 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /**
  * Regenerate the manual's screenshots: `npx tsx tools/gen-help-screenshots.ts`
  *
@@ -19,10 +21,9 @@
  * `~/.genoffice/bin` shim. `GENOFFICE_AUTH_DIR` is not enough on its own: it
  * redirects GenOffice's own key and leaves the shared gsk CLI config in place.
  *
- * With no key, `gskLoginInfo()` returns null, the app reads as signed out, and
- * the greeting, the account row and the Genspark Projects entry all disappear —
- * which is also the state every CI run and every user without a Genspark account
- * is in. Nothing of the developer's own session is read or written.
+ * VgoOffice removes desktop account login. Isolating the profile still matters
+ * because configured model credentials and local file paths must never appear
+ * in a public figure. Nothing of the developer's own session is read or written.
  */
 import {
   _electron as electron,
@@ -60,7 +61,7 @@ function minimalPdf(): Buffer {
     null, // stream, filled below
     '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',
   ]
-  const stream = `BT /F1 18 Tf 72 700 Td (GenOffice Manual Sample) Tj ET\nBT /F1 11 Tf 72 660 Td (This paragraph is here so you can try text selection.) Tj ET\nBT /F1 11 Tf 72 620 Td (SECRET ONE needs redaction.) Tj ET\nBT /F1 11 Tf 72 580 Td (More filler text on the sample page.) Tj ET`
+  const stream = `BT /F1 18 Tf 72 700 Td (VgoOffice Manual Sample) Tj ET\nBT /F1 11 Tf 72 660 Td (This paragraph is here so you can try text selection.) Tj ET\nBT /F1 11 Tf 72 620 Td (SECRET ONE needs redaction.) Tj ET\nBT /F1 11 Tf 72 580 Td (More filler text on the sample page.) Tj ET`
   objects[3] = `<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`
   let pdf = '%PDF-1.4\n'
   const offsets: number[] = []
@@ -84,7 +85,7 @@ interface Scratch {
 }
 
 async function makeScratch(): Promise<Scratch> {
-  const root = mkdtempSync(join(tmpdir(), 'genoffice-help-shots-'))
+  const root = mkdtempSync(join(tmpdir(), 'vgooffice-help-shots-'))
   const home = join(root, 'home')
   const userData = join(root, 'userdata')
   const samples = join(root, 'help-samples')
@@ -95,7 +96,7 @@ async function makeScratch(): Promise<Scratch> {
   // /var/folders/<xx>/<per-user-hash>/T, so it differs per machine. This has to
   // be absolute and creatable, which is all resolveDefaultSaveDir asks of a
   // configured dir.
-  const saveDir = process.platform === 'win32' ? 'C:\\GenOffice' : '/tmp/GenOffice'
+  const saveDir = process.platform === 'win32' ? 'C:\\VgoOffice' : '/tmp/VgoOffice'
   for (const dir of [home, userData, samples, saveDir]) mkdirSync(dir, { recursive: true })
 
   // the file list the Home figure shows; types only — the figures are about
@@ -152,10 +153,14 @@ async function launch(scratch: Scratch, lang: string): Promise<ElectronApplicati
     env: {
       ...hostEnv,
       HOME: scratch.home,
+      USERPROFILE: scratch.home,
+      APPDATA: join(scratch.home, 'AppData', 'Roaming'),
+      LOCALAPPDATA: join(scratch.home, 'AppData', 'Local'),
       GENOFFICE_USER_DATA: scratch.userData,
       GENOFFICE_AUTH_DIR: join(scratch.home, '.genoffice'),
       GENOFFICE_NO_SPARE_VIEW: '1',
       GENOFFICE_LANG: lang,
+      APPIMAGE: 'vgooffice-help-capture',
     },
   })
 }

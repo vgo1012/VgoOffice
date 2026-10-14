@@ -1,69 +1,39 @@
-# Installing GenOffice
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
 
-> The following is the upstream GenOffice installation reference. For VgoOffice, use the supplied Windows installer.
+# Installing VgoOffice
 
-Every build is published on the [Releases page](https://github.com/genspark-ai/genoffice/releases/latest). All of them come from `main`; the macOS and Windows installers are signed.
+[Releases](https://github.com/vgo1012/VgoOffice/releases) — Use an installer attached to a release. This page does not imply that a GitHub binary has already been published. Local builds are unsigned unless signing credentials are provided.
 
-## Pick the file for your machine
+## Before you install
 
-| Platform                             | Requirements                                          | File                   |
-| ------------------------------------ | ----------------------------------------------------- | ---------------------- |
-| **macOS** — Apple Silicon            | macOS 11+                                             | `.dmg` (arm64)         |
-| **macOS** — Intel                    | macOS 11+                                             | `.dmg` (x64)           |
-| **Windows** — most PCs               | Windows 10+, Intel/AMD                                | `-x64.exe` installer   |
-| **Windows** on Arm                   | Windows 11 on Arm (Snapdragon X and similar)          | `-arm64.exe` installer |
-| **Linux** — Debian / Ubuntu          | x86_64, glibc 2.34+ (Ubuntu 22.04 or newer)           | `.deb`                 |
-| **Linux** — Fedora / RHEL / openSUSE | x86_64, glibc 2.34+ (Fedora 35+, RHEL 9+, Leap 15.6+) | `.rpm`                 |
-| **Linux** — anything else            | x86_64, glibc 2.34+, FUSE 2                           | `.AppImage`            |
+This customized edition has been tested on Windows x64. macOS and Linux source targets remain, but this edition has not been validated on those platforms. Choose a package only when its release explicitly supports your operating system.
 
-Older versions stay on the Releases page.
+## Install and start
 
-## On macOS
+1. Save open documents and close the previous version before upgrading.
+2. Run the Windows .exe installer and complete installation.
+3. Start VgoOffice from its desktop or Start menu shortcut.
 
-Open the `.dmg` and drag **GenOffice** into Applications. On an Intel build the first launch asks you to confirm opening it: right-click the app in Applications ▸ Open. That is Gatekeeper meeting an unsigned-seeming disk image, not a damaged download.
+The installer stores resources once, so normal startup avoids unpacking a portable executable each time. Copying only VgoOffice.exe omits required editor resources.
 
-## On Windows
+## Upgrading and preferences
 
-Run the `.exe` installer. It puts GenOffice in the Start menu and registers `.docx`, `.xlsx`, `.pptx`, `.pdf` and friends so double-clicking a file opens it.
+Upgrades retain the existing Eoffice installation identity and profile directory. A folder still named Eoffice is expected for compatibility. In Settings → General, select light, dark or system appearance; the default background is light blue-gray. Document colors are controlled separately.
 
-## On Linux
+## Your version and project
 
-**Debian / Ubuntu**
+Settings → About shows your installed version and links to the VgoOffice project. Give the repository a Star if it helps you. Update availability depends on the build configuration; check the project's Releases page when in-app updates are unavailable.
 
-```sh
-sudo apt install ./genoffice_<version>_amd64.deb
-```
+[VgoOffice · Star](https://github.com/vgo1012/VgoOffice)
 
-**Fedora / RHEL / openSUSE**
+## Command line and AI
+
+The compatibility command remains genoffice. Settings → Integrations shows its installed path and integration setup. Run the command below using that path or after adding the CLI to PATH.
 
 ```sh
-sudo dnf install ./genoffice-<version>.x86_64.rpm     # Fedora / RHEL family
-sudo zypper install ./genoffice-<version>.x86_64.rpm  # openSUSE
+genoffice --version
 ```
 
-**AppImage** — runs where it is, with no install step:
+Desktop account login has been removed. Configure your own model API, an OpenAI-compatible endpoint or an installed Codex CLI. Third-party authentication and usage fees remain separate; local editing needs no VgoOffice account.
 
-```sh
-chmod +x GenOffice-<version>.AppImage
-./GenOffice-<version>.AppImage
-```
-
-It needs the FUSE 2 runtime. If you would rather not install it, run it with `--appimage-extract-and-run` and the sandbox works from the extracted directory.
-
-## The build you are running
-
-**Settings ▸ About** is where the app reports the build you have, the channel it follows and where the project lives. When a newer build is published on that channel, the same pane offers the update; a Flatpak, Nix or Docker install does not, because those are replaced by the tool that put them there.
-
-![Settings ▸ About, showing the installed version, the update channel the app follows, and the project's GitHub link](img/install.png)
-
-## Three more routes
-
-All three wrap the published artifacts rather than rebuilding the app, so they track the official binaries.
-
-- **Flatpak** — installs the `.deb` through Flatpak's `extra-data` mechanism and runs it under Zypak, which adapts Electron's own sandbox. The `/app` tree is read-only, so updates go through Flatpak rather than the in-app update dialog.
-- **Nix** — a package expression you build from a checkout with `nix-build packaging/nix`; see `packaging/nix`.
-- **Docker** — a headless batch-conversion image (`packaging/docker`). It converts a whole tree of Office, Markdown and HTML documents to PDF through the app's own export pipeline, so the output is what File ▸ Export would produce. It is a CLI utility, not a server.
-
-## The command line comes with it
-
-Every install ships a `genoffice` command that talks to the same engines the window does, so the two never disagree about a file. On macOS and Windows it is inside the app bundle; `genoffice install-cli` puts it on your `PATH`. See **Command line and agents** for what it can do.
+[Integration settings](help://settings-integrations) · [AI models](help://ai-models)

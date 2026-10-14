@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Operasi file: ganti nama, hapus, ekspor
 
 Bab ini mencakup operasi file yang dipakai bersama oleh semua editor; pilihan ekspor khas tiap editor ada di babnya masing-masing.

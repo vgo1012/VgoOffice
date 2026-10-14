@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Quick start: the interface and the basics
 
 VgoOffice is an office suite that runs entirely on your machine: one window, one row of tabs, holding six editors — Docs (word processing), Sheets (spreadsheets), Slides (presentations), PDF, Markdown and HTML. Files are genuine .docx / .xlsx / .pptx / .pdf, fully interchangeable with Word, Excel and PowerPoint. No network required.

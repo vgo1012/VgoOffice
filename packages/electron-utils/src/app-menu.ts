@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /// Localized replacements for Electron role menus, whose built-in labels are
 /// English-only and (for role:'windowMenu' on Windows/Linux) follow macOS
 /// conventions (Zoom, Ctrl+M minimize, Bring All to Front).

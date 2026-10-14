@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Opdrachtregel en agents
 
 Elke installatie bevat een `genoffice`-commando dat dezelfde engines aanstuurt als het venster — dezelfde parsers, dezelfde writer, dezelfde renderer. Een bestand dat de app opslaat en een bestand dat de opdracht schrijft zijn hetzelfde bestand, en een controle die het AI-paneel van de app doorstaat, doorstaat de opdracht ook.
@@ -32,7 +34,7 @@ macOS en Windows leveren het mee in de app-bundel. Om het bij naam aan te roepen
 | `capabilities`    | Meldt welke cloudfuncties op deze computer zijn ingesteld.                                                                                                                                                                                                                    |
 | `guide`           | De op-referentie en de ontwerphoogedelen, gegenereerd uit dezelfde definities waarop de executor valideert — dus kan niet afwijken van wat `apply` accepteert. `--json` geeft ze met het schema van elke op.                                                                  |
 | `install-cli`     | Zet `genoffice` in de `PATH`.                                                                                                                                                                                                                                                 |
-| `skill`           | Toont de coding agents op deze computer en installeert of werkt de GenOffice-skill daarin bij.                                                                                                                                                                                |
+| `skill`           | Toont de coding agents op deze computer en installeert of werkt de VgoOffice-skill daarin bij.                                                                                                                                                                                |
 | `mcp`             | Biedt elke opdracht aan als Model Context Protocol-tool. Zie **Verbinden met een coding agent**.                                                                                                                                                                              |
 
 ## Bewerken: docs, sheets, slides

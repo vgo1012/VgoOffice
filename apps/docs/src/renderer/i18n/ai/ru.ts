@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const ru = {
@@ -9,7 +10,7 @@ export const ru = {
   aiStarterContinue: 'Продолжи текст с того места, где он обрывается',
   aiStarterFillTemplate: 'Найди и заполни местозаполнители в документе',
   aiGskLoginBtn: 'Войти в Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'Открыть ИИ-помощника',
   aiSummarizeBtn: 'ИИ-резюме',
   aiSummarizePrompt: 'Кратко изложите основное содержание и ключевые моменты этого документа',

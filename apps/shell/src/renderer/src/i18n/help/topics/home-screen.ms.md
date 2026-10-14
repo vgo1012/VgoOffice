@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Skrin Laman Utama: di mana fail anda berada
 
 Laman Utama ialah halaman permulaan VgoOffice: bar navigasi di kiri, senarai fail dan kad penciptaan pantas di kanan.

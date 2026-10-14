@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # התחלה מהירה: הממשק והבסיס
 
 ‏VgoOffice היא חבילת משרד שרצה כולה על המחשב שלך: חלון אחד, שורת כרטיסיות אחת, ובתוכה שישה עורכים — Docs (עיבוד תמלילים), Sheets (גיליונות), Slides (מצגות), PDF, Markdown ו-HTML. הקבצים הם .docx / .xlsx / .pptx / .pdf אמיתיים, ניתנים להחלפה מלאה עם Word, Excel ו-PowerPoint. לא נדרשת רשת.

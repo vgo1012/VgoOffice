@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # AI सहायक पैनल
 
 हर एडिटर AI पैनल बुला सकता है: कुछ चुनें, निर्देश दें, और स्ट्रीम होता परिणाम देखें।

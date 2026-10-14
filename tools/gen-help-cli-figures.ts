@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /**
  * Regenerate the three manual figures that are not screens: `npx tsx tools/gen-help-cli-figures.ts`
  *
@@ -127,9 +128,9 @@ function figureHtml(title: string, blocks: { command: string; output: string }[]
 <style>
   /* App dark theme, copied from packages/ui/src/tokens.css [data-theme='dark']. */
   :root {
-    --canvas: #2b2b2b; --surface: #1e1e1e; --surface-subtle: #2a2a2a;
-    --border: #3a3a3a; --text-primary: #e4e4e4; --text-secondary: #a0a0a0;
-    --text-tertiary: #8a8a8a; --brand: #4a9eff; --radius-12: 12px;
+    --canvas: #101e34; --surface: #172a45; --surface-subtle: #1d3351;
+    --border: #2b4362; --text-primary: #e8f0fa; --text-secondary: #b7c8de;
+    --text-tertiary: #a5b9d3; --brand: #4a9eff; --radius-12: 12px;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
@@ -167,7 +168,7 @@ function figureHtml(title: string, blocks: { command: string; output: string }[]
 </style></head>
 <body>
   <div class="card">
-    <div class="head"><span class="app">GenOffice</span><span class="sep">—</span><span>${escapeHtml(title)}</span></div>
+    <div class="head"><span class="app">VgoOffice</span><span class="sep">—</span><span>${escapeHtml(title)}</span></div>
     <div class="term">
 ${body}
     </div>
@@ -231,18 +232,8 @@ async function dismissStarPrompt(page: Page): Promise<void> {
  * the build you are on and replaces it. Same scratch profile as the app
  * generator, so the figure cannot pick up a developer's account or home path.
  *
- * One row of this pane is not reproducible: "Open Source" appends the live
- * stargazer count, which the main process fetches from api.github.com. It is
- * real and correct in the figure, but it moves whenever the repo is starred, so
- * a regeneration that shows a different number is the count changing and not a
- * capture going wrong. Three ways of pinning it were tried and all failed
- * without touching product code, which is why it is documented instead of
- * hidden: contextBridge freezes window.aiOffice so the renderer cannot be made
- * to ignore it, a Chromium --host-resolver-rules switch does not reach the main
- * process's own fetch, and Electron strips NODE_OPTIONS=--require, so a preload
- * shim never runs. The app has no offline flag for it either. If this ever
- * needs to be stable, the fix belongs in the product (a capture flag next to
- * the fetch), not in this script.
+ * VgoOffice shows its own repository link without fetching a live star count,
+ * so this pane can be captured without an external GitHub request.
  */
 async function shootInstall(): Promise<void> {
   const require = createRequire(join(SHELL_DIR, 'package.json'))

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { existsSync, readFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { homedir } from 'node:os'
@@ -95,7 +96,7 @@ export interface AppLaunch {
   args: string[]
 }
 
-/** How to start the GenOffice GUI: the app binary that hosts this CLI, an installed app, or the dev checkout. */
+/** How to start the VgoOffice GUI: the app binary that hosts this CLI, an installed app, or the dev checkout. */
 export function appLaunch(env: NodeJS.ProcessEnv = process.env): AppLaunch | null {
   if (env.GENOFFICE_APP_BIN) return { command: env.GENOFFICE_APP_BIN, args: [] }
   if (packagedResourcesDir() && process.versions.electron) {

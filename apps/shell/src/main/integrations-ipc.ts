@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { app, clipboard, dialog, ipcMain, type BrowserWindow } from 'electron'

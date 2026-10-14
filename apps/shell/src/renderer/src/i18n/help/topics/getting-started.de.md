@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Schnellstart: die Oberfläche und die Grundlagen
 
 VgoOffice ist ein Office-Paket, das vollständig auf Ihrem Rechner läuft: ein Fenster, eine Reihe von Tabs, darin sechs Editoren — Docs (Textverarbeitung), Sheets (Tabellenkalkulation), Slides (Präsentationen), PDF, Markdown und HTML. Die Dateien sind echte .docx / .xlsx / .pptx / .pdf und lassen sich vollständig mit Word, Excel und PowerPoint austauschen. Kein Netzwerk nötig.

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Szybki start: interfejs i podstawy
 
 VgoOffice to pakiet biurowy działający w całości na Twoim komputerze: jedno okno, jeden rząd kart, w którym mieści się sześć edytorów — Docs (edytor tekstu), Sheets (arkusze), Slides (prezentacje), PDF, Markdown i HTML. Pliki to prawdziwe pliki .docx / .xlsx / .pptx / .pdf, w pełni zgodne z Wordem, Excelem i PowerPointem. Nie jest potrzebne połączenie z siecią.

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const ko = {
@@ -9,7 +10,7 @@ export const ko = {
   aiStarterContinue: '지금 내용에 이어서 계속 써 줘',
   aiStarterFillTemplate: '문서의 자리 표시자를 찾아 채워 줘',
   aiGskLoginBtn: 'Genspark 로그인',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'AI 도우미 열기',
   aiSummarizeBtn: 'AI 요약',
   aiSummarizePrompt: '이 문서의 주요 내용과 핵심 사항을 요약해 주세요',

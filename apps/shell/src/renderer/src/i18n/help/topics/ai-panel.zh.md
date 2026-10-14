@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # AI 助手面板
 
 每个编辑器都能唤起 AI 面板：选中内容、下指令、看流式结果。

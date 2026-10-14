@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Operaciones de archivo: cambiar nombre, eliminar, exportar
 
 Este capítulo cubre las operaciones de archivo comunes a todos los editores; las opciones de exportación propias de cada editor están en su capítulo.

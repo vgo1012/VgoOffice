@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const id = {
@@ -9,7 +10,7 @@ export const id = {
   aiStarterContinue: 'Lanjutkan menulis dari bagian akhir dokumen',
   aiStarterFillTemplate: 'Temukan dan isi placeholder di dokumen ini',
   aiGskLoginBtn: 'Masuk ke Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'Buka asisten AI',
   aiSummarizeBtn: 'Ringkasan AI',
   aiSummarizePrompt: 'Ringkas isi utama dan poin-poin penting dokumen ini',

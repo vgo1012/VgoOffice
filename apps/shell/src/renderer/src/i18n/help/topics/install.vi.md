@@ -1,69 +1,39 @@
-# Cài đặt GenOffice
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
 
-> Dưới đây là hướng dẫn cài đặt của dự án gốc GenOffice. Với VgoOffice, hãy dùng trình cài đặt Windows được cung cấp.
+# Cài đặt VgoOffice
 
-Mọi bản dựng đều được công bố trên [trang phát hành](https://github.com/genspark-ai/genoffice/releases/latest). Tất cả đều đến từ `main`; và trình cài đặt cho macOS và Windows đã được ký.
+[Bản phát hành](https://github.com/vgo1012/VgoOffice/releases) — Dùng trình cài đặt đính kèm bản phát hành. Trang này không có nghĩa là đã công bố tệp nhị phân trên GitHub. Bản dựng cục bộ không được ký nếu không cung cấp thông tin ký mã.
 
-## Chọn tệp cho máy của bạn
+## Trước khi cài đặt
 
-| Nền tảng                             | Yêu cầu                                               | Tệp                        |
-| ------------------------------------ | ----------------------------------------------------- | -------------------------- |
-| **macOS** — Apple Silicon            | macOS 11+                                             | `.dmg` (arm64)             |
-| **macOS** — Intel                    | macOS 11+                                             | `.dmg` (x64)               |
-| **Windows** — hầu hết PC             | Windows 10+, Intel/AMD                                | trình cài đặt `-x64.exe`   |
-| **Windows** trên Arm                 | Windows 11 trên Arm (Snapdragon X và tương tự)        | trình cài đặt `-arm64.exe` |
-| **Linux** — Debian / Ubuntu          | x86_64, glibc 2.34+ (Ubuntu 22.04 hoặc mới hơn)       | `.deb`                     |
-| **Linux** — Fedora / RHEL / openSUSE | x86_64, glibc 2.34+ (Fedora 35+, RHEL 9+, Leap 15.6+) | `.rpm`                     |
-| **Linux** — thứ khác                 | x86_64, glibc 2.34+, FUSE 2                           | `.AppImage`                |
+Phiên bản này đã được kiểm tra trên Windows x64. Các mục tiêu macOS và Linux vẫn được giữ trong mã nguồn, nhưng phiên bản này chưa được xác minh ở đó. Chỉ chọn gói khi bản phát hành nêu rõ hỗ trợ hệ điều hành của bạn.
 
-Các bản cũ hơn vẫn nằm trên trang phát hành.
+## Cài đặt và khởi chạy
 
-## Trên macOS
+1. Lưu tài liệu đang mở và đóng phiên bản cũ trước khi nâng cấp.
+2. Chạy trình cài đặt .exe của Windows đến khi hoàn tất.
+3. Khởi chạy VgoOffice từ lối tắt trên màn hình hoặc menu Bắt đầu.
 
-Mở tệp `.dmg` rồi kéo **GenOffice** vào Applications. Với bản dựng Intel, lần chạy đầu tiên sẽ yêu cầu bạn xác nhận việc mở: nhấp phải vào ứng dụng trong Applications ▸ Mở. Đó là Gatekeeper gặp một đĩa ảnh trông như không có chữ ký, chứ không phải tệp tải về bị hỏng.
+Trình cài đặt lưu tài nguyên một lần, tránh giải nén chương trình di động mỗi lần khởi chạy. Chỉ sao chép VgoOffice.exe sẽ thiếu tài nguyên của các trình biên tập.
 
-## Trên Windows
+## Nâng cấp và tùy chọn
 
-Chạy trình cài đặt `.exe`. Nó đưa GenOffice vào menu Start và đăng ký `.docx`, `.xlsx`, `.pptx`, `.pdf` cùng các định dạng tương tự, để nhấp đúp vào một tệp là mở được tệp đó.
+Nâng cấp giữ định danh cài đặt và thư mục hồ sơ Eoffice hiện có. Tên thư mục Eoffice là bình thường để duy trì tương thích. Trong Cài đặt → Chung, chọn sáng, tối hoặc theo hệ thống; nền mặc định là xanh xám nhạt. Màu tài liệu được điều khiển riêng.
 
-## Trên Linux
+## Phiên bản và dự án
 
-**Debian / Ubuntu**
+Cài đặt → Giới thiệu hiển thị phiên bản và liên kết VgoOffice. Hãy tặng kho mã một Star nếu hữu ích. Cập nhật phụ thuộc cấu hình bản dựng; xem trang phát hành nếu không có cập nhật trong ứng dụng.
 
-```sh
-sudo apt install ./genoffice_<version>_amd64.deb
-```
+[VgoOffice · Star](https://github.com/vgo1012/VgoOffice)
 
-**Fedora / RHEL / openSUSE**
+## Dòng lệnh và AI
+
+Lệnh tương thích vẫn là genoffice. Cài đặt → Tích hợp hiển thị đường dẫn và cấu hình. Chạy lệnh dưới qua đường dẫn đó hoặc sau khi thêm CLI vào PATH.
 
 ```sh
-sudo dnf install ./genoffice-<version>.x86_64.rpm     # Fedora / RHEL family
-sudo zypper install ./genoffice-<version>.x86_64.rpm  # openSUSE
+genoffice --version
 ```
 
-**AppImage** — chạy ngay tại chỗ, không cần bước cài đặt:
+Đăng nhập tài khoản ứng dụng đã bị loại bỏ. Cấu hình API mô hình của bạn, điểm cuối tương thích OpenAI hoặc Codex CLI đã cài. Xác thực và phí bên thứ ba vẫn độc lập; chỉnh sửa cục bộ không cần tài khoản VgoOffice.
 
-```sh
-chmod +x GenOffice-<version>.AppImage
-./GenOffice-<version>.AppImage
-```
-
-Nó cần môi trường chạy FUSE 2. Nếu bạn không muốn cài đặt, hãy chạy với `--appimage-extract-and-run`, và hộp cát sẽ hoạt động từ thư mục đã giải nén.
-
-## Bản dựng bạn đang chạy
-
-**Cài đặt ▸ Giới thiệu** là nơi ứng dụng báo bạn đang có bản dựng nào, đang theo kênh nào và dự án nằm ở đâu. Khi bản dựng mới hơn được phát hành trên kênh đó, chính bảng đó sẽ đề nghị cập nhật; bản cài đặt qua Flatpak, Nix hoặc Docker thì không, vì bị công cụ đã cài chúng thay thế.
-
-![Cài đặt ▸ Giới thiệu, hiển thị phiên bản đã cài, kênh cập nhật mà ứng dụng theo dõi và liên kết GitHub của dự án](img/install.png)
-
-## Ba cách nữa
-
-Cả ba đều bọc các tệp đã phát hành thay vì dựng lại ứng dụng, nên chúng bám theo tệp nhị phân chính thức.
-
-- **Flatpak** — cài tệp `.deb` qua cơ chế `extra-data` của Flatpak và chạy dưới Zypak, bộ điều hợp hộp cát riêng của Electron. Cây `/app` là chỉ đọc, nên các bản cập nhật đi qua Flatpak chứ không qua hộp thoại cập nhật trong ứng dụng.
-- **Nix** — một biểu thức gói mà bạn dựng từ một bản sao mã nguồn bằng `nix-build packaging/nix`; xem `packaging/nix`.
-- **Docker** — một ảnh chuyển đổi hàng loạt không giao diện (`packaging/docker`). Nó chuyển cả một cây tài liệu Office, Markdown và HTML sang PDF qua đúng dãy xuất của ứng dụng, nên kết quả đúng bằng thứ mà File ▸ Xuất sẽ tạo ra. Đây là tiện ích CLI, không phải máy chủ.
-
-## Dòng lệnh đi kèm luôn
-
-Mọi bản cài đặt đều kèm lệnh `genoffice` nói chuyện với đúng những engine mà cửa sổ dùng, nên cả hai không bao giờ bất đồng về một tệp. Trên macOS và Windows nó nằm trong gói ứng dụng; và `genoffice install-cli` đưa nó vào `PATH` của bạn. Xem **Dòng lệnh và tác nhân** để biết nó làm được gì.
+[Cài đặt tích hợp](help://settings-integrations) · [Mô hình AI](help://ai-models)

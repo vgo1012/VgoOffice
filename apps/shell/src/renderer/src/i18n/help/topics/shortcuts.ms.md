@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Pintasan papan kekunci
 
 Setiap editor mempunyai pengikatan kekunci sendiri, dan hanya sebahagian kecil daripadanya berfungsi di mana-mana sahaja. Halaman ini ialah senarai penuh, dikelompokkan mengikut aplikasi, dengan pintasan macOS dan Windows / Linux bersebelahan.

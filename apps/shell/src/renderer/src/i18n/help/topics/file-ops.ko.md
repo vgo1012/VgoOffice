@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 파일 작업: 이름 바꾸기, 삭제, 내보내기
 
 이 장에서는 모든 편집기에 공통인 파일 작업을 설명합니다. 편집기마다 따로 있는 내보내기 선택지는 각 장에서 다룹니다.

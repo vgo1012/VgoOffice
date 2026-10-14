@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 // Repo-wide lint config (lint only — no formatter, so no whole-repo format diff).
 // Rules are tuned so the current codebase passes cleanly; tighten incrementally.
 import js from '@eslint/js'
@@ -8,6 +9,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 export default tseslint.config(
   {
     ignores: [
+      '.local/**',
       '**/node_modules/**',
       '**/dist/**',
       '**/out/**',

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Kết nối tác nhân lập trình
 
 VgoOffice nói chuyện theo Model Context Protocol, nên một tác nhân lập trình có thể đọc, ghi và kết xuất tài liệu của bạn qua đúng những engine mà ứng dụng dùng. Tác nhân không phải đoán mò một định dạng tệp: nó nhận lược đồ thao tác có kiểu từ đúng những định nghĩa mà bộ thực thi dùng để kiểm tra.

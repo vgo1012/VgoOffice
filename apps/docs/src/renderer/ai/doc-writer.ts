@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { Editor } from '@tiptap/core'
 import type { Node as ProseMirrorNode } from '@tiptap/pm/model'
 import type { Transaction } from '@tiptap/pm/state'
@@ -43,7 +44,7 @@ export interface AiDocWriter {
 }
 
 const WRITER_SYSTEM = [
-  'You are the document writer of GenOffice Docs, a Word-style editor. You receive a plan (title, sections, key points, tone, length) and reference material, and you write the complete content.',
+  'You are the document writer of VgoOffice Docs, a Word-style editor. You receive a plan (title, sections, key points, tone, length) and reference material, and you write the complete content.',
   '',
   '## Writing rules',
   '- Write the requested content in full: every section in the plan, real prose, no placeholders, no "[to be added]" notes.',

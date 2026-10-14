@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Perintah baris perintah dan agen
 
 Setiap pemasangan membawa perintah `genoffice` yang menjalankan mesin yang sama dengan jendela — parser yang sama, penulis yang sama, perender yang sama. Berkas yang disimpan aplikasi dan berkas yang ditulis perintah itu adalah berkas yang sama, dan pemeriksaan yang lolos di panel AI aplikasi juga lolos di perintah.
@@ -32,7 +34,7 @@ macOS dan Windows menyertakannya di dalam bundel aplikasi. Untuk memanggilnya de
 | `capabilities`    | Melaporkan fitur awan mana yang sudah dikonfigurasi di komputer ini.                                                                                                                                                                                     |
 | `guide`           | Referensi op dan panduan desain, dibangkitkan dari definisi yang sama dengan yang dipakai eksekutor untuk memvalidasi — jadi tidak mungkin melenceng dari apa yang diterima `apply`. `--json` mengembalikannya beserta skema tiap op.                    |
 | `install-cli`     | Menaruh `genoffice` di `PATH`.                                                                                                                                                                                                                           |
-| `skill`           | Mendaftarkan agen pemrograman yang ditemukan di komputer ini, lalu memasang atau memperbarui skill GenOffice di dalamnya.                                                                                                                                |
+| `skill`           | Mendaftarkan agen pemrograman yang ditemukan di komputer ini, lalu memasang atau memperbarui skill VgoOffice di dalamnya.                                                                                                                                |
 | `mcp`             | Menyajikan semua perintah sebagai alat Model Context Protocol. Lihat **Menghubungkan agen pemrograman**.                                                                                                                                                 |
 
 ## Menyunting: dokumen, lembar, presentasi

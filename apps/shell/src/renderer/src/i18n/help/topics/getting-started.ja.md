@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # クイックスタート：画面と基本操作
 
 VgoOffice は自分のマシン上でだけで動くオフィススイートです。ウィンドウ 1 つ、タブの列 1 行に 6 種類のエディター — Docs（文書処理）、Sheets（表計算）、Slides（プレゼンテーション）、PDF、Markdown、HTML — が入っています。扱うファイルは本物の .docx / .xlsx / .pptx / .pdf で、Word、Excel、PowerPoint と完全にやり取りできます。ネットワークは不要です。

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 首頁（Home）：檔案都在哪裡
 
 首頁是 VgoOffice 的起始頁：左側是導覽側邊欄，右側是檔案清單與快速建立卡片。

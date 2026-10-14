@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const id = {
@@ -18,7 +19,7 @@ export const id = {
   aiQcStopped: 'Pemeriksaan tata letak dihentikan',
   aiQcCapped: '{count} halaman lagi tidak diperiksa (batas per proses)',
   aiGskLoginBtn: 'Masuk ke Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'Buka asisten AI',
   aiFactCheckBtn: 'Cek Fakta AI',
   aiFactCheckPrompt:

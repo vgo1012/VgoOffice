@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Быстрый старт: интерфейс и основы
 
 VgoOffice — офисный пакет, который работает целиком на вашем компьютере: одно окно, один ряд вкладок и шесть редакторов — Docs (работа с текстом), Sheets (электронные таблицы), Slides (презентации), PDF, Markdown и HTML. Файлы настоящие: .docx / .xlsx / .pptx / .pdf, полностью совместимые с Word, Excel и PowerPoint. Сеть не требуется.

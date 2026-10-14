@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { imageSearchTool, webSearchTool } from '@genoffice/ai-search'
 import { flagBool, flagString } from '../args'
 import { aiSettingsPath, prepareCloud } from '../cloud'
@@ -7,7 +8,7 @@ import { CliError, EXIT } from '../result'
 export const searchCommand: CommandDef = {
   name: 'search',
   summary:
-    'Web or image search through the provider configured in GenOffice (Genspark, Serper, Serply, Tavily, Parallel).',
+    'Web or image search through the provider configured in VgoOffice (Genspark, Serper, Serply, Tavily, Parallel).',
   usage: 'search <query> [--images] [--max <n>]',
   options: [
     { name: 'images', description: 'search images instead of web pages' },

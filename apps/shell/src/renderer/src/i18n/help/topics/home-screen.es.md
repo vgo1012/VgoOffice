@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # La pantalla de inicio: dónde están sus archivos
 
 Inicio es la página de arranque de VgoOffice: una barra de navegación a la izquierda, listas de archivos y tarjetas de creación rápida a la derecha.

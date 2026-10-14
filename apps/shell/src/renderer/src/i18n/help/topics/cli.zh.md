@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 命令行与代理
 
 每个安装版本都带一个 `genoffice` 命令，它驱动的是窗口所用的同一套引擎——同样的解析器、同样的写入器、同样的渲染器。应用保存的文件和命令写出的文件是同一个文件；应用 AI 面板能通过的检查，命令也能通过。
@@ -32,7 +34,7 @@ macOS 和 Windows 上它位于应用包内。想直接按名字调用，先运�
 | `capabilities`    | 报告本机配置了哪些云端功能。                                                                                                           |
 | `guide`           | 操作参考与设计指南，由执行器校验所依据的同一份定义生成，因此不会与 `apply` 接受的内容产生偏差。`--json` 会带上每个操作的 schema 返回。 |
 | `install-cli`     | 把 `genoffice` 放进 `PATH`。                                                                                                           |
-| `skill`           | 列出本机找到的编程代理，并在其中安装或更新 GenOffice 技能。                                                                            |
+| `skill`           | 列出本机找到的编程代理，并在其中安装或更新 VgoOffice 技能。                                                                            |
 | `mcp`             | 把每条命令作为 Model Context Protocol 工具提供。见**连接编程代理**。                                                                   |
 
 ## 编辑：docs、sheets、slides

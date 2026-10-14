@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { basename, join } from 'node:path'
 import { realpathSync } from 'node:fs'
 import { BrowserWindow, shell, WebContentsView } from 'electron'

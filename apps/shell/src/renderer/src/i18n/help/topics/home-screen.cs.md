@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Obrazovka domovské stránky: kde žijí vaše soubory
 
 Domů je startovní stránka VgoOffice: navigační panel vlevo, seznamy souborů a karty pro rychlé vytvoření vpravo.

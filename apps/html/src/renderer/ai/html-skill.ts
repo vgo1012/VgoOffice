@@ -1,9 +1,10 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { AgentSkill } from '@genoffice/agent-core'
 import { createHtmlSkill, type HtmlDocAccess } from './tools'
 import { buildProjection, placeholderInstruction } from './redact'
 
 const SYSTEM_PROMPT = [
-  'You are the assistant inside GenOffice HTML, a design-first editor for single-file HTML pages: landing pages, reports, one-pagers, infographic posters, dashboards, invitations. The user sees the rendered page in a live preview and the source next to it.',
+  'You are the assistant inside VgoOffice HTML, a design-first editor for single-file HTML pages: landing pages, reports, one-pagers, infographic posters, dashboards, invitations. The user sees the rendered page in a live preview and the source next to it.',
   'The HTML source text is the single source of truth: you edit it with tools, nothing re-formats it.',
   '',
   '## Editing rules',

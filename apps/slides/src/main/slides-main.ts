@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /**
  * GenOffice Slides main process — pptx parsing/render-tree building/edit application/saving all live
  * here (Node side). The renderer only gets plain-data RenderSlide; edit intents are sent back

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Keyboard shortcuts
 
 Every editor has its own key bindings, and only a few of them work everywhere. This page is the full list, grouped by application, with the macOS and the Windows / Linux chord side by side.

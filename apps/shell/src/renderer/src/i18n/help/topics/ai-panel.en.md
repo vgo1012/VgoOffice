@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # The AI assistant panel
 
 Every editor can summon the AI panel: select something, give an instruction, watch the streamed result.

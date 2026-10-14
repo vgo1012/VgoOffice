@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Cài đặt, ngôn ngữ, chủ đề và tích hợp MCP
 
 ## Mở cài đặt

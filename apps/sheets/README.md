@@ -1,4 +1,6 @@
-# GenOffice Sheets
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
+# VgoOffice Sheets
 
 An AI-native spreadsheet app for macOS and Windows.
 

@@ -1,24 +1,21 @@
-# Contributing to GenOffice
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
+# Contributing to VgoOffice
 
 Thanks for your interest in contributing. This document covers the local
 setup, the checks a change must pass, and the conventions used in this
 repository.
 
-## How changes land here
+## Contributing to this edition
 
-This GitHub repository is a mirror: development happens in a private tree,
-and `main` here advances through single squashed snapshot commits
-(`Sync snapshot (<date>)`). That is why every file in a sync shows the same
-last-commit message, and why nobody — maintainers included — pushes to
-`main` directly.
+VgoOffice development, issues and pull requests belong to
+[vgo1012/VgoOffice](https://github.com/vgo1012/VgoOffice). Describe the problem,
+keep changes focused, and include the applicable checks below. Preserve local
+user profiles, files and API configuration when changing the desktop app.
 
-External pull requests are welcome and are reviewed here. Once a change is
-accepted, a maintainer imports it into the private tree with your authorship
-preserved as a `Co-authored-by:` trailer, and it ships to `main` in the next
-snapshot; your PR is then closed with a note pointing at the snapshot that
-carried it. GitHub will show the PR as "closed" rather than "merged" — the
-code and the attribution still land. Issues and feature requests are handled
-directly on this repository as usual.
+Do not commit local build output, installers, API keys, profile backups or
+one-off test documents. The original project is credited in LICENSE, NOTICE
+and MODIFICATIONS.md; do not remove those notices.
 
 ## Repository layout
 
@@ -161,9 +158,9 @@ testing and local overrides:
 | `XLSX_SIDECAR_PATH`, `XLSX_OPEN_PATH`, `XLSX_DEBUG_PORT`                                          | Point at a locally built xlsx sidecar and its debug port                         |
 | `*_DEV_PORT`, `*_RENDERER_URL`                                                                    | Per-app Vite dev server ports and renderer URLs (set by `npm run dev`)           |
 
-AI features degrade rather than break without credentials: requests surface an
-inline sign-in prompt, and web search falls back to keyless backends (Parallel's
-free Search MCP, then DuckDuckGo).
+Local document editing needs no application account. Configure AI with your
+own provider credentials or an existing local CLI. This edition has no desktop
+Genspark login; web search can use the keyless Parallel backend.
 
 ## Coding conventions
 

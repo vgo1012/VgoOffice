@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { withoutAccountLogin } from '@genoffice/ai-provider'
 /**
  * AI IPC for the slides main process, extracted from slides-main.ts:

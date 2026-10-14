@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { memo, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import type { Lang } from '@genoffice/i18n'
@@ -158,7 +159,7 @@ import {
 import { WRAP_OPTIONS } from './ContextMenu'
 import { CropDialog, CutoutDialog } from './PictureDialogs'
 import {
-  GensparkMark,
+  AiMark,
   IconAlignCenter,
   IconAlignJustify,
   IconAlignLeft,
@@ -3016,7 +3017,7 @@ function RibbonInner({
           </div>
         ) : tab === 'home' ? (
           <>
-            {/* ---- Genspark AI (first slot: entry + one-click AI actions) ---- */}
+            {/* ---- VgoOffice AI (first slot: entry + one-click AI actions) ---- */}
             <div className="ribbon-group">
               <div className="ribbon-group-items">
                 <button
@@ -3025,9 +3026,9 @@ function RibbonInner({
                   onClick={onToggleAi}
                 >
                   <span className="rb-big-icon">
-                    <GensparkMark size={26} />
+                    <AiMark size={26} />
                   </span>
-                  <span>Genspark AI</span>
+                  <span>VgoOffice AI</span>
                 </button>
                 <button
                   className="rb-big ai-entry"
@@ -3127,7 +3128,7 @@ function RibbonInner({
                   <span>{t('aiTidyBtn')}</span>
                 </button>
               </div>
-              <div className="ribbon-group-label">Genspark AI</div>
+              <div className="ribbon-group-label">VgoOffice AI</div>
             </div>
 
             <div className="ribbon-sep" />

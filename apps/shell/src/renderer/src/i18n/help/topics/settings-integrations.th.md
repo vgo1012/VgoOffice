@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # การตั้งค่า ภาษา ธีม และการเชื่อมต่อ MCP
 
 ## การเปิดการตั้งค่า

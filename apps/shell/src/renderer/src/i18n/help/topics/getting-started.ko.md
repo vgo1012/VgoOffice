@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 빠른 시작: 인터페이스와 기본 조작
 
 VgoOffice는 전적으로 내 컴퓨터에서 동작하는 오피스 스위트입니다. 창 하나, 탭 한 줄에 6개의 편집기가 들어 있습니다. 문서(Docs), 스프레드시트(Sheets), 프레젠테이션(Slides), PDF, Markdown, HTML입니다. 다루는 파일은 진짜 .docx / .xlsx / .pptx / .pdf이며 Word, Excel, PowerPoint와 완전히 호환됩니다. 네트워크는 필요 없습니다.

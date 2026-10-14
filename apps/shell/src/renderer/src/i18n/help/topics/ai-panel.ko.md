@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # AI 어시스턴트 패널
 
 어느 편집기에서든 AI 패널을 불러올 수 있습니다. 무언가를 선택하고, 지시하고, 스트리밍되는 결과를 봅니다.

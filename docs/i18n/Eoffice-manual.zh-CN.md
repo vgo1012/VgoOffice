@@ -6,13 +6,13 @@ GenOffice 的办公编辑器、文件读写和 AI 逻辑，使用新 V Logo 和�
 
 ## 安装与启动
 
-安装文件：`D:\code\EOffice\apps\shell\release\eoffice-light\Eoffice Setup 0.11.1.exe`。
+安装文件：`<repo>\apps\shell\release\eoffice-light\Eoffice Setup 0.11.1.exe`。
 安装包 160,276,080 字节，约 153 MiB。把这个文件复制到其他 Windows 10/11
 x64 电脑，双击安装，可选择安装目录；随后从桌面或开始菜单的 **Eoffice**
 快捷方式启动。普通使用者无需安装 Node.js、Rust、GCC 或复制源码。
 
 本机于 2026 年 10 月 13 日按用户授权自动更新到 **0.11.1**，安装目录为
-`C:\Users\zhuoqi\AppData\Local\Programs\Eoffice`，桌面及开始菜单快捷方式指向
+`%USERPROFILE%\AppData\Local\Programs\Eoffice`，桌面及开始菜单快捷方式指向
 该目录的 `Eoffice.exe`。更新执行时旧版已关闭；安装返回 0，新版已重新启动。
 原设置文件在安装前后哈希一致，当前有效主题为浅色。以后更新时先保存文件并
 关闭 Eoffice，再运行新版安装包。可在 Windows「已安装的应用」中
@@ -84,7 +84,7 @@ Eoffice 是基于 [genspark-ai/genoffice](https://github.com/genspark-ai/genoffi
 
 ## 构建与验证记录
 
-源码目录：`D:\code\EOffice`。本次未增加 npm 依赖，原生表格引擎和 OCR 源码未变。
+源码目录：`<repo>`。本次未增加 npm 依赖，原生表格引擎和 OCR 源码未变。
 完整前端构建通过，第三方声明包含 570 个 npm 包和 144 个 Rust crate。
 本机打包使用已配置的本地 GNU 工具链；开发构建步骤如下，普通使用者不需要执行：
 
@@ -95,7 +95,7 @@ npm.cmd run build:all
 $env:CSC_IDENTITY_AUTO_DISCOVERY='false'
 $env:BUILD_DIR='release/eoffice-light'
 Push-Location apps/shell
-../../node_modules/.bin/electron-builder.cmd --win nsis --x64 --publish never --config electron-builder.cjs --config.electronDist=D:/code/EOffice/node_modules/electron/dist --config.extraMetadata.version=0.11.1
+../../node_modules/.bin/electron-builder.cmd --win nsis --x64 --publish never --config electron-builder.cjs --config.electronDist=<repo>/node_modules/electron/dist --config.extraMetadata.version=0.11.1
 Pop-Location
 ```
 

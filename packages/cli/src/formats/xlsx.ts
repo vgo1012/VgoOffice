@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import JSZip from 'jszip'
 import * as numfmt from 'numfmt'
 import {
@@ -187,7 +188,7 @@ async function withSidecar<T>(fn: (client: XlsxSidecarClient) => Promise<T>): Pr
   const binary = xlsxSidecarPath()
   if (!binary) {
     throw new CliError(EXIT.conversion, 'xlsx engine (xlsx-sidecar) not found', {
-      hint: 'set XLSX_SIDECAR_PATH or run a packaged GenOffice',
+      hint: 'set XLSX_SIDECAR_PATH or run a packaged VgoOffice',
     })
   }
   const client = new XlsxSidecarClient(binary)

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import {
@@ -1785,6 +1786,18 @@ export function SettingsModal({
               <>
                 <h3 className="set-pane-title">{t('setSecAbout')}</h3>
                 <Field label={t('versionLabel')} value={appVersion || '—'} />
+                <Field
+                  label={t('setGithub')}
+                  value="VgoOffice · github.com/vgo1012/VgoOffice"
+                  action={
+                    <button
+                      className="set-btn"
+                      onClick={() => void window.aiOffice.openGitHubRepo()}
+                    >
+                      {t('starOnGitHub')}
+                    </button>
+                  }
+                />
                 {updateState && (
                   <div className="set-field">
                     <div className="set-field-text">

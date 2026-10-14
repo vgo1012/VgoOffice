@@ -1,11 +1,13 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Security Policy
 
 ## Reporting a Vulnerability
 
 Please report suspected vulnerabilities privately via GitHub's
-[private vulnerability reporting](https://github.com/genspark-ai/genoffice/security/advisories/new)
-on this repository. Do not open public issues for security reports. We aim to
-acknowledge reports within 72 hours.
+[private vulnerability reporting](https://github.com/vgo1012/VgoOffice/security/advisories/new)
+on this repository when it is enabled. Do not post credentials or exploit
+details in public issues.
 
 ## Process Security Posture
 
@@ -19,8 +21,9 @@ All application windows run with the full Electron renderer lockdown:
   (`@genoffice/electron-utils` → `safeExternalUrl`) that parses the URL and
   enforces a protocol allowlist (http/https; pdf link annotations additionally
   allow mailto). `file:`, `javascript:`, and custom schemes are always rejected.
-- No API keys are hardcoded. AI requests are proxied through the signed-in
-  account by default; user-supplied keys stay in the OS-level settings store.
+- AI uses the configured service provider or a local CLI. This edition has no
+  application account login. User-supplied keys are stored in the local profile;
+  do not publish that profile or its backups.
 
 ## Threat Model: AI-Generated Layout Scripts (slides)
 

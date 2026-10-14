@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { useEffect, useRef, useState } from 'react'
 import appIcon from './assets/app-icon.png'
 import { useI18n } from './locale'

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Layar Beranda: tempat file Anda berada
 
 Beranda adalah halaman awal VgoOffice: bilah navigasi di sebelah kiri, daftar file dan kartu pembuatan cepat di sebelah kanan.

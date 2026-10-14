@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const vi = {
@@ -18,7 +19,7 @@ export const vi = {
   aiQcStopped: 'Đã dừng kiểm tra bố cục',
   aiQcCapped: 'Còn {count} trang chưa được kiểm tra (đạt giới hạn mỗi lần chạy)',
   aiGskLoginBtn: 'Đăng nhập Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'Mở trợ lý AI',
   aiFactCheckBtn: 'Kiểm chứng thông tin AI',
   aiFactCheckPrompt:

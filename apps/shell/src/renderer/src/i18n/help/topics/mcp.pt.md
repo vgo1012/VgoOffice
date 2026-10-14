@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Ligar um agente de programação
 
 O VgoOffice fala o Model Context Protocol, por isso um agente de programação consegue ler, escrever e renderizar os seus documentos através dos mesmos motores que a aplicação usa. O agente não está a adivinhar um formato de ficheiro: recebe os esquemas tipados das operações a partir das mesmas definições contra as quais o executor valida.

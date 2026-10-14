@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # โมเดล AI และการตั้งค่า
 
 ## ผู้ให้บริการและโมเดล

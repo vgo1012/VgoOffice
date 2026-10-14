@@ -1,3 +1,4 @@
+# Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 name: Feature request
 description: Suggest a new capability or an improvement
 labels: [enhancement]
@@ -7,11 +8,11 @@ body:
     attributes:
       label: App
       options:
-        - GenOffice Docs (docs)
-        - GenOffice Sheets (sheets)
-        - GenOffice Slides (slides)
-        - GenOffice PDF (pdf)
-        - GenOffice Markdown (markdown)
+        - VgoOffice Docs (docs)
+        - VgoOffice Sheets (sheets)
+        - VgoOffice Slides (slides)
+        - VgoOffice PDF (pdf)
+        - VgoOffice Markdown (markdown)
         - Shell / home screen
         - AI panel / providers
         - Whole suite

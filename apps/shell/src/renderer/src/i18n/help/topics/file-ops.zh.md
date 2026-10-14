@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 文件操作：重命名、删除、导出
 
 这一章讲跨编辑器通用的文件操作。各编辑器自己的导出选项见对应章节。

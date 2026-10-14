@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 連接程式開發代理
 
 VgoOffice 支援 Model Context Protocol，因此程式開發代理可以透過應用程式所用的同一套引擎讀寫並算繪你的文件。代理並不是靠猜檔案格式：它取得的型別化 op schema，與執行器驗證所依據的是同一份定義。

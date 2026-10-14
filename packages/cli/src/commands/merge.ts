@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { randomBytes } from 'node:crypto'
 import { readFileSync } from 'node:fs'
 import { basename } from 'node:path'
@@ -71,7 +72,7 @@ export const mergeCommand: CommandDef = {
     { name: 'out', value: 'path', description: 'output file (required)' },
     {
       name: 'force',
-      description: 'overwrite an existing output file, or write while GenOffice has the file open',
+      description: 'overwrite an existing output file, or write while VgoOffice has the file open',
     },
     {
       name: 'strict',

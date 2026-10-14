@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # File operations: rename, delete, export
 
 This chapter covers the file operations shared by every editor; each editor's own export options are in its chapter.

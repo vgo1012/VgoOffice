@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /** ai strings, zh: defines the key set every other locale shard must match. */
 export const zh = {
   aiEmptyDraftTitle: '让 AI 帮你从零起草',
@@ -8,7 +9,7 @@ export const zh = {
   aiStarterContinue: '接着现有内容往下写',
   aiStarterFillTemplate: '找出并填写文档里的占位符',
   aiGskLoginBtn: '登录 Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: '打开 AI 助手',
   aiSummarizeBtn: 'AI 总结',
   aiSummarizePrompt: '总结这篇文档的主要内容和要点',

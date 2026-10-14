@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Phím tắt
 
 Mỗi trình soạn thảo có tổ hợp phím riêng, và chỉ vài tổ hợp hoạt động ở mọi nơi. Trang này là danh sách đầy đủ, chia theo từng ứng dụng, với tổ hợp phím của macOS và của Windows / Linux đặt cạnh nhau.

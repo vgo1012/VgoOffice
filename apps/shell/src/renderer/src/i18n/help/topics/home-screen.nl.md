@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Het startscherm: waar je bestanden staan
 
 Start is de beginpagina van VgoOffice: een navigatiebalk links, bestandslijsten en snelmakenkaarten rechts.

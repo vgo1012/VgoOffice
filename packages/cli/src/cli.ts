@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -229,7 +230,7 @@ function globalHelp(registry: CommandRegistry): string {
   const defs = registry.list()
   const width = Math.max(...defs.map((d) => d.name.length))
   return [
-    `genoffice ${VERSION} — GenOffice command line`,
+    `genoffice ${VERSION} — VgoOffice command line`,
     '',
     'Usage: genoffice <command> [options]',
     '',

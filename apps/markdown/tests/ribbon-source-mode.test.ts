@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, createElement } from 'react'
 import { createRoot } from 'react-dom/client'
@@ -6,7 +7,7 @@ import { buildExtensions } from '../src/renderer/editor/extensions'
 import { Ribbon } from '../src/renderer/components/Ribbon'
 
 // The assistant is unrelated to the formatting buttons under test.
-vi.mock('../src/renderer/ai/AiPanel', () => ({ GensparkMark: () => null }))
+vi.mock('../src/renderer/ai/AiPanel', () => ({ AiMark: () => null }))
 
 beforeEach(() => vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT', true))
 const cleanups: Array<() => void> = []

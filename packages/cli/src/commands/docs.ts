@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { basename, dirname } from 'node:path'
 import { flagBool, flagString } from '../args'
 import {
@@ -95,7 +96,7 @@ export const docsCommand: CommandDef = {
     {
       name: 'force',
       description:
-        'apply: overwrite an existing --out file, or write while GenOffice has the file open',
+        'apply: overwrite an existing --out file, or write while VgoOffice has the file open',
     },
   ],
   async run(args, ctx) {

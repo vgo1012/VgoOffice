@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Operasi fail: menamakan semula, memadam, dan eksport
 
 Bab ini merangkumi operasi fail yang dikongsi oleh semua editor. Pilihan eksport khusus setiap editor ada dalam babnya sendiri.

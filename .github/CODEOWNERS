@@ -1,6 +1,7 @@
+# Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 # ee/ is the enterprise-license boundary and takes no external contributions
 # (see ee/LICENSE); license-related files need a maintainer review.
-/ee/ @merrick-2002
-/LICENSE @merrick-2002
-/NOTICE @merrick-2002
-/.github/CODEOWNERS @merrick-2002
+/ee/ @vgo1012
+/LICENSE @vgo1012
+/NOTICE @vgo1012
+/.github/CODEOWNERS @vgo1012

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { existsSync, readFileSync, statSync } from 'node:fs'
 import { basename, dirname, extname, isAbsolute, join, resolve } from 'node:path'
 import { flagBool, flagString } from '../args'
@@ -64,7 +65,7 @@ export const createCommand: CommandDef = {
       name: 'from',
       value: 'file',
       description:
-        'xlsx: a .csv, or a .json holding a 2-D array of cell values or { "sheets": [{ "name", "rows" }] }; strings starting with "=" are formulas. docx: a .md file, or a .html file holding a restricted-HTML fragment (see `genoffice guide docs`). pdf: any .md/.html/.docx/.xlsx/.pptx file, printed by the GenOffice renderer',
+        'xlsx: a .csv, or a .json holding a 2-D array of cell values or { "sheets": [{ "name", "rows" }] }; strings starting with "=" are formulas. docx: a .md file, or a .html file holding a restricted-HTML fragment (see `genoffice guide docs`). pdf: any .md/.html/.docx/.xlsx/.pptx file, printed by the VgoOffice renderer',
     },
     {
       name: 'header',
@@ -83,7 +84,7 @@ export const createCommand: CommandDef = {
       name: 'render',
       value: 'dir',
       description:
-        'pptx: after writing, render one PNG per slide into <dir> (default: <output name>-previews beside the file) and list them in detail.previews; starts a hidden GenOffice process for a few seconds',
+        'pptx: after writing, render one PNG per slide into <dir> (default: <output name>-previews beside the file) and list them in detail.previews; starts a hidden VgoOffice process for a few seconds',
     },
     {
       name: 'audit',

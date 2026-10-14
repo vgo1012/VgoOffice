@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import {
   aiPanelWidthAtPointer,
   AiPanelSideButton,
@@ -16,7 +17,7 @@ import {
   type AiTokenUsageView,
   useChatRunQueue,
 } from '@genoffice/ui'
-import { GensparkMark } from '../ribbon-icons'
+import { AiMark } from '../ribbon-icons'
 import type { ChangePlan } from '@genoffice/xlsx-gateway/domain/workbook.types'
 import { ATTACHMENT_IMAGE_EXTS, type AttachmentMeta } from '../../shared/desktop-api'
 import { useI18n, type TFunc } from '../i18n/locale'
@@ -481,7 +482,7 @@ export function AiChatPanel({
           data-tip={t('aiOpenAssistant')}
           aria-label={t('aiOpenAssistant')}
         >
-          <GensparkMark size={22} />
+          <AiMark size={22} />
         </button>
       </aside>
     )
@@ -561,12 +562,12 @@ export function AiChatPanel({
         onPointerDown={startResize}
         role="separator"
         aria-orientation="vertical"
-        aria-label={t('aiGensparkAccount')}
+        aria-label="VgoOffice AI"
       />
       <header className="ai-panel-header">
         <span className="ai-panel-title">
-          <GensparkMark size={22} />
-          Genspark
+          <AiMark size={22} />
+          VgoOffice AI
         </span>
         <div className="ai-panel-header-actions">
           <AiPanelSideButton

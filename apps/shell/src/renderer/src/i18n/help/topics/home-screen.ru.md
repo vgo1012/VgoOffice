@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Главный экран: где хранятся ваши файлы
 
 «Главная» — стартовая страница VgoOffice: слева панель навигации, справа списки файлов и карточки быстрого создания.

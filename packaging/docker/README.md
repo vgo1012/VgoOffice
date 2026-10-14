@@ -1,3 +1,11 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
+> **Upstream Linux reference only.** These recipes fetch original GenOffice
+> binaries and have not been adapted or tested as VgoOffice distributions.
+> Use the source-build instructions in the VgoOffice root README for this
+> edition; the verified installer is Windows x64. No VgoOffice Linux release
+> assets are provided by these recipes.
+
 # Docker: headless batch conversion
 
 A self-contained image that converts a whole tree of Office/Markdown/HTML

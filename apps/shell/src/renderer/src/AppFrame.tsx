@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { useEffect, useState } from 'react'
 import { Home } from './Home'
 import { Onboarding } from './Onboarding'

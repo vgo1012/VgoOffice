@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { afterEach, describe, expect, it } from 'vitest'
 import { z } from 'zod'
 import { request as httpRequest } from 'node:http'
@@ -64,7 +65,7 @@ describe('MCP server core', () => {
     expect(res.status).toBe(200)
     const body = (await res.json()) as { status: string; server: string }
     expect(body.status).toBe('ok')
-    expect(body.server).toBe('GenOffice')
+    expect(body.server).toBe('VgoOffice')
   })
 
   it('completes initialize and lists the registered tools', async () => {

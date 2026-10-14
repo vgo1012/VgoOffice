@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { existsSync, lstatSync, mkdirSync, readFileSync, readlinkSync } from 'node:fs'
 import { basename, dirname, isAbsolute, join } from 'node:path'
 import { agentConfigDir, type AgentId } from './agent-skills'

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # الشاشة الرئيسية: مكان ملفاتك
 
 الشاشة الرئيسية هي صفحة بدء VgoOffice: شريط تنقّل على اليسار، وقوائم الملفات وبطاقات الإنشاء السريع على اليمين.

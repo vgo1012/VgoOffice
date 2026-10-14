@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # AI アシスタントパネル
 
 どのエディターからでも AI パネルを呼び出せます。内容を選び、指示を出し、ストリームされる結果を見ます。

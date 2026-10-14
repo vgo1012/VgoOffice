@@ -1,68 +1,59 @@
-# GenOffice Privacy
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
 
-Last updated: August 26, 2026
+# VgoOffice Privacy
 
-GenOffice opens, edits, and saves documents locally. Document editing does not
-upload files to GenOffice. AI features require a network connection and send
-requests only when you use them.
+Last updated: October 14, 2026
+
+VgoOffice opens, edits, saves and converts documents locally. Ordinary document
+editing does not upload files. AI, search and media features use the service
+provider or local CLI you configure; their requests can contain your prompt,
+selected content or referenced files. Check the selected provider's policy and
+company requirements before using it with internal documents.
+
+## Account and local settings
+
+This edition has no VgoOffice or Genspark application-account login. A service
+provider or an existing CLI may still require its own API key or authentication.
+API configuration is stored in the local application profile. Treat that profile
+and its backups as private; do not commit or publish them.
 
 ## Usage analytics
 
-Usage analytics is enabled by default in packaged official builds, including
-the initial app launch before the onboarding notice is shown. Onboarding
-explains what is collected and where to turn it off.
+The provided company Windows builds do not include analytics credentials and
+use a no-op tracker. A builder can explicitly configure an analytics destination
+through the existing build metadata. Without that metadata, no usage analytics
+is sent, even if the preference is enabled.
 
-You can disable reporting at any time under **Settings → General → Send
-anonymous usage statistics**. An explicit opt-out is remembered and stops all
-subsequent analytics events.
+When analytics is configured, it can be disabled under **Settings → General →
+Send anonymous usage statistics**. An explicit opt-out is remembered.
 
 ### Events and parameters
 
 When enabled, the app sends these events:
 
-- `install_first_launch` — marks the first analytics-enabled use of a newly
-  assigned anonymous `client_id`; used for retention cohorts
+- `install_first_launch` — first analytics-enabled use of an anonymous client id
 - `app_launch` — no event-specific parameter
-- `file_open` — `ext`, the file extension such as `docx` or `xlsx`
-- `file_new` — `kind`, one of `docx`, `xlsx`, `pptx`, `md`, or `pdf`
+- `file_open` — file extension
+- `file_new` — document kind
 
-Every event includes:
-
-- `app_version`
-- `platform`
-- `os_version`
-- `ui_lang`
-- a per-process `session_id` derived from the process start time
-- `engagement_time_msec` with the fixed value `100`
-
-When available, the payload also includes `country_id`, the two-letter country
-code from the operating system's regional locale. This can differ from the
-user's physical location.
-
-The Google Analytics 4 payload also uses a random install UUID as `client_id`.
-The country code is sent through GA4's country-only `user_location` field; the
-app does not send a city or region. Neither identifier is a Genspark account or
-email address.
+The payload includes app version, platform, OS version, UI language, a
+per-process session id, a fixed engagement-time value, and an anonymous install
+UUID. The operating system's country code may be included. The payload does not
+include document contents, file names, file paths, API keys or account identity.
 
 ## Network information
 
-Events are sent to Google Analytics 4 using the Measurement Protocol over
-HTTPS. As the HTTPS recipient, Google necessarily sees the connection's public
-IP address and transport metadata, and may use them for coarse geolocation and
-security or spam-abuse processing. GenOffice does not add an IP address to the
-event payload.
+AI requests go to your configured provider. A configured analytics destination
+uses the existing Google Analytics 4 Measurement Protocol over HTTPS. Network
+recipients can see the connection's public IP address and transport metadata;
+VgoOffice does not add an IP address to the analytics payload.
 
-## Data not collected by analytics
+Optional updates, font downloads, model discovery and external links use their
+configured destinations when those features are used. Opening the project link
+in About opens https://github.com/vgo1012/VgoOffice in your browser; it does not
+submit a Star or sign in to GitHub on your behalf.
 
-GenOffice analytics never sends:
+## Project origin
 
-- document content
-- file names
-- file paths
-- Genspark account identity
-- email addresses
-
-The analytics metadata is injected only into packaged official builds and is
-not part of this repository. Source builds and forks without that packaged
-metadata install a no-op tracker and send no usage analytics; all features work
-the same.
+VgoOffice is derived from the Apache-2.0-licensed GenOffice core. Original
+copyright and third-party notices are retained in LICENSE and NOTICE.

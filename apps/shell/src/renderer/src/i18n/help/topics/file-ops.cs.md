@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Práce se soubory: přejmenování, odstranění, export
 
 Tato kapitola popisuje práci se soubory společnou všem editorům; vlastní možnosti exportu každého editoru najdete v jeho kapitole.

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 vi.mock('node:fs', () => {

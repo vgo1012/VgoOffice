@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 // The desktop has no account login. Provider failures remain visible without
 // offering sign-in, including an error bubble with legacy Genspark settings.
 import { beforeAll, describe, expect, it, vi } from 'vitest'
@@ -121,6 +122,7 @@ describe('AI error bubble sign-in button', () => {
         }),
       )
       const { container } = mounted
+      expect(container.querySelector('.ai-panel-title')?.textContent?.trim()).toBe('VgoOffice AI')
       const textarea = container.querySelector<HTMLTextAreaElement>('.ai-input-box textarea')!
       typeInto(textarea, 'summarize this')
       const send = container.querySelector<HTMLButtonElement>('.ai-send-btn')!
@@ -168,6 +170,7 @@ describe('AI error bubble sign-in button', () => {
         }),
       )
       const container = mounted.container
+      expect(container.querySelector('.ai-panel-title')?.textContent?.trim()).toBe('VgoOffice AI')
       const textarea = container.querySelector<HTMLTextAreaElement>('.ai-input-box textarea')!
       typeInto(textarea, 'summarize this')
       const send = container.querySelector<HTMLButtonElement>('.ai-send-btn')!

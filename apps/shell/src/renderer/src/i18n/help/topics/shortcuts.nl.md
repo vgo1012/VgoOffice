@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Sneltoetsen
 
 Elke editor heeft een eigen toetsenindeling en slechts een paar werken overal. Deze pagina is de volledige lijst, gegroepeerd per toepassing, met de macOS- en de Windows / Linux-combinatie naast elkaar.

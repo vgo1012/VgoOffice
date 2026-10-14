@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Línea de comandos y agentes
 
 Cada instalación trae un comando `genoffice` que maneja los mismos motores que la ventana: los mismos analizadores, el mismo escritor, el mismo renderizador. Un archivo que guarda la aplicación y un archivo que escribe el comando son el mismo archivo, y una comprobación que supera el panel de IA de la aplicación la supera también el comando.
@@ -32,7 +34,7 @@ macOS y Windows lo traen dentro del paquete de la app. Para llamarlo por su nomb
 | `capabilities`    | Informa de qué funciones en la nube están configuradas en esta máquina.                                                                                                                                                                                                         |
 | `guide`           | La referencia de ops y las guías de diseño, generadas a partir de las mismas definiciones que el ejecutor usa para validar, así que no pueden apartarse de lo que `apply` acepta. `--json` la devuelve con el esquema de cada op.                                               |
 | `install-cli`     | Pone `genoffice` en el `PATH`.                                                                                                                                                                                                                                                  |
-| `skill`           | Lista los agentes de programación encontrados en esta máquina e instala o actualiza en ellos la skill de GenOffice.                                                                                                                                                             |
+| `skill`           | Lista los agentes de programación encontrados en esta máquina e instala o actualiza en ellos la skill de VgoOffice.                                                                                                                                                             |
 | `mcp`             | Publica todos los comandos como una herramienta del Model Context Protocol. Vea **Conectar un agente de programación**.                                                                                                                                                         |
 
 ## Edición: documentos, hojas, presentaciones

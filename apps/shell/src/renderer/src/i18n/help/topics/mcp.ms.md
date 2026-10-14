@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Menyambungkan ejen penulisan kod
 
 VgoOffice bercakap dengan Model Context Protocol, jadi ejen penulisan kod boleh membaca, menulis dan memaparkan dokumen anda melalui enjin yang sama seperti yang digunakan oleh aplikasi. Ejen itu tidak meneka format fail: ia mendapat skema op bertip daripada definisi yang sama seperti yang disahkan oleh pelaku.

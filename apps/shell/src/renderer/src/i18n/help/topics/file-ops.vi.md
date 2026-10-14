@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Thao tác tập tin: đổi tên, xóa, xuất
 
 Chương này nói về các thao tác tập tin dùng chung cho mọi trình soạn thảo; các lựa chọn xuất riêng của từng trình soạn thảo nằm trong chương của nó.

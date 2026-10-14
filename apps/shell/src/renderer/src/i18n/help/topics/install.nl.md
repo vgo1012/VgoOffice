@@ -1,69 +1,39 @@
-# GenOffice installeren
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
 
-> De onderstaande instructies horen bij het oorspronkelijke GenOffice-project. Gebruik voor VgoOffice het meegeleverde Windows-installatieprogramma.
+# VgoOffice installeren
 
-Elke build staat op de [Releases-pagina](https://github.com/genspark-ai/genoffice/releases/latest). Ze komen allemaal uit `main`; de installateurs voor macOS en Windows zijn ondertekend.
+[Releases](https://github.com/vgo1012/VgoOffice/releases) — Gebruik een installatiebestand dat bij een release is gevoegd. Deze pagina betekent niet dat al een binair bestand op GitHub is gepubliceerd. Lokale builds zijn zonder ondertekeningsgegevens niet ondertekend.
 
-## Kies het bestand voor je computer
+## Voor de installatie
 
-| Platform                             | Vereisten                                             | Bestand                   |
-| ------------------------------------ | ----------------------------------------------------- | ------------------------- |
-| **macOS** — Apple Silicon            | macOS 11+                                             | `.dmg` (arm64)            |
-| **macOS** — Intel                    | macOS 11+                                             | `.dmg` (x64)              |
-| **Windows** — de meeste pc's         | Windows 10+, Intel/AMD                                | installateur `-x64.exe`   |
-| **Windows** op Arm                   | Windows 11 on Arm (Snapdragon X en vergelijkbaar)     | installateur `-arm64.exe` |
-| **Linux** — Debian / Ubuntu          | x86_64, glibc 2.34+ (Ubuntu 22.04 of nieuwer)         | `.deb`                    |
-| **Linux** — Fedora / RHEL / openSUSE | x86_64, glibc 2.34+ (Fedora 35+, RHEL 9+, Leap 15.6+) | `.rpm`                    |
-| **Linux** — al het andere            | x86_64, glibc 2.34+, FUSE 2                           | `.AppImage`               |
+Deze editie is getest op Windows x64. De broncodedoelen voor macOS en Linux blijven bestaan, maar deze editie is daar niet gevalideerd. Kies een pakket alleen wanneer de release jouw besturingssysteem uitdrukkelijk ondersteunt.
 
-Oudere versies blijven op de Releases-pagina staan.
+## Installeren en starten
 
-## Op macOS
+1. Sla geopende documenten op en sluit de vorige versie voordat je bijwerkt.
+2. Voer het .exe-installatieprogramma voor Windows uit en voltooi de installatie.
+3. Start VgoOffice via de snelkoppeling op het bureaublad of in het Startmenu.
 
-Open het `.dmg` en sleep **GenOffice** naar Programma's. Bij een Intel-build vraagt de eerste keer starten om bevestiging: klik met de rechtermuis op de app in Programma's ▸ Open. Dat is Gatekeeper die een schijfkopie tegenkomt die niet-ondertekend lijkt, geen beschadigde download.
+Het installatieprogramma slaat bronnen eenmaal op, zonder bij elke start een portable programma uit te pakken. Alleen VgoOffice.exe kopiëren laat benodigde editorbronnen weg.
 
-## Op Windows
+## Upgrades en voorkeuren
 
-Voer de installateur `.exe` uit. Die zet GenOffice in het Startmenu en registreert `.docx`, `.xlsx`, `.pptx`, `.pdf` en soortgelijke, zodat een dubbelklik op een bestand het opent.
+Upgrades behouden de bestaande installatie-identiteit en profielmap van Eoffice. Een map die Eoffice blijft heten is normaal voor compatibiliteit. Kies onder Instellingen → Algemeen een licht, donker of systeemthema; de standaardachtergrond is lichtblauwgrijs. Documentkleuren worden afzonderlijk beheerd.
 
-## Op Linux
+## Versie en project
 
-**Debian / Ubuntu**
+Instellingen → Over toont de geïnstalleerde versie en een link naar het VgoOffice-project. Geef de repository een Star als deze nuttig is. Updates zijn afhankelijk van de buildconfiguratie; bekijk de releases wanneer bijwerken in de app niet beschikbaar is.
 
-```sh
-sudo apt install ./genoffice_<version>_amd64.deb
-```
+[VgoOffice · Star](https://github.com/vgo1012/VgoOffice)
 
-**Fedora / RHEL / openSUSE**
+## Opdrachtregel en AI
+
+De compatibiliteitsopdracht blijft genoffice. Instellingen → Integraties toont het geïnstalleerde pad en de configuratie. Voer de onderstaande opdracht uit via dat pad of voeg de CLI eerst toe aan PATH.
 
 ```sh
-sudo dnf install ./genoffice-<version>.x86_64.rpm     # Fedora / RHEL family
-sudo zypper install ./genoffice-<version>.x86_64.rpm  # openSUSE
+genoffice --version
 ```
 
-**AppImage** — draait waar het staat, zonder installatiestap:
+Aanmelden bij een app-account is verwijderd. Stel je eigen model-API, een OpenAI-compatibel endpoint of een geïnstalleerde Codex CLI in. Externe authenticatie en kosten blijven afzonderlijk; lokaal bewerken vereist geen VgoOffice-account.
 
-```sh
-chmod +x GenOffice-<version>.AppImage
-./GenOffice-<version>.AppImage
-```
-
-Het heeft de FUSE 2-runtime nodig. Wil je die niet installeren, start het dan met `--appimage-extract-and-run`; de sandbox werkt vanuit de uitgepakte map.
-
-## De build die je draait
-
-**Instellingen ▸ Over** is waar de app meldt welke build je hebt, welk kanaal hij volgt en waar het project woont. Zodra er een nieuwere build op dat kanaal verschijnt, biedt hetzelfde paneel die update aan; een Flatpak-, Nix- of Docker-installatie doet dat niet, omdat ze door het gereedschap dat ze daar heeft geplaatst worden vervangen.
-
-![Instellingen ▸ Over, met de geïnstalleerde versie, het updatekanaal dat de app volgt en de GitHub-link van het project](img/install.png)
-
-## Nog drie routes
-
-Ze pakken alle drie de gepubliceerde artefacten in plaats van de app opnieuw te bouwen, dus ze volgen de officiële binaire bestanden.
-
-- **Flatpak** — installeert de `.deb` via het `extra-data`-mechanisme van Flatpak en draait die onder Zypak, dat de eigen sandbox van Electron aanpast. De `/app`-structuur is alleen-lezen, dus updates lopen via Flatpak en niet via het updatevenster in de app.
-- **Nix** — een pakketuitdrukking die je vanuit een checkout bouwt met `nix-build packaging/nix`; zie `packaging/nix`.
-- **Docker** — een headless image voor batchconversie (`packaging/docker`). Het zet een hele boom aan Office-, Markdown- en HTML-documenten om naar PDF via de eigen exportpijplijn van de app, dus de uitvoer is wat Bestand ▸ Exporteren zou geven. Het is een CLI-hulpmiddel, geen server.
-
-## De opdrachtregel zit erbij
-
-Elke installatie bevat een `genoffice`-commando dat met dezelfde engines praat als het venster, zodat de twee nooit over een bestand het oneens zijn. Op macOS en Windows zit het in de app-bundel; `genoffice install-cli` zet het in je `PATH`. Wat het kan doen, lees je in **Opdrachtregel en agents**.
+[Integratie-instellingen](help://settings-integrations) · [AI-modellen](help://ai-models)

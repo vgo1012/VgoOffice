@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 快速上手：介面與基本操作
 
 VgoOffice 是一套完全在你電腦上運作的辦公套件：單一視窗、一排分頁，裡面裝著六個編輯器——Docs（文字處理）、Sheets（試算表）、Slides（簡報）、PDF、Markdown 與 HTML。檔案就是真正的 .docx / .xlsx / .pptx / .pdf，與 Word、Excel、PowerPoint 完全互通，不需要連網。

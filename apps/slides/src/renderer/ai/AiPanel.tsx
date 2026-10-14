@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import {
   aiPanelWidthAtPointer,
   AiPanelSideButton,
@@ -62,7 +63,7 @@ import {
   type AiScopeQuoteData,
   type AiTokenUsageView,
 } from '@genoffice/ui'
-import { GensparkMark } from '../components/icons'
+import { AiMark } from '../components/icons'
 import sendEnterOn from '../assets/send-enter-on.png'
 import sendEnterOff from '../assets/send-enter-off.png'
 import sendStop from '../assets/send-stop.png'
@@ -2146,7 +2147,7 @@ export function AiPanel({
         aria-label={t('appAiRailExpand')}
         onClick={onExpand}
       >
-        <GensparkMark size={22} />
+        <AiMark size={22} />
       </button>
     )
   }
@@ -2178,7 +2179,7 @@ export function AiPanel({
       />
       <div className="ai-panel-header">
         <span className="ai-panel-title">
-          <GensparkMark size={22} />
+          <AiMark size={22} />
           {t('aiPanelTitle')}
         </span>
         <div className="ai-panel-header-actions">

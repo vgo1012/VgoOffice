@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { execFile } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { homedir } from 'node:os'

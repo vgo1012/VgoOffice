@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 export { withoutAccountLogin } from './account-free'
 /** Browser-safe settings surface. Keep Node-backed transports out of renderer bundles. */
 export type {

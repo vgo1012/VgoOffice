@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 /// The default folder where new/untitled files land on their first (silent)
 /// save and where AI-generated drafts go. Defaults to <Documents>/VgoOffice
 /// and is user-configurable via the `defaultSaveDir` key

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Màn hình Trang chủ: tập tin của bạn ở đâu
 
 Trang chủ là trang khởi đầu của VgoOffice: thanh điều hướng bên trái, danh sách tập tin và các thẻ tạo nhanh bên phải.

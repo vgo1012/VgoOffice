@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 홈 화면: 파일이 있는 곳
 
 홈은 VgoOffice의 시작 페이지입니다. 왼쪽에는 탐색 사이드바, 오른쪽에는 파일 목록과 빠른 생성 카드가 있습니다.

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Pintasan papan ketik
 
 Setiap editor punya pengikatan tombol sendiri, dan hanya sebagian yang berlaku di mana saja. Halaman ini adalah daftar lengkapnya, dikelompokkan menurut aplikasi, dengan pintasan macOS dan Windows / Linux berdampingan.

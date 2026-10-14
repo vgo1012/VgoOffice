@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { ChildProcess, execFile } from 'node:child_process'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {

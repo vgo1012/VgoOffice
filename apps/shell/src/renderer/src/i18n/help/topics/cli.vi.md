@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Dòng lệnh và tác nhân
 
 Mọi bản cài đặt đều kèm lệnh `genoffice` điều khiển đúng những engine mà cửa sổ dùng — cùng bộ phân tích, cùng bộ ghi, cùng bộ kết xuất. Một tệp do ứng dụng lưu và một tệp do lệnh ghi là cùng một tệp, và một kiểm tra mà bảng AI của ứng dụng vượt qua thì lệnh cũng vượt qua.
@@ -32,7 +34,7 @@ macOS và Windows kèm nó trong bó ứng dụng. Để gọi bằng tên, ch�
 | `capabilities`    | Báo cáo những tính năng đám mây nào đã được cấu hình trên máy này.                                                                                                                                                                                                     |
 | `guide`           | Tra cứu thao tác và các hướng dẫn thiết kế, sinh ra từ đúng những định nghĩa mà bộ thực thi dùng để kiểm tra — nên nó không thể lệch khỏi những gì `apply` chấp nhận. `--json` trả về tra cứu kèm lược đồ của từng thao tác.                                           |
 | `install-cli`     | Đưa `genoffice` vào `PATH`.                                                                                                                                                                                                                                            |
-| `skill`           | Liệt kê các tác nhân lập trình tìm thấy trên máy này rồi cài hoặc cập nhật kỹ năng GenOffice trong chúng.                                                                                                                                                              |
+| `skill`           | Liệt kê các tác nhân lập trình tìm thấy trên máy này rồi cài hoặc cập nhật kỹ năng VgoOffice trong chúng.                                                                                                                                                              |
 | `mcp`             | Phục vụ mọi lệnh như một công cụ của Model Context Protocol. Xem **Kết nối tác nhân lập trình**.                                                                                                                                                                       |
 
 ## Soạn thảo: tài liệu, bảng tính, bản trình chiếu

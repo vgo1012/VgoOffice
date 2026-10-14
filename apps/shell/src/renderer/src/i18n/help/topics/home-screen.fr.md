@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # L’écran d’accueil : où vivent vos fichiers
 
 Accueil est la page de démarrage de VgoOffice : une barre de navigation à gauche, des listes de fichiers et des cartes de création rapide à droite.

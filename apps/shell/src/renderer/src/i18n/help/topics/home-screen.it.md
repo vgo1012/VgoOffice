@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # La schermata Home: dove si trovano i tuoi file
 
 Home è la pagina iniziale di VgoOffice: una barra di navigazione a sinistra, elenchi di file e schede di creazione rapida a destra.

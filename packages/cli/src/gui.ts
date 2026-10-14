@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { existsSync, readFileSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { dirname, join } from 'node:path'
@@ -38,7 +39,7 @@ export interface GuiOpenDocuments {
 }
 
 /**
- * Files the running GenOffice shell has open, from the registries it publishes
+ * Files the running VgoOffice shell has open, from the registries it publishes
  * on every tab change (apps/shell/src/main/open-documents.ts). Empty when no
  * shell is running: a registry whose pid is gone is a crash leftover.
  */

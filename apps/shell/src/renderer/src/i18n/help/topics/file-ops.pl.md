@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Operacje na plikach: zmiana nazwy, usuwanie, eksport
 
 Ten rozdział opisuje operacje na plikach wspólne dla wszystkich edytorów; opcje eksportu każdego edytora znajdziesz w jego rozdziale.

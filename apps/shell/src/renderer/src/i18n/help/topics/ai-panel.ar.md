@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # لوحة مساعد الذكاء الاصطناعي
 
 يمكن لكل محرّر استدعاء لوحة الذكاء الاصطناعي: حدّد شيئًا، وأعطِ تعليماتك، وشاهد النتيجة وهي تصل.

@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # اختصارات لوحة المفاتيح
 
 لكل محرر روابط مفاتيح خاصة به، وقليل منها فقط يعمل في كل مكان. هذه الصفحة هي القائمة الكاملة، مجمَّعة حسب التطبيق، مع وضع اختصار macOS بجوار اختصار Windows / Linux.

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { readFileSync } from 'node:fs'
 import { basename, dirname } from 'node:path'
 import { flagBool, flagString } from '../args'
@@ -83,7 +84,7 @@ export const slidesCommand: CommandDef = {
     {
       name: 'force',
       description:
-        'apply: overwrite an existing --out file, or write while GenOffice has the file open',
+        'apply: overwrite an existing --out file, or write while VgoOffice has the file open',
     },
     {
       name: 'page',
@@ -461,7 +462,7 @@ async function replace(
   }
 }
 
-/** One PNG per slide, through the app's PDF export (hidden GenOffice process) and pdfium. */
+/** One PNG per slide, through the app's PDF export (hidden VgoOffice process) and pdfium. */
 async function render(
   file: string | undefined,
   args: Parameters<CommandDef['run']>[0],

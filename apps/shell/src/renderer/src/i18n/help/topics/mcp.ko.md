@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 코딩 에이전트 연결
 
 VgoOffice는 Model Context Protocol을 말하므로, 코딩 에이전트가 앱이 쓰는 바로 그 엔진으로 문서를 읽고, 쓰고, 렌더링할 수 있습니다. 에이전트가 파일 형식을 추측하는 일은 없습니다. executor가 검증하는 바로 그 정의에서 타입이 붙은 op 스키마를 받습니다.

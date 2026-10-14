@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { withoutAccountLogin } from '@genoffice/ai-provider'
 import { createHash, randomUUID } from 'node:crypto'
 import {

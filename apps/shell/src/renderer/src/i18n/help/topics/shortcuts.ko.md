@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # 키보드 단축키
 
 편집기마다 고유한 키 바인딩이 있고, 그중 어디에서나 동작하는 것은 일부뿐입니다. 이 문서는 전체 목록을 애플리케이션별로 묶고, macOS와 Windows / Linux 조합을 나란히 놓았습니다.

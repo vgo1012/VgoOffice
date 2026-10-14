@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import { McpServerService, DEFAULT_MCP_PORT, type McpToolDefinition } from './mcp-server'
 import { McpLogger } from './mcp-logger'
 import type { CliRunner } from './cli-runner'
@@ -145,7 +146,7 @@ function buildTools(): McpToolDefinition[] {
         openInTab: (filePath) => {
           if (!deps) return
           const opened = deps.openPath(filePath)
-          if (!opened) throw new Error(`could not open ${filePath} in GenOffice`)
+          if (!opened) throw new Error(`could not open ${filePath} in VgoOffice`)
         },
         docs: deps.docsControl,
         extraFormats,

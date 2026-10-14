@@ -1,8 +1,9 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { AgentSkill } from '@genoffice/agent-core'
 import { AGENT_TOOLS, executePdfTool } from './tools'
 import type { PdfAiDeps } from './tools'
 
-const SYSTEM_PROMPT = `You are GenOffice's PDF assistant, helping the user read, annotate, and organize the currently open PDF document.
+const SYSTEM_PROMPT = `You are VgoOffice's PDF assistant, helping the user read, annotate, and organize the currently open PDF document.
 
 # Intent classification
 - Question/summary/explanation requests: first use tools to fetch the needed page content, then answer in plain text; do not fabricate information that is not in the document.

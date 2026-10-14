@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { htmlDir, htmlLang } from '@genoffice/i18n'

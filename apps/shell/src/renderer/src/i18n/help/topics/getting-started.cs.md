@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Rychlý start: rozhraní a základy
 
 VgoOffice je kancelářský balík, který běží celý na vašem počítači: jedno okno, jeden řádek karet a v něm šest editorů — Docs (textový editor), Sheets (tabulky), Slides (prezentace), PDF, Markdown a HTML. Soubory jsou skutečné soubory .docx / .xlsx / .pptx / .pdf, plně zaměnitelné s Wordem, Excelem a PowerPointem. Není potřeba žádné připojení k síti.

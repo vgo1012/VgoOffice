@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { IFunctionInfo } from '@univerjs/engine-formula'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { platformShortcuts } from '@genoffice/i18n'
@@ -22,7 +23,7 @@ import {
   BorderThickOuterIcon,
   BorderTopIcon,
   CaretIcon,
-  GensparkMark,
+  AiMark,
   RIBBON_GLYPH_ICONS,
   RedoIcon,
   SaveAsIcon,
@@ -3332,10 +3333,10 @@ function Ribbon({
           onClick={onAiToggle}
         >
           <span className="tool-icon-row">
-            <GensparkMark size={26} />
+            <AiMark size={26} />
           </span>
           <span>
-            <strong>Genspark AI</strong>
+            <strong>VgoOffice AI</strong>
           </span>
         </button>
         <button

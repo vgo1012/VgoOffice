@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Command line and agents
 
 Every install ships a `genoffice` command that drives the same engines the window does — the same parsers, the same writer, the same renderer. A file the app saves and a file the command writes are the same file, and a check the app's AI panel passes is a check the command passes.
@@ -32,7 +34,7 @@ macOS and Windows ship it inside the app bundle. To use it by name, run `genoffi
 | `capabilities`    | Report which cloud features are configured on this machine.                                                                                                                                                         |
 | `guide`           | The op reference and design guides, generated from the same definitions the executor validates against — so it cannot drift from what `apply` accepts. `--json` returns it with each op's schema.                   |
 | `install-cli`     | Put `genoffice` on the `PATH`.                                                                                                                                                                                      |
-| `skill`           | List the coding agents found on this machine and install or update the GenOffice skill in them.                                                                                                                     |
+| `skill`           | List the coding agents found on this machine and install or update the VgoOffice skill in them.                                                                                                                     |
 | `mcp`             | Serve every command as a Model Context Protocol tool. See **Connecting a coding agent**.                                                                                                                            |
 
 ## Editing: docs, sheets, slides

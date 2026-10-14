@@ -1,3 +1,4 @@
+# Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 name: Bug report
 description: Something is broken or behaves unexpectedly
 labels: [bug]
@@ -8,11 +9,11 @@ body:
       label: App
       description: Which part of the suite is affected?
       options:
-        - GenOffice Docs (docs)
-        - GenOffice Sheets (sheets)
-        - GenOffice Slides (slides)
-        - GenOffice PDF (pdf)
-        - GenOffice Markdown (markdown)
+        - VgoOffice Docs (docs)
+        - VgoOffice Sheets (sheets)
+        - VgoOffice Slides (slides)
+        - VgoOffice PDF (pdf)
+        - VgoOffice Markdown (markdown)
         - Shell / home screen
         - AI panel / providers
         - Build / packaging

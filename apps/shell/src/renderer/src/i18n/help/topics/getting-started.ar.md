@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # بدء سريع: الواجهة والأساسيات
 
 VgoOffice حزمة مكتبية تعمل بالكامل على جهازك: نافذة واحدة وصف واحد من علامات التبويب يضم ستة محرّرات — Docs (معالجة النصوص)، وSheets (جداول البيانات)، وSlides (العروض التقديمية)، وPDF، وMarkdown، وHTML. الملفات ملفات .docx / .xlsx / .pptx / .pdf حقيقية، وتتوافق تمامًا مع Word وExcel وPowerPoint. لا حاجة إلى أي اتصال بالشبكة.

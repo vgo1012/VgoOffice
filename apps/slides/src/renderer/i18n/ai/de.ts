@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const de = {
@@ -19,7 +20,7 @@ export const de = {
   aiQcStopped: 'Layoutprüfung gestoppt',
   aiQcCapped: '{count} weitere Seite(n) nicht geprüft (Limit pro Lauf)',
   aiGskLoginBtn: 'Bei Genspark anmelden',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'KI-Assistenten öffnen',
   aiFactCheckBtn: 'KI-Faktencheck',
   aiFactCheckPrompt:

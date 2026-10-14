@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # キーボードショートカット
 
 どのエディターにも独自のキーバインドがあり、どこでも効くのはその一部だけです。このページは全一覧で、アプリケーションごとにまとめ、macOS と Windows / Linux の組み合わせを並べてあります。

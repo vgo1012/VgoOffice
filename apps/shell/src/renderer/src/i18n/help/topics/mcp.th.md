@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # การเชื่อมต่อเอเจนต์เขียนโค้ด
 
 VgoOffice สื่อสารด้วย Model Context Protocol เอเจนต์เขียนโค้ดจึงอ่าน เขียน และเรนเดอร์เอกสารของคุณด้วยเอนจินชุดเดียวกับที่แอปใช้ เอเจนต์ไม่ได้เดารูปแบบไฟล์มันได้สคีมาของแต่ละ op จากนิยามชุดเดียวกับที่ตัว executor ใช้ตรวจ

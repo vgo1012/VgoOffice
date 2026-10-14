@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # सेटिंग्स, भाषा, थीम और MCP इंटीग्रेशन
 
 ## सेटिंग्स खोलना

@@ -1,3 +1,4 @@
+// Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md.
 import type { zh } from './zh'
 
 export const ru = {
@@ -18,7 +19,7 @@ export const ru = {
   aiQcStopped: 'Проверка макета остановлена',
   aiQcCapped: 'Ещё {count} стр. не проверено (лимит за один запуск)',
   aiGskLoginBtn: 'Войти в Genspark',
-  aiPanelTitle: 'Genspark',
+  aiPanelTitle: 'VgoOffice AI',
   aiOpenAssistant: 'Открыть ИИ-помощника',
   aiFactCheckBtn: 'ИИ-фактчекинг',
   aiFactCheckPrompt:

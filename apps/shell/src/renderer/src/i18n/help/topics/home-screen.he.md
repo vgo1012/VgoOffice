@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # מסך הבית: איפה הקבצים שלך גרים
 
 הבית הוא דף ההתחלה של VgoOffice: סרגל ניווט בשמאל, רשימות קבצים וכרטיסיות יצירה מהירה בימין.

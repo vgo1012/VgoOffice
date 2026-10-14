@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Le panneau d’assistant IA
 
 Chaque éditeur peut appeler le panneau IA: sélectionnez quelque chose, donnez une instruction, regardez le résultat en flux.

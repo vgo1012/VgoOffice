@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # The Home screen: where your files live
 
 Home is VgoOffice's start page: a navigation sidebar on the left, file lists and quick-create cards on the right.

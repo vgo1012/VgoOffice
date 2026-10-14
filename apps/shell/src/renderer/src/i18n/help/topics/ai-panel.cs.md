@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # Panel AI asistenta
 
 Každý editor může vyvolat panel AI: vyberte něco, zadejte pokyn a sledujte výsledek, který se přenáší postupně.

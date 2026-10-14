@@ -1,3 +1,5 @@
+<!-- Modified for VgoOffice (https://github.com/vgo1012/VgoOffice); see MODIFICATIONS.md. -->
+
 # O ecrã Início: onde ficam os seus arquivos
 
 O ecrã Início é a página inicial do VgoOffice: uma barra de navegação à esquerda e, à direita, as listas de arquivos e os cartões de criação rápida.
